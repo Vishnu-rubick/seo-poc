@@ -1,11 +1,9 @@
-import "./App.css";
-
 import { Button, Input, Table } from "antd";
+import campaignData from "../../testo.json";
+import { ReactNode } from "react";
+import "./home.css"
 
-import campaignData from "../testo.json";
-import Home from "./Home/home";
-
-function App() {
+const Home: React.FC = (): ReactNode => {
   const totalIssues =
     campaignData["errors"] + campaignData["warnings"] + campaignData["notices"];
   const crawlability =
@@ -107,14 +105,41 @@ function App() {
     },
   ];
 
-  // inputs
-  
-
   return (
-    <div className="app">
-      <Home/>
-    </div>
+    <>
+      <div className="input-conatiner">
+        <Input
+          className="domain-input"
+          placeholder="Please enter domain name"
+        />
+        <Input className="limit-input" placeholder="Enter page limit" />
+        <Button>Validate</Button>
+        <Button>Refetech</Button>
+      </div>
+      <hr />
+      <div className="table-container">
+        <div>
+          <div className="issues-wrapper">
+            <p>Report By Issues</p>
+            <Table
+              className="issues-table"
+              dataSource={dataSource}
+              columns={view_1}
+              pagination={false}
+            />
+          </div>
+          <div className="pages-wrapper">
+            <p>Report By Pages</p>
+            <Table
+              className="pages-table"
+              dataSource={view_2_dataSource}
+              columns={view_2}
+              pagination={false}
+            />
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
-
-export default App;
+};
+export default Home;
