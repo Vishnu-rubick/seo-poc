@@ -113,7 +113,7 @@ const Home: React.FC = (): ReactNode => {
           placeholder="Please enter domain name"
         />
         <Input className="limit-input" placeholder="Enter page limit" />
-        <Button>Validate</Button>
+        <Button>Validating ...</Button>
         <Button>Refetech</Button>
       </div>
       <hr />
