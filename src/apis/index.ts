@@ -1,7 +1,7 @@
 import axios from "axios";
 // import fs from 'fs';
 
-const SEMRUSH_API_KEY = 'e397a3362c127d0ff446a398af36a0f4' || "GET KEY FROM ENV";
+const SEMRUSH_API_KEY = "GET KEY FROM ENV";
 const SEMRUSH_BASE_URL = "https://api.semrush.com/";
 
 export interface CampaignConfig {
