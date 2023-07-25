@@ -1,10 +1,8 @@
 import axios from "axios";
-import fs from 'fs';
+// import fs from 'fs';
 
-const SEMRUSH_API_KEY =
-  process.env.SEMRUSH_API_KEY || "GET KEY FROM ENV";
-const SEMRUSH_BASE_URL =
-  process.env.SEMRUSH_BASE_URL || "https://api.semrush.com/";
+const SEMRUSH_API_KEY = 'e397a3362c127d0ff446a398af36a0f4' || "GET KEY FROM ENV";
+const SEMRUSH_BASE_URL = "https://api.semrush.com/";
 
 export interface CampaignConfig {
   domain?: String;
@@ -22,6 +20,7 @@ export interface CampaignConfig {
 console.log("API FILE READ");
 
 const runAudit = async (projectId: String) => {
+
   const baseUrl =
     SEMRUSH_BASE_URL +
     `reports/v1/projects/${projectId}/siteaudit/launch?key=${SEMRUSH_API_KEY}`;
@@ -38,10 +37,10 @@ const getCampaign = async (projectId: String) => {
   const response = await axios.get(baseUrl);
 
   const data = JSON.stringify(response.data);
-  fs.writeFile('../../data/getCampaign.json', data, (err) => {
-    if (err) throw err;
-    console.log('Data written to file');
-  });
+  // fs.writeFile('../../data/getCampaign.json', data, (err) => {
+  //   if (err) throw err;
+  //   console.log('Data written to file');
+  // });
 
   return response.data;
 };
@@ -58,7 +57,9 @@ const getDetailedIssue = async (
   // const response = await axios.get()
 };
 
-module.exports = {
-  runAudit,
-  getCampaign
-};
+// module.exports = {
+//   runAudit,
+//   getCampaign
+// };
+ 
+export { runAudit, getCampaign };

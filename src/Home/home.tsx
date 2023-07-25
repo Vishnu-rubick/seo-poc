@@ -1,13 +1,18 @@
-import { Button, Input, Table } from "antd";
+import { Button, Select, Table } from "antd";
+import { ReactNode, useState } from "react";
 import campaignData from "../../testo.json";
-import { ReactNode } from "react";
-import "./home.css"
+// import {getCampaign, runAudit} from "../apis/index"
+
+import "./home.css";
 
 const Home: React.FC = (): ReactNode => {
+  const [domain,setDomain] = useState('');
+  const [data, setData] = useState(campaignData);
+  const [projectId, setProjectId] = useState('');
   const totalIssues =
-    campaignData["errors"] + campaignData["warnings"] + campaignData["notices"];
+    data["errors"] + data["warnings"] + data["notices"];
   const crawlability =
-    campaignData["current_snapshot"]["thematicScores"]["crawlability"]["value"];
+    data["current_snapshot"]["thematicScores"]["crawlability"]["value"];
 
   const dataSource = [
     {
@@ -54,11 +59,11 @@ const Home: React.FC = (): ReactNode => {
     },
   ];
 
-  const pagesAudited = campaignData["pages_crawled"];
-  const pagesWithIssues = campaignData["haveIssues"];
-  const notCrawlable = campaignData["blocked"];
-  const brokenOrRedirects = campaignData["broken"] + campaignData["redirected"];
-  const healthyPages = campaignData["healthy"];
+  const pagesAudited = data["pages_crawled"];
+  const pagesWithIssues = data["haveIssues"];
+  const notCrawlable = data["blocked"];
+  const brokenOrRedirects = data["broken"] + data["redirected"];
+  const healthyPages = data["healthy"];
 
   const view_2_dataSource = [
     {
@@ -104,17 +109,43 @@ const Home: React.FC = (): ReactNode => {
       key: "6",
     },
   ];
+  
+  // const handleValidateClick = () => {
+  //   if(projectId){
+  //     runAudit(projectId);
+  //   }   
+  // };
+
+  const handleRefetchClick = async() => {
+      
+  };
+  interface selectProp{
+     key:  string,
+     value: string
+
+  }
+  const handleSelect = (selectedValue: string, e: selectProp)=>{
+     setDomain(e.value);
+     setProjectId(e.key);
+  }
 
   return (
     <>
       <div className="input-conatiner">
-        <Input
-          className="domain-input"
-          placeholder="Please enter domain name"
-        />
-        <Input className="limit-input" placeholder="Enter page limit" />
-        <Button>Validating ...</Button>
-        <Button>Refetech</Button>
+        <Select
+          onSelect={handleSelect}
+          className="select-wrapper"
+          placeholder="Select domain"
+        >
+          <Select.Option key={12793985} value="textmercato.com">
+            textmercato.com
+          </Select.Option>
+          <Select.Option key={12808182} value="rubick.ai">
+            rubick.ai
+          </Select.Option>
+        </Select>
+        {/* <Button onClick={handleValidateClick}>Validate</Button> */}
+        <Button onClick={handleRefetchClick}>Refetch</Button>
       </div>
       <hr />
       <div className="table-container">
