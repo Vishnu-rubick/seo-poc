@@ -4,58 +4,115 @@ import './App.css';
 
 import { Table } from "antd";
 
-const issuesDict = require("../issues.json");
-const campaignData = require("../testo.json");
+import campaignData from '../testo.json';
+import issuesDict from '../issues.json';
 
 function App() {
 
+  const totalIssues = campaignData['errors'] + campaignData['warnings'] + campaignData['notices']
+  const crawlability = campaignData['current_snapshot']['thematicScores']['crawlability']['value']
+
   const dataSource = [
     {
-      rowHeader: '1',
-      totalIssues: '20',
-      crawlability: '30',
-      tech_issues: '40',
-      link_issues: '50',
-      text_issues: '60'
+      key: '1',
+      rowHeader: 'All Issues',
+      totalIssues: totalIssues, 
+      crawlability: crawlability,
+      techIssues: '40',
+      linkIssues: '50',
+      textIssues: '60'
     },
   ];
 
-  const columns_1 = [
+  const view_1 = [
     {
       title: '',
       dataIndex: 'rowHeader',
-      key: 'rowHeader',
+      key: '1',
     },  
     {
       title: 'Total Issues',
-      dataIndex: 'total_issues',
-      key: 'total_issues',
+      dataIndex: 'totalIssues',
+      key: '2',
     },  
     {
       title: 'Crawlability',
       dataIndex: 'crawlability',
-      key: 'crawlability',
+      key: '3',
     },
     {
       title: 'Tech issues',
-      dataIndex: 'tech_issues',
-      key: 'tech_issues',
+      dataIndex: 'techIssues',
+      key: '4',
     },
     {
       title: 'Link/Url issues',
-      dataIndex: 'link_issues',
-      key: 'link_issues',
+      dataIndex: 'linkIssues',
+      key: '5',
     },
     { 
       title: 'Text/Image issues',
-      dataIndex: 'text_issues',
-      key: 'text_issues',
+      dataIndex: 'textIssues',
+      key: '6',
+    },
+  ];
+
+  const pagesAudited = campaignData['pages_crawled']
+  const pagesWithIssues = campaignData['haveIssues']
+  const notCrawlable = campaignData['blocked']
+  const brokenOrRedirects = campaignData['broken'] + campaignData['redirected']
+  const healthyPages = campaignData['healthy']
+
+  const view_2_dataSource = [
+    {
+      key: '1',
+      rowHeader: 'All Pages',
+      pagesAudited: pagesAudited,
+      pagesWithIssues: pagesWithIssues,
+      notCrawlable: notCrawlable,
+      brokenOrRedirects: brokenOrRedirects,
+      healthyPages: healthyPages
+    }
+  ]
+
+
+  const view_2 = [
+    {
+      title: '',
+      dataIndex: 'rowHeader',
+      key: '1',
+    },  
+    {
+      title: 'Pages Audited',
+      dataIndex: 'pagesAudited',
+      key: '2',
+    },  
+    {
+      title: 'Pages with issus',
+      dataIndex: 'pagesWithIssues',
+      key: '3',
+    },
+    {
+      title: 'Not Crawlable',
+      dataIndex: 'notCrawlable',
+      key: '4',
+    },
+    {
+      title: 'Broken/Redirects',
+      dataIndex: 'brokenOrRedirects',
+      key: '5',
+    },
+    { 
+      title: 'Healthy Pages',
+      dataIndex: 'healthyPages',
+      key: '6',
     },
   ];
   
   return (
     <>
-      <Table dataSource={dataSource} columns={columns_1} pagination={false} />;
+      <Table dataSource={dataSource} columns={view_1} pagination={false} />;
+      <Table dataSource={view_2_dataSource} columns={view_2} pagination={false} />
     </>
   );
 }
