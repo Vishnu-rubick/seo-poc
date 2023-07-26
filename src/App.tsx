@@ -6,7 +6,6 @@ import campaignData from "../testo.json";
 import Home from "./Home/home";
 
 function App() {
-
   return (
     <div className="app">
       <Home/>
