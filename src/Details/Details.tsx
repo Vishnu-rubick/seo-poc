@@ -1,30 +1,73 @@
-import React, { useState } from "react";
-import type { RadioChangeEvent } from "antd";
-import { Radio, Tabs } from "antd";
-import type { SizeType } from "antd/es/config-provider/SizeContext";
+import React from "react";
+import { Tabs, Table } from "antd";
+import type { TabsProps } from "antd";
+import './details.css';
+
+const onChange = (key: string) => {
+  console.log(key);
+};
 
 const Details: React.FC = () => {
- 
-
-  return (
-    <div>
-   
-      <Tabs
-        defaultActiveKey="1"
-        size="small"
-        style={{ marginBottom: 32 }}
-        items={new Array(3).fill(null).map((_, i) => {
-          const id = String(i + 1);
-          return {
-            label: `Tab ${id}`,
-            key: id,
-            children: `Content of tab ${id}`,
-          };
-        })}
-      />
-      
-    </div>
-  );
-};
+  const data = [
+    "Row 1",
+    "Row 2",
+    "Row 3",
+    "Row 4",
+  ];
+  const columns = [
+    {
+      dataIndex: "data",
+      key: "data",
+      render: () => <span>2 issue with duplicate tag</span>,
+    },
+  ];
+  const items: TabsProps["items"] = [
+    {
+      key: "1",
+      label: `All`,
+      children: (
+        <Table
+          pagination={false}
+          dataSource={data.map((item, index) => ({ key: index, data: item }))}
+          columns={columns}
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: `Errors`,
+      children: (
+        <Table
+          pagination={false}
+          dataSource={data.map((item, index) => ({ key: index, data: item }))}
+          columns={columns}
+        />
+      ),
+    },
+    {
+      key: "3",
+      label: `Warnings`,
+      children: (
+        <Table
+          pagination={false}
+          dataSource={data.map((item, index) => ({ key: index, data: item }))}
+          columns={columns}
+        />
+      ),
+    },
+    {
+      key: "4",
+      label: `Notices`,
+      children: (
+        <Table
+          pagination={false}
+          dataSource={data.map((item, index) => ({ key: index, data: item }))}
+          columns={columns}
+        />
+      ),
+    },
+  ];
+  return <Tabs className="details-tab" defaultActiveKey="1" items={items} onChange={onChange} />;
+}
 
 export default Details;
