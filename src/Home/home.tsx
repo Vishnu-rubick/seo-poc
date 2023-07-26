@@ -1,30 +1,95 @@
 import { Button, Select, Table } from "antd";
-import { ReactNode, useState } from "react";
-import campaignData from "../../testo.json";
+import { ReactNode, useEffect, useState } from "react";
+import campaignDataTm from "../../data/getCampaign-tm.json";
+import campaignDataRubick from "../../data/getCampaign-rubick.json";
+import issueCategoryMap from "../../data/issues-category_Mapped.json";
 // import {getCampaign, runAudit} from "../apis/index"
 
 import "./home.css";
 
 const Home: React.FC = (): ReactNode => {
-  const [domain,setDomain] = useState('');
-  const [data, setData] = useState(campaignData);
-  const [projectId, setProjectId] = useState('');
-  const totalIssues =
-    data["errors"] + data["warnings"] + data["notices"];
-  const crawlability =
-    data["current_snapshot"]["thematicScores"]["crawlability"]["value"];
-
-  const dataSource = [
-    {
+  const [domain, setDomain] = useState<string>();
+  const [data, setData] = useState<any>();
+  const [dataSourceOne, setDataSourceOne] = useState<any[]>(
+    [{
       key: "1",
       rowHeader: "All Issues",
-      totalIssues: totalIssues,
-      crawlability: crawlability,
-      techIssues: "40",
-      linkIssues: "50",
-      textIssues: "60",
-    },
-  ];
+      totalIssues: 0,
+      crawlability: 0,
+      techIssues: 0,
+      linkIssues: 0,
+      textIssues: 0,
+    }]
+  );
+  const [dataSourceTwo, setDataSourceTwo] = useState<any[]>(
+    [{
+      key: "1",
+      rowHeader: "All Issues",
+      pagesAudited: 0,
+      pagesWithIssues: 0,
+      notCrawlable: 0,
+      brokenOrRedirects: 0,
+      healthyPages: 0,
+    }]
+  );
+  const [projectId, setProjectId] = useState("");
+
+  const getIssueCount = (data: any) => {
+    const issueFreq = data?.defects;
+
+    let res: any = {
+      tech: 0,
+      crawl: 0,
+      broken: 0,
+      markup: 0,
+    }
+
+    for(const key in issueFreq){
+      const idx = issueCategoryMap.find((issue) => issue.id == parseInt(key));
+      if(idx == undefined)  continue;
+
+      res[idx['category']] += issueFreq[key]
+    }
+
+    setDataSourceOne([{
+      key: "1",
+      rowHeader: "All Issues",
+      totalIssues: data?.errors + data?.warnings + data?.notices || 0,
+      crawlability: res.crawl,
+      techIssues: res.tech,
+      linkIssues: res.broken,
+      textIssues: res.markup,
+    }]);
+  }
+
+  useEffect(() => {
+    console.log("null us effect");
+    setDomain("textmercato.com");
+    setData(campaignDataTm);
+    getIssueCount(data);
+    setDataSourceTwo([{
+      key: "1",
+      rowHeader: "All Pages",
+      pagesAudited: data?.pages_crawled || 0,
+      pagesWithIssues: data?.haveIssues || 0,
+      notCrawlable: data?.blocked || 0,
+      brokenOrRedirects: data?.broken + data?.redirected || 0,
+      healthyPages: data?.healthy || 0,
+    }]);
+  }, []);
+
+  useEffect(() => {
+    getIssueCount(data);
+    setDataSourceTwo([{
+      key: "1",
+      rowHeader: "All Pages",
+      pagesAudited: data?.pages_crawled || 0,
+      pagesWithIssues: data?.haveIssues || 0,
+      notCrawlable: data?.blocked || 0,
+      brokenOrRedirects: data?.broken + data?.redirected || 0,
+      healthyPages: data?.healthy || 0,
+    }]);
+  }, [data]);
 
   const view_1 = [
     {
@@ -59,24 +124,6 @@ const Home: React.FC = (): ReactNode => {
     },
   ];
 
-  const pagesAudited = data["pages_crawled"];
-  const pagesWithIssues = data["haveIssues"];
-  const notCrawlable = data["blocked"];
-  const brokenOrRedirects = data["broken"] + data["redirected"];
-  const healthyPages = data["healthy"];
-
-  const view_2_dataSource = [
-    {
-      key: "1",
-      rowHeader: "All Pages",
-      pagesAudited: pagesAudited,
-      pagesWithIssues: pagesWithIssues,
-      notCrawlable: notCrawlable,
-      brokenOrRedirects: brokenOrRedirects,
-      healthyPages: healthyPages,
-    },
-  ];
-
   const view_2 = [
     {
       title: "",
@@ -89,7 +136,7 @@ const Home: React.FC = (): ReactNode => {
       key: "2",
     },
     {
-      title: "Pages with issus",
+      title: "Pages with issues",
       dataIndex: "pagesWithIssues",
       key: "3",
     },
@@ -109,26 +156,23 @@ const Home: React.FC = (): ReactNode => {
       key: "6",
     },
   ];
-  
-  // const handleValidateClick = () => {
-  //   if(projectId){
-  //     runAudit(projectId);
-  //   }   
-  // };
 
-  const handleRefetchClick = async() => {
-      
+  const handleRefetchClick = async () => {
+    if (domain == "textmercato.com") {
+      setData(campaignDataTm);
+    } else if (domain == "rubick.ai") {
+      setData(campaignDataRubick);
+    }
   };
-  interface selectProp{
-     key:  string,
-     value: string
-
+  interface selectProp {
+    key: string;
+    value: string;
   }
-  const handleSelect = (selectedValue: string, e: selectProp)=>{
-     setDomain(e.value);
-     setProjectId(e.key);
-  }
-
+  const handleSelect = (selectedValue: string, e: selectProp) => {
+    setDomain(e.value);
+    setProjectId(e.key);
+  };
+  console.log();
   return (
     <>
       <div className="input-conatiner">
@@ -136,6 +180,7 @@ const Home: React.FC = (): ReactNode => {
           onSelect={handleSelect}
           className="select-wrapper"
           placeholder="Select domain"
+          value={domain}
         >
           <Select.Option key={12793985} value="textmercato.com">
             textmercato.com
@@ -154,7 +199,7 @@ const Home: React.FC = (): ReactNode => {
             <p>Report By Issues</p>
             <Table
               className="issues-table"
-              dataSource={dataSource}
+              dataSource={dataSourceOne}
               columns={view_1}
               pagination={false}
             />
@@ -163,7 +208,7 @@ const Home: React.FC = (): ReactNode => {
             <p>Report By Pages</p>
             <Table
               className="pages-table"
-              dataSource={view_2_dataSource}
+              dataSource={dataSourceTwo}
               columns={view_2}
               pagination={false}
             />
