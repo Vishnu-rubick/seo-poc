@@ -41,6 +41,2848 @@
         "217": 88,
         "123": 287
     },
+    "issueReports": {
+        "214": {
+            "limit": 236,
+            "page": 0,
+            "total": 236,
+            "data": [
+                {
+                    "num": 13,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7ce030e2fb780190f2b0",
+                    "source_url": "https://rubick.ai/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 10,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7ce030e2fb780190f2b0",
+                    "source_url": "https://rubick.ai/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 11,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7ce030e2fb780190f2b0",
+                    "source_url": "https://rubick.ai/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 12,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7ce030e2fb780190f2b0",
+                    "source_url": "https://rubick.ai/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 11,
+                    "title": "Terms of Use - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7c8930e2fb78018f0cd7",
+                    "source_url": "https://rubick.ai/terms-of-use/"
+                },
+                {
+                    "num": 9,
+                    "title": "Terms of Use - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7c8930e2fb78018f0cd7",
+                    "source_url": "https://rubick.ai/terms-of-use/"
+                },
+                {
+                    "num": 12,
+                    "title": "Terms of Use - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7c8930e2fb78018f0cd7",
+                    "source_url": "https://rubick.ai/terms-of-use/"
+                },
+                {
+                    "num": 10,
+                    "title": "Terms of Use - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7c8930e2fb78018f0cd7",
+                    "source_url": "https://rubick.ai/terms-of-use/"
+                },
+                {
+                    "num": 11,
+                    "title": "Expand Your Reach with Multi-Marketplace Listing | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e3730e2fb780198535b",
+                    "source_url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/"
+                },
+                {
+                    "num": 10,
+                    "title": "Expand Your Reach with Multi-Marketplace Listing | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e3730e2fb780198535b",
+                    "source_url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/"
+                },
+                {
+                    "num": 8,
+                    "title": "Expand Your Reach with Multi-Marketplace Listing | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e3730e2fb780198535b",
+                    "source_url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/"
+                },
+                {
+                    "num": 9,
+                    "title": "Expand Your Reach with Multi-Marketplace Listing | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e3730e2fb780198535b",
+                    "source_url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7cde30e2fb780190e5a8",
+                    "source_url": "https://rubick.ai/product/product-information-management/?product-attribute-extraction"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7cde30e2fb780190e5a8",
+                    "source_url": "https://rubick.ai/product/product-information-management/?product-attribute-extraction"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7cde30e2fb780190e5a8",
+                    "source_url": "https://rubick.ai/product/product-information-management/?product-attribute-extraction"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7cde30e2fb780190e5a8",
+                    "source_url": "https://rubick.ai/product/product-information-management/?product-attribute-extraction"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7cde30e2fb780190e5a8",
+                    "source_url": "https://rubick.ai/product/product-information-management/?product-attribute-extraction"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5f30e2fb780193a8fc",
+                    "source_url": "https://rubick.ai/product/product-information-management/?multi-marketplace-listing"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5f30e2fb780193a8fc",
+                    "source_url": "https://rubick.ai/product/product-information-management/?multi-marketplace-listing"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7d5f30e2fb780193a8fc",
+                    "source_url": "https://rubick.ai/product/product-information-management/?multi-marketplace-listing"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5f30e2fb780193a8fc",
+                    "source_url": "https://rubick.ai/product/product-information-management/?multi-marketplace-listing"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5f30e2fb780193a8fc",
+                    "source_url": "https://rubick.ai/product/product-information-management/?multi-marketplace-listing"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7d4e30e2fb7801934ee7",
+                    "source_url": "https://rubick.ai/product/product-information-management/?generate-product-descriptions"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4e30e2fb7801934ee7",
+                    "source_url": "https://rubick.ai/product/product-information-management/?generate-product-descriptions"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4e30e2fb7801934ee7",
+                    "source_url": "https://rubick.ai/product/product-information-management/?generate-product-descriptions"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4e30e2fb7801934ee7",
+                    "source_url": "https://rubick.ai/product/product-information-management/?generate-product-descriptions"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4e30e2fb7801934ee7",
+                    "source_url": "https://rubick.ai/product/product-information-management/?generate-product-descriptions"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5a30e2fb7801939024",
+                    "source_url": "https://rubick.ai/product/product-information-management/?data-sourcing"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5a30e2fb7801939024",
+                    "source_url": "https://rubick.ai/product/product-information-management/?data-sourcing"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5a30e2fb7801939024",
+                    "source_url": "https://rubick.ai/product/product-information-management/?data-sourcing"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7d5a30e2fb7801939024",
+                    "source_url": "https://rubick.ai/product/product-information-management/?data-sourcing"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5a30e2fb7801939024",
+                    "source_url": "https://rubick.ai/product/product-information-management/?data-sourcing"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5230e2fb7801936486",
+                    "source_url": "https://rubick.ai/product/product-information-management/?auto-image-editing"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7d5230e2fb7801936486",
+                    "source_url": "https://rubick.ai/product/product-information-management/?auto-image-editing"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5230e2fb7801936486",
+                    "source_url": "https://rubick.ai/product/product-information-management/?auto-image-editing"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5230e2fb7801936486",
+                    "source_url": "https://rubick.ai/product/product-information-management/?auto-image-editing"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5230e2fb7801936486",
+                    "source_url": "https://rubick.ai/product/product-information-management/?auto-image-editing"
+                },
+                {
+                    "num": 12,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7ce230e2fb780190fc30",
+                    "source_url": "https://rubick.ai/product/product-information-management/"
+                },
+                {
+                    "num": 9,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/multi-marketplace-listings/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/multi-marketplace-listings/",
+                    "page_id": "64bf7ce230e2fb780190fc30",
+                    "source_url": "https://rubick.ai/product/product-information-management/"
+                },
+                {
+                    "num": 13,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7ce230e2fb780190fc30",
+                    "source_url": "https://rubick.ai/product/product-information-management/"
+                },
+                {
+                    "num": 10,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7ce230e2fb780190fc30",
+                    "source_url": "https://rubick.ai/product/product-information-management/"
+                },
+                {
+                    "num": 11,
+                    "title": "Efficient Product Information Management for Seamless Operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7ce230e2fb780190fc30",
+                    "source_url": "https://rubick.ai/product/product-information-management/"
+                },
+                {
+                    "num": 9,
+                    "title": "Actionable E-commerce Analytics | Market Insights with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e1130e2fb78019782fd",
+                    "source_url": "https://rubick.ai/product/marketing-suite/market-insights/"
+                },
+                {
+                    "num": 8,
+                    "title": "Actionable E-commerce Analytics | Market Insights with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e1130e2fb78019782fd",
+                    "source_url": "https://rubick.ai/product/marketing-suite/market-insights/"
+                },
+                {
+                    "num": 10,
+                    "title": "Actionable E-commerce Analytics | Market Insights with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e1130e2fb78019782fd",
+                    "source_url": "https://rubick.ai/product/marketing-suite/market-insights/"
+                },
+                {
+                    "num": 11,
+                    "title": "Actionable E-commerce Analytics | Market Insights with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e1130e2fb78019782fd",
+                    "source_url": "https://rubick.ai/product/marketing-suite/market-insights/"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5730e2fb7801938021",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?seller-onboarding"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5730e2fb7801938021",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?seller-onboarding"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5730e2fb7801938021",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?seller-onboarding"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5730e2fb7801938021",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?seller-onboarding"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5430e2fb7801937013",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?review-management"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5430e2fb7801937013",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?review-management"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5430e2fb7801937013",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?review-management"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5430e2fb7801937013",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?review-management"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4830e2fb7801932c92",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?product-recommendations"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4830e2fb7801932c92",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?product-recommendations"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4830e2fb7801932c92",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?product-recommendations"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4830e2fb7801932c92",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?product-recommendations"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4430e2fb78019315b6",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?influencer-marketing"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4430e2fb78019315b6",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?influencer-marketing"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4430e2fb78019315b6",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?influencer-marketing"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4430e2fb78019315b6",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?influencer-marketing"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4230e2fb7801930b9d",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?content-generation"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4230e2fb7801930b9d",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?content-generation"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4230e2fb7801930b9d",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?content-generation"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4230e2fb7801930b9d",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?content-generation"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d2d30e2fb7801929968",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?ad-management"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d2d30e2fb7801929968",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?ad-management"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d2d30e2fb7801929968",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?ad-management"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d2d30e2fb7801929968",
+                    "source_url": "https://rubick.ai/product/marketing-suite/?ad-management"
+                },
+                {
+                    "num": 9,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d2e30e2fb7801929fa2",
+                    "source_url": "https://rubick.ai/product/marketing-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d2e30e2fb7801929fa2",
+                    "source_url": "https://rubick.ai/product/marketing-suite/"
+                },
+                {
+                    "num": 11,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d2e30e2fb7801929fa2",
+                    "source_url": "https://rubick.ai/product/marketing-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "Amplify Your eCommerce Product Marketing Efforts with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d2e30e2fb7801929fa2",
+                    "source_url": "https://rubick.ai/product/marketing-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "Cataloging Automation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e0830e2fb780197508a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/cataloging-automation/"
+                },
+                {
+                    "num": 9,
+                    "title": "Cataloging Automation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e0830e2fb780197508a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/cataloging-automation/"
+                },
+                {
+                    "num": 12,
+                    "title": "Cataloging Automation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e0830e2fb780197508a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/cataloging-automation/"
+                },
+                {
+                    "num": 11,
+                    "title": "Cataloging Automation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e0830e2fb780197508a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/cataloging-automation/"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d3e30e2fb780192f53b",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?links-sourcing"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d3e30e2fb780192f53b",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?links-sourcing"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d3e30e2fb780192f53b",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?links-sourcing"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d3e30e2fb780192f53b",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?links-sourcing"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d2b30e2fb780192900a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-to-text"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d2b30e2fb780192900a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-to-text"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d2b30e2fb780192900a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-to-text"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d2b30e2fb780192900a",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-to-text"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4630e2fb78019320a3",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-editing-solutions"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4630e2fb78019320a3",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-editing-solutions"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4630e2fb78019320a3",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-editing-solutions"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4630e2fb78019320a3",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?image-editing-solutions"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4b30e2fb7801933e39",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?cataloging-automation"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4b30e2fb7801933e39",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?cataloging-automation"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4b30e2fb7801933e39",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?cataloging-automation"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4b30e2fb7801933e39",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?cataloging-automation"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5d30e2fb7801939fc4",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?catalog-quality-management"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5d30e2fb7801939fc4",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?catalog-quality-management"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5d30e2fb7801939fc4",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?catalog-quality-management"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5d30e2fb7801939fc4",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/?catalog-quality-management"
+                },
+                {
+                    "num": 11,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5830e2fb7801938725",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5830e2fb7801938725",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/"
+                },
+                {
+                    "num": 9,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5830e2fb7801938725",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "Enhance eCommerce Product Cataloging with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5830e2fb7801938725",
+                    "source_url": "https://rubick.ai/product/cataloging-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "Privacy Policy - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4f30e2fb780193551a",
+                    "source_url": "https://rubick.ai/privacy-policy/"
+                },
+                {
+                    "num": 9,
+                    "title": "Privacy Policy - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4f30e2fb780193551a",
+                    "source_url": "https://rubick.ai/privacy-policy/"
+                },
+                {
+                    "num": 10,
+                    "title": "Privacy Policy - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4f30e2fb780193551a",
+                    "source_url": "https://rubick.ai/privacy-policy/"
+                },
+                {
+                    "num": 11,
+                    "title": "Privacy Policy - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4f30e2fb780193551a",
+                    "source_url": "https://rubick.ai/privacy-policy/"
+                },
+                {
+                    "num": 9,
+                    "title": "Trusted by E-commerce Partnerships | Partner with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7cdf30e2fb780190ece3",
+                    "source_url": "https://rubick.ai/partners/"
+                },
+                {
+                    "num": 10,
+                    "title": "Trusted by E-commerce Partnerships | Partner with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7cdf30e2fb780190ece3",
+                    "source_url": "https://rubick.ai/partners/"
+                },
+                {
+                    "num": 11,
+                    "title": "Trusted by E-commerce Partnerships | Partner with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7cdf30e2fb780190ece3",
+                    "source_url": "https://rubick.ai/partners/"
+                },
+                {
+                    "num": 12,
+                    "title": "Trusted by E-commerce Partnerships | Partner with Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7cdf30e2fb780190ece3",
+                    "source_url": "https://rubick.ai/partners/"
+                },
+                {
+                    "num": 10,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7c8630e2fb78018efbe1",
+                    "source_url": "https://rubick.ai/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 11,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7c8630e2fb78018efbe1",
+                    "source_url": "https://rubick.ai/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 12,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7c8630e2fb78018efbe1",
+                    "source_url": "https://rubick.ai/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 13,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7c8630e2fb78018efbe1",
+                    "source_url": "https://rubick.ai/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 11,
+                    "title": "Disclaimer - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d2930e2fb78019283e5",
+                    "source_url": "https://rubick.ai/disclaimer/"
+                },
+                {
+                    "num": 10,
+                    "title": "Disclaimer - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d2930e2fb78019283e5",
+                    "source_url": "https://rubick.ai/disclaimer/"
+                },
+                {
+                    "num": 12,
+                    "title": "Disclaimer - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d2930e2fb78019283e5",
+                    "source_url": "https://rubick.ai/disclaimer/"
+                },
+                {
+                    "num": 13,
+                    "title": "Disclaimer - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d2930e2fb78019283e5",
+                    "source_url": "https://rubick.ai/disclaimer/"
+                },
+                {
+                    "num": 9,
+                    "title": "Get in touch with us and we will help you | Contact Us | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4c30e2fb78019342e1",
+                    "source_url": "https://rubick.ai/contact-us/"
+                },
+                {
+                    "num": 10,
+                    "title": "Get in touch with us and we will help you | Contact Us | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4c30e2fb78019342e1",
+                    "source_url": "https://rubick.ai/contact-us/"
+                },
+                {
+                    "num": 11,
+                    "title": "Get in touch with us and we will help you | Contact Us | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4c30e2fb78019342e1",
+                    "source_url": "https://rubick.ai/contact-us/"
+                },
+                {
+                    "num": 12,
+                    "title": "Get in touch with us and we will help you | Contact Us | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4c30e2fb78019342e1",
+                    "source_url": "https://rubick.ai/contact-us/"
+                },
+                {
+                    "num": 10,
+                    "title": "Uncategorized Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e4730e2fb780198a6ea",
+                    "source_url": "https://rubick.ai/category/uncategorized/"
+                },
+                {
+                    "num": 12,
+                    "title": "Uncategorized Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e4730e2fb780198a6ea",
+                    "source_url": "https://rubick.ai/category/uncategorized/"
+                },
+                {
+                    "num": 13,
+                    "title": "Uncategorized Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e4730e2fb780198a6ea",
+                    "source_url": "https://rubick.ai/category/uncategorized/"
+                },
+                {
+                    "num": 11,
+                    "title": "Uncategorized Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e4730e2fb780198a6ea",
+                    "source_url": "https://rubick.ai/category/uncategorized/"
+                },
+                {
+                    "num": 13,
+                    "title": "PIM Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e4530e2fb7801989ead",
+                    "source_url": "https://rubick.ai/category/pim-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "PIM Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e4530e2fb7801989ead",
+                    "source_url": "https://rubick.ai/category/pim-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "PIM Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e4530e2fb7801989ead",
+                    "source_url": "https://rubick.ai/category/pim-suite/"
+                },
+                {
+                    "num": 11,
+                    "title": "PIM Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e4530e2fb7801989ead",
+                    "source_url": "https://rubick.ai/category/pim-suite/"
+                },
+                {
+                    "num": 13,
+                    "title": "Marketing Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e4930e2fb780198b4d5",
+                    "source_url": "https://rubick.ai/category/marketing-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "Marketing Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e4930e2fb780198b4d5",
+                    "source_url": "https://rubick.ai/category/marketing-suite/"
+                },
+                {
+                    "num": 11,
+                    "title": "Marketing Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e4930e2fb780198b4d5",
+                    "source_url": "https://rubick.ai/category/marketing-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "Marketing Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e4930e2fb780198b4d5",
+                    "source_url": "https://rubick.ai/category/marketing-suite/"
+                },
+                {
+                    "num": 10,
+                    "title": "Cataloging Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7e4430e2fb78019897d0",
+                    "source_url": "https://rubick.ai/category/cataloging-suite/"
+                },
+                {
+                    "num": 11,
+                    "title": "Cataloging Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7e4430e2fb78019897d0",
+                    "source_url": "https://rubick.ai/category/cataloging-suite/"
+                },
+                {
+                    "num": 12,
+                    "title": "Cataloging Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7e4430e2fb78019897d0",
+                    "source_url": "https://rubick.ai/category/cataloging-suite/"
+                },
+                {
+                    "num": 13,
+                    "title": "Cataloging Suite Archives - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7e4430e2fb78019897d0",
+                    "source_url": "https://rubick.ai/category/cataloging-suite/"
+                },
+                {
+                    "num": 15,
+                    "title": "Why eCommerce Is Incomplete Without a Digital Catalog - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db230e2fb78019573ae",
+                    "source_url": "https://rubick.ai/blog/why-ecommerce-is-incomplete-without-a-digital-catalog/"
+                },
+                {
+                    "num": 14,
+                    "title": "Why eCommerce Is Incomplete Without a Digital Catalog - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db230e2fb78019573ae",
+                    "source_url": "https://rubick.ai/blog/why-ecommerce-is-incomplete-without-a-digital-catalog/"
+                },
+                {
+                    "num": 16,
+                    "title": "Why eCommerce Is Incomplete Without a Digital Catalog - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db230e2fb78019573ae",
+                    "source_url": "https://rubick.ai/blog/why-ecommerce-is-incomplete-without-a-digital-catalog/"
+                },
+                {
+                    "num": 17,
+                    "title": "Why eCommerce Is Incomplete Without a Digital Catalog - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db230e2fb78019573ae",
+                    "source_url": "https://rubick.ai/blog/why-ecommerce-is-incomplete-without-a-digital-catalog/"
+                },
+                {
+                    "num": 13,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7da930e2fb7801954133",
+                    "source_url": "https://rubick.ai/blog/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 14,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7da930e2fb7801954133",
+                    "source_url": "https://rubick.ai/blog/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7da930e2fb7801954133",
+                    "source_url": "https://rubick.ai/blog/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Unlock Success With These Ten eCommerce Solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7da930e2fb7801954133",
+                    "source_url": "https://rubick.ai/blog/unlock-success-with-these-ten-ecommerce-solutions/"
+                },
+                {
+                    "num": 12,
+                    "title": "Ultimate Guide to Cataloging Solutions for eCommerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4030e2fb780192ffa6",
+                    "source_url": "https://rubick.ai/blog/the-ultimate-guide-to-cataloging-solutions-for-ecommerce-success/"
+                },
+                {
+                    "num": 13,
+                    "title": "Ultimate Guide to Cataloging Solutions for eCommerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4030e2fb780192ffa6",
+                    "source_url": "https://rubick.ai/blog/the-ultimate-guide-to-cataloging-solutions-for-ecommerce-success/"
+                },
+                {
+                    "num": 14,
+                    "title": "Ultimate Guide to Cataloging Solutions for eCommerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4030e2fb780192ffa6",
+                    "source_url": "https://rubick.ai/blog/the-ultimate-guide-to-cataloging-solutions-for-ecommerce-success/"
+                },
+                {
+                    "num": 15,
+                    "title": "Ultimate Guide to Cataloging Solutions for eCommerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4030e2fb780192ffa6",
+                    "source_url": "https://rubick.ai/blog/the-ultimate-guide-to-cataloging-solutions-for-ecommerce-success/"
+                },
+                {
+                    "num": 14,
+                    "title": "Revamp your online store using catalog management | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d6030e2fb780193b1f9",
+                    "source_url": "https://rubick.ai/blog/revamp-your-online-store-using-the-potential-of-catalog-management/"
+                },
+                {
+                    "num": 15,
+                    "title": "Revamp your online store using catalog management | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d6030e2fb780193b1f9",
+                    "source_url": "https://rubick.ai/blog/revamp-your-online-store-using-the-potential-of-catalog-management/"
+                },
+                {
+                    "num": 16,
+                    "title": "Revamp your online store using catalog management | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d6030e2fb780193b1f9",
+                    "source_url": "https://rubick.ai/blog/revamp-your-online-store-using-the-potential-of-catalog-management/"
+                },
+                {
+                    "num": 17,
+                    "title": "Revamp your online store using catalog management | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d6030e2fb780193b1f9",
+                    "source_url": "https://rubick.ai/blog/revamp-your-online-store-using-the-potential-of-catalog-management/"
+                },
+                {
+                    "num": 14,
+                    "title": "Promote your online sales with efficient, cutting-edge cataloging solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7daa30e2fb7801954771",
+                    "source_url": "https://rubick.ai/blog/promote-your-online-sales-with-efficient-cutting-edge-cataloging-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Promote your online sales with efficient, cutting-edge cataloging solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7daa30e2fb7801954771",
+                    "source_url": "https://rubick.ai/blog/promote-your-online-sales-with-efficient-cutting-edge-cataloging-solutions/"
+                },
+                {
+                    "num": 17,
+                    "title": "Promote your online sales with efficient, cutting-edge cataloging solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7daa30e2fb7801954771",
+                    "source_url": "https://rubick.ai/blog/promote-your-online-sales-with-efficient-cutting-edge-cataloging-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Promote your online sales with efficient, cutting-edge cataloging solutions - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7daa30e2fb7801954771",
+                    "source_url": "https://rubick.ai/blog/promote-your-online-sales-with-efficient-cutting-edge-cataloging-solutions/"
+                },
+                {
+                    "num": 13,
+                    "title": "Transform and Organize Your eCommerce with Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db530e2fb7801958452",
+                    "source_url": "https://rubick.ai/blog/organize-and-transform-your-ecommerce-business-with-effective-catalog-solutions/"
+                },
+                {
+                    "num": 14,
+                    "title": "Transform and Organize Your eCommerce with Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db530e2fb7801958452",
+                    "source_url": "https://rubick.ai/blog/organize-and-transform-your-ecommerce-business-with-effective-catalog-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Transform and Organize Your eCommerce with Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db530e2fb7801958452",
+                    "source_url": "https://rubick.ai/blog/organize-and-transform-your-ecommerce-business-with-effective-catalog-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Transform and Organize Your eCommerce with Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db530e2fb7801958452",
+                    "source_url": "https://rubick.ai/blog/organize-and-transform-your-ecommerce-business-with-effective-catalog-solutions/"
+                },
+                {
+                    "num": 12,
+                    "title": "Optimizing eCommerce performance through catalog updates",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7da830e2fb7801953df4",
+                    "source_url": "https://rubick.ai/blog/optimizing-ecommerce-performance-through-seamless-catalog-updates/"
+                },
+                {
+                    "num": 13,
+                    "title": "Optimizing eCommerce performance through catalog updates",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7da830e2fb7801953df4",
+                    "source_url": "https://rubick.ai/blog/optimizing-ecommerce-performance-through-seamless-catalog-updates/"
+                },
+                {
+                    "num": 14,
+                    "title": "Optimizing eCommerce performance through catalog updates",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7da830e2fb7801953df4",
+                    "source_url": "https://rubick.ai/blog/optimizing-ecommerce-performance-through-seamless-catalog-updates/"
+                },
+                {
+                    "num": 15,
+                    "title": "Optimizing eCommerce performance through catalog updates",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7da830e2fb7801953df4",
+                    "source_url": "https://rubick.ai/blog/optimizing-ecommerce-performance-through-seamless-catalog-updates/"
+                },
+                {
+                    "num": 13,
+                    "title": "Master the art of product curation with smart cataloging | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7daa30e2fb7801954b85",
+                    "source_url": "https://rubick.ai/blog/master-the-art-of-product-curation-with-smart-cataloging/"
+                },
+                {
+                    "num": 14,
+                    "title": "Master the art of product curation with smart cataloging | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7daa30e2fb7801954b85",
+                    "source_url": "https://rubick.ai/blog/master-the-art-of-product-curation-with-smart-cataloging/"
+                },
+                {
+                    "num": 15,
+                    "title": "Master the art of product curation with smart cataloging | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7daa30e2fb7801954b85",
+                    "source_url": "https://rubick.ai/blog/master-the-art-of-product-curation-with-smart-cataloging/"
+                },
+                {
+                    "num": 16,
+                    "title": "Master the art of product curation with smart cataloging | Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7daa30e2fb7801954b85",
+                    "source_url": "https://rubick.ai/blog/master-the-art-of-product-curation-with-smart-cataloging/"
+                },
+                {
+                    "num": 14,
+                    "title": "Enhancing eCommerce with Personalized Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db630e2fb7801958858",
+                    "source_url": "https://rubick.ai/blog/improved-ecommerce-experiences-customized-cataloging-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Enhancing eCommerce with Personalized Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db630e2fb7801958858",
+                    "source_url": "https://rubick.ai/blog/improved-ecommerce-experiences-customized-cataloging-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Enhancing eCommerce with Personalized Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db630e2fb7801958858",
+                    "source_url": "https://rubick.ai/blog/improved-ecommerce-experiences-customized-cataloging-solutions/"
+                },
+                {
+                    "num": 17,
+                    "title": "Enhancing eCommerce with Personalized Catalog Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db630e2fb7801958858",
+                    "source_url": "https://rubick.ai/blog/improved-ecommerce-experiences-customized-cataloging-solutions/"
+                },
+                {
+                    "num": 12,
+                    "title": "How to improve your current product listings | Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7dab30e2fb7801955113",
+                    "source_url": "https://rubick.ai/blog/how-to-improve-your-current-listings-with-a-catalog-management-tool/"
+                },
+                {
+                    "num": 13,
+                    "title": "How to improve your current product listings | Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7dab30e2fb7801955113",
+                    "source_url": "https://rubick.ai/blog/how-to-improve-your-current-listings-with-a-catalog-management-tool/"
+                },
+                {
+                    "num": 14,
+                    "title": "How to improve your current product listings | Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7dab30e2fb7801955113",
+                    "source_url": "https://rubick.ai/blog/how-to-improve-your-current-listings-with-a-catalog-management-tool/"
+                },
+                {
+                    "num": 15,
+                    "title": "How to improve your current product listings | Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7dab30e2fb7801955113",
+                    "source_url": "https://rubick.ai/blog/how-to-improve-your-current-listings-with-a-catalog-management-tool/"
+                },
+                {
+                    "num": 12,
+                    "title": "Enhancing Efficiency in Online Retail with Professional Cataloging",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db330e2fb78019577ec",
+                    "source_url": "https://rubick.ai/blog/how-professional-cataloging-solutions-can-make-online-retail-efficient/"
+                },
+                {
+                    "num": 13,
+                    "title": "Enhancing Efficiency in Online Retail with Professional Cataloging",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db330e2fb78019577ec",
+                    "source_url": "https://rubick.ai/blog/how-professional-cataloging-solutions-can-make-online-retail-efficient/"
+                },
+                {
+                    "num": 14,
+                    "title": "Enhancing Efficiency in Online Retail with Professional Cataloging",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db330e2fb78019577ec",
+                    "source_url": "https://rubick.ai/blog/how-professional-cataloging-solutions-can-make-online-retail-efficient/"
+                },
+                {
+                    "num": 15,
+                    "title": "Enhancing Efficiency in Online Retail with Professional Cataloging",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db330e2fb78019577ec",
+                    "source_url": "https://rubick.ai/blog/how-professional-cataloging-solutions-can-make-online-retail-efficient/"
+                },
+                {
+                    "num": 16,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db630e2fb7801958b5a",
+                    "source_url": "https://rubick.ai/blog/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 13,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db630e2fb7801958b5a",
+                    "source_url": "https://rubick.ai/blog/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 14,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db630e2fb7801958b5a",
+                    "source_url": "https://rubick.ai/blog/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 15,
+                    "title": "How Cataloging Can Optimize Profit for Your New Online Store - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db630e2fb7801958b5a",
+                    "source_url": "https://rubick.ai/blog/how-cataloging-can-optimize-profit-for-your-new-online-store/"
+                },
+                {
+                    "num": 13,
+                    "title": "High-Quality Catalogue Using Persuasive Product Presentation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7dad30e2fb7801955839",
+                    "source_url": "https://rubick.ai/blog/high-quality-catalogue-using-persuasive-product-presentation/"
+                },
+                {
+                    "num": 14,
+                    "title": "High-Quality Catalogue Using Persuasive Product Presentation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7dad30e2fb7801955839",
+                    "source_url": "https://rubick.ai/blog/high-quality-catalogue-using-persuasive-product-presentation/"
+                },
+                {
+                    "num": 15,
+                    "title": "High-Quality Catalogue Using Persuasive Product Presentation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7dad30e2fb7801955839",
+                    "source_url": "https://rubick.ai/blog/high-quality-catalogue-using-persuasive-product-presentation/"
+                },
+                {
+                    "num": 16,
+                    "title": "High-Quality Catalogue Using Persuasive Product Presentation - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7dad30e2fb7801955839",
+                    "source_url": "https://rubick.ai/blog/high-quality-catalogue-using-persuasive-product-presentation/"
+                },
+                {
+                    "num": 13,
+                    "title": "Cataloging solutions to streamline your eCommerce operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7dbc30e2fb780195ab53",
+                    "source_url": "https://rubick.ai/blog/harness-the-power-of-cataloging-solutions-to-streamline-your-ecommerce-operations/"
+                },
+                {
+                    "num": 14,
+                    "title": "Cataloging solutions to streamline your eCommerce operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7dbc30e2fb780195ab53",
+                    "source_url": "https://rubick.ai/blog/harness-the-power-of-cataloging-solutions-to-streamline-your-ecommerce-operations/"
+                },
+                {
+                    "num": 15,
+                    "title": "Cataloging solutions to streamline your eCommerce operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7dbc30e2fb780195ab53",
+                    "source_url": "https://rubick.ai/blog/harness-the-power-of-cataloging-solutions-to-streamline-your-ecommerce-operations/"
+                },
+                {
+                    "num": 16,
+                    "title": "Cataloging solutions to streamline your eCommerce operations",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7dbc30e2fb780195ab53",
+                    "source_url": "https://rubick.ai/blog/harness-the-power-of-cataloging-solutions-to-streamline-your-ecommerce-operations/"
+                },
+                {
+                    "num": 12,
+                    "title": "eCommerce Catalogs: Transforming Browsing into Buying",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7daf30e2fb780195641d",
+                    "source_url": "https://rubick.ai/blog/from-browsing-to-buying-creating-compelling-ecommerce-catalogs-that-capture-customer-attention/"
+                },
+                {
+                    "num": 13,
+                    "title": "eCommerce Catalogs: Transforming Browsing into Buying",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7daf30e2fb780195641d",
+                    "source_url": "https://rubick.ai/blog/from-browsing-to-buying-creating-compelling-ecommerce-catalogs-that-capture-customer-attention/"
+                },
+                {
+                    "num": 14,
+                    "title": "eCommerce Catalogs: Transforming Browsing into Buying",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7daf30e2fb780195641d",
+                    "source_url": "https://rubick.ai/blog/from-browsing-to-buying-creating-compelling-ecommerce-catalogs-that-capture-customer-attention/"
+                },
+                {
+                    "num": 15,
+                    "title": "eCommerce Catalogs: Transforming Browsing into Buying",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7daf30e2fb780195641d",
+                    "source_url": "https://rubick.ai/blog/from-browsing-to-buying-creating-compelling-ecommerce-catalogs-that-capture-customer-attention/"
+                },
+                {
+                    "num": 14,
+                    "title": "Experience the Catalog Innovation Along With Building Your Business - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db030e2fb7801956809",
+                    "source_url": "https://rubick.ai/blog/experience-the-catalog-innovation-along-with-building-your-business/"
+                },
+                {
+                    "num": 15,
+                    "title": "Experience the Catalog Innovation Along With Building Your Business - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db030e2fb7801956809",
+                    "source_url": "https://rubick.ai/blog/experience-the-catalog-innovation-along-with-building-your-business/"
+                },
+                {
+                    "num": 16,
+                    "title": "Experience the Catalog Innovation Along With Building Your Business - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db030e2fb7801956809",
+                    "source_url": "https://rubick.ai/blog/experience-the-catalog-innovation-along-with-building-your-business/"
+                },
+                {
+                    "num": 17,
+                    "title": "Experience the Catalog Innovation Along With Building Your Business - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db030e2fb7801956809",
+                    "source_url": "https://rubick.ai/blog/experience-the-catalog-innovation-along-with-building-your-business/"
+                },
+                {
+                    "num": 14,
+                    "title": "Enhance your eCommerce business through cataloging solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d5b30e2fb7801939700",
+                    "source_url": "https://rubick.ai/blog/enhance-your-ecommerce-business-through-cataloging-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Enhance your eCommerce business through cataloging solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d5b30e2fb7801939700",
+                    "source_url": "https://rubick.ai/blog/enhance-your-ecommerce-business-through-cataloging-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Enhance your eCommerce business through cataloging solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d5b30e2fb7801939700",
+                    "source_url": "https://rubick.ai/blog/enhance-your-ecommerce-business-through-cataloging-solutions/"
+                },
+                {
+                    "num": 17,
+                    "title": "Enhance your eCommerce business through cataloging solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d5b30e2fb7801939700",
+                    "source_url": "https://rubick.ai/blog/enhance-your-ecommerce-business-through-cataloging-solutions/"
+                },
+                {
+                    "num": 12,
+                    "title": "eCommerce Cataloging Strategies and Solutions for Online Retail",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db430e2fb7801957d06",
+                    "source_url": "https://rubick.ai/blog/ecommerce-cataloging-strategies-and-solutions-to-succeed-in-online-retail/"
+                },
+                {
+                    "num": 13,
+                    "title": "eCommerce Cataloging Strategies and Solutions for Online Retail",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db430e2fb7801957d06",
+                    "source_url": "https://rubick.ai/blog/ecommerce-cataloging-strategies-and-solutions-to-succeed-in-online-retail/"
+                },
+                {
+                    "num": 14,
+                    "title": "eCommerce Cataloging Strategies and Solutions for Online Retail",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db430e2fb7801957d06",
+                    "source_url": "https://rubick.ai/blog/ecommerce-cataloging-strategies-and-solutions-to-succeed-in-online-retail/"
+                },
+                {
+                    "num": 15,
+                    "title": "eCommerce Cataloging Strategies and Solutions for Online Retail",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db430e2fb7801957d06",
+                    "source_url": "https://rubick.ai/blog/ecommerce-cataloging-strategies-and-solutions-to-succeed-in-online-retail/"
+                },
+                {
+                    "num": 12,
+                    "title": "Unleash Sales Potential through the Power of Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7db130e2fb7801956d90",
+                    "source_url": "https://rubick.ai/blog/catalog-management-unlocking-sales-potential-for-maximum-success/"
+                },
+                {
+                    "num": 13,
+                    "title": "Unleash Sales Potential through the Power of Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7db130e2fb7801956d90",
+                    "source_url": "https://rubick.ai/blog/catalog-management-unlocking-sales-potential-for-maximum-success/"
+                },
+                {
+                    "num": 14,
+                    "title": "Unleash Sales Potential through the Power of Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7db130e2fb7801956d90",
+                    "source_url": "https://rubick.ai/blog/catalog-management-unlocking-sales-potential-for-maximum-success/"
+                },
+                {
+                    "num": 15,
+                    "title": "Unleash Sales Potential through the Power of Catalog Management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7db130e2fb7801956d90",
+                    "source_url": "https://rubick.ai/blog/catalog-management-unlocking-sales-potential-for-maximum-success/"
+                },
+                {
+                    "num": 14,
+                    "title": "Boost eCommerce business with effective catalog management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7dae30e2fb7801955e11",
+                    "source_url": "https://rubick.ai/blog/boost-your-ecommerce-business-with-effective-catalog-management-solutions/"
+                },
+                {
+                    "num": 15,
+                    "title": "Boost eCommerce business with effective catalog management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7dae30e2fb7801955e11",
+                    "source_url": "https://rubick.ai/blog/boost-your-ecommerce-business-with-effective-catalog-management-solutions/"
+                },
+                {
+                    "num": 16,
+                    "title": "Boost eCommerce business with effective catalog management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7dae30e2fb7801955e11",
+                    "source_url": "https://rubick.ai/blog/boost-your-ecommerce-business-with-effective-catalog-management-solutions/"
+                },
+                {
+                    "num": 17,
+                    "title": "Boost eCommerce business with effective catalog management",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7dae30e2fb7801955e11",
+                    "source_url": "https://rubick.ai/blog/boost-your-ecommerce-business-with-effective-catalog-management-solutions/"
+                },
+                {
+                    "num": 32,
+                    "title": "Blog Post - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7c8730e2fb78018f02f7",
+                    "source_url": "https://rubick.ai/blog-post/"
+                },
+                {
+                    "num": 33,
+                    "title": "Blog Post - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7c8730e2fb78018f02f7",
+                    "source_url": "https://rubick.ai/blog-post/"
+                },
+                {
+                    "num": 34,
+                    "title": "Blog Post - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7c8730e2fb78018f02f7",
+                    "source_url": "https://rubick.ai/blog-post/"
+                },
+                {
+                    "num": 35,
+                    "title": "Blog Post - Rubick.ai",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7c8730e2fb78018f02f7",
+                    "source_url": "https://rubick.ai/blog-post/"
+                },
+                {
+                    "num": 9,
+                    "title": "Know more About Us How we Empowering E-commerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7c8830e2fb78018f097f",
+                    "source_url": "https://rubick.ai/about-us/"
+                },
+                {
+                    "num": 10,
+                    "title": "Know more About Us How we Empowering E-commerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7c8830e2fb78018f097f",
+                    "source_url": "https://rubick.ai/about-us/"
+                },
+                {
+                    "num": 11,
+                    "title": "Know more About Us How we Empowering E-commerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7c8830e2fb78018f097f",
+                    "source_url": "https://rubick.ai/about-us/"
+                },
+                {
+                    "num": 12,
+                    "title": "Know more About Us How we Empowering E-commerce Success",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7c8830e2fb78018f097f",
+                    "source_url": "https://rubick.ai/about-us/"
+                },
+                {
+                    "num": 13,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/product-information-management",
+                    "page_id": "64bf7c8330e2fb78018eea59",
+                    "source_url": "https://rubick.ai/"
+                },
+                {
+                    "num": 14,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7c8330e2fb78018eea59",
+                    "source_url": "https://rubick.ai/"
+                },
+                {
+                    "num": 15,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7c8330e2fb78018eea59",
+                    "source_url": "https://rubick.ai/"
+                },
+                {
+                    "num": 16,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7c8330e2fb78018eea59",
+                    "source_url": "https://rubick.ai/"
+                },
+                {
+                    "num": 17,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7c8330e2fb78018eea59",
+                    "source_url": "https://rubick.ai/"
+                },
+                {
+                    "num": 12,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/product-information-management/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/product-information-management",
+                    "page_id": "64bf7d4030e2fb780193038a",
+                    "source_url": "https://rubick.ai"
+                },
+                {
+                    "num": 13,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/marketing-suite/",
+                    "page_id": "64bf7d4030e2fb780193038a",
+                    "source_url": "https://rubick.ai"
+                },
+                {
+                    "num": 14,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/cataloging-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/cataloging-suite",
+                    "page_id": "64bf7d4030e2fb780193038a",
+                    "source_url": "https://rubick.ai"
+                },
+                {
+                    "num": 15,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai/product/marketing-suite/",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/product/marketing-suite",
+                    "page_id": "64bf7d4030e2fb780193038a",
+                    "source_url": "https://rubick.ai"
+                },
+                {
+                    "num": 16,
+                    "title": "Boost your ecommerce sales with Transformative AI Solutions",
+                    "discovered": 1690271312628,
+                    "info": {
+                        "url": "https://rubick.ai",
+                        "code": 301
+                    },
+                    "target_url": "https://rubick.ai/products/cataloging-suite",
+                    "page_id": "64bf7d4030e2fb780193038a",
+                    "source_url": "https://rubick.ai"
+                }
+            ],
+            "issue_id": 214
+        }
+    },
     "markups": {
         "twitterCard": 58,
         "schemaOrg": 0,
