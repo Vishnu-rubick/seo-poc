@@ -1,18 +1,18 @@
 import { Button, Select, Table } from "antd";
 import { ReactNode, useEffect, useState } from "react";
-import campaignDataTm from "../../data/getCampaign-tm.json";
 import campaignDataRubick from "../../data/getCampaign-rubick.json";
+import campaignDataTm from "../../data/getCampaign-tm.json";
 import issueCategoryMap from "../../data/issues-category_Mapped.json";
 // import {getCampaign, runAudit} from "../apis/index"
 
-import "./home.css";
 import { Link } from "react-router-dom";
+import "./home.css";
 
 const Home: React.FC = (): ReactNode => {
   const [domain, setDomain] = useState<string>();
   const [data, setData] = useState<any>();
-  const [dataSourceOne, setDataSourceOne] = useState<any[]>(
-    [{
+  const [dataSourceOne, setDataSourceOne] = useState<any[]>([
+    {
       key: "1",
       rowHeader: "All Issues",
       totalIssues: 0,
@@ -20,10 +20,10 @@ const Home: React.FC = (): ReactNode => {
       techIssues: 0,
       linkIssues: 0,
       textIssues: 0,
-    }]
-  );
-  const [dataSourceTwo, setDataSourceTwo] = useState<any[]>(
-    [{
+    },
+  ]);
+  const [dataSourceTwo, setDataSourceTwo] = useState<any[]>([
+    {
       key: "1",
       rowHeader: "All Issues",
       pagesAudited: 0,
@@ -31,8 +31,8 @@ const Home: React.FC = (): ReactNode => {
       notCrawlable: 0,
       brokenOrRedirects: 0,
       healthyPages: 0,
-    }]
-  );
+    },
+  ]);
   const [projectId, setProjectId] = useState("");
 
   const getIssueCount = (data: any) => {
@@ -43,54 +43,66 @@ const Home: React.FC = (): ReactNode => {
       crawl: 0,
       broken: 0,
       markup: 0,
-    }
+    };
 
-    for(const key in issueFreq){
+    for (const key in issueFreq) {
       const idx = issueCategoryMap.find((issue) => issue.id == parseInt(key));
-      if(idx == undefined)  continue;
+      if (idx == undefined) continue;
 
-      res[idx['category']] += issueFreq[key]
+      res[idx["category"]] += issueFreq[key];
     }
 
-    setDataSourceOne([{
-      key: "1",
-      rowHeader: "All Issues",
-      totalIssues: data?.errors + data?.warnings + data?.notices || 0,
-      crawlability: res.crawl,
-      techIssues: res.tech,
-      linkIssues: res.broken,
-      textIssues: res.markup,
-    }]);
-  }
+    setDataSourceOne([
+      {
+        key: "1",
+        rowHeader: "All Issues",
+        totalIssues: data?.errors + data?.warnings + data?.notices || 0,
+        crawlability: res.crawl,
+        techIssues: res.tech,
+        linkIssues: res.broken,
+        textIssues: res.markup,
+      },
+    ]);
+  };
 
   useEffect(() => {
     console.log("null us effect");
     setDomain("textmercato.com");
     setData(campaignDataTm);
     getIssueCount(data);
-    setDataSourceTwo([{
-      key: "1",
-      rowHeader: "All Pages",
-      pagesAudited: data?.pages_crawled || 0,
-      pagesWithIssues: data?.haveIssues || 0,
-      notCrawlable: data?.blocked || 0,
-      brokenOrRedirects: data?.broken + data?.redirected || 0,
-      healthyPages: data?.healthy || 0,
-    }]);
+    setDataSourceTwo([
+      {
+        key: "1",
+        rowHeader: "All Pages",
+        pagesAudited: data?.pages_crawled || 0,
+        pagesWithIssues: data?.haveIssues || 0,
+        notCrawlable: data?.blocked || 0,
+        brokenOrRedirects: data?.broken + data?.redirected || 0,
+        healthyPages: data?.healthy || 0,
+      },
+    ]);
   }, []);
 
   useEffect(() => {
     getIssueCount(data);
-    setDataSourceTwo([{
-      key: "1",
-      rowHeader: "All Pages",
-      pagesAudited: data?.pages_crawled || 0,
-      pagesWithIssues: data?.haveIssues || 0,
-      notCrawlable: data?.blocked || 0,
-      brokenOrRedirects: data?.broken + data?.redirected || 0,
-      healthyPages: data?.healthy || 0,
-    }]);
+    setDataSourceTwo([
+      {
+        key: "1",
+        rowHeader: "All Pages",
+        pagesAudited: data?.pages_crawled || 0,
+        pagesWithIssues: data?.haveIssues || 0,
+        notCrawlable: data?.blocked || 0,
+        brokenOrRedirects: data?.broken + data?.redirected || 0,
+        healthyPages: data?.healthy || 0,
+      },
+    ]);
   }, [data]);
+
+  useEffect(() => {
+    if (domain) {
+      localStorage.setItem("domain", domain);
+    }
+  }, [domain]);
 
   const view_1 = [
     {

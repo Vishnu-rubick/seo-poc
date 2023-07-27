@@ -1,6 +1,6 @@
 import type { TabsProps } from "antd";
 import { Table, Tabs } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./details.css";
 
 interface TableRow {
@@ -19,7 +19,10 @@ const Details: React.FC = () => {
     { id: 3, data: "Row 3" },
     // Add more rows as needed
   ]);
-
+  
+  useEffect(()=>{
+    console.log('domain is',localStorage.getItem("domain"));
+  },[])
   const columns = [
     {
       title: "Column 1",
