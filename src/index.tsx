@@ -5,14 +5,15 @@ import Details from "./Details/Details";
 import Home from "./Home/home";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import PagesDetails from "./PagesDetails/pagesDetails";
 const router = createBrowserRouter([
   {
     path: "/details/issues/:id",
     element: <Details />,
   },
   {
-    path: "/details/pages/:id",
-    element: <Details />,
+    path: "/details/pages",
+    element: <PagesDetails />,
   },
   {
     path: "/",

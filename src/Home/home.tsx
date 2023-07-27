@@ -163,41 +163,41 @@ const Home: React.FC = (): ReactNode => {
       title: "Pages Audited",
       dataIndex: "pagesAudited",
       key: "2",
-      render: (text: string, record: any) => (
-        <Link to={`/details/pages/2`}>{text}</Link>
-      ),
+      // render: (text: string, record: any) => (
+      //   <Link to={`/details/pages`}>{text}</Link>
+      // ),
     },
     {
       title: "Pages with issues",
       dataIndex: "pagesWithIssues",
       key: "3",
-      render: (text: string, record: any) => (
-        <Link to={`/details/pages/3`}>{text}</Link>
-      ),
+      // render: (text: string, record: any) => (
+      //   <Link to={`/details/pages`}>{text}</Link>
+      // ),
     },
     {
       title: "Not Crawlable",
       dataIndex: "notCrawlable",
       key: "4",
       render: (text: string, record: any) => (
-        <Link to={`/details/pages/4`}>{text}</Link>
+        <Link to={`/details/pages`}>{text}</Link>
       ),
     },
     {
       title: "Broken/Redirects",
       dataIndex: "brokenOrRedirects",
       key: "5",
-      render: (text: string, record: any) => (
-        <Link to={`/details/pages/5`}>{text}</Link>
-      ),
+      // render: (text: string, record: any) => (
+      //   <Link to={`/details/pages`}>{text}</Link>
+      // ),
     },
     {
       title: "Healthy Pages",
       dataIndex: "healthyPages",
       key: "6",
-      render: (text: string, record: any) => (
-        <Link to={`/details/pages/6`}>{text}</Link>
-      ),
+      // render: (text: string, record: any) => (
+      //   <Link to={`/details/pages`}>{text}</Link>
+      // ),
     },
   ];
 
@@ -257,11 +257,11 @@ const Home: React.FC = (): ReactNode => {
           <div className="pages-wrapper">
             <p>Report By Pages</p>
             <Table
-              // onRow={() => ({
-              //   onClick: () => {
-              //     window.location.href = `/details/pages`;
-              //   },
-              // })}
+              onRow={() => ({
+                onClick: () => {
+                  window.location.href = `/details/pages`;
+                },
+              })}
               style={{ cursor: "pointer" }}
               className="pages-table"
               dataSource={dataSourceTwo}

@@ -1,7 +1,7 @@
 import type { TabsProps } from "antd";
 import { Table, Tabs } from "antd";
 import React, { useEffect, useState } from "react";
-import "./details.css";
+import "../Details/details.css";
 
 interface TableRow {
   id: number;
@@ -12,14 +12,14 @@ const onChange = (key: string) => {
   console.log(key);
 };
 
-const Details: React.FC = () => {
+const PagesDetails: React.FC = () => {
   const [allData, setAllData] = useState<TableRow[]>([
     { id: 1, data: "Row 1" },
     { id: 2, data: "Row 2" },
     { id: 3, data: "Row 3" },
     // Add more rows as needed
   ]);
-  
+
   const columns = [
     {
       title: "Column 1",
@@ -27,9 +27,9 @@ const Details: React.FC = () => {
       key: "data",
     },
   ];
-   useEffect(() => {
-     console.log("domain is", localStorage.getItem("domain"));
-   }, []);
+  useEffect(() => {
+    console.log("domain is", localStorage.getItem("domain"));
+  }, []);
 
   //  const expandableConfig = {
   //    expandedRowRender: (record: TableRow) => (
@@ -43,7 +43,7 @@ const Details: React.FC = () => {
   const items: TabsProps["items"] = [
     {
       key: "1",
-      label: `All`,
+      label: `Pages Audited`,
       children: (
         <Table
           pagination={false}
@@ -56,17 +56,22 @@ const Details: React.FC = () => {
     },
     {
       key: "2",
-      label: `Errors`,
+      label: `Pages with issues`,
       children: <Table pagination={false} showHeader={false} />,
     },
     {
       key: "3",
-      label: `Warnings`,
+      label: `Not Crawlable`,
       children: <Table pagination={false} showHeader={false} />,
     },
     {
       key: "4",
-      label: `Notices`,
+      label: `Broken/Redirects`,
+      children: <Table pagination={false} showHeader={false} />,
+    },
+    {
+      key: "5",
+      label: `Healthy Pages`,
       children: <Table pagination={false} showHeader={false} />,
     },
   ];
@@ -80,4 +85,4 @@ const Details: React.FC = () => {
   );
 };
 
-export default Details;
+export default PagesDetails;
