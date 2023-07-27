@@ -119,14 +119,35 @@ const Details: React.FC = (props: any) => {
       key: "data",
     },
   ];
-  //  const expandableConfig = {
-  //    expandedRowRender: (record: TableRow) => (
-  //      // Replace this with the content you want to display in the expanded row.
-  //      // For example, you can return another table or any custom content.
-  //      <p>{record.data} - Details</p>
-  //    ),
-  //    rowExpandable: () => true, // Make all rows expandable
-  //  };
+   const expandableConfig = {
+     expandedRowRender: (record: any) => {
+      console.log(record)
+      let ans = {} as any;
+
+      record.subData.forEach((row: any) => {
+        let url = row.source_url as string;
+        if(!ans.hasOwnProperty(url))  ans[url] = {
+          data: url,
+          count: 0
+        };
+
+        ans[url].count++;
+      })
+
+      let res = [] as any[];
+
+      const arrayOfObjects = Object.values(ans).map((obj) => obj);
+      return arrayOfObjects.map((row: any) => {
+        return (
+          <div style={{display: "flex", justifyContent: "space-between"}}>
+            <p >{row.data}</p>
+            <p >{row.count} times</p>
+          </div>
+        )
+      })
+     },
+     rowExpandable: () => true, // Make all rows expandable
+   };
 
   const items: TabsProps["items"] = [
     {
@@ -138,7 +159,7 @@ const Details: React.FC = (props: any) => {
           dataSource={getData("", data)}
           columns={columns}
           showHeader={false}
-          // expandable={expandableConfig}
+          expandable={expandableConfig}
         />
       ),
     },
@@ -151,6 +172,7 @@ const Details: React.FC = (props: any) => {
           showHeader={false}
           dataSource={getData("crawl", data)}
           columns={columns}
+          expandable={expandableConfig}
         />
       ),
     },
@@ -163,6 +185,7 @@ const Details: React.FC = (props: any) => {
           showHeader={false}
           dataSource={getData("tech", data)}
           columns={columns}
+          expandable={expandableConfig}
         />
       ),
     },
@@ -175,6 +198,7 @@ const Details: React.FC = (props: any) => {
           showHeader={false}
           dataSource={getData("broken", data)}
           columns={columns}
+          expandable={expandableConfig}
         />
       ),
     },
@@ -187,6 +211,7 @@ const Details: React.FC = (props: any) => {
           showHeader={false}
           dataSource={getData("markup", data)}
           columns={columns}
+          expandable={expandableConfig}
         />
       ),
     },

@@ -46,16 +46,17 @@ const getData = (type: string, data: any) => {
       let issueReport = {
         ...obj,
         data: issueCategoryMap[issueId].title,
-        key: issueCategoryMap[issueId].key
       }
       ans[obj.source_url].push(issueReport)
     }
   }
-
-  for (const key in ans){
+  let key = 0;
+  for (const ansKey in ans){
+    key += 1
     res.push({
-      data: key,
-      subData: ans[key]
+      data: ansKey,
+      subData: ans[ansKey],
+      key: key
     }); 
   }
 
