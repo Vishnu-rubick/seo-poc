@@ -19,6 +19,7 @@ totalIssues.forEach((issue: any) => {
   let issueId = issue.id as number;
   key += 1;
   issueCategoryMap[issueId] = {
+    issueId: issueId,
     title: issue.title,
     category: issue.category,
     key: key,
@@ -34,7 +35,16 @@ const getData = (type: string, data: any) => {
   if(!defects)  return []
   let allIssues = Object.keys(defects);
   let key = 0;
-  if(type != "")  allIssues = allIssues.filter((issue: any) => issue.category == type);
+  if(type != ""){
+    let ans = []
+    for (const issueId in allIssues){
+      console.log(issueId)
+      let issue: any = issueCategoryMap[issueId];
+      if(!issue || issue.category != type) continue;
+      ans.push(issueId);
+    }
+    allIssues = ans;
+  }
 
   let res = allIssues.map((issue) => {
     let issueId = parseInt(issue) as number;
@@ -42,9 +52,11 @@ const getData = (type: string, data: any) => {
       issueId: issue,
       data: issueCategoryMap[issue].title,
       subData: data?.issueReports[issueId]?.data || [],
+      key: issueCategoryMap[issue].key,
+      category: issueCategoryMap[issue].category
     }
   })
-
+  console.log(type, res, allIssues.length)
   return res;
 }
 
@@ -52,7 +64,7 @@ const Details: React.FC = () => {
   const [domain, setDomain] = useState("");
   const [data, setData] = useState<any>();
   // console.log("domain: ", domain)
-  // console.log("data: ", data)
+  // console.log("data: ", getData("", data))
   // console.log("issueCategoryMap: ", issueCategoryMap)
 
   useEffect(()=>{
@@ -97,17 +109,17 @@ const Details: React.FC = () => {
     {
       key: "2",
       label: `Errors`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("", data)} />,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("crawl", data)} />,
     },
     {
       key: "3",
       label: `Warnings`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("", data)} />,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("tech", data)} />,
     },
     {
       key: "4",
       label: `Notices`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("", data)} />,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("markup", data)} />,
     },
   ];
   return (
