@@ -144,12 +144,7 @@ const PagesDetails: React.FC = () => {
   return (
     <div className="details-wrapper">
       <Link
-        style={{
-          margin: "1.5rem",
-          marginLeft: "1.5rem",
-          color: "#1677ff",
-          textDecoration: "none",
-        }}
+        style={{ margin: "1.5rem", marginLeft:'1.5rem', color:"#1677ff", textDecoration: "none" }}
         to="/"
       >
         Go back
