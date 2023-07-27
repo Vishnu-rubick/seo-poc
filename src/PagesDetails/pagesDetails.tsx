@@ -130,7 +130,6 @@ const PagesDetails: React.FC = () => {
     {
       key: "1",
       label: `Pages with Issues`,
-      className:"pages-with-issues"
       children: (
         <Table
           pagination={false}
