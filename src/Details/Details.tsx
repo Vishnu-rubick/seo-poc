@@ -71,8 +71,8 @@ const Details: React.FC = () => {
     console.log("useEFFECT :)")
     let domain = localStorage.getItem("domain") as string;
     if(!domain){
-      localStorage.setItem("domain", 'textmercato.com');
-      domain = 'textmercato.com';
+      localStorage.setItem("domain", 'rubick.ai');
+      domain = 'rubick.ai';
     }
     
     if(domain == 'textmercato.com'){

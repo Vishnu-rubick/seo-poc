@@ -67,7 +67,7 @@ const Home: React.FC = (): ReactNode => {
 
   useEffect(() => {
     console.log("null us effect");
-    setDomain("textmercato.com");
+    setDomain("rubick.ai");
     setData(campaignDataTm);
     getIssueCount(data);
     setDataSourceTwo([
