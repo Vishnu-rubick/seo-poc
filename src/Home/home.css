@@ -22,3 +22,15 @@
 .pages-wrapper{
   margin-top: 2.6rem;
 }
+/* tableLinks.css */
+.ant-table-link {
+  color: #333; 
+  text-decoration: none;
+}
+.ant-table-cell a{
+  color: #333 !important;
+}
+.ant-table-link:hover {
+  
+  text-decoration: underline;
+}

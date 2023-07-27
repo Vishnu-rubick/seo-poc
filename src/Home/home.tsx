@@ -6,6 +6,7 @@ import issueCategoryMap from "../../data/issues-category_Mapped.json";
 // import {getCampaign, runAudit} from "../apis/index"
 
 import "./home.css";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = (): ReactNode => {
   const [domain, setDomain] = useState<string>();
@@ -101,26 +102,42 @@ const Home: React.FC = (): ReactNode => {
       title: "Total Issues",
       dataIndex: "totalIssues",
       key: "2",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/2`}>{text}</Link>
+      ),
     },
     {
       title: "Crawlability",
       dataIndex: "crawlability",
       key: "3",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/3`}>{text}</Link>
+      ),
     },
     {
       title: "Tech issues",
       dataIndex: "techIssues",
       key: "4",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/4`}>{text}</Link>
+      ),
     },
     {
       title: "Link/Url issues",
       dataIndex: "linkIssues",
       key: "5",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/5`}>{text}</Link>
+      ),
     },
+
     {
       title: "Text/Image issues",
       dataIndex: "textIssues",
       key: "6",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/6`}>{text}</Link>
+      ),
     },
   ];
 
@@ -134,26 +151,41 @@ const Home: React.FC = (): ReactNode => {
       title: "Pages Audited",
       dataIndex: "pagesAudited",
       key: "2",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/2`}>{text}</Link>
+      ),
     },
     {
       title: "Pages with issues",
       dataIndex: "pagesWithIssues",
       key: "3",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/3`}>{text}</Link>
+      ),
     },
     {
       title: "Not Crawlable",
       dataIndex: "notCrawlable",
       key: "4",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/4`}>{text}</Link>
+      ),
     },
     {
       title: "Broken/Redirects",
       dataIndex: "brokenOrRedirects",
       key: "5",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/5`}>{text}</Link>
+      ),
     },
     {
       title: "Healthy Pages",
       dataIndex: "healthyPages",
       key: "6",
+      render: (text: string, record: any) => (
+        <Link to={`/details/issues/6`}>{text}</Link>
+      ),
     },
   ];
 
@@ -200,13 +232,25 @@ const Home: React.FC = (): ReactNode => {
             <Table
               className="issues-table"
               dataSource={dataSourceOne}
+              // onRow={() => ({
+              //   onClick: () => {
+              //     window.location.href = `/details/issues`;
+              //   },
+              // })}
               columns={view_1}
               pagination={false}
+              style={{ cursor: "pointer" }}
             />
           </div>
           <div className="pages-wrapper">
             <p>Report By Pages</p>
             <Table
+              // onRow={() => ({
+              //   onClick: () => {
+              //     window.location.href = `/details/pages`;
+              //   },
+              // })}
+              style={{ cursor: "pointer" }}
               className="pages-table"
               dataSource={dataSourceTwo}
               columns={view_2}

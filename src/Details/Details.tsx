@@ -1,26 +1,33 @@
-import React from "react";
-import { Tabs, Table } from "antd";
 import type { TabsProps } from "antd";
-import './details.css';
+import { Table, Tabs } from "antd";
+import React, { useState } from "react";
+import "./details.css";
+
+interface TableRow {
+  id: number;
+  data: string;
+}
 
 const onChange = (key: string) => {
   console.log(key);
 };
 
 const Details: React.FC = () => {
-  const data = [
-    "Row 1",
-    "Row 2",
-    "Row 3",
-    "Row 4",
-  ];
+  const [allData, setAllData] = useState<TableRow[]>([
+    { id: 1, data: "Row 1" },
+    { id: 2, data: "Row 2" },
+    { id: 3, data: "Row 3" },
+    // Add more rows as needed
+  ]);
+
   const columns = [
     {
+      title: "Column 1",
       dataIndex: "data",
       key: "data",
-      render: () => <span>2 issue with duplicate tag</span>,
     },
   ];
+
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -28,46 +35,36 @@ const Details: React.FC = () => {
       children: (
         <Table
           pagination={false}
-          dataSource={data.map((item, index) => ({ key: index, data: item }))}
+          dataSource={allData}
           columns={columns}
+          showHeader={false}
         />
       ),
     },
     {
       key: "2",
       label: `Errors`,
-      children: (
-        <Table
-          pagination={false}
-          dataSource={data.map((item, index) => ({ key: index, data: item }))}
-          columns={columns}
-        />
-      ),
+      children: <Table pagination={false} showHeader={false} />,
     },
     {
       key: "3",
       label: `Warnings`,
-      children: (
-        <Table
-          pagination={false}
-          dataSource={data.map((item, index) => ({ key: index, data: item }))}
-          columns={columns}
-        />
-      ),
+      children: <Table pagination={false} showHeader={false} />,
     },
     {
       key: "4",
       label: `Notices`,
-      children: (
-        <Table
-          pagination={false}
-          dataSource={data.map((item, index) => ({ key: index, data: item }))}
-          columns={columns}
-        />
-      ),
+      children: <Table pagination={false} showHeader={false} />,
     },
   ];
-  return <Tabs className="details-tab" defaultActiveKey="1" items={items} onChange={onChange} />;
-}
+  return (
+    <Tabs
+      className="details-tab"
+      defaultActiveKey="1"
+      items={items}
+      onChange={onChange}
+    />
+  );
+};
 
 export default Details;
