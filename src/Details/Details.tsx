@@ -37,7 +37,7 @@ const getData = (type: string, data: any) => {
   let key = 0;
   if (type != "") {
     let ans = [];
-    for (const issueId in allIssues) {
+    for (const issueId of allIssues) {
       let issue: any = issueCategoryMap[issueId];
       if (!issue || issue.category != type) continue;
       ans.push(issueId);
@@ -51,24 +51,34 @@ const getData = (type: string, data: any) => {
   snapshot.errors.forEach((obj: any) => {
     let id = obj.id as string;
     issueType[id] = 'Error';
+    issueType[id] = {
+      type: 'Error',
+      count: obj.count
+    }
   })
   snapshot.warnings.forEach((obj: any) => {
     let id = obj.id as string;
     issueType[id] = 'Warning';
+    issueType[id] = {
+      type: 'Warning',
+      count: obj.count
+    }
   })
   snapshot.notices.forEach((obj: any) => {
     let id = obj.id as string;
     issueType[id] = 'Notice';
+    issueType[id] = {
+      type: 'Notice',
+      count: obj.count
+    }
   })
 
   let res = allIssues.map((issue) => {
     let issueId = parseInt(issue) as number;
 
-    
-
     return {
       issueId: issue,
-      data: issueCategoryMap[issue].title + " --" + issueType[issue],
+      data: issueCategoryMap[issue].title + " --" + issueType[issue].type + " " + issueType[issue].count + " times" ,
       subData: data?.issueReports[issueId]?.data || [],
       key: issueCategoryMap[issue].key,
       category: issueCategoryMap[issue].category,
