@@ -118,18 +118,23 @@ const Details: React.FC = () => {
     },
     {
       key: "2",
-      label: `Errors`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("crawl", data)} />,
+      label: `Crawlablity Issues`,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("crawl", data)} columns={columns} />,
     },
     {
       key: "3",
-      label: `Warnings`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("tech", data)} />,
+      label: `Tech Issues`,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("tech", data)} columns={columns} />,
+    },
+    {
+      key: "4", 
+      label: `Link/Url Issues`,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("broken", data)} columns={columns} />,
     },
     {
       key: "4",
-      label: `Notices`,
-      children: <Table pagination={false} showHeader={false} dataSource={getData("markup", data)} />,
+      label: `Text/Image Issues`,
+      children: <Table pagination={false} showHeader={false} dataSource={getData("markup", data)} columns={columns} />,
     },
   ];
   return (
