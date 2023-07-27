@@ -1,5 +1,8 @@
 .details-tab{
  margin-left: 10rem;
  margin-right: 10rem;
- margin-top: 2rem;
+ margin-top: 1rem;
+}
+.details-wrapper{
+  display: flex;
 }

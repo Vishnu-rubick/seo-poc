@@ -6,6 +6,7 @@ import "./details.css";
 import campaignDataRubick from "../../data/getCampaign-rubick.json";
 import campaignDataTm from "../../data/getCampaign-tm.json";
 import totalIssues from "../../data/issues-category_Mapped.json";
+import { Link } from "react-router-dom";
 
 interface TableRow {
   id: number;
@@ -138,12 +139,25 @@ const Details: React.FC = () => {
     },
   ];
   return (
+    <div className="details-wrapper">
+      <Link
+        style={{
+          margin: "1.5rem",
+          marginLeft: "1.5rem",
+          color: "#1677ff",
+          textDecoration: "none",
+        }}
+        to="/"
+      >
+        Go back
+      </Link>
     <Tabs
       className="details-tab"
       defaultActiveKey="1"
       items={items}
       onChange={onChange}
     />
+    </div>
   );
 };
 

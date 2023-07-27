@@ -1,5 +1,5 @@
 import type { TabsProps } from "antd";
-import { Table, Tabs } from "antd";
+import { Button, Table, Tabs } from "antd";
 import React, { useEffect, useState } from "react";
 import "../Details/details.css";
 
@@ -7,6 +7,7 @@ import campaignDataRubick from "../../data/getCampaign-rubick.json";
 import campaignDataTm from "../../data/getCampaign-tm.json";
 import totalIssues from "../../data/issues-category_Mapped.json";
 import { appendFileSync } from "fs";
+import { Link } from "react-router-dom";
 
 interface TableRow {
   id: number;
@@ -141,12 +142,25 @@ const PagesDetails: React.FC = () => {
     },
   ];
   return (
-    <Tabs
-      className="details-tab"
-      defaultActiveKey="1"
-      items={items}
-      onChange={onChange}
-    />
+    <div className="details-wrapper">
+      <Link
+        style={{
+          margin: "1.5rem",
+          marginLeft: "1.5rem",
+          color: "#1677ff",
+          textDecoration: "none",
+        }}
+        to="/"
+      >
+        Go back
+      </Link>
+      <Tabs
+        className="details-tab"
+        defaultActiveKey="1"
+        items={items}
+        onChange={onChange}
+      />
+    </div>
   );
 };
 
