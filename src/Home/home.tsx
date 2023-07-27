@@ -167,17 +167,17 @@ const Home: React.FC = (): ReactNode => {
       title: "Pages with issues",
       dataIndex: "pagesWithIssues",
       key: "3",
-      // render: (text: string, record: any) => (
-      //   <Link to={`/details/pages`}>{text}</Link>
-      // ),
+      render: (text: string, record: any) => (
+        <Link to={`/details/pages`}>{text}</Link>
+      ),
     },
     {
       title: "Not Crawlable",
       dataIndex: "notCrawlable",
       key: "4",
-      render: (text: string, record: any) => (
-        <Link to={`/details/pages`}>{text}</Link>
-      ),
+      // render: (text: string, record: any) => (
+      //   <Link to={`/details/pages`}>{text}</Link>
+      // ),
     },
     {
       title: "Broken/Redirects",
@@ -255,11 +255,11 @@ const Home: React.FC = (): ReactNode => {
           <div className="pages-wrapper">
             <p>Report By Pages</p>
             <Table
-              onRow={() => ({
-                onClick: () => {
-                  window.location.href = `/details/pages`;
-                },
-              })}
+              // onRow={() => ({
+              //   onClick: () => {
+              //     window.location.href = `/details/pages`;
+              //   },
+              // })}
               style={{ cursor: "pointer" }}
               className="pages-table"
               dataSource={dataSourceTwo}

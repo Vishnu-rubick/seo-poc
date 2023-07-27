@@ -3,22 +3,70 @@ import { Table, Tabs } from "antd";
 import React, { useEffect, useState } from "react";
 import "../Details/details.css";
 
+import campaignDataRubick from "../../data/getCampaign-rubick.json";
+import campaignDataTm from "../../data/getCampaign-tm.json";
+import totalIssues from "../../data/issues-category_Mapped.json";
+import { appendFileSync } from "fs";
+
 interface TableRow {
   id: number;
   data: string;
 }
 
+let issueCategoryMap: any = {}
+let key = 0;
+
+totalIssues.forEach((issue: any) => {
+  let issueId = issue.id as number;
+  key += 1;
+  issueCategoryMap[issueId] = {
+    issueId: issueId,
+    title: issue.title,
+    category: issue.category,
+    key: key,
+  }
+})
+
 const onChange = (key: string) => {
   console.log(key);
 };
 
+const getData = (type: string, data: any) => {
+  if(!data || !(data.issueReports)) return [];
+  let reports = data.issueReports;
+  let res = [], ans = {} as any;
+
+  for(const issueId in reports){
+    for (const rep in reports[issueId].data){
+      let obj = reports[issueId].data[rep] as any
+      console.log(issueCategoryMap[issueId].category, type, issueCategoryMap[issueId].category==type)
+      if(type != "" && issueCategoryMap[issueId].category != type)  continue;
+      if(!ans.hasOwnProperty(obj.source_url)) ans[obj.source_url] = []
+      let issueReport = {
+        ...obj,
+        data: issueCategoryMap[issueId].title,
+        key: issueCategoryMap[issueId].key
+      }
+      ans[obj.source_url].push(issueReport)
+    }
+  }
+
+  for (const key in ans){
+    res.push({
+      data: key,
+      subData: ans[key]
+    }); 
+  }
+
+  return res;
+}
+
 const PagesDetails: React.FC = () => {
-  const [allData, setAllData] = useState<TableRow[]>([
-    { id: 1, data: "Row 1" },
-    { id: 2, data: "Row 2" },
-    { id: 3, data: "Row 3" },
-    // Add more rows as needed
-  ]);
+  const [domain, setDomain] = useState("");
+  const [data, setData] = useState<any>();
+
+  // console.log("data: ", getData("", data))
+  // console.log("issueCategoryMap: ", issueCategoryMap)
 
   const columns = [
     {
@@ -27,52 +75,69 @@ const PagesDetails: React.FC = () => {
       key: "data",
     },
   ];
-  useEffect(() => {
-    console.log("domain is", localStorage.getItem("domain"));
-  }, []);
 
-  //  const expandableConfig = {
-  //    expandedRowRender: (record: TableRow) => (
-  //      // Replace this with the content you want to display in the expanded row.
-  //      // For example, you can return another table or any custom content.
-  //      <p>{record.data} - Details</p>
-  //    ),
-  //    rowExpandable: () => true, // Make all rows expandable
-  //  };
+  useEffect(()=>{
+    let domain = localStorage.getItem("domain") as string;
+    if(!domain){
+      localStorage.setItem("domain", 'rubick.ai');
+      domain = 'rubick.ai';
+    }
+    
+    if(domain == 'textmercato.com'){
+      setData(campaignDataTm)
+    }
+    else {
+      setData(campaignDataRubick)
+    }
+    setDomain(domain);
+
+  },[])
+
+   const expandableConfig = {
+     expandedRowRender: (record: any) => {
+        let ans = {} as any;
+
+        record.subData.forEach((row: any) => {
+          let url = record.data as string;
+          if(!ans.hasOwnProperty(url))  ans[url] = {
+            url: url,
+            data: row.data,
+            count: 0
+          };
+
+          ans[url].count++;
+        })
+
+        let res = [] as any[];
+
+        const arrayOfObjects = Object.values(ans).map((obj) => obj);
+        console.log(ans)        
+        return arrayOfObjects.map((row: any) => {
+          return (
+            <p>{row.data} occured {row.count} times</p>
+          )
+        })
+      //   // Replace this with the content you want to display in the expanded row.
+      //   // For example, you can return another table or any custom content.
+      //   <p>{record.subData.title} - Details</p>
+      // )
+     },
+     rowExpandable: () => true, // Make all rows expandable
+   };
 
   const items: TabsProps["items"] = [
     {
       key: "1",
-      label: `Pages Audited`,
+      label: `Pages with Issues`,
       children: (
         <Table
           pagination={false}
-          dataSource={allData}
+          dataSource={getData("", data)}
           columns={columns}
           showHeader={false}
-          // expandable={expandableConfig}
+          expandable={expandableConfig}
         />
       ),
-    },
-    {
-      key: "2",
-      label: `Pages with issues`,
-      children: <Table pagination={false} showHeader={false} />,
-    },
-    {
-      key: "3",
-      label: `Not Crawlable`,
-      children: <Table pagination={false} showHeader={false} />,
-    },
-    {
-      key: "4",
-      label: `Broken/Redirects`,
-      children: <Table pagination={false} showHeader={false} />,
-    },
-    {
-      key: "5",
-      label: `Healthy Pages`,
-      children: <Table pagination={false} showHeader={false} />,
     },
   ];
   return (
