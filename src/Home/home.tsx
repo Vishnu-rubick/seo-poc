@@ -111,7 +111,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "totalIssues",
       key: "2",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/2`}>{text}</Link>
+        <Link to={`/details/issues/1`}>{text}</Link>
       ),
     },
     {
@@ -119,7 +119,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "crawlability",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/3`}>{text}</Link>
+        <Link to={`/details/issues/2`}>{text}</Link>
       ),
     },
     {
@@ -127,7 +127,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "techIssues",
       key: "4",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/4`}>{text}</Link>
+        <Link to={`/details/issues/3`}>{text}</Link>
       ),
     },
     {
@@ -135,7 +135,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "linkIssues",
       key: "5",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/5`}>{text}</Link>
+        <Link to={`/details/issues/4`}>{text}</Link>
       ),
     },
 
@@ -144,7 +144,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "textIssues",
       key: "6",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/6`}>{text}</Link>
+        <Link to={`/details/issues/5`}>{text}</Link>
       ),
     },
   ];
@@ -249,7 +249,6 @@ const Home: React.FC = (): ReactNode => {
               // })}
               columns={view_1}
               pagination={false}
-              style={{ cursor: "pointer" }}
             />
           </div>
           <div className="pages-wrapper">
@@ -260,7 +259,6 @@ const Home: React.FC = (): ReactNode => {
               //     window.location.href = `/details/pages`;
               //   },
               // })}
-              style={{ cursor: "pointer" }}
               className="pages-table"
               dataSource={dataSourceTwo}
               columns={view_2}
