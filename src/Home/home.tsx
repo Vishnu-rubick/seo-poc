@@ -68,7 +68,8 @@ const Home: React.FC = (): ReactNode => {
   useEffect(() => {
     console.log("null us effect");
     setDomain("rubick.ai");
-    setData(campaignDataTm);
+    localStorage.setItem("domain", "rubick.ai");
+    setData(campaignDataRubick);
     getIssueCount(data);
     setDataSourceTwo([
       {
@@ -98,11 +99,6 @@ const Home: React.FC = (): ReactNode => {
     ]);
   }, [data]);
 
-  useEffect(() => {
-    if (domain) {
-      localStorage.setItem("domain", domain);
-    }
-  }, [domain]);
 
   const view_1 = [
     {
@@ -204,8 +200,10 @@ const Home: React.FC = (): ReactNode => {
   const handleRefetchClick = async () => {
     if (domain == "textmercato.com") {
       setData(campaignDataTm);
+      localStorage.setItem("domain", "textmercato.com");
     } else if (domain == "rubick.ai") {
       setData(campaignDataRubick);
+      localStorage.setItem("domain", "rubick.ai");
     }
   };
   interface selectProp {
