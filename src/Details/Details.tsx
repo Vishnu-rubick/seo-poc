@@ -132,7 +132,7 @@ const Details: React.FC = () => {
       children: <Table pagination={false} showHeader={false} dataSource={getData("broken", data)} columns={columns} />,
     },
     {
-      key: "4",
+      key: "5",
       label: `Text/Image Issues`,
       children: <Table pagination={false} showHeader={false} dataSource={getData("markup", data)} columns={columns} />,
     },
