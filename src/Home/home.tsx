@@ -164,7 +164,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "pagesAudited",
       key: "2",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/2`}>{text}</Link>
+        <Link to={`/details/pages/2`}>{text}</Link>
       ),
     },
     {
@@ -172,7 +172,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "pagesWithIssues",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/3`}>{text}</Link>
+        <Link to={`/details/pages/3`}>{text}</Link>
       ),
     },
     {
@@ -180,7 +180,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "notCrawlable",
       key: "4",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/4`}>{text}</Link>
+        <Link to={`/details/pages/4`}>{text}</Link>
       ),
     },
     {
@@ -188,7 +188,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "brokenOrRedirects",
       key: "5",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/5`}>{text}</Link>
+        <Link to={`/details/pages/5`}>{text}</Link>
       ),
     },
     {
@@ -196,7 +196,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "healthyPages",
       key: "6",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/6`}>{text}</Link>
+        <Link to={`/details/pages/6`}>{text}</Link>
       ),
     },
   ];

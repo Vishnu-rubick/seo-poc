@@ -20,9 +20,6 @@ const Details: React.FC = () => {
     // Add more rows as needed
   ]);
   
-  useEffect(()=>{
-    console.log('domain is',localStorage.getItem("domain"));
-  },[])
   const columns = [
     {
       title: "Column 1",
@@ -30,7 +27,10 @@ const Details: React.FC = () => {
       key: "data",
     },
   ];
-
+   useEffect(() => {
+     console.log("domain is", localStorage.getItem("domain"));
+   }, []);
+   
   const items: TabsProps["items"] = [
     {
       key: "1",
