@@ -2,17 +2,20 @@
   margin: 0;
   padding: 0;
 }
-.table-container{
+.container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.input-conatiner{
-  display: flex;
-  padding: 2rem;
-  align-items: center;
-  justify-content: center;
+.router-container {
+  width: 100%;
+  height: 100%;
+}
+.navbar {
+  height: 100%;
+  width: 200px;
 }
 .domain-input{
   width: 30%;

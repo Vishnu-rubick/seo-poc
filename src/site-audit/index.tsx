@@ -6,9 +6,9 @@ import issueCategoryMap from "../../data/issues-category_Mapped.json";
 // import {getCampaign, runAudit} from "../apis/index"
 
 import { Link } from "react-router-dom";
-import "./home.css";
+import "./style.css";
 
-const Home: React.FC = (): ReactNode => {
+const SiteAudit: React.FC = (): ReactNode => {
   const [domain, setDomain] = useState<string>();
   const [data, setData] = useState<any>();
   const [dataSourceOne, setDataSourceOne] = useState<any[]>([
@@ -111,7 +111,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "totalIssues",
       key: "2",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/1`}>{text}</Link>
+        <Link to={`/site-audit/details/issues/1`}>{text}</Link>
       ),
     },
     {
@@ -119,7 +119,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "crawlability",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/2`}>{text}</Link>
+        <Link to={`/site-audit/details/issues/2`}>{text}</Link>
       ),
     },
     {
@@ -127,7 +127,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "techIssues",
       key: "4",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/3`}>{text}</Link>
+        <Link to={`/site-audit/details/issues/3`}>{text}</Link>
       ),
     },
     {
@@ -135,7 +135,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "linkIssues",
       key: "5",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/4`}>{text}</Link>
+        <Link to={`/site-audit/details/issues/4`}>{text}</Link>
       ),
     },
 
@@ -144,7 +144,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "textIssues",
       key: "6",
       render: (text: string, record: any) => (
-        <Link to={`/details/issues/5`}>{text}</Link>
+        <Link to={`/site-audit/details/issues/5`}>{text}</Link>
       ),
     },
   ];
@@ -160,7 +160,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "pagesAudited",
       key: "2",
       // render: (text: string, record: any) => (
-      //   <Link to={`/details/pages`}>{text}</Link>
+      //   <Link to={`/site-audit/details/pages`}>{text}</Link>
       // ),
     },
     {
@@ -168,7 +168,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "pagesWithIssues",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/details/pages`}>{text}</Link>
+        <Link to={`/site-audit/details/pages`}>{text}</Link>
       ),
     },
     {
@@ -176,7 +176,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "notCrawlable",
       key: "4",
       // render: (text: string, record: any) => (
-      //   <Link to={`/details/pages`}>{text}</Link>
+      //   <Link to={`/site-audit/details/pages`}>{text}</Link>
       // ),
     },
     {
@@ -184,7 +184,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "brokenOrRedirects",
       key: "5",
       // render: (text: string, record: any) => (
-      //   <Link to={`/details/pages`}>{text}</Link>
+      //   <Link to={`/site-audit/details/pages`}>{text}</Link>
       // ),
     },
     {
@@ -192,7 +192,7 @@ const Home: React.FC = (): ReactNode => {
       dataIndex: "healthyPages",
       key: "6",
       // render: (text: string, record: any) => (
-      //   <Link to={`/details/pages`}>{text}</Link>
+      //   <Link to={`/site-audit/details/pages`}>{text}</Link>
       // ),
     },
   ];
@@ -217,8 +217,59 @@ const Home: React.FC = (): ReactNode => {
   console.log();
   return (
     <>
-      <div className="welcome-container">Welcome to SEO TOOLS</div>
+      <div className="home-container">
+        <div className="input-conatiner">
+          <Select
+            onSelect={handleSelect}
+            className="select-wrapper"
+            placeholder="Select domain"
+            value={domain}
+          >
+            <Select.Option key={12793985} value="textmercato.com">
+              textmercato.com
+            </Select.Option>
+            <Select.Option key={12808182} value="rubick.ai">
+              rubick.ai
+            </Select.Option>
+          </Select>
+          {/* <Button onClick={handleValidateClick}>Validate</Button> */}
+          <Button onClick={handleRefetchClick}>Refetch</Button>
+        </div>
+        <hr />
+        <div className="table-container">
+          <div>
+            <div className="issues-wrapper">
+              <p>Report By Issues</p>
+              <Table
+                className="issues-table"
+                dataSource={dataSourceOne}
+                // onRow={() => ({
+                //   onClick: () => {
+                //     window.location.href = `/site-audit/details/issues`;
+                //   },
+                // })}
+                columns={view_1}
+                pagination={false}
+              />
+            </div>
+            <div className="pages-wrapper">
+              <p>Report By Pages</p>
+              <Table
+                // onRow={() => ({
+                //   onClick: () => {
+                //     window.location.href = `/site-audit/details/pages`;
+                //   },
+                // })}
+                className="pages-table"
+                dataSource={dataSourceTwo}
+                columns={view_2}
+                pagination={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
-export default Home;
+export default SiteAudit;

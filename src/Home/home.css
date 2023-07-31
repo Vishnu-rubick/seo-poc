@@ -1,36 +1,7 @@
-.table-container{
+.welcome-container {
+  height: 100%;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top: 5rem;
-}
-.input-conatiner{
-  display: flex;
-  padding: 2rem;
   align-items: center;
-  justify-content: center;
-}
-.select-wrapper{
-  width: 300px;
-}
-.domain-input{
-  width: 30%;
-}
-.limit-input{ 
-  width: 10%;
-}
-.pages-wrapper{
-  margin-top: 2.6rem;
-}
-/* tableLinks.css */
-.ant-table-link {
-  color: #333; 
-  text-decoration: none;
-}
-.ant-table-cell a{
-  color: #333 !important;
-}
-.ant-table-link:hover {
-  
-  text-decoration: underline;
 }
