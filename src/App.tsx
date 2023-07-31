@@ -53,13 +53,12 @@ function App() {
       />
       <div className="router-container">
         <Routes>
-          <Route path="/" Component={Home} />
-          <Route path="/site-audit" Component={SiteAudit} >
-            <Route path="details/issues/:id" Component={Details} />
-            <Route path="details/pages" Component={PagesDetails} />
-          </Route>
-          <Route path="/backlinks" Component={Backlinks} />
-          <Route path="/keywords" Component={Keywords} />
+          <Route path="/" element={<Home />} />
+          <Route path="/site-audit" element={<SiteAudit />} />
+          <Route path="/site-audit/details/issues/:id" element={<Details />} />
+          <Route path="/site-audit/details/pages" element={<PagesDetails />} />
+          <Route path="/backlinks" element={<Backlinks />} />
+          <Route path="/keywords" element={<Keywords />} />
         </Routes>
       </div>
     </div>

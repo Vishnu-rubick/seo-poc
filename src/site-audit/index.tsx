@@ -5,7 +5,7 @@ import campaignDataTm from "../../data/getCampaign-tm.json";
 import issueCategoryMap from "../../data/issues-category_Mapped.json";
 // import {getCampaign, runAudit} from "../apis/index"
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./style.css";
 
 const SiteAudit: React.FC = (): ReactNode => {
@@ -168,7 +168,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "pagesWithIssues",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/pages`}>{text}</Link>
+        <Link to={`details/pages`}>{text}</Link>
       ),
     },
     {
@@ -268,6 +268,7 @@ const SiteAudit: React.FC = (): ReactNode => {
             </div>
           </div>
         </div>
+        <Outlet />
       </div>
     </>
   );
