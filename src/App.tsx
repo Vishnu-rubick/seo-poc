@@ -28,7 +28,7 @@ const NavItems: MenuProps["items"] = [
 ];
 
 function App() {
-  const [currentMenu, setCurrentMenu] = useState("site-audit");
+  const [currentMenu, setCurrentMenu] = useState("");
   const navigate = useNavigate();
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     console.log(e.key);
