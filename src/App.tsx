@@ -1,16 +1,15 @@
 import "./App.css";
 
-import { Button, Input, Menu, MenuProps, Table } from "antd";
+import { Menu, MenuProps } from "antd";
 
-import campaignData from "../testo.json";
-import Home from "./Home/home";
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
-import SiteAudit from "./site-audit";
+import Details from "./Details/Details";
+import Home from "./Home/home";
+import PagesDetails from "./PagesDetails/pagesDetails";
 import Backlinks from "./backlinks";
 import Keywords from "./keywords";
-import Details from "./Details/Details";
-import PagesDetails from "./PagesDetails/pagesDetails";
+import SiteAudit from "./site-audit";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -54,9 +53,15 @@ function App() {
       <div className="router-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/site-audit" element={<SiteAudit />} />
+          <Route path="/site-audit" element={<SiteAudit />}>
+            <Route
+              path="details/pages"
+              element={<PagesDetails />}
+            />
+          </Route>
+
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
-          <Route path="/site-audit/details/pages" element={<PagesDetails />} />
+
           <Route path="/backlinks" element={<Backlinks />} />
           <Route path="/keywords" element={<Keywords />} />
         </Routes>

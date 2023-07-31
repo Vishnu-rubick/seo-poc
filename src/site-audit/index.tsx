@@ -268,7 +268,6 @@ const SiteAudit: React.FC = (): ReactNode => {
             </div>
           </div>
         </div>
-        <Outlet />
       </div>
     </>
   );
