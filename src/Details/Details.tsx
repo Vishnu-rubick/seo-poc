@@ -119,7 +119,7 @@ const Details: React.FC = (props: any) => {
 
   const onChange = (key: string) => {
     setActiveTab(key);
-    navigate(`/details/issues/${key}`)
+    navigate(`/site-audit/details/issues/${key}`);
   };
 
   const columns = [

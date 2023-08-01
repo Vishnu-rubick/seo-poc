@@ -29,18 +29,20 @@ function BacklinksDetails() {
            anchorText: cur.anchor,
            externalLinks: cur.external_num,
            internalLinks: cur.internal_num,
-           noFollow: "True",
+           noFollow: cur.nofollow.toString(),
          }));
 
          setDataSource(backlinksDetailsArr);
    },[])
  
-
+  useEffect(()=>{
+    console.log(dataSource)
+  },[dataSource])
 
 
    const columns = [
      {
-       title: "Page Authority",
+       title: "Page Authority Score",
        dataIndex: "pageAuthority",
        key: "1",
      },
