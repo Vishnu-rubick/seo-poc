@@ -1,0 +1,10 @@
+.keywords-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.keywords-tabs > .ant-tabs {
+    margin: 0 auto;
+}

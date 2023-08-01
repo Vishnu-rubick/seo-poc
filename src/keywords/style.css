@@ -5,3 +5,21 @@
     justify-content: center;
     align-items: center;
 }
+
+.table-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.keywords-dashboard{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.keywords-dashboard-header {
+    display: flex;
+    justify-content: center;
+}
+  

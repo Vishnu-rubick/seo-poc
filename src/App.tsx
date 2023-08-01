@@ -12,6 +12,7 @@ import Keywords from "./keywords";
 import SiteAudit from "./site-audit";
 import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
 import ReferringDomains from "./backlinks/referring-domains/referring-domain";
+import KeywordsDetails from "./keywords/details";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -47,6 +48,7 @@ function App() {
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "center",
+          margin: "0 auto"
         }}
         onClick={handleMenuClick}
         items={NavItems}
@@ -59,6 +61,7 @@ function App() {
           <Route path="site-audit/details/pages" element={<PagesDetails />} />
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
           <Route path="/keywords" element={<Keywords />} />
+          <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
 
           {/* backlinks-routes */}
           <Route path="/backlinks" element={<Backlinks />} />
