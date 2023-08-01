@@ -10,6 +10,8 @@ import PagesDetails from "./PagesDetails/pagesDetails";
 import Backlinks from "./backlinks";
 import Keywords from "./keywords";
 import SiteAudit from "./site-audit";
+import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
+import ReferringDomains from "./backlinks/referring-domains/referring-domain";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -53,17 +55,18 @@ function App() {
       <div className="router-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/site-audit" element={<SiteAudit />}>
-            <Route
-              path="details/pages"
-              element={<PagesDetails />}
-            />
-          </Route>
-
+          <Route path="/site-audit" element={<SiteAudit />}></Route>
+          <Route path="site-audit/details/pages" element={<PagesDetails />} />
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
-
-          <Route path="/backlinks" element={<Backlinks />} />
           <Route path="/keywords" element={<Keywords />} />
+
+          {/* backlinks-routes */}
+          <Route path="/backlinks" element={<Backlinks />} />
+          <Route path="/backlinks/details" element={<BacklinksDetails />} />
+          <Route
+            path="/referring-domains/details"
+            element={<ReferringDomains />}
+          />
         </Routes>
       </div>
     </div>
