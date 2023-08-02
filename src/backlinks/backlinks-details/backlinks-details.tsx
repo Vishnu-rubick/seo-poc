@@ -35,9 +35,6 @@ function BacklinksDetails() {
          setDataSource(backlinksDetailsArr);
    },[])
  
-  useEffect(()=>{
-    console.log(dataSource)
-  },[dataSource])
 
 
    const columns = [

@@ -46,7 +46,7 @@ function ReferringDomains() {
   ];
   return (
     <div>
-      <div className="header" style={{display: 'flex'}}>
+      <div className="header" style={{ display: "flex" }}>
         <Link
           style={{
             margin: "1rem",
@@ -64,6 +64,10 @@ function ReferringDomains() {
         className="issues-table"
         dataSource={dataSource}
         columns={columns}
+        pagination={{
+          pageSize: 10,
+          total: dataSource.length,
+        }}
       />
     </div>
   );

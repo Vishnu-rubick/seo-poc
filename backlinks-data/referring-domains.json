@@ -6,16 +6,16 @@
     "ip": "142.251.16.132",
     "country": "us",
     "first_seen": 1668231180,
-    "last_seen": 1690787403
+    "last_seen": 1690863811
   },
   {
-    "domain_ascore": 36,
+    "domain_ascore": 35,
     "domain": "cutshort.io",
-    "backlinks_num": 185,
-    "ip": "172.67.23.17",
-    "country": "us",
+    "backlinks_num": 186,
+    "ip": "104.22.17.209",
+    "country": "",
     "first_seen": 1653176431,
-    "last_seen": 1690674794
+    "last_seen": 1690855876
   },
   {
     "domain_ascore": 11,
@@ -72,13 +72,13 @@
     "last_seen": 1690552421
   },
   {
-    "domain_ascore": 37,
+    "domain_ascore": 40,
     "domain": "growjo.com",
     "backlinks_num": 19,
     "ip": "52.86.144.29",
     "country": "us",
     "first_seen": 1661333982,
-    "last_seen": 1690741837
+    "last_seen": 1690864905
   },
   {
     "domain_ascore": 43,
@@ -267,7 +267,7 @@
     "ip": "52.8.158.158",
     "country": "us",
     "first_seen": 1667495021,
-    "last_seen": 1690450306
+    "last_seen": 1690834077
   },
   {
     "domain_ascore": 4,
@@ -826,6 +826,15 @@
     "country": "sg",
     "first_seen": 1666970599,
     "last_seen": 1688800771
+  },
+  {
+    "domain_ascore": 19,
+    "domain": "dips.pw",
+    "backlinks_num": 1,
+    "ip": "184.168.102.190",
+    "country": "sg",
+    "first_seen": 1667239237,
+    "last_seen": 1689086095
   },
   {
     "domain_ascore": 2,
