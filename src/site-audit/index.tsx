@@ -111,7 +111,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "totalIssues",
       key: "2",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/issues/1`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/1`}>{text}</Link>
       ),
     },
     {
@@ -119,7 +119,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "crawlability",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/issues/2`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/2`}>{text}</Link>
       ),
     },
     {
@@ -127,7 +127,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "techIssues",
       key: "4",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/issues/3`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/3`}>{text}</Link>
       ),
     },
     {
@@ -135,7 +135,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "linkIssues",
       key: "5",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/issues/4`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/4`}>{text}</Link>
       ),
     },
 
@@ -144,7 +144,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "textIssues",
       key: "6",
       render: (text: string, record: any) => (
-        <Link to={`/site-audit/details/issues/5`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/5`}>{text}</Link>
       ),
     },
   ];
@@ -168,7 +168,7 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "pagesWithIssues",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`details/pages`}>{text}</Link>
+        <Link className="hyperLink" to={`details/pages`}>{text}</Link>
       ),
     },
     {

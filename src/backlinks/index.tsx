@@ -30,14 +30,14 @@ const Backlinks: React.FC = () => {
       title: "Backlinks",
       dataIndex: "backlinks",
       key: "2",
-      render: (text: string, record: any) => <Link to={`details`}>{text}</Link>,
+      render: (text: string, record: any) => <Link className="hyperLink" to={`details`}>{text}</Link>,
     },
     {
       title: "Referring Domains",
       dataIndex: "referringDomains",
       key: "3",
       render: (text: string, record: any) => (
-        <Link to={`/referring-domains/details`}>{text}</Link>
+        <Link className="hyperLink" to={`/referring-domains/details`}>{text}</Link>
       ),
     },
     {
@@ -55,7 +55,7 @@ const Backlinks: React.FC = () => {
       dataIndex: "outboundDomains",
       key: "6",
       render: (text: string, record: any) => (
-        <Link to={`/outbound-domains/details`}>{text}</Link>
+        <Link className="hyperLink" to={`/outbound-domains/details`}>{text}</Link>
       ),
     },
   ];

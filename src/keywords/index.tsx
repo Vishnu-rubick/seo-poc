@@ -39,7 +39,7 @@ const Keywords: React.FC = () => {
       title: "All Keywords",
       dataIndex: "allKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/all`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/all`}>{text}</Link>
       ),
     },
     {
@@ -47,7 +47,7 @@ const Keywords: React.FC = () => {
       title: "Shared Keywords",
       dataIndex: "sharedKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/shared`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/shared`}>{text}</Link>
       ),
     },
     {
@@ -55,7 +55,7 @@ const Keywords: React.FC = () => {
       title: "Missing Keywords",
       dataIndex: "missingKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/missing`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/missing`}>{text}</Link>
       ),
     },
     {
@@ -63,7 +63,7 @@ const Keywords: React.FC = () => {
       title: "Weak Keywords",
       dataIndex: "weakKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/weak`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/weak`}>{text}</Link>
       ),
     },
     {
@@ -71,7 +71,7 @@ const Keywords: React.FC = () => {
       title: "Untapped Keywords",
       dataIndex: "untappedKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/untapped`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/untapped`}>{text}</Link>
       ),
     },
     {
@@ -79,7 +79,7 @@ const Keywords: React.FC = () => {
       title: "Strong Keywords",
       dataIndex: "strongKeywords",
       render: (text: string, record: any) => (
-        <Link to={`/keywords/details/strong`}>{text}</Link>
+        <Link className="hyperLink" to={`/keywords/details/strong`}>{text}</Link>
       ),
     },
   ];

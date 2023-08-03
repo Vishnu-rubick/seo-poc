@@ -15,8 +15,13 @@ import ReferringDomains from "./backlinks/referring-domains/referring-domain";
 import KeywordsDetails from "./keywords/details";
 import CompetitorAnalysis from "./competitorAnalysis";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
+import MenuItem from "antd/es/menu/MenuItem";
 
 const NavItems: MenuProps["items"] = [
+  {
+    label: "Seo Tools",
+    key: ""
+  },
   {
     label: "Site Audit",
     key: "site-audit",
@@ -57,9 +62,14 @@ function App() {
           margin: "0 auto",
         }}
         onClick={handleMenuClick}
-        items={NavItems}
         mode="vertical"
-      />
+      >
+        <MenuItem className="menu-item-header" key="" >SEO Tools</MenuItem>
+        <MenuItem key="site-audit" >Site Audit</MenuItem>
+        <MenuItem key="backlinks" >Backlinks</MenuItem>
+        <MenuItem key="keywords" >Keywords</MenuItem>
+        <MenuItem key="competitorAnalysis" >Competitor Analysis</MenuItem>
+      </Menu>
       <div className="router-container">
         <Routes>
           <Route path="/" element={<Home />} />
