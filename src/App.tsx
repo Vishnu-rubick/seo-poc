@@ -13,6 +13,7 @@ import SiteAudit from "./site-audit";
 import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
 import ReferringDomains from "./backlinks/referring-domains/referring-domain";
 import KeywordsDetails from "./keywords/details";
+import CompetitorAnalysis from "./competitorAnalysis";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -26,6 +27,10 @@ const NavItems: MenuProps["items"] = [
   {
     label: "Keywords",
     key: "keywords",
+  },
+  {
+    label: "Competitor Analysis",
+    key: "competitorAnalysis",
   },
 ];
 
@@ -62,6 +67,7 @@ function App() {
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
           <Route path="/keywords" element={<Keywords />} />
           <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
+          <Route path="/competitorAnalysis" element={<CompetitorAnalysis />} />
 
           {/* backlinks-routes */}
           <Route path="/backlinks" element={<Backlinks />} />

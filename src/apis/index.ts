@@ -176,6 +176,19 @@ const getStrongKeywords = (data: {
   return res;
 };
 
+const getDomainKeyords = (domain: string, data: { [key: string]: MergedData }) => {
+  let res: MergedData[] = [];
+
+  for (let key of Object.keys(data)) {
+    let obj: MergedData = data[key];
+
+    if(domain == "textMercato" && obj.inTextMercato) res.push(obj);
+    else if(domain == "pepperContent" && obj.inPepperContent) res.push(obj);
+    else if(domain == "wittyPen" && obj.inWittyPen) res.push(obj);
+  }
+
+  return res;
+}
 const runAudit = async (projectId: String) => {
   const baseUrl =
     SEMRUSH_BASE_URL +
@@ -227,4 +240,5 @@ export {
   getWeakKeywords,
   getUntappedKeywords,
   getStrongKeywords,
+  getDomainKeyords
 };
