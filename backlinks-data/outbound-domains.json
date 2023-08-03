@@ -1,38 +1,46 @@
-[ 
-  {
-    "key": 1,
-    "subdomain": "https://entomo.co/"
-  },
-  {
-    "key": 2,
-    "subdomain": "https://goodlyfeproject.in/"
-  },
-  {
-    "key": 3,
-    "subdomain": "https://writerzen.net/"
-  },
-  {
-    "key": 4,
-    "subdomain": "https://www.linkedin.com/company/text-mercato-solutions-private-limited/mycompany/"
-  },
-  {
-    "key": 5,
-    "subdomain": "https://www.instagram.com/textmercatocontentwriting/"
-  },
-  {
-    "key": 6,
-    "subdomain": "https://twitter.com/TextMercato"
-  },
-  {
-    "key": 7,
-    "subdomain": "https://www.oliveboard.in/"
-  },
-  {
-    "key": 8,
-    "subdomain": "https://emoha.com/"
-  },
-  {
-    "key": 9,
-    "subdomain": "https://www.facebook.com/tmcontentwriting"
-  }
+[
+  { "key": 1, "domain": "emoha.com", "backlinks_num": 37885, "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"  },
+  { "key": 2, "domain": "www.instagram.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 3, "domain": "writerzen.net" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 4, "domain": "qz.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 5, "domain": "ilfusion.medium.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 6, "domain": "data.gov" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 7, "domain": "www.andamen.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 8, "domain": "in.teabox.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 9, "domain": "entomo.co", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 10, "domain": "www.freshmenu.com", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 11, "domain": "developers.google.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 12, "domain": "www.columnfivemedia.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 13, "domain": "www.facebook.com", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 14, "domain": "seotribunal.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 15, "domain": "en.wikipedia.org" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 16, "domain": "www.oliveboard.in", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 17, "domain": "elitedaily.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 18, "domain": "indianexpress.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 19, "domain": "twitter.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 20, "domain": "www.fourseven.com", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 21, "domain": "scholar.google.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 22, "domain": "www.prnewswire.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 23, "domain": "www.oberlo.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 24, "domain": "www.linkedin.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 25, "domain": "www.lexisnexis.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 26, "domain": "papers.ssrn.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 27, "domain": "www.sciencedirect.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 28, "domain": "app.textmercato.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 29, "domain": "m.economictimes.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 30, "domain": "pubmed.ncbi.nlm.nih.gov", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 31, "domain": "www.oercommons.org" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 32, "domain": "www.exchange4media.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 33, "domain": "www.livemint.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 34, "domain": "www.invespcro.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 35, "domain": "www.edelman.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 36, "domain": "www.deadlinenews.co.uk", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 37, "domain": "blog.hubspot.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 38, "domain": "www.urbanladder.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 39, "domain": "goodlyfeproject.in" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 40, "domain": "www.hubspot.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 41, "domain": "www.nytimes.com" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 42, "domain": "www.ruleranalytics.com", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" },
+  { "key": 43, "domain": "nmji.in" , "domain_ascore" : "?", "first_seen":"?", "last_seen": "?"},
+  { "key": 44, "domain": "www.searchenginejournal.com", "domain_ascore" : "?", "first_seen":"?", "last_seen": "?" }
 ]

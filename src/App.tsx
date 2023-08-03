@@ -14,6 +14,7 @@ import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
 import ReferringDomains from "./backlinks/referring-domains/referring-domain";
 import KeywordsDetails from "./keywords/details";
 import CompetitorAnalysis from "./competitorAnalysis";
+import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -53,7 +54,7 @@ function App() {
           flexDirection: "column",
           justifyContent: "flex-start",
           alignItems: "center",
-          margin: "0 auto"
+          margin: "0 auto",
         }}
         onClick={handleMenuClick}
         items={NavItems}
@@ -75,6 +76,10 @@ function App() {
           <Route
             path="/referring-domains/details"
             element={<ReferringDomains />}
+          />
+          <Route
+            path="/outbound-domains/details"
+            element={<OutboundDomains />}
           />
         </Routes>
       </div>

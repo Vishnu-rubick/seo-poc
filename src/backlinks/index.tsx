@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import backlinksOverview from "../../backlinks-data/backlinks-overview.json";
 import referringDomainsData from "../../backlinks-data/referring-domains.json";
 import backlinksList from "../../backlinks-data/backlinks-details.json";
-import outboundDomainsList from "../../backlinks-data/outbound-domains.json"
+import outboundDomainsData from "../../backlinks-data/outbound-domains.json"
 
 import "./backlinks.css";
 
@@ -17,7 +17,7 @@ const Backlinks: React.FC = () => {
       referringDomains: referringDomainsData.length,
       monthlyVisits: 0,
       organicTraffic: 0,
-      outboundDomains: outboundDomainsList.length,
+      outboundDomains: outboundDomainsData.length,
     },
   ]);
   const columns = [
@@ -54,6 +54,9 @@ const Backlinks: React.FC = () => {
       title: "Outbound Domains",
       dataIndex: "outboundDomains",
       key: "6",
+      render: (text: string, record: any) => (
+        <Link to={`/outbound-domains/details`}>{text}</Link>
+      ),
     },
   ];
   return (
