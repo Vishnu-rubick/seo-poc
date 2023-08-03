@@ -1,9 +1,11 @@
 import { Table } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import backlinksOverview from "../../backlinks-data/backlinks-overview.json";
- import referringDomainsData from "../../backlinks-data/referring-domains.json"
-import backlinksList from "../../backlinks-data/backlinks-details.json"
+// import backlinksOverview from "../../backlinks-data/backlinks-overview.json";
+import referringDomainsData from "../../backlinks-data/referring-domains.json";
+import backlinksList from "../../backlinks-data/backlinks-details.json";
+import outboundDomainsList from "../../backlinks-data/outbound-domains.json"
+
 import "./backlinks.css";
 
 const Backlinks: React.FC = () => {
@@ -15,7 +17,7 @@ const Backlinks: React.FC = () => {
       referringDomains: referringDomainsData.length,
       monthlyVisits: 0,
       organicTraffic: 0,
-      outboundDomains: 0,
+      outboundDomains: outboundDomainsList.length,
     },
   ]);
   const columns = [
