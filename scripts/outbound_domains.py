@@ -62,7 +62,7 @@ def get_outbound_domains_with_freq(url, main_url, visited_pages=None, outbound_d
 
 
 if __name__ == "__main__":
-    website_url = 'https://quotes.toscrape.com/'
+    website_url = 'https://textmercato.com'
     client_domain = get_domain(website_url)
     
     main_url = website_url  # Store the main website URL
