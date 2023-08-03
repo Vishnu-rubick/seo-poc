@@ -1,8 +1,8 @@
-import { Table } from 'antd';
-import React, { useState } from 'react'
+import { Table } from "antd";
+import React, { useState } from "react";
 
 import KeywordsData from "../../data/keywords/keyordsMerged.json";
-import { getDomainKeyords, MergedData } from '../apis';
+import { getDomainKeyords, MergedData } from "../apis";
 
 function CompetitorAnalysis() {
   const keywordsData = KeywordsData as { [key: string]: MergedData };
@@ -98,7 +98,7 @@ function CompetitorAnalysis() {
   return (
     <div className="keywords-dashboard">
       <div className="keywords-dashboard-header">
-        <h4>Competitor Analysis</h4>
+        <h4>Competitor Analysis Report</h4>
       </div>
       <hr />
       <Table dataSource={dataSource} columns={columns} pagination={false} />
@@ -106,4 +106,4 @@ function CompetitorAnalysis() {
   );
 }
 
-export default CompetitorAnalysis
+export default CompetitorAnalysis;
