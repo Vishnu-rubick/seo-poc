@@ -15,8 +15,8 @@ const Backlinks: React.FC = () => {
       rowHeader: "Total",
       backlinks: backlinksList.length,
       referringDomains: referringDomainsData.length,
-      monthlyVisits: 0,
-      organicTraffic: 0,
+      monthlyVisits: '?',
+      organicTraffic: '?',
       outboundDomains: outboundDomainsData.length,
     },
   ]);
