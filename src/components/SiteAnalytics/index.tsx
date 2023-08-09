@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import React from "react";
 import { DashboardDataType } from "../../interfaces";
+import { Pie } from '@ant-design/plots';
 
 import "./style.scss";
 
@@ -15,6 +16,11 @@ interface CardProps {
   backgroundColor?: string;
 }
 
+interface PieDataType {
+  type: string;
+  value: number;
+}
+
 function Card({ title, count, backgroundColor = '#fff' }: CardProps) {
   return (
     <>
@@ -27,6 +33,44 @@ function Card({ title, count, backgroundColor = '#fff' }: CardProps) {
 }
 
 function SiteAnalytics({ data }: SiteAnalyticsProps) {
+
+  const pieData: PieDataType[] = [
+    {
+      type: 'Crawl',
+      value: data?.crawlIssues || 0,
+    },
+    {
+      type: 'Tech/Image',
+      value: data?.markupIssues || 0,
+    },
+    {
+      type: 'HTML, HREFLANG & HTML',
+      value: data?.techIssues || 0,
+    },
+    {
+      type: 'Links/URLs',
+      value: data?.brokenIssues || 0,
+    },
+  ]
+
+  const config = {
+    appendPadding: 10,
+    data: pieData,
+    angleField: 'value',
+    colorField: 'type',
+    radius: 0.8,
+    innerHeight: 10,
+    outerHeight: 10,
+    label: {
+      type: 'outer',
+    },
+    interactions: [
+      {
+        type: 'element-active',
+      },
+    ],
+  };
+
   return (
     <>
     <div className="site-analytics">
@@ -41,7 +85,9 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
             <Col span={12}><Card title="Links/URLs" count={data?.brokenIssues} backgroundColor='#FEF8EB' /></Col>
           </Row>
         </div>
-        <div className="site-analytics-content-chart"></div>
+        <div className="site-analytics-content-chart">
+          <Pie {...config} />
+        </div>
       </div>
     </div>
     </>

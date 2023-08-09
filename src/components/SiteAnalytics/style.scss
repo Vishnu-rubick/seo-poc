@@ -13,22 +13,26 @@
     justify-content: space-between;
     align-items: center;
 
-    &-cards {
-        padding: 10px 15px;
-    }
 }
 
 .site-analytics {
     &-content {
-        padding: 10px 40px;
+        padding: 10px 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        
+        &-chart {
+            height: max-content;
+            > canvas {
+                height: 100px;
+            }
+        }
     }
 
     &-card {
-        height: 100px;
+        height: 80px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -36,10 +40,10 @@
         padding: 10px 15px;
         border-radius: 5px;
         &-title {
-            font-size: 15px;
+            font-size: 13px;
         }
         &-count {
-            font-size: 35px;
+            font-size: 20px;
             >span {
                 font-size: 15px;
             }

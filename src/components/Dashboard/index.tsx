@@ -37,8 +37,8 @@ function Card({ data, title, subTitle, child }: CardProps) {
         <div className="dashboard-card-header">
           <div className="title">
             <img src="src/assets/common/info.svg" alt="" />
-            <h2>{title}</h2>
-            { subComponent  } 
+            <h4>{title}</h4>
+            { subComponent } 
           </div>
         </div>
         <div className="card-content">{child}</div>
@@ -50,6 +50,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
   useEffect(() => {
+    console.log(import.meta.env.VITE_API_BASE_URL)
     axios
       .get(
         `${import.meta.env.VITE_API_BASE_URL}/site-audit/dashboard/${projectId}`

@@ -8,6 +8,10 @@
     }
 }
 
+.audited-pages-content {
+    padding: 10px 20px;
+}
+
 .number-cards {
     display: flex;
     justify-content: space-between;
@@ -23,8 +27,12 @@
             font-weight: 600;
         }
         &-count {
-            font-size: 40px;
+            font-size: 20px;
             font-weight: 500;
         }
     }
+}
+
+.bar-chart {
+    height: 70px; /* Adjust the width as needed */
 }
