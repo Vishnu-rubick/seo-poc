@@ -3,7 +3,11 @@ import { useState } from "react";
 import "./pages-details.css";
 
 
-function PagesDetails() {
+interface PageDetailsProps {
+  projectId: string;
+}
+
+function PagesDetails({projectId}: PageDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
     key: index + 1,
     url: `https://example${index + 1}.com`,

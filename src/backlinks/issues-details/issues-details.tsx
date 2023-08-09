@@ -3,7 +3,12 @@ import { useState } from "react";
 import "./issues-details.css";
 import HeaderCard from "./header-card/header-card";
 
-function IssuesDetails() {
+
+interface IssuesDetailsProps {
+  projectId: string;
+}
+
+function IssuesDetails({ projectId }: IssuesDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
     key: index + 1,
     issue: `Issue ${index + 1}.This is a sample issue description.`,

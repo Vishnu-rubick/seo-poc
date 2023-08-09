@@ -24,13 +24,14 @@ import Dashboard from "./components/Dashboard";
  }
 import IssuesDetails from "./backlinks/issues-details/issues-details";
 import PagesDetails from "./backlinks/pages-details/pages-details";
+import LandingPage from "./components/landingPage";
 const NavItems: MenuProps["items"] = [
   {
     label: "Seo Tools",
-    key: ""
+    key: "seo-tools"
   },
   {
-    label: "Site Audit",
+    label: "Site Audit",  
     key: "site-audit",
   },
   {
@@ -51,7 +52,6 @@ function App() {
   const [currentMenu, setCurrentMenu] = useState("");
   const navigate = useNavigate();
   const handleMenuClick: MenuProps["onClick"] = (e) => {
-    console.log(e.key);
     setCurrentMenu(e.key);
     navigate(`/${e.key}`);
   };
@@ -71,7 +71,7 @@ function App() {
         onClick={handleMenuClick}
         mode="vertical"
       >
-        <MenuItem className="menu-item-header" key="">
+        <MenuItem className="menu-item-header" key="seo-tools">
           SEO Tools
         </MenuItem>
         <MenuItem key="site-audit">Site Audit</MenuItem>
@@ -88,7 +88,6 @@ function App() {
           <Route path="/keywords" element={<Keywords />} />
           <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
           <Route path="/competitorAnalysis" element={<CompetitorAnalysis />} />
-          <Route path="/dashboard" element={<Dashboard projectId="12808182" />} />
 
           {/* backlinks-routes */}
           <Route path="/backlinks" element={<Backlinks />} />
@@ -103,8 +102,10 @@ function App() {
           />
           
             {/* latest-components */}
-          <Route path="/issues-details" element={<IssuesDetails />} />
-          <Route path="/pages-details" element={<PagesDetails />} />
+          <Route path="/seo-tools" element={<LandingPage projectId="12808182" />} />
+          {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
+          <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
+          <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}
         </Routes>
       </div>
     </div>

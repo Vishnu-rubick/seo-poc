@@ -1,12 +1,9 @@
 .dashboard-container {
-    height: 100%;
-
-    .ant-col {
-        padding: 10px 15px;
-    }
+    height: max-content;
 }
 
 .dashboard-card {
     border: 1px solid #E5F7FC;
     padding: 10px 15px;
+    height: 100%;
 }

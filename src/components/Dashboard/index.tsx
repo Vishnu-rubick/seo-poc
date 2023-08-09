@@ -66,27 +66,45 @@ function Dashboard({ projectId }: DashboardProps) {
   return (
     <>
       <div className="dashboard-container">
-        <Row style={{ height: "40" }}>
-          <Col span={16}>
+        <Row style={{ height: "40%" }}>
+          <Col span={15} style={{ margin: "5px 10px 0 0" }}>
             <Card
               data={data}
               title="Audited Pages"
               child={<AuditedPages data={data} />}
             />
           </Col>
-          <Col span={8}>
-            <h1></h1>
+          <Col span={8} style={{ margin: "5px 10px 0 0" }}>
+            <Card 
+              data={data}
+              title="Issues Trend"
+              child={
+                <>
+                  <h2>Coming Soon...</h2>
+                </>
+              }
+            />
           </Col>
         </Row>
-        <Row style={{ height: "60" }}>
-          <Col span={16}>
+        <Row style={{ height: "60%" }}>
+          <Col span={15} style={{ margin: "5px 10px 0 0" }}>
             <Card
               data={data}
               title="Site Analytics"
               child={<SiteAnalytics data={data} />}
             />
           </Col>
-          <Col span={8}></Col>
+          <Col span={8} style={{ margin: "5px 10px 0 0" }}>
+            <Card 
+              data={data}
+              title="Analytics Trend"
+              child={
+                <>
+                  <h2>Coming Soon...</h2>
+                </>
+              }
+            />
+          </Col>
         </Row>
       </div>
     </>
