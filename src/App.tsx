@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { Menu, MenuProps } from "antd";
+import { UserOutlined } from '@ant-design/icons';
 
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
@@ -16,6 +17,8 @@ import KeywordsDetails from "./keywords/details";
 import CompetitorAnalysis from "./competitorAnalysis";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
 import MenuItem from "antd/es/menu/MenuItem";
+import TextField from "./components/textField";
+import Dashboard from "./components/Dashboard";
 
 const NavItems: MenuProps["items"] = [
   {
@@ -79,6 +82,7 @@ function App() {
           <Route path="/keywords" element={<Keywords />} />
           <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
           <Route path="/competitorAnalysis" element={<CompetitorAnalysis />} />
+          <Route path="/dashboard" element={<Dashboard projectId="12808182" />} />
 
           {/* backlinks-routes */}
           <Route path="/backlinks" element={<Backlinks />} />

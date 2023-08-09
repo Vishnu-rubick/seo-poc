@@ -36,7 +36,7 @@ def get_outbound_domains_with_freq(url, main_url, visited_pages=None, outbound_d
     if visited_pages is None:
         visited_pages = {}
     if outbound_domains is None:
-        outbound_domains = set()
+        outbound_domains = {}
 
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -46,11 +46,12 @@ def get_outbound_domains_with_freq(url, main_url, visited_pages=None, outbound_d
         if main_url and main_url in href:  # Skip main website URL and its internal pages
             continue
         if href.startswith('http') and url not in href:
-            outbound_domains.add(href)
+            if href not in outbound_domains:
+               outbound_domains[href] = 0
+            outbound_domains[href] += 1
 
         elif not href.startswith('http') and not href.startswith('#'):
             internal_link = urljoin(url, href)
-            print(internal_link, '\n')
             if internal_link not in visited_pages:
                visited_pages[internal_link] = 0
 
@@ -70,8 +71,13 @@ if __name__ == "__main__":
 
     # Extract unique domain names
     unique_domains = set()
+    outbound_domains_unique = {}
     for domain in outbound_domains:
-        unique_domains.add(domain.split('/')[2])  # Extract domain from the URL
+        domain = domain.split('/')[2]
+        if domain not in outbound_domains_unique:
+               outbound_domains_unique[domain] = 0
+        outbound_domains_unique[domain] += 1
+        unique_domains.add(domain)  # Extract domain from the URL
 
     # Write outbound domains to a file
     with open(f'data/{client_domain}_outbound_domains.txt', 'w') as file:
@@ -83,5 +89,8 @@ if __name__ == "__main__":
         for domain in unique_domains:
             file.write(domain + '\n')
 
-    with open(f'data/{client_domain}_freq.json', 'w') as file:
-        json.dump(visited_pages, file)
+    with open(f'data/{client_domain}_outbound_link_freq.json', 'w') as file:
+        json.dump(outbound_domains, file)
+
+    with open(f'data/{client_domain}_outbound_domain_freq.json', 'w') as file:
+        json.dump(outbound_domains_unique, file)

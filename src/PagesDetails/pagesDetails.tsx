@@ -34,6 +34,7 @@ const onChange = (key: string) => {
 
 const getData = (type: string, data: any) => {
   if(!data || !(data.issueReports)) return [];
+  
   let reports = data.issueReports;
   let res = [], ans = {} as any;
 

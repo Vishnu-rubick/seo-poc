@@ -1,0 +1,30 @@
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > * {
+        margin: 0 10px;
+        font-style: none;
+    }
+}
+
+.number-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        &-count {
+            font-size: 40px;
+            font-weight: 500;
+        }
+    }
+}
