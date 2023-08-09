@@ -59,8 +59,6 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
     angleField: 'value',
     colorField: 'type',
     radius: 0.8,
-    innerHeight: 10,
-    outerHeight: 10,
     label: {
       type: 'outer',
     },
@@ -77,15 +75,15 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
       <div className="site-analytics-content">
         <div className="site-analytics-content-cards">
           <Row>
-            <Col span={12}><Card title="Crawlability" count={data?.crawlIssues} backgroundColor='#E5F7FC' /></Col>
-            <Col span={12}><Card title="Text/Image" count={data?.markupIssues} backgroundColor='#FFF5E6' /></Col>
+            <Col span={11}><Card title="Crawlability" count={data?.crawlIssues} backgroundColor='#E5F7FC' /></Col>
+            <Col span={11}><Card title="Text/Image" count={data?.markupIssues} backgroundColor='#FFF5E6' /></Col>
           </Row>
           <Row>
-            <Col span={12}><Card title="HTML, HREFLANG & HTML" count={data?.techIssues} backgroundColor='#FFEBEB' /></Col>
-            <Col span={12}><Card title="Links/URLs" count={data?.brokenIssues} backgroundColor='#FEF8EB' /></Col>
+            <Col span={11}><Card title="HTML, HREFLANG & HTML" count={data?.techIssues} backgroundColor='#FFEBEB' /></Col>
+            <Col span={11}><Card title="Links/URLs" count={data?.brokenIssues} backgroundColor='#FEF8EB' /></Col>
           </Row>
         </div>
-        <div className="site-analytics-content-chart">
+        <div className="site-analytics-content-chart" >
           <Pie {...config} />
         </div>
       </div>

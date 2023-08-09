@@ -8,26 +8,17 @@
     }
 }
 
-.site-analytics-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
 .site-analytics {
     &-content {
         padding: 10px 20px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         
         &-chart {
-            height: max-content;
-            > canvas {
-                height: 100px;
-            }
+            height: 250px !important;
+            width: auto;
         }
     }
 
