@@ -6,17 +6,22 @@ import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Details from "./Details/Details";
 import Home from "./Home/home";
-import PagesDetails from "./PagesDetails/pagesDetails";
+//import PagesDetails from "./PagesDetails/pagesDetails";
 import Backlinks from "./backlinks";
 import Keywords from "./keywords";
 import SiteAudit from "./site-audit";
 import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
-import ReferringDomains from "./backlinks/referring-domains/referring-domain";
+import ReferringDomains from "./backlinks/issues-details/issues-details";
 import KeywordsDetails from "./keywords/details";
 import CompetitorAnalysis from "./competitorAnalysis";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
 import MenuItem from "antd/es/menu/MenuItem";
 
+ {
+   /* latest-components */
+ }
+import IssuesDetails from "./backlinks/issues-details/issues-details";
+import PagesDetails from "./backlinks/pages-details/pages-details";
 const NavItems: MenuProps["items"] = [
   {
     label: "Seo Tools",
@@ -64,11 +69,13 @@ function App() {
         onClick={handleMenuClick}
         mode="vertical"
       >
-        <MenuItem className="menu-item-header" key="" >SEO Tools</MenuItem>
-        <MenuItem key="site-audit" >Site Audit</MenuItem>
-        <MenuItem key="backlinks" >Backlinks</MenuItem>
-        <MenuItem key="keywords" >Keywords</MenuItem>
-        <MenuItem key="competitorAnalysis" >Competitor Analysis</MenuItem>
+        <MenuItem className="menu-item-header" key="">
+          SEO Tools
+        </MenuItem>
+        <MenuItem key="site-audit">Site Audit</MenuItem>
+        <MenuItem key="backlinks">Backlinks</MenuItem>
+        <MenuItem key="keywords">Keywords</MenuItem>
+        <MenuItem key="competitorAnalysis">Competitor Analysis</MenuItem>
       </Menu>
       <div className="router-container">
         <Routes>
@@ -91,6 +98,10 @@ function App() {
             path="/outbound-domains/details"
             element={<OutboundDomains />}
           />
+          
+            {/* latest-components */}
+          <Route path="/issues-details" element={<IssuesDetails />} />
+          <Route path="/pages-details" element={<PagesDetails />} />
         </Routes>
       </div>
     </div>
