@@ -14,6 +14,7 @@ interface CardProps {
   count?: number;
   total?: number;
   backgroundColor?: string;
+  badgeColor?: string;
 }
 
 interface PieDataType {
@@ -21,11 +22,14 @@ interface PieDataType {
   value: number;
 }
 
-function Card({ title, count, backgroundColor = '#fff' }: CardProps) {
+function Card({ title, count, backgroundColor = '#fff', badgeColor = '#fff' }: CardProps) {
   return (
     <>
       <div style={{backgroundColor: backgroundColor}} className="site-analytics-card">
-        <div className="site-analytics-card-title">{title}</div>
+        <div className="site-analytics-card-title">
+          <div style={{backgroundColor: badgeColor}} className="site-analytics-card-title-badge"></div>
+          <div className="site-analytics-card-title-text">{title}</div>
+        </div>
         <div className="site-analytics-card-count">{count} <span>Issues</span></div>
       </div>
     </>
@@ -46,7 +50,7 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
     {
       type: 'HTML, HREFLANG & HTML',
       value: data?.techIssues || 0,
-    },
+    },  
     {
       type: 'Links/URLs',
       value: data?.brokenIssues || 0,
@@ -58,7 +62,8 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
     data: pieData,
     angleField: 'value',
     colorField: 'type',
-    colors: ['#2DBEFD', '#FFC232', '#FE9417', '#FF6C71'],
+    seriesField: 'type',
+    color: ['#2CBEFC', '#FEC233', '#FF9416', '#FF6C71'],
     radius: 0.8,
     label: {
       type: 'outer',
@@ -76,12 +81,12 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
       <div className="site-analytics-content">
         <div className="site-analytics-content-cards">
           <Row>
-            <Col span={11}><Card title="Crawlability" count={data?.crawlIssues} backgroundColor='#E5F7FC' /></Col>
-            <Col span={11}><Card title="Text/Image" count={data?.markupIssues} backgroundColor='#FFF5E6' /></Col>
+            <Col span={11}><Card title="Crawlability" count={data?.crawlIssues} backgroundColor='#E5F7FC' badgeColor="#00A6ED" /></Col>
+            <Col span={11}><Card title="Text/Image" count={data?.markupIssues} backgroundColor='#FFF5E6' badgeColor="#FF9416" /></Col>
           </Row>
           <Row>
-            <Col span={11}><Card title="HTML, HREFLANG & HTML" count={data?.techIssues} backgroundColor='#FFEBEB' /></Col>
-            <Col span={11}><Card title="Links/URLs" count={data?.brokenIssues} backgroundColor='#FEF8EB' /></Col>
+            <Col span={11}><Card title="HTML, HREFLANG & HTML" count={data?.techIssues} backgroundColor='#FFEBEB' badgeColor="#FD343A" /></Col>
+            <Col span={11}><Card title="Links/URLs" count={data?.brokenIssues} backgroundColor='#FEF8EB' badgeColor="#FEC233" /></Col>
           </Row>
         </div>
         <div className="site-analytics-content-chart" >

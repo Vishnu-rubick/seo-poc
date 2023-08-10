@@ -11,6 +11,7 @@ interface AuditedPagesProps {
 interface CardProps {
   title?: string;
   count?: number;
+  className?: string; 
 }
 
 interface BarDataItem {
@@ -19,10 +20,10 @@ interface BarDataItem {
   type: string;
 }
 
-function Card({ title, count }: CardProps) {
+function Card({ title, count, className }: CardProps) {
   return (
     <>
-      <div className="card">
+      <div className={`card ${className}`}>
         <div className="card-title">{title}</div>
         <hr />
         <div className="card-count">{count}</div>
@@ -62,11 +63,14 @@ function AuditedPages({ data }: AuditedPagesProps) {
   ];
 
   const config = {
-    data: barData.reverse(),
+    data: barData,
     isStack: true,
     xField: 'value',
     yField: 'id',
     seriesField: 'type',
+    colorField: 'type',
+    color: ['#84D149', '#FE6060', '#FD8E0C', '#FFB400', '#F5F5F5'],
+    
     label: {
       position: 'top',
       layout: [
@@ -92,11 +96,11 @@ function AuditedPages({ data }: AuditedPagesProps) {
             <Bar {...config} />
           </div>
           <div className="number-cards">
-            <Card title="Healthy" count={data?.healthyPages} />
-            <Card title="Broken" count={data?.brokenPages} />
-            <Card title="Redirected" count={data?.redirectedPages} />
-            <Card title="With Issues" count={data?.pagesWithIssues} />
-            <Card title="Blocked" count={data?.blockedPages} />
+            <Card className="healthy" title="Healthy" count={data?.healthyPages} />
+            <Card className="broken" title="Broken" count={data?.brokenPages} />
+            <Card className="redirected" title="Redirected" count={data?.redirectedPages} />
+            <Card className="with-issues" title="With Issues" count={data?.pagesWithIssues} />
+            <Card className="blocked" title="Blocked" count={data?.blockedPages} />
           </div>
         </div>
       </div>

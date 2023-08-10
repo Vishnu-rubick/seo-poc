@@ -10,6 +10,31 @@
 
 .audited-pages-content {
     padding: 10px 20px;
+    .healthy {
+        .card-title {
+            border-bottom: 1px solid #84D149;
+        }
+    }
+    .broken {
+        .card-title {
+            border-bottom: 1px solid #FE6060;
+        }
+    }
+    .redirected {
+        .card-title {
+            border-bottom: 1px solid #FD8E0C;
+        }
+    }
+    .with-issues {
+        .card-title {
+            border-bottom: 1px solid #FFB400;
+        }
+    }
+    .blocked {
+        .card-title {
+            border-bottom: 1px solid #F5F5F5;
+        }
+    }
 }
 
 .number-cards {
