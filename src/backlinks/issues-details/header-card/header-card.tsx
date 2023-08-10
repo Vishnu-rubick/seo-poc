@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import './header-card.css';
 
-function HeaderCard({ variant = "p0", }) {
+function HeaderCard({ variant = "P0", value = 0 }) {
   const getBackgroundColor = () => {
     switch (variant) {
-      case "p0":
+      case "P0":
         return "#FF2503";
-      case "p1":
+      case "P1":
         return "#FF8400";
-      case "p2":
+      case "P2":
         return "#FFBF00";
       default:
         return "#FF2503"; 
@@ -21,9 +21,9 @@ function HeaderCard({ variant = "p0", }) {
           className="circle"
           style={{ background: getBackgroundColor() }}
         ></div>
-        <span>P0 Issues</span>
+        <span>{variant} Issues</span>
       </div>
-      <span className="total">54</span>
+      <span className="total">{value}</span>
     </div>
   );
 }

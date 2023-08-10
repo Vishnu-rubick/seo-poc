@@ -4,7 +4,6 @@ import { DashboardDataType } from "../../interfaces";
 import "./style.scss";
 import { Bar } from '@ant-design/plots';
 
-
 interface AuditedPagesProps {
   data: DashboardDataType | undefined;
 }

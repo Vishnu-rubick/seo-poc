@@ -20,6 +20,13 @@
             height: 250px !important;
             width: auto;
         }
+
+        &-cards {
+            .ant-col-11 {
+                width: 250px;
+                margin: 18px 17px 0 0;
+            }
+        }
     }
 
     &-card {

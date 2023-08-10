@@ -41,7 +41,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
             { subComponent } 
           </div>
         </div>
-        <div className="card-content">{child}</div>
+        <div className="dashboard-card-content">{child}</div>
       </div>
     </>
   );
@@ -67,40 +67,44 @@ function Dashboard({ projectId }: DashboardProps) {
     <>
       <div className="dashboard-container">
         <Row >
-          <Col span={15} style={{ border: '1px solid #E5F7FC' }}>
+          <Col span={15} style={{ border: '1px solid #D9D9D9' }}>
             <Card
               data={data}
               title="Audited Pages"
               child={<AuditedPages data={data} />}
             />
           </Col>
-          <Col span={8} style={{ border: '1px solid #E5F7FC' }}>
+          <Col span={8} style={{ border: '1px solid #D9D9D9' }}>
             <Card 
               data={data}
               title="Issues Trend"
               child={
                 <>
-                  <h2>Coming Soon...</h2>
+                  <div className="hash">
+                    <p>N/A</p>
+                  </div>
                 </>
               }
             />
           </Col>
         </Row>
         <Row >
-          <Col span={15} style={{ border: '1px solid #E5F7FC' }}>
+          <Col span={15} style={{ border: '1px solid #D9D9D9' }}>
             <Card
               data={data}
               title="Site Analytics"
               child={<SiteAnalytics data={data} />}
             />
           </Col>
-          <Col span={8} style={{ border: '1px solid #E5F7FC' }}>
+          <Col span={8} style={{ border: '1px solid #D9D9D9' }}>
             <Card 
               data={data}
               title="Analytics Trend"
               child={
                 <>
-                  <h2>Coming Soon...</h2>
+                  <div className="hash">
+                    <p>N/A</p>
+                  </div>
                 </>
               }
             />

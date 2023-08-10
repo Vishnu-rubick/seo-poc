@@ -5,6 +5,9 @@
 .dashboard-card {
     height: 100%;
     padding: 10px 15px;
+    &-content {
+        height: fit-content !important;
+    }
 }
 
 .ant-col {

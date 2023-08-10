@@ -1,8 +1,8 @@
 import { Table } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./issues-details.css";
 import HeaderCard from "./header-card/header-card";
-
+import axios from "axios";
 
 interface IssuesDetailsProps {
   projectId: string;
@@ -11,18 +11,30 @@ interface IssuesDetailsProps {
 function IssuesDetails({ projectId }: IssuesDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
     key: index + 1,
-    issue: `Issue ${index + 1}.This is a sample issue description.`,
+    title: `Issue ${index + 1}.This is a sample issue description.`,
     category: index % 2 === 0 ? "text and images" : "url/images",
     priority: "--",
     pagesAffected: Math.floor(Math.random() * 10) + 1,
   }));
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
 
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/campaign/${projectId}/issues`)
+      .then((response: any) => {
+        setDataSource(response.data);
+        console.log(response.data)
+      })
+      .catch((err) => {
+        console.log(`Couldn't fetch Issues Data...`, err)
+      });
+  }, []);
+
   const rowHeight = 50;
   const columns = [
     {
       title: <span style={{ fontWeight: 400 }}>Issue</span>,
-      dataIndex: "issue",
+      dataIndex: "title",
       key: "1",
       width: 150,
       className: "typography issue-text",
@@ -52,10 +64,9 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
   return (
     <div className="issues-details-wrapper">
       <div className="cards-container">
-        <HeaderCard variant="p0"/>
-        <HeaderCard variant="p1"/>
-        <HeaderCard variant="p2"/>
-        
+        <HeaderCard variant="P0" value={dataSource.filter((el: any) => el.priority == 'P0').length} />
+        <HeaderCard variant="P1" value={dataSource.filter((el: any) => el.priority == 'P1').length} />
+        <HeaderCard variant="P2" value={dataSource.filter((el: any) => el.priority == 'P2').length} />
       </div>
       <div className="issues-header">
         <p className="issues-title">Issues</p>

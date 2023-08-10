@@ -1,5 +1,6 @@
 import { Table } from "antd";
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./pages-details.css";
 
 
@@ -10,18 +11,30 @@ interface PageDetailsProps {
 function PagesDetails({projectId}: PageDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
     key: index + 1,
-    url: `https://example${index + 1}.com`,
+    pageUrl: `https://example${index + 1}.com`,
     category: index % 2 === 0 ? "text and images" : "url/images",
     priority: "--",
-    noOfPages: Math.floor(Math.random() * 10) + 1,
+    noOfIssues: Math.floor(Math.random() * 10) + 1,
   }));
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/campaign/${projectId}/pages?page=0`)
+      .then((response: any) => {
+        setDataSource(response.data);
+        console.log(response.data)
+      })
+      .catch((err) => {
+        console.log(`Couldn't fetch Pages Data...`, err)
+      });
+  }, []);
 
   const rowHeight = 50;
   const columns = [
     {
       title: <span style={{ fontWeight: 400 }}>Issue</span>,
-      dataIndex: "url",
+      dataIndex: "pageUrl",
       key: "1",
       width: 150,
       className: "typography",
@@ -43,7 +56,7 @@ function PagesDetails({projectId}: PageDetailsProps) {
     {
       title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
       width: 100,
-      dataIndex: "noOfPages",
+      dataIndex: "noOfIssues",
       key: "4",
       className: "typography pages-affected-text",
     },

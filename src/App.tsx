@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import { Menu, MenuProps } from "antd";
 import { UserOutlined } from '@ant-design/icons';
@@ -25,6 +25,7 @@ import Dashboard from "./components/Dashboard";
 import IssuesDetails from "./backlinks/issues-details/issues-details";
 import PagesDetails from "./backlinks/pages-details/pages-details";
 import LandingPage from "./components/landingPage";
+import AppSider from "./components/app-sider/app-sider";
 const NavItems: MenuProps["items"] = [
   {
     label: "Seo Tools",
@@ -48,8 +49,15 @@ const NavItems: MenuProps["items"] = [
   },
 ];
 
+const siderStyle: React.CSSProperties = {
+  textAlign: 'center',
+  color: '#fff',
+  backgroundColor: '#00235B',
+  height: 1080,
+};
+
 function App() {
-  const [currentMenu, setCurrentMenu] = useState("");
+  const [currentMenu, setCurrentMenu] = useState("seo-tools");
   const navigate = useNavigate();
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     setCurrentMenu(e.key);
@@ -62,23 +70,47 @@ function App() {
         className="navbar"
         selectedKeys={[currentMenu]}
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          margin: "0 auto",
+          ...siderStyle,
+          // display: "flex",
+          // flexDirection: "column",
+          // justifyContent: "flex-start",
+          // alignItems: "center",
+          // margin: "0 auto",
         }}
         onClick={handleMenuClick}
         mode="vertical"
       >
-        <MenuItem className="menu-item-header" key="seo-tools">
-          SEO Tools
+        <MenuItem disabled className="menu-item-header" key="">
+          <img height='20px' src="src/assets/common/company-logo.svg" />
         </MenuItem>
-        <MenuItem key="site-audit">Site Audit</MenuItem>
-        <MenuItem key="backlinks">Backlinks</MenuItem>
-        <MenuItem key="keywords">Keywords</MenuItem>
-        <MenuItem key="competitorAnalysis">Competitor Analysis</MenuItem>
+        <MenuItem key="seo-tools">
+          <img src={`src/assets/common/website-iq${currentMenu=='seo-tools' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="key-metrics">
+          <img src={`src/assets/common/key-metrics${currentMenu=='key-metrics' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="keywords">
+          <img src={`src/assets/common/keywords${currentMenu=='keywords' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="backlinks">
+          <img src={`src/assets/common/backlinks${currentMenu=='backlinks' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="industry-benchmarking">
+          <img src={`src/assets/common/industry-benchmarking${currentMenu=='industry-benchmarking' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="content-planner">
+          <img src={`src/assets/common/content-planner${currentMenu=='content-planner' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="task-manager">
+          <img src={`src/assets/common/task-manager${currentMenu=='task-manager' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        <MenuItem disabled key="faqs">
+          <img src={`src/assets/common/faqs${currentMenu=='faqs' ? '-selected' : ''}.svg`} alt="" />
+        </MenuItem>
+        {/* <MenuItem disabled key="keywords">Keywords</MenuItem>
+        <MenuItem disabled key="competitorAnalysis">Competitor Analysis</MenuItem> */}
       </Menu>
+      {/* <AppSider /> */}
       <div className="router-container">
         <Routes>
           <Route path="/" element={<Home />} />

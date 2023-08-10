@@ -58,6 +58,7 @@ function SiteAnalytics({ data }: SiteAnalyticsProps) {
     data: pieData,
     angleField: 'value',
     colorField: 'type',
+    colors: ['#2DBEFD', '#FFC232', '#FE9417', '#FF6C71'],
     radius: 0.8,
     label: {
       type: 'outer',
