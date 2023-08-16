@@ -1,38 +1,36 @@
 import "./App.scss";
 
 import { Menu, MenuProps } from "antd";
-import { UserOutlined } from '@ant-design/icons';
 
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Details from "./Details/Details";
 import Home from "./Home/home";
 //import PagesDetails from "./PagesDetails/pagesDetails";
+import MenuItem from "antd/es/menu/MenuItem";
 import Backlinks from "./backlinks";
-import Keywords from "./keywords";
-import SiteAudit from "./site-audit";
 import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
 import ReferringDomains from "./backlinks/issues-details/issues-details";
-import KeywordsDetails from "./keywords/details";
-import CompetitorAnalysis from "./competitorAnalysis";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
-import MenuItem from "antd/es/menu/MenuItem";
-import Dashboard from "./components/Dashboard";
-
- {
-   /* latest-components */
- }
-import IssuesDetails from "./backlinks/issues-details/issues-details";
 import PagesDetails from "./backlinks/pages-details/pages-details";
+import CompetitorAnalysis from "./competitorAnalysis";
 import LandingPage from "./components/landingPage";
-import AppSider from "./components/app-sider/app-sider";
+import Keywords from "./keywords";
+import KeywordsDetails from "./keywords/details";
+import ModuleDetails from "./pages/module-details";
+import WebsiteIq from "./pages/website-Iq";
+import SiteAudit from "./site-audit";
+
+{
+  /* latest-components */
+}
 const NavItems: MenuProps["items"] = [
   {
     label: "Seo Tools",
-    key: "seo-tools"
+    key: "seo-tools",
   },
   {
-    label: "Site Audit",  
+    label: "Site Audit",
     key: "site-audit",
   },
   {
@@ -50,9 +48,9 @@ const NavItems: MenuProps["items"] = [
 ];
 
 const siderStyle: React.CSSProperties = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#00235B',
+  textAlign: "center",
+  color: "#fff",
+  backgroundColor: "#00235B",
   height: 1080,
 };
 
@@ -81,31 +79,71 @@ function App() {
         mode="vertical"
       >
         <MenuItem disabled className="menu-item-header" key="">
-          <img height='20px' src="src/assets/common/company-logo.svg" />
+          <img height="20px" src="src/assets/common/company-logo.svg" />
         </MenuItem>
         <MenuItem key="seo-tools">
-          <img src={`src/assets/common/website-iq${currentMenu=='seo-tools' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/website-iq${
+              currentMenu == "seo-tools" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="key-metrics">
-          <img src={`src/assets/common/key-metrics${currentMenu=='key-metrics' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/key-metrics${
+              currentMenu == "key-metrics" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="keywords">
-          <img src={`src/assets/common/keywords${currentMenu=='keywords' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/keywords${
+              currentMenu == "keywords" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="backlinks">
-          <img src={`src/assets/common/backlinks${currentMenu=='backlinks' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/backlinks${
+              currentMenu == "backlinks" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="industry-benchmarking">
-          <img src={`src/assets/common/industry-benchmarking${currentMenu=='industry-benchmarking' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/industry-benchmarking${
+              currentMenu == "industry-benchmarking" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="content-planner">
-          <img src={`src/assets/common/content-planner${currentMenu=='content-planner' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/content-planner${
+              currentMenu == "content-planner" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="task-manager">
-          <img src={`src/assets/common/task-manager${currentMenu=='task-manager' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/task-manager${
+              currentMenu == "task-manager" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         <MenuItem disabled key="faqs">
-          <img src={`src/assets/common/faqs${currentMenu=='faqs' ? '-selected' : ''}.svg`} alt="" />
+          <img
+            src={`src/assets/common/faqs${
+              currentMenu == "faqs" ? "-selected" : ""
+            }.svg`}
+            alt=""
+          />
         </MenuItem>
         {/* <MenuItem disabled key="keywords">Keywords</MenuItem>
         <MenuItem disabled key="competitorAnalysis">Competitor Analysis</MenuItem> */}
@@ -132,9 +170,14 @@ function App() {
             path="/outbound-domains/details"
             element={<OutboundDomains />}
           />
-          
-            {/* latest-components */}
-          <Route path="/seo-tools" element={<LandingPage projectId="12808182" />} />
+
+          {/* latest-components */}
+          <Route
+            path="/seo-tools"
+            element={<LandingPage projectId="12808182" />}
+          />
+          <Route path="/website-iq" element={<WebsiteIq />} />
+          <Route path="/module-details" element={<ModuleDetails />} />
           {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
           <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
           <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}

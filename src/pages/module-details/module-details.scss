@@ -1,0 +1,46 @@
+.module-details-wrapper {
+  height: 100%;
+  width: 100%;
+  .module-details-container {
+    background-color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    width: 92%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    .module-details-content {
+      flex: 20%;
+      h1 {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: 0px;
+        text-align: left;
+        background: linear-gradient(to right, #00235b, #00a6ed);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+      p {
+        // font-family: Inter;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .cards-container {
+      flex: 80%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+      gap: 2rem;
+    }
+  }
+}
