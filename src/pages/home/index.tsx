@@ -118,14 +118,15 @@ function Home() {
                   />
                 </Form.Item>
 
-                {[1, 2, 3, 4, 5].map(() => (
+                {competitors.length? competitors.map(() => (
                   <Form.Item label="Competitor 3">
                     <Input
                       className="custom-input"
                       placeholder="Enter competitor 3"
                     />
                   </Form.Item>
-                ))}
+                )) : null
+              }
 
                 <Button className="add-btn" onClick={handleAddCompetitor}>
                   Add competitor
