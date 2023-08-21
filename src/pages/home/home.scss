@@ -1,0 +1,111 @@
+@mixin mandatory-label {
+  .ant-form-item-label::after {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ff0000;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+    padding-right: 13rem;
+  }
+}
+.home-wrapper {
+  height: 100%;
+  width: 100%;
+  .home-container {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    display: flex;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    width: 92%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    .form-img-wrapper {
+      width: 50%;
+
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      .form-img {
+        display: block;
+        height: 70%;
+        width: 80%;
+        padding-left: 10%;
+      }
+    }
+    .form-wrapper {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .form-container {
+        height: 80%;
+        border: 1px solid #d9d9d9;
+        padding: 2rem;
+        overflow: auto;
+
+        .mandatory-field {
+          @include mandatory-label;
+        }
+        // .competitors-list {
+        //   width: 100%;
+        //   height: calc(15vh - 50px);
+        //   overflow: auto;
+        // }
+        .ant-select-selection-item {
+          padding-left: 0 !important;
+        }
+
+        .ant-form-item-label > label::after {
+          content: none !important;
+        }
+        .ant-form-item {
+          margin-bottom: 20px;
+        }
+
+        .ant-form-item-label {
+          margin-right: 5rem;
+        }
+        .ant-form-horizontal .ant-form-item-label {
+          text-align: left;
+        }
+
+        .ant-form-horizontal .ant-form-item-control {
+          display: inline-block;
+        }
+        .custom-input,
+        .custom-select {
+          height: 38px;
+        }
+        .ant-select-selector {
+          height: 38px;
+        }
+        .add-btn {
+          border: none;
+          text-decoration: underline !important;
+          box-shadow: none;
+          padding: 0;
+          span {
+            display: block;
+          }
+        }
+        .btns-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          margin-top: 2rem;
+        }
+        .business-form {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}

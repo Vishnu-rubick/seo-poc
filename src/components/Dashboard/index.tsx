@@ -65,17 +65,21 @@ function Dashboard({ projectId }: DashboardProps) {
 
   return (
     <>
-      <div className="dashboard-container">
-        <Row >
-          <Col span={15} style={{ border: '1px solid #D9D9D9' }}>
+      <div
+        style={{ backgroundColor: "white" }}
+        id="dashboard-container-id"
+        className="dashboard-container"
+      >
+        <Row>
+          <Col span={15} style={{ border: "1px solid #D9D9D9" }}>
             <Card
               data={data}
               title="Audited Pages"
               child={<AuditedPages data={data} />}
             />
           </Col>
-          <Col span={8} style={{ border: '1px solid #D9D9D9' }}>
-            <Card 
+          <Col span={8} style={{ border: "1px solid #D9D9D9" }}>
+            <Card
               data={data}
               title="Issues Trend"
               child={
@@ -88,16 +92,16 @@ function Dashboard({ projectId }: DashboardProps) {
             />
           </Col>
         </Row>
-        <Row >
-          <Col span={15} style={{ border: '1px solid #D9D9D9' }}>
+        <Row>
+          <Col span={15} style={{ border: "1px solid #D9D9D9" }}>
             <Card
               data={data}
               title="Site Analytics"
               child={<SiteAnalytics data={data} />}
             />
           </Col>
-          <Col span={8} style={{ border: '1px solid #D9D9D9' }}>
-            <Card 
+          <Col span={8} style={{ border: "1px solid #D9D9D9" }}>
+            <Card
               data={data}
               title="Analytics Trend"
               child={
