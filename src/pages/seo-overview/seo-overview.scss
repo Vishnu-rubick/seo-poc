@@ -27,21 +27,21 @@
       background: #00235b;
       color: #ffffff;
     }
-    .ant-table-cell{
+    .ant-table-cell {
       background: #ffffff;
     }
   }
-  .overview-cards {
-    flex: 8;
-  }
+  // .overview-cards {
+  //   flex: 8;
+  // }
   .seo-overview-header {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    h1{
+
+    h1 {
       color: #00235b;
     }
   }
@@ -55,14 +55,22 @@
     padding: 10px;
     .website-name {
       flex: 5;
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
     }
     .update-freq-container {
       .history-logo {
         display: inline-block;
       }
+      .ant-select-selector {
+        border: none;
+      }
       display: flex;
       align-items: center;
-      // justify-content: space-between;
+      justify-content: space-between;
+      width: 265px;
     }
   }
 }

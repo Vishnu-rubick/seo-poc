@@ -80,7 +80,7 @@ function SeoOverview() {
                 style={{ width: 120 }}
                 //  onChange={handleChange}
                 options={[
-                  { value: "15days", label: "15 Days" },
+                  { value: "fortnight", label: "Fortnight" },
                   { value: "monthly", label: "Monthly" },
                   { value: "quarterly", label: "Quarterly" },
                   { value: "halfyearly", label: "Half Yearly" },
@@ -90,20 +90,20 @@ function SeoOverview() {
             </div>
           </div>
         </Row>
-        <Row gutter={[1, 1]} className="overview-cards">
-          {[1, 2, 3, 4, 5, 6, 7].map(() => (
+        <Row  justify="start" className="overview-cards">
+          {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
             <Col span={3}>
               <OverviewCard />
             </Col>
           ))}
         </Row>
         <Row className="charts-row">
-          <Col span={8} style={{ height: "200px" }}>
+          <Col span={11} style={{ height: "200px" }}>
             <div>
               <h4>Competitors Positioning Map</h4>
             </div>
           </Col>
-          <Col span={8} style={{ height: "200px" }}>
+          <Col span={11} style={{ height: "200px" }}>
             <div>
               <h4>Domain Authority</h4>
             </div>
