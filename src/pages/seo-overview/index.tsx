@@ -50,18 +50,6 @@ const columns: ColumnsType<DataType> = [
   },
 ];
 
-const data: DataType[] = [];
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    metric: `metric ${i}`,
-    industryBenchmark: '--',
-    'rubick.ai': '2',
-    'peppercontent.io': '3', 
-    'wittypen.com': '2',
-  });
-}
-
 function SeoOverview({ projectId }: SeoOverviewProps) {
 
   const [overviewData, setOverviewData] = useState<any[]>([]);
