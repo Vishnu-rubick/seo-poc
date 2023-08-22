@@ -17,11 +17,12 @@ import CompetitorAnalysis from "./competitorAnalysis";
 import LandingPage from "./components/landingPage";
 import Keywords from "./keywords";
 import KeywordsDetails from "./keywords/details";
+import HomeModule from "./pages/home";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
-import HomeModule from './pages/home';
 
 import SiteAudit from "./site-audit";
+import SeoOverview from "./pages/seo-overview";
 
 {
   /* latest-components */
@@ -82,6 +83,9 @@ function App() {
       >
         <MenuItem disabled className="menu-item-header" key="">
           <img height="20px" src="src/assets/common/company-logo.svg" />
+        </MenuItem>
+        <MenuItem className="menu-item-header" key="seo-overview">
+          <img src="src/assets/common/home.png" />
         </MenuItem>
         <MenuItem key="seo-tools">
           <img
@@ -181,6 +185,7 @@ function App() {
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
           <Route path="/home-form" element={<HomeModule />} />
+          <Route path="/seo-overview" element={<SeoOverview />} />
           {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
           <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
           <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}
