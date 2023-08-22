@@ -3,11 +3,11 @@
   width: 100%;
   // ant-col-styling
   .ant-col {
-    height: 100%;
+   // height: 100%;
   }
   .seo-overview-col {
-    padding-left: 2rem;
-    padding-right: 8rem;
+     padding-left: 2rem;
+     padding-right: 8rem;
     // display: flex;
     // flex-direction: column;
   }
@@ -31,9 +31,11 @@
       background: #ffffff;
     }
   }
-  // .overview-cards {
-  //   flex: 8;
-  // }
+  .overview-cards {
+   .ant-col{
+    margin: 0;
+   }
+  }
   .seo-overview-header {
     width: 100%;
     height: 100%;

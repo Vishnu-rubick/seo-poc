@@ -108,7 +108,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         </Row>
         <Row  justify="start" className="overview-cards">
           {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-            <Col span={3}>
+            <Col span={3} >
               <OverviewCard />
             </Col>
           ))}
