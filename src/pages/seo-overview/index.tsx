@@ -79,7 +79,6 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         })
         res.push(obj);
       })
-      console.log(res);
       setOverviewData(res);
     }).catch((err) => {
       console.log(err);
