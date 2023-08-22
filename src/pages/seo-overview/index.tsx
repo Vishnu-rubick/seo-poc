@@ -5,15 +5,21 @@ import OverviewCard from "./overview-card/overview-card";
 import "./seo-overview.scss";
 
 import type { ColumnsType } from "antd/es/table";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+interface SeoOverviewProps {
+  projectId: string;
+}
 
 interface DataType {
   key: React.Key;
   metric: string;
 
-  industryBenchmark: number;
-  textmercato: number;
-  peppercontent: number;
-  wittypen: number;
+  industryBenchmark: string;
+  'rubick.ai': string;
+  'peppercontent.io': string;
+  'wittypen.com': string;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -28,18 +34,18 @@ const columns: ColumnsType<DataType> = [
     width: 20,
   },
   {
-    title: "textmercato.com",
-    dataIndex: "textmercato",
+    title: "Rubick.ai",
+    dataIndex: "rubick.ai",
     width: 20,
   },
   {
     title: "peppercontent.io",
-    dataIndex: "peppercontent",
+    dataIndex: "peppercontent.io",
     width: 20,
   },
   {
     title: "wittypen.com",
-    dataIndex: "wittypen",
+    dataIndex: "wittypen.com",
     width: 20,
   },
 ];
@@ -49,14 +55,37 @@ for (let i = 0; i < 100; i++) {
   data.push({
     key: i,
     metric: `metric ${i}`,
-    industryBenchmark: 32,
-    textmercato: 2,
-    peppercontent: 3,
-    wittypen: 2,
+    industryBenchmark: '--',
+    'rubick.ai': '2',
+    'peppercontent.io': '3', 
+    'wittypen.com': '2',
   });
 }
 
-function SeoOverview() {
+function SeoOverview({ projectId }: SeoOverviewProps) {
+
+  const [overviewData, setOverviewData] = useState<any[]>([]);
+
+  useEffect(() => {
+    axios.get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/competitorAnalysis/${projectId}`).then((response) => {
+      let data = response.data;
+      let res: any[] = [];
+      const columns = ['Domain Authority', 'Organic Search Traffic', 'Paid Search Traffic', 'Visitors', 'Unique Visitors', 'Avg. Visit Duration', 'Bounce Rate', 'Traffic Share'];
+      columns.forEach((column, idx) => {
+        let obj = {key: idx, metric: column, industryBenchmark: '--'} as any;
+        data.forEach((domainObj: any) => {
+          if(column == 'Traffic Share') obj[domainObj.Domain] = domainObj[column].toPrecision(4);
+          else obj[domainObj.Domain] = parseInt(domainObj[column])
+        })
+        res.push(obj);
+      })
+      console.log(res);
+      setOverviewData(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }, [])
+  
   return (
     <div className="seo-overview-wrapper">
       <AppHeader />
@@ -113,7 +142,7 @@ function SeoOverview() {
           <Table
             className="competitors-table"
             columns={columns}
-            dataSource={data}
+            dataSource={overviewData}
             // bordered
             showHeader
             title={() => "Competitor Analysis"}

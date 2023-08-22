@@ -185,7 +185,10 @@ function App() {
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
           <Route path="/home-form" element={<HomeModule />} />
-          <Route path="/seo-overview" element={<SeoOverview />} />
+          <Route
+            path="/seo-overview"
+            element={<SeoOverview projectId="12808182" />}
+          />
           {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
           <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
           <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}
