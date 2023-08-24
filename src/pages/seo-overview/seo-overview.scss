@@ -3,11 +3,11 @@
   width: 100%;
   // ant-col-styling
   .ant-col {
-   // height: 100%;
+    // height: 100%;
   }
   .seo-overview-col {
-     padding-left: 2rem;
-     padding-right: 8rem;
+    padding-left: 2rem;
+    //padding-right: calc(100vw - 8rem );
     // display: flex;
     // flex-direction: column;
   }
@@ -22,20 +22,6 @@
   }
 
   // custom-classes-styling
-  .competitors-table {
-    .ant-table-title {
-      background: #00235b;
-      color: #ffffff;
-    }
-    .ant-table-cell {
-      background: #ffffff;
-    }
-  }
-  .overview-cards {
-   .ant-col{
-    margin: 0;
-   }
-  }
   .seo-overview-header {
     width: 100%;
     height: 100%;
@@ -44,7 +30,17 @@
     justify-content: space-between;
 
     h1 {
-      color: #00235b;
+      // color: #00235b;
+      font-family: Inter;
+      background: linear-gradient(90.5deg, #00235b 17.92%, #00a6ed 97.07%);
+      -webkit-background-clip: text; /* For WebKit (Safari, Chrome) */
+      background-clip: text;
+      color: transparent;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: center;
     }
   }
   .seo-overview-subheader {
@@ -63,16 +59,75 @@
       }
     }
     .update-freq-container {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      width: 143px;
+      background: #f8f8f8;
       .history-logo {
         display: inline-block;
       }
       .ant-select-selector {
         border: none;
+        background: #f8f8f8;
       }
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 265px;
+      .custom-select {
+        &:hover,
+        &:focus,
+        &:active,
+        &.ant-select-focused,
+        &.ant-select-focused:not(.ant-select-disabled):not(
+            .ant-select-customize-input
+          ) {
+          border: none;
+          color: initial;
+        }
+      }
+    }
+  }
+  .overview-cards-container {
+    margin-top: 1.4rem;
+    background-color: #ffffff;
+    padding: 10px;
+    h2 {
+      color: #00235b;
+      font-family: Inter;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-left: 15px;
+    }
+  }
+  .overview-cards {
+    margin-top: 1rem;
+    .ant-col {
+      margin: 0;
+    }
+  }
+  .charts-row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .ant-col {
+      margin: 0;
+    }
+    .line-chart-container {
+      padding: 10px;
+      background: #ffffff;
+      margin: 0 0 0 20px;
+    }
+  }
+  .table-row {
+    margin-top: 1.4rem;
+  }
+  .competitors-table {
+    .ant-table-title {
+      background: #00235b;
+      color: #ffffff;
+    }
+    .ant-table-cell {
+      background: #ffffff;
     }
   }
 }

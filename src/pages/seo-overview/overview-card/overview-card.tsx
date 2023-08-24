@@ -1,11 +1,21 @@
 import "./overview-card.scss"
-function OverviewCard() {
+function OverviewCard({img, arrow, title, val}: any) {
   return (
     <div className="overview-card-wrapper">
-      <div>
+      {/* <div>
         <h2>26</h2>
-        <p>Domain Authority</p>
-        {/* graph */}
+        <p>Domain Authority</p>      
+        <img src={MinGraph} alt="" />
+      </div> */}
+      <div className="card-container">
+        <img className="logo-img" src={img} alt="" />
+        <div className="content-wrapper">
+          <span className="value-wrapper">
+            <h2>{val}</h2>
+            <img className="inc-dec-logo" src={arrow} alt="" />
+          </span>
+          <p className="title">{title}</p>
+        </div>
       </div>
     </div>
   );

@@ -1,12 +1,28 @@
 import { Col, Row, Select, Table } from "antd";
-import HistoryLogo from "../../assets/seo-overview/clock.svg";
+import CalenderLogo from "../../assets/seo-overview/calender.svg";
 import AppHeader from "../../components/app-header/app-header";
 import OverviewCard from "./overview-card/overview-card";
 import "./seo-overview.scss";
 
 import type { ColumnsType } from "antd/es/table";
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import BounceRateArrow from "../../assets/seo-overview/cards/bounce-rate-arrow.png";
+import BounceRateLogo from "../../assets/seo-overview/cards/bounce-rate.svg";
+import DominAuthorityArrow from "../../assets/seo-overview/cards/domain-auth-arrow.png";
+import DominAuthorityLogo from "../../assets/seo-overview/cards/domain-authority.svg";
+import OrganicKeywordsArrow from "../../assets/seo-overview/cards/organic-keywords-arrow.png";
+import OrganicKeywordsLogo from "../../assets/seo-overview/cards/organic-keywords.svg";
+import OrangicSearchTrafficArrow from "../../assets/seo-overview/cards/organic-search-traffic-arrow.png";
+import OrangicSearchTrafficLogo from "../../assets/seo-overview/cards/organic-search-traffic.svg";
+import PaidSearchTrafficArrow from "../../assets/seo-overview/cards/paid-search-traffic-arrow.png";
+import PaidSearchTrafficLogo from "../../assets/seo-overview/cards/paid-search-traffic.svg";
+import TrafficShareArrow from "../../assets/seo-overview/cards/traffic-share-arrow.png";
+import TrafficShareLogo from "../../assets/seo-overview/cards/traffic-share.svg";
+import UniqueVisitorsArrow from "../../assets/seo-overview/cards/unique-visitors-arrow.png";
+import UniqueVisitorsLogo from "../../assets/seo-overview/cards/unique-visitors.svg";
+import VisitDurationArrow from "../../assets/seo-overview/cards/visit-duration-arrow.png";
+import VisitDurationLogo from "../../assets/seo-overview/cards/visit-duration.svg";
 
 interface SeoOverviewProps {
   projectId: string;
@@ -17,9 +33,9 @@ interface DataType {
   metric: string;
 
   industryBenchmark: string;
-  'rubick.ai': string;
-  'peppercontent.io': string;
-  'wittypen.com': string;
+  "rubick.ai": string;
+  "peppercontent.io": string;
+  "wittypen.com": string;
 }
 
 const columns: ColumnsType<DataType> = [
@@ -51,28 +67,107 @@ const columns: ColumnsType<DataType> = [
 ];
 
 function SeoOverview({ projectId }: SeoOverviewProps) {
-
   const [overviewData, setOverviewData] = useState<any[]>([]);
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/competitorAnalysis/${projectId}`).then((response) => {
-      let data = response.data;
-      let res: any[] = [];
-      const columns = ['Domain Authority', 'Organic Search Traffic', 'Paid Search Traffic', 'Visitors', 'Unique Visitors', 'Avg. Visit Duration', 'Bounce Rate', 'Traffic Share'];
-      columns.forEach((column, idx) => {
-        let obj = {key: idx, metric: column, industryBenchmark: '--'} as any;
-        data.forEach((domainObj: any) => {
-          if(column == 'Traffic Share') obj[domainObj.Domain] = domainObj[column].toPrecision(4);
-          else obj[domainObj.Domain] = parseInt(domainObj[column])
-        })
-        res.push(obj);
+    axios
+      .get(
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/site-audit/competitorAnalysis/${projectId}`
+      )
+      .then((response) => {
+        let data = response.data;
+        let res: any[] = [];
+        const columns = [
+          "Domain Authority",
+          "Organic Search Traffic",
+          "Paid Search Traffic",
+          "Visitors",
+          "Unique Visitors",
+          "Avg. Visit Duration",
+          "Bounce Rate",
+          "Traffic Share",
+        ];
+        columns.forEach((column, idx) => {
+          let obj = {
+            key: idx,
+            metric: column,
+            industryBenchmark: "--",
+          } as any;
+          data.forEach((domainObj: any) => {
+            if (column == "Traffic Share")
+              obj[domainObj.Domain] = domainObj[column].toPrecision(4);
+            else obj[domainObj.Domain] = parseInt(domainObj[column]);
+          });
+          res.push(obj);
+        });
+        setOverviewData(res);
       })
-      setOverviewData(res);
-    }).catch((err) => {
-      console.log(err);
-    });
-  }, [])
-  
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const overviewCards = [
+    {
+      id: 1,
+      img: DominAuthorityLogo,
+      arrow: DominAuthorityArrow,
+      val: "27",
+      title: "Domain Authority",
+    },
+    {
+      id: 2,
+      img: OrangicSearchTrafficLogo,
+      arrow: OrangicSearchTrafficArrow,
+      val: "45",
+      title: "Oraganic Search traffic",
+    },
+    {
+      id: 3,
+      img: PaidSearchTrafficLogo,
+      arrow: PaidSearchTrafficArrow,
+      val: "44",
+      title: "Paid Search Traffic",
+    },
+    {
+      id: 4,
+      img: OrganicKeywordsLogo,
+      arrow: OrganicKeywordsArrow,
+      val: "44",
+      title: "Organic Keywords",
+    },
+    {
+      id: 5,
+      img: UniqueVisitorsLogo,
+      arrow: UniqueVisitorsArrow,
+      val: "33",
+      title: "Unique Visitors",
+    },
+    {
+      id: 6,
+      img: VisitDurationLogo,
+      arrow: VisitDurationArrow,
+      val: "33",
+      title: "Visit Duration",
+    },
+    {
+      id: 7,
+      img: BounceRateLogo,
+      val: "50%",
+      arrow: BounceRateArrow,
+      title: "Bounce rate",
+    },
+    {
+      id: 8,
+      val: "1%",
+      img: TrafficShareLogo,
+      arrow: TrafficShareArrow,
+      title: "Traffic Share",
+    },
+  ];
+
   return (
     <div className="seo-overview-wrapper">
       <AppHeader />
@@ -86,15 +181,17 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <Row className="seo-overview-subheader-row">
           <div className="seo-overview-subheader">
             <span className="website-name">
-              <a href="https://www.textmercato.com/">www.textmercato.com</a>
+              {/* <a href="https://www.textmercato.com/">www.textmercato.com</a> */}
+              Domain - textmercato.com
             </span>
             <div className="update-freq-container">
-              <img className="history-logo" src={HistoryLogo} alt="" />
-              <span>Update Frequency:</span>
+              <img className="history-logo" src={CalenderLogo} alt="" />
+              {/* <span>Update Frequency:</span> */}
               <Select
                 defaultValue="monthly"
                 style={{ width: 120 }}
                 //  onChange={handleChange}
+                className="custom-select"
                 options={[
                   { value: "fortnight", label: "Fortnight" },
                   { value: "monthly", label: "Monthly" },
@@ -106,26 +203,33 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
             </div>
           </div>
         </Row>
-        <Row  justify="start" className="overview-cards">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map(() => (
-            <Col span={3} >
-              <OverviewCard />
-            </Col>
-          ))}
-        </Row>
-        <Row className="charts-row">
-          <Col span={11} style={{ height: "200px" }}>
+        <div className="overview-cards-container">
+          <h2>Your key SEO Metrics</h2>
+          <Row justify="start" className="overview-cards">
+            {overviewCards.map(({ img, arrow, title, val }) => (
+              <Col span={6}>
+                <OverviewCard img={img} arrow={arrow} title={title} val={val} />
+              </Col>
+            ))}
+          </Row>
+        </div>
+
+        {/* <Row className="charts-row">
+          <Col span={12} style={{ height: "200px" }}>
             <div>
               <h4>Competitors Positioning Map</h4>
+              <hr style={{ border: "0.5px solid #D9D9D9" }} />
             </div>
           </Col>
-          <Col span={11} style={{ height: "200px" }}>
-            <div>
+          <Col span={12}>
+            <div className="line-chart-container">
               <h4>Domain Authority</h4>
+              <hr style={{ border: "0.5px solid #D9D9D9" }} />
+              <LineChart />
             </div>
           </Col>
-        </Row>
-        <Row>
+        </Row> */}
+        <Row className="table-row">
           <Table
             className="competitors-table"
             columns={columns}
