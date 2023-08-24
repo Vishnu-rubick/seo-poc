@@ -11,6 +11,7 @@ import axios from "axios";
 import domtoimage from "dom-to-image";
 import AppHeader from "../app-header/app-header";
 import "./style.scss";
+import AffectedPages from "../../pages/website-Iq/report/affected-pages";
 
 interface LandingPageProps {
   projectId: string;
@@ -56,6 +57,11 @@ function LandingPage({ projectId }: LandingPageProps) {
       key: "audited-pages",
       label: `Audited Pages`,
       children: <PagesDetails projectId={projectId} />,
+    },
+    {
+      key: "affected-pages",
+      label: `Affected Pages`,
+      children: <AffectedPages/>,
     },
   ];
 
