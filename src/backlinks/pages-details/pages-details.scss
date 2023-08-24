@@ -1,0 +1,73 @@
+.issues-details-wrapper {
+  .issues-title {
+    margin-left: 14px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .issues-header {
+    width: 100;
+    background-color: rgba(0, 35, 91, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* typography of table */
+  .typography {
+    font-family: Inter;
+    font-size: 1rem !important;
+    font-weight: 400;
+    line-height: 24px !important;
+    letter-spacing: 0px !important;
+    text-align: left !important;
+  }
+  .issue-text {
+    font-weight: 500;
+  }
+
+  .cards-container {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .issues-table {
+    .ant-table-title {
+      // background: #00235b;
+      background: #ffffff;
+      color: #00235b;
+      font-family: Inter;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      // text-align: center;
+    }
+    .ant-table-cell {
+      background: #ffffff;
+    }
+    .ant-table-thead > tr > th {
+      background: #eaf8fe;
+      color: #34507c;
+      font-family: "Roboto";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      // text-align: center;
+    }
+    .ant-table-cell {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      color: #00235b;
+    }
+  }
+}

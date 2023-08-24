@@ -1,8 +1,8 @@
 import { Table } from "antd";
-import { useEffect, useState } from "react";
-import "./issues-details.css";
-import HeaderCard from "./header-card/header-card";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import HeaderCard from "./header-card/header-card";
+import "./issues-details.scss";
 
 interface IssuesDetailsProps {
   projectId: string;
@@ -20,17 +20,20 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/campaign/${projectId}/issues`)
+      .get(
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/site-audit/campaign/${projectId}/issues`
+      )
       .then((response: any) => {
         setDataSource(response.data);
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((err) => {
-        console.log(`Couldn't fetch Issues Data...`, err)
+        console.log(`Couldn't fetch Issues Data...`, err);
       });
   }, []);
 
-  const rowHeight = 50;
   const columns = [
     {
       title: <span style={{ fontWeight: 400 }}>Issue</span>,
@@ -64,19 +67,29 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
   return (
     <div className="issues-details-wrapper">
       <div className="cards-container">
-        <HeaderCard variant="P0" value={dataSource.filter((el: any) => el.priority == 'P0').length} />
-        <HeaderCard variant="P1" value={dataSource.filter((el: any) => el.priority == 'P1').length} />
-        <HeaderCard variant="P2" value={dataSource.filter((el: any) => el.priority == 'P2').length} />
+        <HeaderCard
+          variant="P0"
+          value={dataSource.filter((el: any) => el.priority == "P0").length}
+        />
+        <HeaderCard
+          variant="P1"
+          value={dataSource.filter((el: any) => el.priority == "P1").length}
+        />
+        <HeaderCard
+          variant="P2"
+          value={dataSource.filter((el: any) => el.priority == "P2").length}
+        />
       </div>
-      <div className="issues-header">
+      {/* <div className="issues-header">
         <p className="issues-title">Issues</p>
-      </div>
+      </div> */}
       <Table
         style={{ height: "85vh", overflow: "auto" }}
         className="issues-table"
         dataSource={dataSource}
         columns={columns}
         pagination={false}
+        title={() => "Issues"}
         //loading
       />
     </div>

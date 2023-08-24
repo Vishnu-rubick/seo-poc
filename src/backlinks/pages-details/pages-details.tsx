@@ -63,9 +63,9 @@ function PagesDetails({projectId}: PageDetailsProps) {
   ];
   return (
     <div className="issues-details-wrapper">
-      <div className="issues-header">
+      {/* <div className="issues-header">
         <p className="issues-title">Audited Pages</p>
-      </div>
+      </div> */}
       <Table
         style={{ height: "85vh", overflow: "auto" }}
         className="issues-table"
@@ -73,6 +73,7 @@ function PagesDetails({projectId}: PageDetailsProps) {
         columns={columns}
         pagination={false}
         //loading
+        title={() => "Audited Analysis"}
       />
     </div>
   );

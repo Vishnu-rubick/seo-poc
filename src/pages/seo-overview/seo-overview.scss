@@ -89,7 +89,7 @@
     margin-top: 1.4rem;
     background-color: #ffffff;
     padding: 10px;
-    .subheading{
+    .subheading {
       margin-left: 15px;
     }
     h2 {
@@ -100,7 +100,6 @@
       line-height: 26px;
       letter-spacing: 0em;
       text-align: left;
-      
     }
   }
   .overview-cards {
@@ -126,11 +125,37 @@
   }
   .competitors-table {
     .ant-table-title {
-      background: #00235b;
-      color: #ffffff;
+      // background: #00235b;
+      background: #ffffff;
+      color: #00235b;
+      font-family: Inter;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: 0em;
+      // text-align: center;
     }
     .ant-table-cell {
       background: #ffffff;
+    }
+    .ant-table-thead > tr > th {
+      background: #eaf8fe;
+      color: #34507c;
+      font-family: "Roboto";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      // text-align: center;
+    }
+    .ant-table-cell {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      color: #00235B;
+;
     }
   }
 }
