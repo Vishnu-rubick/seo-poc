@@ -108,13 +108,13 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         console.log(err);
       });
   }, []);
-
+  console.log('data: ', overviewData)
   const overviewCards = [
     {
       id: 1,
       img: DominAuthorityLogo,
       arrow: DominAuthorityArrow,
-      val: "27",
+      val: "12%",
       title: "Domain Authority",
     },
     {
@@ -182,7 +182,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           <div className="seo-overview-subheader">
             <span className="website-name">
               {/* <a href="https://www.textmercato.com/">www.textmercato.com</a> */}
-              Domain - textmercato.com
+              Domain - rubick.ai
             </span>
             <div className="update-freq-container">
               <img className="history-logo" src={CalenderLogo} alt="" />
@@ -206,9 +206,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewCards.map(({ img, arrow, title, val }) => (
+            {overviewData.map(({ metric: title, ['rubick.ai']: val }: any, idx) => (
               <Col span={6}>
-                <OverviewCard img={img} arrow={arrow} title={title} val={val} />
+                <OverviewCard img={overviewCards[idx]?.img} arrow={overviewCards[idx]?.arrow} title={title} val={Number.isNaN(val) ? "--" : val} />
               </Col>
             ))}
           </Row>
