@@ -204,7 +204,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           </div>
         </Row>
         <div className="overview-cards-container">
-          <h2>Your key SEO Metrics</h2>
+          <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
             {overviewCards.map(({ img, arrow, title, val }) => (
               <Col span={6}>

@@ -89,6 +89,9 @@
     margin-top: 1.4rem;
     background-color: #ffffff;
     padding: 10px;
+    .subheading{
+      margin-left: 15px;
+    }
     h2 {
       color: #00235b;
       font-family: Inter;
@@ -97,7 +100,7 @@
       line-height: 26px;
       letter-spacing: 0em;
       text-align: left;
-      margin-left: 15px;
+      
     }
   }
   .overview-cards {
