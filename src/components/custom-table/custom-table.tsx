@@ -104,6 +104,7 @@ const CustomTable: React.FC = () => (
       expandIcon: CustomExpandIcon,
     }}
     dataSource={data}
+    pagination={false}
   />
 );
 

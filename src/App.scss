@@ -23,17 +23,17 @@
       border-radius: 0 !important;
       color: #fff !important;
     }
-    &-active {
-      color: #00235B !important;
-      background-color: #fff !important;
-      > img {
-        content: url("src/assets/common/website-iq-selected");
-      }
-    }
-    &-selected {
-      background-color: #fff !important;
-      color: #00235B !important;
-    }
+    // &-active {
+    //   color: #00235B !important;
+    //   background-color: #fff !important;
+    //   > img {
+    //     content: url("src/assets/common/website-iq-selected");
+    //   }
+    // }
+    // &-selected {
+    //   background-color: #fff !important;
+    //   color: #00235B !important;
+    // }
   }
 }
 

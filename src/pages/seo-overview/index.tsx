@@ -101,7 +101,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
               obj[domainObj.Domain] = domainObj[column].toPrecision(4);
             else obj[domainObj.Domain] = parseInt(domainObj[column]);
             if (isNaN(obj[domainObj.Domain])) {
-              obj[domainObj.Domain] = "NA";
+              obj[domainObj.Domain] = "N/A";
             }
           });
           res.push(obj);

@@ -21,8 +21,13 @@ import HomeModule from "./pages/home";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
 
-import SiteAudit from "./site-audit";
+import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
+import WebsiteIqIcon from "./assets/common/website-iq.svg";
+import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
+import HonmeIcon from "./assets/common/HomeIcon.svg";
+
 import SeoOverview from "./pages/seo-overview";
+import SiteAudit from "./site-audit";
 
 {
   /* latest-components */
@@ -85,15 +90,26 @@ function App() {
           <img height="20px" src="src/assets/common/company-logo.svg" />
         </MenuItem>
         <MenuItem className="menu-item-header" key="seo-overview">
-          <img src="src/assets/common/home.png" />
+          {currentMenu === "seo-overview" ? (
+            <div className="menu-icon">
+              <img src={HonmeIconSelected} alt="" />
+            </div>
+          ) : (
+            <div className="menu-icon">
+              <img src={HonmeIcon} alt="" />
+            </div>
+          )}
         </MenuItem>
         <MenuItem key="seo-tools">
-          <img
-            src={`src/assets/common/website-iq${
-              currentMenu == "seo-tools" ? "-selected" : ""
-            }.svg`}
-            alt=""
-          />
+          {currentMenu === "seo-tools" ? (
+            <div className="menu-icon">
+              <img src={WebsiteIqIconSelected} alt="" />
+            </div>
+          ) : (
+            <div className="menu-icon">
+              <img src={WebsiteIqIcon} alt="" />
+            </div>
+          )}
         </MenuItem>
         <MenuItem disabled key="key-metrics">
           <img
@@ -159,7 +175,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
-          <Route path="site-audit/details/pages" element={<PagesDetails />} />
+          <Route
+            path="site-audit/details/pages"
+            element={<PagesDetails projectId="12808182" />}
+          />
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
           <Route path="/keywords" element={<Keywords />} />
           <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
@@ -170,7 +189,7 @@ function App() {
           <Route path="/backlinks/details" element={<BacklinksDetails />} />
           <Route
             path="/referring-domains/details"
-            element={<ReferringDomains />}
+            element={<ReferringDomains projectId="12808182" />}
           />
           <Route
             path="/outbound-domains/details"
