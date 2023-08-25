@@ -16,7 +16,7 @@ function OverviewCard({ img, arrow, title, val, id }: any) {
         <div className="content-wrapper">
           <span className="value-wrapper">
             <h2>{val}</h2>
-            <img className={`inc-dec-logo ${id == 0 ? "rotate-80deg" : ""}`} src={arrow} alt="" />
+            <img className={`inc-dec-logo ${id === 0 ? "rotate-65deg" : ""}`} src={arrow} alt="" />
           </span>
           <p className="title">{title}</p>
         </div>

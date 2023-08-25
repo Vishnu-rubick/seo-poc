@@ -48,6 +48,7 @@ const columns: ColumnsType<DataType> = [
     title: "Industry Benchmark",
     dataIndex: "industryBenchmark",
     width: 20,
+    render: (text: string) => <span style={{color:"#ADB0B8"}}>{text}</span>,
   },
   {
     title: "Rubick.ai",
@@ -93,12 +94,15 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           let obj = {
             key: idx,
             metric: column,
-            industryBenchmark: "--",
+            industryBenchmark: "Coming Soon",
           } as any;
           data.forEach((domainObj: any) => {
             if (column == "Traffic Share")
               obj[domainObj.Domain] = domainObj[column].toPrecision(4);
             else obj[domainObj.Domain] = parseInt(domainObj[column]);
+            if (isNaN(obj[domainObj.Domain])) {
+              obj[domainObj.Domain] = "NA";
+            }
           });
           res.push(obj);
         });
@@ -108,7 +112,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         console.log(err);
       });
   }, []);
-  console.log('data: ', overviewData)
+  console.log("data: ", overviewData);
   const overviewCards = [
     {
       id: 1,
@@ -206,11 +210,19 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewData?.map(({ metric: title, ['rubick.ai']: val }: any, idx) => (
-              <Col span={6} key={idx}>
-                <OverviewCard id={idx} img={overviewCards[idx]?.img} arrow={overviewCards[idx]?.arrow} title={title} val={Number.isNaN(val) ? "--" : val} />
-              </Col>
-            ))}
+            {overviewData?.map(
+              ({ metric: title, ["rubick.ai"]: val }: any, idx) => (
+                <Col span={6} key={idx}>
+                  <OverviewCard
+                    id={idx}
+                    img={overviewCards[idx]?.img}
+                    arrow={overviewCards[idx]?.arrow}
+                    title={title}
+                    val={Number.isNaN(val) ? "--" : val}
+                  />
+                </Col>
+              )
+            )}
           </Row>
         </div>
 
@@ -239,7 +251,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
             title={() => "Competitor Analysis"}
             // footer={() => "Footer"}
             pagination={false}
-            scroll={{ y: 240 }}
+            scroll={{ y: "30vh" }}
           />
         </Row>
       </Col>
