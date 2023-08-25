@@ -29,15 +29,24 @@
     margin-right: 2.5%;
     .form-img-wrapper {
       width: 50%;
-
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
       .form-img {
         display: block;
         height: 70%;
         width: 80%;
         padding-left: 10%;
+      }
+      h1 {
+        font-family: Inter;
+        background: linear-gradient(90.5deg, #00235b 17.92%, #00a6ed 97.07%);
+        -webkit-background-clip: text; /* For WebKit (Safari, Chrome) */
+        background-clip: text;
+        color: transparent;
+        font-size: 64px;
+        font-weight: 600;
+        // line-height: 37px;
+        letter-spacing: 0em;
+        text-align: left;
+
       }
     }
     .form-wrapper {
@@ -53,6 +62,16 @@
 
         .mandatory-field {
           @include mandatory-label;
+        }
+
+        h2 {
+          font-family: Inter;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 39px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: #00a6ed;
         }
         // .competitors-list {
         //   width: 100%;

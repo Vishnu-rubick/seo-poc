@@ -21,7 +21,7 @@ function Home() {
         </div>
         <div className="form-wrapper">
           <div className="form-container">
-            <h1>Tell us more about your business</h1>
+            <h2>Tell us more about your business</h2>
             <div className="business-form">
               <Form
                 {...formItemLayout}
