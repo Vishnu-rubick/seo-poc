@@ -1,24 +1,9 @@
 .seo-overview-wrapper {
   height: 100%;
   width: 100%;
-  // ant-col-styling
-  .ant-col {
-    // height: 100%;
-  }
+
   .seo-overview-col {
     padding-left: 2rem;
-    //padding-right: calc(100vw - 8rem );
-    // display: flex;
-    // flex-direction: column;
-  }
-  // ant-rows-styling
-  .seo-overview-header-row {
-    // height: 5%;
-    // flex: 1;
-  }
-  .seo-overview-subheader-row {
-    // height: 5%;
-    // flex: 1;
   }
 
   // custom-classes-styling
@@ -161,5 +146,8 @@
       letter-spacing: 0em;
       color: #00235b;
     }
+  }
+  .rotate-80deg{
+        transform: rotate(80deg);
   }
 }

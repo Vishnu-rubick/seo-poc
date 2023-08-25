@@ -7,6 +7,13 @@ import "./issues-details.scss";
 interface IssuesDetailsProps {
   projectId: string;
 }
+type DataSourceType = {
+  key: number;
+  title: string;
+  category: string;
+  priority: string;
+  pagesAffected: number;
+};
 
 function IssuesDetails({ projectId }: IssuesDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
@@ -41,6 +48,8 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       key: "1",
       width: 150,
       className: "typography issue-text",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.title.localeCompare(b.title),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Category</span>,
@@ -48,6 +57,8 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       width: 100,
       key: "2",
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.category.localeCompare(b.category),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Priority</span>,
@@ -55,6 +66,8 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       width: 100,
       key: "3",
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.priority.localeCompare(b.priority),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
@@ -62,6 +75,8 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       dataIndex: "pagesAffected",
       key: "4",
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.pagesAffected - b.pagesAffected,
     },
   ];
   return (
@@ -91,6 +106,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         pagination={false}
         title={() => "Issues"}
         //loading
+        showSorterTooltip={false}
       />
     </div>
   );

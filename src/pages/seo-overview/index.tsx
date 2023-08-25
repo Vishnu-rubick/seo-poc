@@ -206,9 +206,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewData.map(({ metric: title, ['rubick.ai']: val }: any, idx) => (
-              <Col span={6}>
-                <OverviewCard img={overviewCards[idx]?.img} arrow={overviewCards[idx]?.arrow} title={title} val={Number.isNaN(val) ? "--" : val} />
+            {overviewData?.map(({ metric: title, ['rubick.ai']: val }: any, idx) => (
+              <Col span={6} key={idx}>
+                <OverviewCard id={idx} img={overviewCards[idx]?.img} arrow={overviewCards[idx]?.arrow} title={title} val={Number.isNaN(val) ? "--" : val} />
               </Col>
             ))}
           </Row>

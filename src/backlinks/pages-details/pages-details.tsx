@@ -3,12 +3,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./pages-details.scss";
 
-
 interface PageDetailsProps {
   projectId: string;
 }
+type DataSourceType = {
+  key: number;
+  pageUrl: string;
+  category: string;
+  priority: string;
+  noOfIssues: number;
+};
 
-function PagesDetails({projectId}: PageDetailsProps) {
+function PagesDetails({ projectId }: PageDetailsProps) {
   const dataArray = Array.from({ length: 30 }, (_, index) => ({
     key: index + 1,
     pageUrl: `https://example${index + 1}.com`,
@@ -20,13 +26,17 @@ function PagesDetails({projectId}: PageDetailsProps) {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_API_BASE_URL}/site-audit/campaign/${projectId}/pages?page=0`)
+      .get(
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/site-audit/campaign/${projectId}/pages?page=0`
+      )
       .then((response: any) => {
         setDataSource(response.data);
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((err) => {
-        console.log(`Couldn't fetch Pages Data...`, err)
+        console.log(`Couldn't fetch Pages Data...`, err);
       });
   }, []);
 
@@ -38,6 +48,8 @@ function PagesDetails({projectId}: PageDetailsProps) {
       key: "1",
       width: 150,
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.pageUrl.localeCompare(b.pageUrl),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Category</span>,
@@ -45,6 +57,8 @@ function PagesDetails({projectId}: PageDetailsProps) {
       width: 100,
       key: "2",
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.category.localeCompare(b.category),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Priority</span>,
@@ -52,6 +66,8 @@ function PagesDetails({projectId}: PageDetailsProps) {
       width: 100,
       key: "3",
       className: "typography",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.priority.localeCompare(b.priority),
     },
     {
       title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
@@ -59,6 +75,8 @@ function PagesDetails({projectId}: PageDetailsProps) {
       dataIndex: "noOfIssues",
       key: "4",
       className: "typography pages-affected-text",
+      sorter: (a: DataSourceType, b: DataSourceType) =>
+        a.noOfIssues - b.noOfIssues,
     },
   ];
   return (
@@ -74,6 +92,7 @@ function PagesDetails({projectId}: PageDetailsProps) {
         pagination={false}
         //loading
         title={() => "Audited Analysis"}
+        showSorterTooltip={false}
       />
     </div>
   );
