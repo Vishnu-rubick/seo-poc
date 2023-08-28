@@ -25,6 +25,7 @@ import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
 import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import HonmeIcon from "./assets/common/HomeIcon.svg";
+import DashboardIconSelected from "./assets/common/dashboard-selected.svg";
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";
@@ -89,8 +90,19 @@ function App() {
         <MenuItem disabled className="menu-item-header" key="">
           <img height="20px" src="src/assets/common/company-logo.svg" />
         </MenuItem>
-        <MenuItem className="menu-item-header" key="seo-overview">
+        {/* <MenuItem className="menu-item-header" key="seo-overview">
           {currentMenu === "seo-overview" ? (
+            <div className="menu-icon">
+              <img src={DashboardIconSelected} alt="" />
+            </div>
+          ) : (
+            <div className="menu-icon">
+              <img src={DashboardIconSelected} alt="" />
+            </div>
+          )}
+        </MenuItem> */}
+        <MenuItem className="menu-item-header" key="seo-overview">
+          {currentMenu === "home" ? (
             <div className="menu-icon">
               <img src={HonmeIconSelected} alt="" />
             </div>
@@ -203,7 +215,7 @@ function App() {
           />
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
-          <Route path="/home-form" element={<HomeModule />} />
+          <Route path="/home" element={<HomeModule />} />
           <Route
             path="/seo-overview"
             element={<SeoOverview projectId="12808182" />}

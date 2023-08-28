@@ -106,7 +106,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         pagination={false}
         title={() => "Issues"}
         //loading
-        showSorterTooltip={false}
+       // showSorterTooltip={false}
       />
     </div>
   );

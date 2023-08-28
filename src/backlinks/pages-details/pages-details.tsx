@@ -92,7 +92,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         pagination={false}
         //loading
         title={() => "Audited Analysis"}
-        showSorterTooltip={false}
+        // showSorterTooltip={false}
       />
     </div>
   );

@@ -3,11 +3,13 @@ import { useState } from "react";
 import HomeFormImg from "../../assets/home-module/home-form-img.svg";
 import AppHeader from "../../components/app-header/app-header";
 import "./home.scss";
+import { useNavigate } from "react-router-dom";
 function Home() {
   const [businessForm] = Form.useForm();
   const formItemLayout = { labelCol: { span: 4 }, wrapperCol: { span: 15 } };
   const buttonItemLayout = { wrapperCol: { span: 14, offset: 4 } };
   const [competitors, setCompetitors] = useState<{ num: number }[]>([]);
+  const navigate= useNavigate();
   const handleAddCompetitor = () => {
     setCompetitors([{ num: 3 }]);
   };
@@ -118,15 +120,16 @@ function Home() {
                   />
                 </Form.Item>
 
-                {competitors.length? competitors.map(() => (
-                  <Form.Item label="Competitor 3">
-                    <Input
-                      className="custom-input"
-                      placeholder="Enter competitor 3"
-                    />
-                  </Form.Item>
-                )) : null
-              }
+                {competitors.length
+                  ? competitors.map(() => (
+                      <Form.Item label="Competitor 3">
+                        <Input
+                          className="custom-input"
+                          placeholder="Enter competitor 3"
+                        />
+                      </Form.Item>
+                    ))
+                  : null}
 
                 <Button className="add-btn" onClick={handleAddCompetitor}>
                   Add competitor
@@ -137,7 +140,12 @@ function Home() {
                     <Button type="primary">Cancel</Button>
                   </Form.Item>
                   <Form.Item {...buttonItemLayout}>
-                    <Button type="primary">Submit</Button>
+                    <Button
+                      onClick={() => navigate("/module-details")}
+                      type="primary"
+                    >
+                      Submit
+                    </Button>
                   </Form.Item>
                 </div>
               </Form>
