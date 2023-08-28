@@ -102,7 +102,7 @@ function App() {
           )}
         </MenuItem> */}
         <MenuItem className="menu-item-header" key="seo-overview">
-          {currentMenu === "home" ? (
+          {currentMenu === "seo-overview" ? (
             <div className="menu-icon">
               <img src={HonmeIconSelected} alt="" />
             </div>
