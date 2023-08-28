@@ -1,13 +1,18 @@
-import { Button, Checkbox, Input } from "antd";
+import { Button, Checkbox, Form, Input, Select } from "antd";
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
-import FreqPrefix from "../../assets/frequency-input-prefix.png";
+import { useEffect } from "react";
 import LimitPrefix from "../../assets/limit-input-prefix.png";
 import URLPrefix from "../../assets/url-input-prefix.png";
 import OverviewImg from "../../assets/wesiteiq-info-img.png";
 import AppHeader from "../../components/app-header/app-header";
 import "./websiteIq.scss";
 
-function Home() {
+function WebsiteIq() {
+  const [auditForm] = Form.useForm();
+  localStorage.setItem("domain", "https://rubick.ai/");
+  useEffect(() => {
+    auditForm.setFieldValue("url", localStorage.getItem("domain"));
+  }, []);
   const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log("checked = ", checkedValues);
   };
@@ -15,6 +20,10 @@ function Home() {
     { label: "Include subdomains", value: "Include subdomains" },
     { label: "Masked URLs", value: "Masked URLs" },
   ];
+  const onFinish = (values: any) => {
+    console.log("Received values of form: ", values);
+  };
+
   return (
     <div className="websiteIq-wrapper">
       <AppHeader />
@@ -32,54 +41,122 @@ function Home() {
           </p>
           <div className="input-checkboxes-wrapper">
             <div className="inputs-container">
-              <Input
-                addonBefore={
-                  <span
-                    style={{
-                      background: "#ffffff",
-                      height: "25px",
-                      display: "block",
-                    }}
+              <Form
+                //  {...layout}
+                name="audit-form"
+                className="audit-form"
+                initialValues={{ remember: true }}
+                onFinish={onFinish}
+                form={auditForm}
+                // validateTrigger="onchange"
+                // validateFirst={true}
+                autoComplete="off"
+                validateTrigger="onChange"
+              >
+                <Form.Item
+                  name="url"
+                  className="url-form-item"
+                  // rules={[
+                  //   { required: true, message: "Please input your URL!" },
+                  // ]}
+                >
+                  <Input
+                    disabled
+                    prefix={
+                      <span
+                        style={{
+                          background: "#ffffff",
+                          height: "25px",
+                          display: "block",
+                        }}
+                      >
+                        <img src={URLPrefix} alt="Icon" />
+                      </span>
+                    }
+                    placeholder="Enter the domain URL"
+                    className="custom-input"
+                  />
+                </Form.Item>
+                <Form.Item
+                  required
+                  name="crawl-limit"
+                  validateFirst
+                  rules={[
+                    { required: true, message: "Please input crawl limit!" },
+                    {
+                      pattern: /^(?:[1-9]\d{0,3}|10000)$/,
+                      message: "Limit can be between 1-10000"
+                    }
+                  ]}
+                  className="limit-form-item"
+                  //  validateTrigger={["onChange"]}
+                >
+                  <Input
+                    type="number"
+                    prefix={
+                      <span
+                        style={{
+                          background: "#ffffff",
+                          height: "25px",
+                          display: "block",
+                        }}
+                      >
+                        <img src={LimitPrefix} alt="Icon" />
+                      </span>
+                    }
+                    placeholder="Crawl Limit"
+                    className="custom-input"
+                  />
+                </Form.Item>
+                <Form.Item
+                  name="crawl-freq"
+                  // rules={[
+                  //   {
+                  //     required: true,
+                  //     message: "Please input crawl frequency!",
+                  //   },
+                  // ]}
+                  className="freq-form-item"
+                >
+                  {/* <Input
+                    prefix={
+                      <span
+                        style={{
+                          background: "#ffffff",
+                          height: "25px",
+                          display: "block",
+                        }}
+                      >
+                        <img src={FreqPrefix} alt="Icon" />
+                      </span>
+                    }
+                    placeholder="Crawl Frequency"
+                    className="custom-input"
+                  /> */}
+                  <Select
+                    defaultValue="monthly"
+                    // style={{ width: 120 }}
+                    //  onChange={handleChange}
+                    className="custom-select"
+                    options={[
+                      { value: "fortnight", label: "Fortnight" },
+                      { value: "monthly", label: "Monthly" },
+                      { value: "quarterly", label: "Quarterly" },
+                      { value: "halfyearly", label: "Half Yearly" },
+                      { value: "yearly", label: "Yearly" },
+                    ]}
+                  />
+                </Form.Item>
+                <Form.Item className="btn-form-item">
+                  <Button
+                    className="audit-btn"
+                    type="primary"
+                    htmlType="submit"
                   >
-                    <img src={URLPrefix} alt="Icon" />
-                  </span>
-                }
-                placeholder="Enter the domain URL"
-                className="url-input"
-              />
-              <Input
-                addonBefore={
-                  <span
-                    style={{
-                      background: "#ffffff",
-                      height: "25px",
-                      display: "block",
-                    }}
-                  >
-                    <img src={LimitPrefix} alt="Icon" />
-                  </span>
-                }
-                placeholder="Crawl Limit"
-                className="limit-input"
-              />
-              <Input
-                addonBefore={
-                  <span
-                    style={{
-                      background: "#ffffff",
-                      height: "25px",
-                      display: "block",
-                    }}
-                  >
-                    <img src={FreqPrefix} alt="Icon" />
-                  </span>
-                }
-                placeholder="Crawl Frequency"
-                className="frequency-input"
-              />
-              <Button className="audit-btn" type="primary">
-                Audit
-              </Button>
+                    Audit
+                  </Button>
+                </Form.Item>
+              </Form>
             </div>
             <div className="checkboxes-container">
               <Checkbox.Group
@@ -123,4 +200,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default WebsiteIq;
