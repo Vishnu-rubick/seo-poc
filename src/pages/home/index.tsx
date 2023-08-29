@@ -57,10 +57,8 @@ function Home() {
   };
 
   const handleOnFinish = () => {
-    console.log(businessForm.getFieldsValue());
     const inputObject = businessForm.getFieldsValue();
     const transformedObject = transformCompetitorsObject(inputObject);
-    console.log(businessForm.getFieldsValue().domain);
     axios
       .post(
         `${import.meta.env.VITE_API_BASE_URL}/project/config`,
@@ -171,7 +169,7 @@ function Home() {
                   />
                 </Form.Item>
                 <Form.Item
-                  label="Competitor 1"
+                  label="Competitor1"
                   className="mandatory-field"
                   name="competitor1"
                   rules={[

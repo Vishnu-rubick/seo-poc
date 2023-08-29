@@ -66,8 +66,9 @@ function Dashboard({ projectId }: DashboardProps) {
         console.error(error);
       });
   }, []);
-  // API FOR FETCHING DASHBOARD DATA
-  
+
+  // API FOR FETCHING DASHBOARD DATA EVERY 15 MINS
+
   // useEffect(() => {
   //   const fetchData = async () => {
   //     axios
