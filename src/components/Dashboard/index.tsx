@@ -1,13 +1,12 @@
-import React, { ReactNode, useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
-import { Col, Input, Row } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import { Col, Row } from "antd";
 
-import "./style.scss";
-import AuditedPages from "../AuditedPages";
 import { DashboardDataType } from "../../interfaces";
+import AuditedPages from "../AuditedPages";
 import SiteAnalytics from "../SiteAnalytics";
+import "./style.scss";
 
 interface DashboardProps {
   type?: "default" | "textArea" | "password"; // Add more types if needed
@@ -30,7 +29,12 @@ interface AuditedPagesProps {
 
 function Card({ data, title, subTitle, child }: CardProps) {
   let subComponent;
-  if(subTitle)  subComponent = <h2>{data?.pagesWithIssues}/{data?.crawledPages}</h2>
+  if (subTitle)
+    subComponent = (
+      <h2>
+        {data?.pagesWithIssues}/{data?.crawledPages}
+      </h2>
+    );
   return (
     <>
       <div className="dashboard-card">
@@ -38,7 +42,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
           <div className="title">
             <img src="src/assets/common/info.svg" alt="" />
             <h4>{title}</h4>
-            { subComponent } 
+            {subComponent}
           </div>
         </div>
         <div className="dashboard-card-content">{child}</div>
@@ -50,7 +54,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
   useEffect(() => {
-    console.log(import.meta.env.VITE_API_BASE_URL)
+    console.log(import.meta.env.VITE_API_BASE_URL);
     axios
       .get(
         `${import.meta.env.VITE_API_BASE_URL}/site-audit/dashboard/${projectId}`
@@ -62,21 +66,35 @@ function Dashboard({ projectId }: DashboardProps) {
         console.error(error);
       });
   }, []);
+  // API FOR FETCHING DASHBOARD DATA
+  
   // useEffect(() => {
-  //   console.log(import.meta.env.VITE_API_BASE_URL);
-  //   axios
-  //     .get(
-  //       `${
-  //         import.meta.env.VITE_API_BASE_URL
-  //       }/site-audit/campaign/:${projectId}`
-  //     )
-  //     .then((res) => {
-  //       // setData(res.data);
-  //       console.log(res);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
+  //   const fetchData = async () => {
+  //     axios
+  //       .get(
+  //         `${
+  //           import.meta.env.VITE_API_BASE_URL
+  //         }/site-audit/campaign/:${projectId}`
+  //       )
+  //       .then((response) => {
+  //         if (response?.data) {
+  //           console.log(response?.data);
+  //         }
+  //         if (response?.data?.status === "completed") {
+  //           // delete the interval
+  //           clearInterval(interval);
+  //         }
+  //         console.log(response);
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error fetching data:", error);
+  //       });
+  //   };
+
+  //   // Call the API immediately
+  //   fetchData();
+  //   // Set up the interval to make the API call every 15 minutes
+  //   const interval = setInterval(fetchData, 15 * 60 * 1000); // 15 minutes in milliseconds
   // }, []);
   return (
     <>
