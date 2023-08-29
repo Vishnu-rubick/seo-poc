@@ -15,13 +15,22 @@ type DataSourceType = {
 };
 
 function PagesDetails({ projectId }: PageDetailsProps) {
-  const dataArray = Array.from({ length: 30 }, (_, index) => ({
-    key: index + 1,
-    pageUrl: `https://example${index + 1}.com`,
-    category: index % 2 === 0 ? "text and images" : "url/images",
-    priority: "--",
-    noOfIssues: Math.floor(Math.random() * 10) + 1,
-  }));
+  // const dataArray = Array.from({ length: 30 }, (_, index) => ({
+  //   key: index + 1,
+  //   pageUrl: `https://example${index + 1}.com`,
+  //   category: index % 2 === 0 ? "text and images" : "url/images",
+  //   priority: "--",
+  //   noOfIssues: Math.floor(Math.random() * 10) + 1,
+  // }));
+  const dataArray = [
+    {
+      key: "Loading...",
+      pageUrl: "Loading...",
+      category: "Loading...",
+      priority: "Loading...",
+      noOfIssues: "Loading...",
+    },
+  ];
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
 
   useEffect(() => {
@@ -32,13 +41,13 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         }/site-audit/campaign/${projectId}/pages?page=0`
       )
       .then((response: any) => {
-        const dataArray = response?.data?.map((item:DataSourceType) => ({
+        const transeformedData = response?.data?.map((item:DataSourceType) => ({
           pageUrl: item.pageUrl,
           noOfIssues: item.noOfIssues,
           category: item.category[0], 
           priority: item.priority[0], 
         }));
-        setDataSource(dataArray);
+        setDataSource(transeformedData);
       })
       .catch((err) => {
         console.log(`Couldn't fetch Pages Data...`, err);
