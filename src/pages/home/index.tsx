@@ -16,13 +16,12 @@ function Home() {
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
       .then((res) => {
-         console.log( res);
+        console.log(res);
         if (res?.data?.projectId) {
           localStorage.setItem("projectId", res?.data?.projectId);
-            navigate("/seo-overview");
-        }
-        else{
-          navigate('/home');
+          navigate("/seo-overview");
+        } else {
+          navigate("/home");
         }
       })
       .catch((error) => {
@@ -61,20 +60,20 @@ function Home() {
     console.log(businessForm.getFieldsValue());
     const inputObject = businessForm.getFieldsValue();
     const transformedObject = transformCompetitorsObject(inputObject);
-    console.log(transformedObject);
+    console.log(businessForm.getFieldsValue().domain);
     axios
       .post(
         `${import.meta.env.VITE_API_BASE_URL}/project/config`,
         transformedObject
       )
       .then((response) => {
-        console.log("Response:", response);
         if (response.status === 201) {
+          localStorage.setItem("domain",businessForm.getFieldsValue().domain);
+          localStorage.setItem("projectId", response?.data?.projectId);
           <Alert message="Successfully created" type="success" />;
           navigate("/module-details");
-        }
-        else{
-           <Alert message="Somthing went wrong." type="error" />;
+        } else {
+          <Alert message="Somthing went wrong." type="error" />;
         }
       })
       .catch((error) => {

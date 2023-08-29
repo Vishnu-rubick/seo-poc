@@ -15,7 +15,7 @@ function ModuleDetails() {
       title: "WebsiteIQ",
       icon: WebsiteIqIcon,
       para: "Revitalize your website's performance with our comprehensive health audit tool. Uncover hidden issues, boost optimization, and achieve peak online with just a click. ",
-      linkTo: "",
+      linkTo: "/website-iq",
     },
     {
       id: 2,

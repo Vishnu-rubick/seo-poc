@@ -1,6 +1,8 @@
-import { Button, Checkbox, Form, Input, Select } from "antd";
+import { Alert, Button, Checkbox, Form, Input, Select } from "antd";
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
+import axios from "axios";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import LimitPrefix from "../../assets/limit-input-prefix.png";
 import URLPrefix from "../../assets/url-input-prefix.png";
 import OverviewImg from "../../assets/wesiteiq-info-img.png";
@@ -9,9 +11,10 @@ import "./websiteIq.scss";
 
 function WebsiteIq() {
   const [auditForm] = Form.useForm();
-  localStorage.setItem("domain", "https://rubick.ai/");
+  const navigate = useNavigate();
+  // localStorage.setItem("domain", "https://rubick.ai/");
   useEffect(() => {
-    auditForm.setFieldValue("url", localStorage.getItem("domain"));
+    auditForm.setFieldValue("domain", localStorage.getItem("domain"));
   }, []);
   const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log("checked = ", checkedValues);
@@ -20,8 +23,23 @@ function WebsiteIq() {
     { label: "Include subdomains", value: "Include subdomains" },
     { label: "Masked URLs", value: "Masked URLs" },
   ];
-  const onFinish = (values: any) => {
-    console.log("Received values of form: ", values);
+  const onFinish = () => {
+    console.log("Received values of form: ", auditForm.getFieldsValue());
+    axios
+      .post(
+        `${import.meta.env.VITE_API_BASE_URL}/project/setup`,
+        auditForm.getFieldsValue()
+      )
+      .then((response) => {
+        console.log(response);
+        if (response?.status === 200) {
+          navigate("/seo-tools");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        <Alert message={error} type="error" />;
+      });
   };
 
   return (
@@ -54,7 +72,7 @@ function WebsiteIq() {
                 validateTrigger="onChange"
               >
                 <Form.Item
-                  name="url"
+                  name="domain"
                   className="url-form-item"
                   // rules={[
                   //   { required: true, message: "Please input your URL!" },
@@ -79,14 +97,14 @@ function WebsiteIq() {
                 </Form.Item>
                 <Form.Item
                   required
-                  name="crawl-limit"
+                  name="pageimit"
                   validateFirst
                   rules={[
                     { required: true, message: "Please input crawl limit!" },
                     {
                       pattern: /^(?:[1-9]\d{0,3}|10000)$/,
-                      message: "Limit can be between 1-10000"
-                    }
+                      message: "Limit can be between 1-10000",
+                    },
                   ]}
                   className="limit-form-item"
                   //  validateTrigger={["onChange"]}
@@ -110,33 +128,11 @@ function WebsiteIq() {
                 </Form.Item>
                 <Form.Item
                   name="crawl-freq"
-                  // rules={[
-                  //   {
-                  //     required: true,
-                  //     message: "Please input crawl frequency!",
-                  //   },
-                  // ]}
                   className="freq-form-item"
+                  initialValue="monthly"
                 >
-                  {/* <Input
-                    prefix={
-                      <span
-                        style={{
-                          background: "#ffffff",
-                          height: "25px",
-                          display: "block",
-                        }}
-                      >
-                        <img src={FreqPrefix} alt="Icon" />
-                      </span>
-                    }
-                    placeholder="Crawl Frequency"
-                    className="custom-input"
-                  /> */}
                   <Select
                     defaultValue="monthly"
-                    // style={{ width: 120 }}
-                    //  onChange={handleChange}
                     className="custom-select"
                     options={[
                       { value: "fortnight", label: "Fortnight" },
@@ -151,7 +147,7 @@ function WebsiteIq() {
                   <Button
                     className="audit-btn"
                     type="primary"
-                    htmlType="submit"
+                    onClick={() => auditForm.submit()}
                   >
                     Audit
                   </Button>
