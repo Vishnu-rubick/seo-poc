@@ -169,7 +169,7 @@ function Home() {
                   />
                 </Form.Item>
                 <Form.Item
-                  label="Competitor1"
+                  label="Competitor 1"
                   className="mandatory-field"
                   name="competitor1"
                   rules={[
