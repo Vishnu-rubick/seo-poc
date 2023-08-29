@@ -19,7 +19,7 @@ function Home() {
          console.log( res);
         if (res?.data?.projectId) {
           localStorage.setItem("projectId", res?.data?.projectId);
-          //  navigate("/seo-overview");
+            navigate("/seo-overview");
         }
         else{
           navigate('/home');
