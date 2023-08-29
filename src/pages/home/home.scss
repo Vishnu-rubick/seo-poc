@@ -60,9 +60,9 @@
         padding: 2rem;
         overflow: auto;
 
-        .mandatory-field {
-          @include mandatory-label;
-        }
+        // .mandatory-field {
+        //   @include mandatory-label;
+        // }
 
         h2 {
           font-family: Inter;

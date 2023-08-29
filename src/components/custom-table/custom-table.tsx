@@ -91,3 +91,75 @@ const CustomTable: React.FC = () => (
 );
 
 export default CustomTable;
+// import React, { useState } from "react";
+// import { Table } from "antd";
+
+// interface Item {
+//   key: number;
+//   name: string;
+//   descriptions: string[];
+// }
+
+// interface ExpandableRowProps {
+//   descriptions: string[];
+// }
+
+// const ExpandableRow: React.FC<ExpandableRowProps> = ({ descriptions }) => (
+//   <ul>
+//     {descriptions.map((desc, index) => (
+//       <li key={index}>{desc}</li>
+//     ))}
+//   </ul>
+// );
+
+// const CustomTable: React.FC = () => {
+//   const [expandedRowKeys, setExpandedRowKeys] = useState<number[]>([]);
+
+//   const handleRowExpand = (expanded: boolean, record: Item) => {
+//     if (expanded) {
+//       setExpandedRowKeys([...expandedRowKeys, record.key]);
+//     } else {
+//       setExpandedRowKeys(expandedRowKeys.filter((key) => key !== record.key));
+//     }
+//   };
+
+//   const expandedRowRender = (record: Item) => (
+//     <ExpandableRow descriptions={record.descriptions} />
+//   );
+
+//   const columns = [
+//     {
+//       title: "Name",
+//       dataIndex: "name",
+//       key: "name",
+//     },
+//   ];
+
+//   const data: Item[] = [
+//     {
+//       key: 1,
+//       name: "Item 1",
+//       descriptions: ["Description 1a", "Description 1b"],
+//     },
+//     {
+//       key: 2,
+//       name: "Item 2",
+//       descriptions: ["Description 2a", "Description 2b", "Description 2c"],
+//     },
+//     // ... other data
+//   ];
+
+//   return (
+//     <Table
+//       dataSource={data}
+//       columns={columns}
+//       expandable={{
+//         expandedRowRender,
+//         expandedRowKeys,
+//         onExpand: handleRowExpand,
+//       }}
+//     />
+//   );
+// };
+
+// export default CustomTable;

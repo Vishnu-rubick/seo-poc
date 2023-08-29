@@ -112,7 +112,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         console.log(err);
       });
   }, []);
-  console.log("data: ", overviewData);
+  console.log("overviewdata: ", overviewData);
   const overviewCards = [
     {
       id: 1,
