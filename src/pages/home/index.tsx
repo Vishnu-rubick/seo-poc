@@ -16,10 +16,13 @@ function Home() {
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
       .then((res) => {
-        // console.log(typeof res?.data?.projectId);
+         console.log( res);
         if (res?.data?.projectId) {
           localStorage.setItem("projectId", res?.data?.projectId);
           //  navigate("/seo-overview");
+        }
+        else{
+          navigate('/home');
         }
       })
       .catch((error) => {
@@ -69,6 +72,9 @@ function Home() {
         if (response.status === 201) {
           <Alert message="Successfully created" type="success" />;
           navigate("/module-details");
+        }
+        else{
+           <Alert message="Somthing went wrong." type="error" />;
         }
       })
       .catch((error) => {
