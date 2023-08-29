@@ -32,8 +32,13 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         }/site-audit/campaign/${projectId}/pages?page=0`
       )
       .then((response: any) => {
-        setDataSource(response.data);
-        console.log(response.data);
+        const dataArray = response?.data?.map((item:DataSourceType) => ({
+          pageUrl: item.pageUrl,
+          noOfIssues: item.noOfIssues,
+          category: item.category[0], 
+          priority: item.priority[0], 
+        }));
+        setDataSource(dataArray);
       })
       .catch((err) => {
         console.log(`Couldn't fetch Pages Data...`, err);

@@ -62,7 +62,22 @@ function Dashboard({ projectId }: DashboardProps) {
         console.error(error);
       });
   }, []);
-
+  // useEffect(() => {
+  //   console.log(import.meta.env.VITE_API_BASE_URL);
+  //   axios
+  //     .get(
+  //       `${
+  //         import.meta.env.VITE_API_BASE_URL
+  //       }/site-audit/campaign/:${projectId}`
+  //     )
+  //     .then((res) => {
+  //       // setData(res.data);
+  //       console.log(res);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }, []);
   return (
     <>
       <div
