@@ -64,7 +64,7 @@ const siderStyle: React.CSSProperties = {
 };
 
 function App() {
-  const [currentMenu, setCurrentMenu] = useState("seo-tools");
+  const [currentMenu, setCurrentMenu] = useState("");
   const navigate = useNavigate();
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     setCurrentMenu(e.key);
