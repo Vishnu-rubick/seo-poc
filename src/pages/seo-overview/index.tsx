@@ -70,6 +70,7 @@ const columns: ColumnsType<DataType> = [
 
 function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
+  const [tableColumns, setTableColumns] = useState<any[]>([]);
 
   useEffect(() => {
     if(localStorage.getItem("projectId"))
@@ -110,6 +111,28 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
              res.push(obj);
            });
            setOverviewData(res);
+           const dynamicColumns = data.map((item:any) => ({
+             title: item.Domain,
+             dataIndex: item.Domain,
+             width: 20,
+           }));
+            const tablecols = [
+              {
+                title: "Metric",
+                dataIndex: "metric",
+                width: 30,
+              },
+              {
+                title: "Industry Benchmark",
+                dataIndex: "industryBenchmark",
+                width: 20,
+                render: (text: string) => (
+                  <span style={{ color: "#ADB0B8" }}>{text}</span>
+                ),
+              },
+              ...dynamicColumns, // Spread the dynamic columns here
+            ];
+           setTableColumns(tablecols);
          })
          .catch((err) => {
            console.log(err);
@@ -251,7 +274,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <Row className="table-row">
           <Table
             className="competitors-table"
-            columns={columns}
+            columns={tableColumns}
             dataSource={overviewData}
             // bordered
             showHeader
