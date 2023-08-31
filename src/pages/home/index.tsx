@@ -81,14 +81,14 @@ function Home() {
         transformedObject
       )
       .then((response) => {
-        if (response.status === 201) {
+        // if (response.status === 201) {
           localStorage.setItem("domain", businessForm.getFieldsValue().domain);
           localStorage.setItem("projectId", response?.data?.projectId);
           <Alert message="Successfully created" type="success" />;
           navigate("/module-details");
-        } else {
-          <Alert message="Somthing went wrong." type="error" />;
-        }
+        // } else {
+        //   <Alert message="Somthing went wrong." type="error" />;
+        // }
       })
       .catch((error) => {
         console.error("Error:", error);

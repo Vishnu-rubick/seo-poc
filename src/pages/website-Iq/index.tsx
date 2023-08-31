@@ -1,7 +1,7 @@
 import { Alert, Button, Checkbox, Form, Input, Select } from "antd";
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LimitPrefix from "../../assets/limit-input-prefix.png";
 import URLPrefix from "../../assets/url-input-prefix.png";
@@ -11,45 +11,61 @@ import "./websiteIq.scss";
 
 function WebsiteIq() {
   const [auditForm] = Form.useForm();
+  const [crawlSubdomains, setCrawlSubdomains] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     auditForm.setFieldValue("domain", localStorage.getItem("domain"));
   }, []);
   const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log("checked = ", checkedValues);
+    const searchString = "crawlSubdomains";
+    if (checkedValues.includes(searchString)) {
+      setCrawlSubdomains(true);
+     
+    }else{
+     setCrawlSubdomains(false);
+   
+    }
   };
   const options = [
-    { label: "Include subdomains", value: "Include subdomains" },
+    { label: "Include subdomains", value: "crawlSubdomains" },
     { label: "Masked URLs", value: "Masked URLs" },
   ];
   const onFinish = () => {
     console.log("Received values of form: ", auditForm.getFieldsValue());
-    axios
-      .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
-        projectId: localStorage.getItem("projectId"),
-        domain: auditForm.getFieldsValue().domain,
-        pageLimit: auditForm.getFieldsValue().pageLimit,
-        crawlFrequency: auditForm.getFieldsValue().crawlFrequency,
-      })
-      .then((response) => {
-        console.log(response);
-         axios
-           .get(
-             `${
-               import.meta.env.VITE_API_BASE_URL
-             }/site-audit/campaign/${localStorage.getItem("projectId")}`
-           )
-           .then((response) => {
-             navigate("/seo-tools");
-           })
-           .catch((error) => {
-             <Alert message={error} type="error" />;
-           });
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        <Alert message={error} type="error" />;
-      });
+    if (localStorage.getItem("projectId") && localStorage.getItem("domain")){
+       axios
+         .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
+           projectId: localStorage.getItem("projectId"),
+           domain: auditForm.getFieldsValue().domain,
+           pageLimit: auditForm.getFieldsValue().pageLimit,
+           crawlFrequency: auditForm.getFieldsValue().crawlFrequency,
+           crawlSubdomains,
+         })
+         .then((response) => {
+           console.log(response);
+           axios
+             .get(
+               `${
+                 import.meta.env.VITE_API_BASE_URL
+               }/site-audit/campaign/${localStorage.getItem("projectId")}`
+             )
+             .then((response) => {
+               navigate("/seo-tools");
+             })
+             .catch((error) => {
+               <Alert message={error} type="error" />;
+             });
+         })
+         .catch((error) => {
+           console.error("Error:", error);
+           <Alert message={error} type="error" />;
+         });
+    }
+    else{
+      <Alert type="error" message="Somthing went wrong. Project id or domain not available."/>
+    }
+    
   };
 
   return (

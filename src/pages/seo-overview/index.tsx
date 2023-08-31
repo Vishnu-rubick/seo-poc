@@ -193,7 +193,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           <div className="seo-overview-subheader">
             <span className="website-name">
               {/* <a href="https://www.textmercato.com/">www.textmercato.com</a> */}
-              Domain - rubick.ai
+              {localStorage.getItem("domain")}
             </span>
             <div className="update-freq-container">
               <img className="history-logo" src={CalenderLogo} alt="" />
