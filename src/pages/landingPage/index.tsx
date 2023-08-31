@@ -4,15 +4,15 @@ import { useNavigate } from "react-router-dom";
 import ExportLogo from "../../assets/home-module/export-logo.png";
 import IssuesDetails from "../../backlinks/issues-details/issues-details";
 import PagesDetails from "../../backlinks/pages-details/pages-details";
+import Dashboard from "../../components/Dashboard";
 import { downloadFileFromURL } from "../../utility/fileDownload";
-import Dashboard from "../Dashboard";
 
+import Alert from "antd/es/alert/Alert";
 import axios from "axios";
 import domtoimage from "dom-to-image";
-import AffectedPages from "../../pages/website-Iq/report/affected-pages";
-import AppHeader from "../app-header/app-header";
+import AppHeader from "../../components/app-header/app-header";
+import AffectedPages from "../website-Iq/report/affected-pages";
 import "./style.scss";
-import Alert from "antd/es/alert/Alert";
 
 interface LandingPageProps {
   projectId?: string;
@@ -105,9 +105,8 @@ function LandingPage({ projectId }: LandingPageProps) {
       } else if (currentTab === "overview") {
         downloadOverviewSS();
       }
-    }
-    else{
-      <Alert message="Project id not present." type="error"/>
+    } else {
+      <Alert message="Project id not present." type="error" />;
     }
   };
 

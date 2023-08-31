@@ -14,10 +14,10 @@ import ReferringDomains from "./backlinks/issues-details/issues-details";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
 import PagesDetails from "./backlinks/pages-details/pages-details";
 import CompetitorAnalysis from "./competitorAnalysis";
-import LandingPage from "./components/landingPage";
 import Keywords from "./keywords";
 import KeywordsDetails from "./keywords/details";
 import HomeModule from "./pages/home";
+import LandingPage from "./pages/landingPage";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
 

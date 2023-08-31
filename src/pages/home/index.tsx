@@ -14,7 +14,6 @@ function Home() {
 
 
   useEffect(() => {
-    console.log("in useeffect");
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
       .then((res) => {
