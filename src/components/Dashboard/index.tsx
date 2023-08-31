@@ -54,49 +54,55 @@ function Card({ data, title, subTitle, child }: CardProps) {
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
   useEffect(() => {
-    console.log(import.meta.env.VITE_API_BASE_URL);
-    axios
-      .get(
-        `${import.meta.env.VITE_API_BASE_URL}/site-audit/dashboard/${projectId}`
-      )
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    if (localStorage.getItem("projectId")) {
+      axios
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/dashboard/${localStorage.getItem("projectId")}`
+        )
+        .then((res) => {
+          setData(res.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   }, []);
 
   // API FOR FETCHING DASHBOARD DATA EVERY 15 MINS
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     axios
-  //       .get(
-  //         `${
-  //           import.meta.env.VITE_API_BASE_URL
-  //         }/site-audit/campaign/:${projectId}`
-  //       )
-  //       .then((response) => {
-  //         if (response?.data) {
-  //           console.log(response?.data);
-  //         }
-  //         if (response?.data?.status === "completed") {
-  //           // delete the interval
-  //           clearInterval(interval);
-  //         }
-  //         console.log(response);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error fetching data:", error);
-  //       });
-  //   };
+  useEffect(() => {
+    const projectId = localStorage.getItem("projectId");
+    if (projectId) {
+      const fetchData = async () => {
+        axios
+          .get(
+            `${
+              import.meta.env.VITE_API_BASE_URL
+            }/site-audit/campaign/${projectId}`
+          )
+          .then((response) => {
+            if (response?.data) {
+              console.log(response?.data);
+            }
+            if (response?.data?.status === "FINISHED") {
+              // delete the interval
+              clearInterval(interval);
+            }
+            console.log(response);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      };
 
-  //   // Call the API immediately
-  //   fetchData();
-  //   // Set up the interval to make the API call every 15 minutes
-  //   const interval = setInterval(fetchData, 15 * 60 * 1000); // 15 minutes in milliseconds
-  // }, []);
+      // Call the API immediately
+      fetchData();
+      // Set up the interval to make the API call every 15 minutes
+      const interval = setInterval(fetchData, 15 * 60 * 1000); // 15 minutes in milliseconds
+    }
+  }, []);
   return (
     <>
       <div

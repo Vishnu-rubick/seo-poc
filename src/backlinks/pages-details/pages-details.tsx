@@ -34,26 +34,34 @@ function PagesDetails({ projectId }: PageDetailsProps) {
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
 
   useEffect(() => {
-    axios
-      .get(
-        `${
-          import.meta.env.VITE_API_BASE_URL
-        }/site-audit/campaign/${projectId}/pages?page=0`
-      )
-      .then((response: any) => {
-        const transeformedData = response?.data?.map((item:DataSourceType) => ({
-          pageUrl: item.pageUrl,
-          noOfIssues: item.noOfIssues,
-          category: item.category[0], 
-          priority: item.priority[0], 
-        }));
-        setDataSource(transeformedData);
-      })
-      .catch((err) => {
-        console.log(`Couldn't fetch Pages Data...`, err);
-      });
+    const projectId = localStorage.getItem("projectId");
+    if (projectId) {
+      axios
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${projectId}/pages?page=0`
+        )
+        .then((response: any) => {
+          const transeformedData = response?.data?.map(
+            (item: DataSourceType) => ({
+              pageUrl: item.pageUrl,
+              noOfIssues: item.noOfIssues,
+              category: item.category[0],
+              priority: item.priority[0],
+            })
+          );
+          setDataSource(transeformedData);
+        })
+        .catch((err) => {
+          console.log(`Couldn't fetch Pages Data...`, err);
+        });
+    }
   }, []);
-
+ 
+  if(!localStorage.getItem("projectId")){
+    return <div>Project id not present</div>
+  }
   const rowHeight = 50;
   const columns = [
     {

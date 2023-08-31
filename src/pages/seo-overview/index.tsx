@@ -23,9 +23,10 @@ import UniqueVisitorsArrow from "../../assets/seo-overview/cards/unique-visitors
 import UniqueVisitorsLogo from "../../assets/seo-overview/cards/unique-visitors.svg";
 import VisitDurationArrow from "../../assets/seo-overview/cards/visit-duration-arrow.png";
 import VisitDurationLogo from "../../assets/seo-overview/cards/visit-duration.svg";
+import { Navigate } from "react-router-dom";
 
 interface SeoOverviewProps {
-  projectId: string;
+  projectId?: string;
 }
 
 interface DataType {
@@ -71,48 +72,51 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
 
   useEffect(() => {
-    axios
-      .get(
-        `${
-          import.meta.env.VITE_API_BASE_URL
-        }/site-audit/competitorAnalysis/${projectId}`
-      )
-      .then((response) => {
-        let data = response.data;
-        let res: any[] = [];
-        const columns = [
-          "Domain Authority",
-          "Organic Search Traffic",
-          "Paid Search Traffic",
-          "Visitors",
-          "Unique Visitors",
-          "Avg. Visit Duration",
-          "Bounce Rate",
-          "Traffic Share",
-        ];
-        columns.forEach((column, idx) => {
-          let obj = {
-            key: idx,
-            metric: column,
-            industryBenchmark: "Coming Soon",
-          } as any;
-          data.forEach((domainObj: any) => {
-            if (column == "Traffic Share")
-              obj[domainObj.Domain] = domainObj[column].toPrecision(4);
-            else obj[domainObj.Domain] = parseInt(domainObj[column]);
-            if (isNaN(obj[domainObj.Domain])) {
-              obj[domainObj.Domain] = "N/A";
-            }
-          });
-          res.push(obj);
-        });
-        setOverviewData(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if(localStorage.getItem("projectId"))
+    {
+       axios
+         .get(
+           `${
+             import.meta.env.VITE_API_BASE_URL
+           }/site-audit/competitorAnalysis/${localStorage.getItem("projectId")}`
+         )
+         .then((response) => {
+           let data = response.data;
+           let res: any[] = [];
+           const columns = [
+             "Domain Authority",
+             "Organic Search Traffic",
+             "Paid Search Traffic",
+             "Visitors",
+             "Unique Visitors",
+             "Avg. Visit Duration",
+             "Bounce Rate",
+             "Traffic Share",
+           ];
+           columns.forEach((column, idx) => {
+             let obj = {
+               key: idx,
+               metric: column,
+               industryBenchmark: "Coming Soon",
+             } as any;
+             data.forEach((domainObj: any) => {
+               if (column == "Traffic Share")
+                 obj[domainObj.Domain] = domainObj[column].toPrecision(4);
+               else obj[domainObj.Domain] = parseInt(domainObj[column]);
+               if (isNaN(obj[domainObj.Domain])) {
+                 obj[domainObj.Domain] = "N/A";
+               }
+             });
+             res.push(obj);
+           });
+           setOverviewData(res);
+         })
+         .catch((err) => {
+           console.log(err);
+         });
+    }
+     
   }, []);
-  console.log("overviewdata: ", overviewData);
   const overviewCards = [
     {
       id: 1,
@@ -172,6 +176,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
     },
   ];
 
+  if (!localStorage.getItem("projectId")) {
+     return <div>Project id not present</div>
+  }
   return (
     <div className="seo-overview-wrapper">
       <AppHeader />

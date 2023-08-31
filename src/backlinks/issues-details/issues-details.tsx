@@ -26,59 +26,64 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
 
   useEffect(() => {
-    axios
-      .get(
-        `${
-          import.meta.env.VITE_API_BASE_URL
-        }/site-audit/campaign/${projectId}/issues`
-      )
-      .then((response: any) => {
-        setDataSource(response.data);
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(`Couldn't fetch Issues Data...`, err);
-      });
+    const projectId = localStorage.getItem("projectId");
+    if (projectId) {
+      axios
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${projectId}/issues`
+        )
+        .then((response: any) => {
+          setDataSource(response.data);
+          console.log(response.data);
+        })
+        .catch((err) => {
+          console.log(`Couldn't fetch Issues Data...`, err);
+        });
+    }
   }, []);
-
-  const columns = [
-    {
-      title: <span style={{ fontWeight: 400 }}>Issue</span>,
-      dataIndex: "title",
-      key: "1",
-      width: 150,
-      className: "typography issue-text",
-      sorter: (a: DataSourceType, b: DataSourceType) =>
-        a.title.localeCompare(b.title),
-    },
-    {
-      title: <span style={{ fontWeight: 400 }}>Category</span>,
-      dataIndex: "category",
-      width: 100,
-      key: "2",
-      className: "typography",
-      sorter: (a: DataSourceType, b: DataSourceType) =>
-        a.category.localeCompare(b.category),
-    },
-    {
-      title: <span style={{ fontWeight: 400 }}>Priority</span>,
-      dataIndex: "priority",
-      width: 100,
-      key: "3",
-      className: "typography",
-      sorter: (a: DataSourceType, b: DataSourceType) =>
-        a.priority.localeCompare(b.priority),
-    },
-    {
-      title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
-      width: 100,
-      dataIndex: "pagesAffected",
-      key: "4",
-      className: "typography",
-      sorter: (a: DataSourceType, b: DataSourceType) =>
-        a.pagesAffected - b.pagesAffected,
-    },
-  ];
+   if (!localStorage.getItem("projectId")){
+    return <div>Project id not present.</div>
+   }
+     const columns = [
+       {
+         title: <span style={{ fontWeight: 400 }}>Issue</span>,
+         dataIndex: "title",
+         key: "1",
+         width: 150,
+         className: "typography issue-text",
+         sorter: (a: DataSourceType, b: DataSourceType) =>
+           a.title.localeCompare(b.title),
+       },
+       {
+         title: <span style={{ fontWeight: 400 }}>Category</span>,
+         dataIndex: "category",
+         width: 100,
+         key: "2",
+         className: "typography",
+         sorter: (a: DataSourceType, b: DataSourceType) =>
+           a.category.localeCompare(b.category),
+       },
+       {
+         title: <span style={{ fontWeight: 400 }}>Priority</span>,
+         dataIndex: "priority",
+         width: 100,
+         key: "3",
+         className: "typography",
+         sorter: (a: DataSourceType, b: DataSourceType) =>
+           a.priority.localeCompare(b.priority),
+       },
+       {
+         title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
+         width: 100,
+         dataIndex: "pagesAffected",
+         key: "4",
+         className: "typography",
+         sorter: (a: DataSourceType, b: DataSourceType) =>
+           a.pagesAffected - b.pagesAffected,
+       },
+     ];
   return (
     <div className="issues-details-wrapper">
       <div className="cards-container">
@@ -106,7 +111,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         pagination={false}
         title={() => "Issues"}
         //loading
-       // showSorterTooltip={false}
+        // showSorterTooltip={false}
       />
     </div>
   );

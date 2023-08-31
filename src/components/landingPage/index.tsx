@@ -9,12 +9,13 @@ import Dashboard from "../Dashboard";
 
 import axios from "axios";
 import domtoimage from "dom-to-image";
+import AffectedPages from "../../pages/website-Iq/report/affected-pages";
 import AppHeader from "../app-header/app-header";
 import "./style.scss";
-import AffectedPages from "../../pages/website-Iq/report/affected-pages";
+import Alert from "antd/es/alert/Alert";
 
 interface LandingPageProps {
-  projectId: string;
+  projectId?: string;
 }
 
 function SubHeaderCard({
@@ -61,7 +62,7 @@ function LandingPage({ projectId }: LandingPageProps) {
     {
       key: "affected-pages",
       label: `Affected Pages`,
-      children: <AffectedPages/>,
+      children: <AffectedPages />,
     },
   ];
 
@@ -83,24 +84,30 @@ function LandingPage({ projectId }: LandingPageProps) {
       });
   };
   const handleExport = async () => {
-    if (currentTab === "Issues") {
-      const res = await axios.get(
-        `${
-          import.meta.env.VITE_API_BASE_URL
-        }/site-audit/campaign/${projectId}/export/issues`
-      );
+    const projectId = localStorage.getItem("projectId");
+    if (projectId) {
+      if (currentTab === "Issues") {
+        const res = await axios.get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${projectId}/export/issues`
+        );
 
-      downloadFileFromURL(res?.data?.link, "issues-csv");
-    } else if (currentTab === "audited-pages") {
-      const res = await axios.get(
-        `${
-          import.meta.env.VITE_API_BASE_URL
-        }/site-audit/campaign/${projectId}/export/pages`
-      );
+        downloadFileFromURL(res?.data?.link, "issues-csv");
+      } else if (currentTab === "audited-pages") {
+        const res = await axios.get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${projectId}/export/pages`
+        );
 
-      downloadFileFromURL(res?.data?.link, "pages-csv");
-    } else if (currentTab === "overview") {
-      downloadOverviewSS();
+        downloadFileFromURL(res?.data?.link, "pages-csv");
+      } else if (currentTab === "overview") {
+        downloadOverviewSS();
+      }
+    }
+    else{
+      <Alert message="Project id not present." type="error"/>
     }
   };
 

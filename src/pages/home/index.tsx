@@ -12,7 +12,9 @@ function Home() {
   const [competitors, setCompetitors] = useState<{}[]>([]);
   const navigate = useNavigate();
 
+
   useEffect(() => {
+    console.log("in useeffect");
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
       .then((res) => {
@@ -21,7 +23,22 @@ function Home() {
           localStorage.setItem("projectId", res?.data?.projectId);
           navigate("/seo-overview");
         } else {
-          navigate("/home");
+          axios
+            .post(`${import.meta.env.VITE_API_BASE_URL}/project/setup`, {
+              pageLimit: 400,
+              domain: res?.data?.domain,
+            })
+            .then(() => {
+              axios
+                .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
+                .then((response) => {
+                  localStorage.setItem("projectId", response?.data?.projectId);
+                  navigate("/website-iq");
+                });
+            })
+            .catch((setUpError) => {
+              <Alert message={setUpError} type="error" />;
+            });
         }
       })
       .catch((error) => {
@@ -66,7 +83,7 @@ function Home() {
       )
       .then((response) => {
         if (response.status === 201) {
-          localStorage.setItem("domain",businessForm.getFieldsValue().domain);
+          localStorage.setItem("domain", businessForm.getFieldsValue().domain);
           localStorage.setItem("projectId", response?.data?.projectId);
           <Alert message="Successfully created" type="success" />;
           navigate("/module-details");

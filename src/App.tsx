@@ -2,7 +2,7 @@ import "./App.scss";
 
 import { Menu, MenuProps } from "antd";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Details from "./Details/Details";
 import Home from "./Home/home";
@@ -21,11 +21,10 @@ import HomeModule from "./pages/home";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
 
+import HonmeIcon from "./assets/common/HomeIcon.svg";
+import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
-import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
-import HonmeIcon from "./assets/common/HomeIcon.svg";
-import DashboardIconSelected from "./assets/common/dashboard-selected.svg";
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";
@@ -70,7 +69,11 @@ function App() {
     setCurrentMenu(e.key);
     navigate(`/${e.key}`);
   };
-
+  const [projectId, setProjectId] = useState("");
+  useEffect(() => {
+    const projectId = localStorage.getItem("projectId");
+    setProjectId(projectId || "");
+  }, []);
   return (
     <div className="app container">
       <Menu
@@ -201,7 +204,7 @@ function App() {
           <Route path="/backlinks/details" element={<BacklinksDetails />} />
           <Route
             path="/referring-domains/details"
-            element={<ReferringDomains projectId="12808182" />}
+            element={<ReferringDomains projectId={projectId} />}
           />
           <Route
             path="/outbound-domains/details"
@@ -209,17 +212,13 @@ function App() {
           />
 
           {/* latest-components */}
-          <Route
-            path="/seo-tools"
-            element={<LandingPage projectId="12808182" />}
-          />
+          <Route path="/seo-tools" element={<LandingPage />} />
+
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
           <Route path="/home" element={<HomeModule />} />
-          <Route
-            path="/seo-overview"
-            element={<SeoOverview projectId="12808182" />}
-          />
+          <Route path="/seo-overview" element={<SeoOverview />} />
+
           {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
           <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
           <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}

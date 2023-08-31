@@ -12,7 +12,6 @@ import "./websiteIq.scss";
 function WebsiteIq() {
   const [auditForm] = Form.useForm();
   const navigate = useNavigate();
-  // localStorage.setItem("domain", "https://rubick.ai/");
   useEffect(() => {
     auditForm.setFieldValue("domain", localStorage.getItem("domain"));
   }, []);
@@ -26,15 +25,26 @@ function WebsiteIq() {
   const onFinish = () => {
     console.log("Received values of form: ", auditForm.getFieldsValue());
     axios
-      .post(
-        `${import.meta.env.VITE_API_BASE_URL}/project/setup`,
-        auditForm.getFieldsValue()
-      )
+      .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
+        projectId: localStorage.getItem("projectId"),
+        domain: auditForm.getFieldsValue().domain,
+        pageLimit: auditForm.getFieldsValue().pageLimit,
+        crawlFrequency: auditForm.getFieldsValue().crawlFrequency,
+      })
       .then((response) => {
         console.log(response);
-        if (response?.status === 200) {
-          navigate("/seo-tools");
-        }
+         axios
+           .get(
+             `${
+               import.meta.env.VITE_API_BASE_URL
+             }/site-audit/campaign/${localStorage.getItem("projectId")}`
+           )
+           .then((response) => {
+             navigate("/seo-tools");
+           })
+           .catch((error) => {
+             <Alert message={error} type="error" />;
+           });
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -97,7 +107,7 @@ function WebsiteIq() {
                 </Form.Item>
                 <Form.Item
                   required
-                  name="pageimit"
+                  name="pageLimit"
                   validateFirst
                   rules={[
                     { required: true, message: "Please input crawl limit!" },
@@ -127,7 +137,7 @@ function WebsiteIq() {
                   />
                 </Form.Item>
                 <Form.Item
-                  name="crawl-freq"
+                  name="crawlFrequency"
                   className="freq-form-item"
                   initialValue="monthly"
                 >
