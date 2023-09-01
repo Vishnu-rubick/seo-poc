@@ -61,7 +61,12 @@ function Home() {
 
     for (const key in input) {
       if (key.startsWith("competitor")) {
-        competitors.push(input[key]);
+        const value = input[key];
+        if (typeof value === "string") {
+          competitors.push(value);
+        } else if (Array.isArray(value)) {
+          competitors.push(...value);
+        }
         delete input[key];
       }
     }
