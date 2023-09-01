@@ -47,17 +47,17 @@ function LandingPage({ projectId }: LandingPageProps) {
     {
       key: "overview",
       label: `Overview`,
-      children: <Dashboard projectId={projectId} />,
+      children: <Dashboard />,
     },
     {
       key: "Issues",
       label: `Issues`,
-      children: <IssuesDetails projectId={projectId} />,
+      children: <IssuesDetails  />,
     },
     {
       key: "audited-pages",
       label: `Audited Pages`,
-      children: <PagesDetails projectId={projectId} />,
+      children: <PagesDetails />,
     },
     {
       key: "affected-pages",

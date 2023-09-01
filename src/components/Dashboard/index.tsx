@@ -90,7 +90,7 @@ function Dashboard({ projectId }: DashboardProps) {
               // delete the interval
               clearInterval(interval);
             }
-            console.log(response);
+            console.log(response ,'res of dasboard refetcg api');
           })
           .catch((error) => {
             console.error("Error fetching data:", error);

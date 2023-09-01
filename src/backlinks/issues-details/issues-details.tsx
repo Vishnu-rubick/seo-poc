@@ -5,7 +5,7 @@ import HeaderCard from "./header-card/header-card";
 import "./issues-details.scss";
 
 interface IssuesDetailsProps {
-  projectId: string;
+  projectId?: string;
 }
 type DataSourceType = {
   key: number;

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./pages-details.scss";
 
 interface PageDetailsProps {
-  projectId: string;
+  projectId? : string;
 }
 type DataSourceType = {
   key: number;
