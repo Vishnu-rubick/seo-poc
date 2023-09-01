@@ -7,8 +7,8 @@ import issueCategoryMap from "../../data/issues-category_Mapped.json";
 
 import { Link, Outlet } from "react-router-dom";
 import "./style.css";
-
-const SiteAudit: React.FC = (): ReactNode => {
+interface SiteAuditProps {}
+const SiteAudit: React.FC<SiteAuditProps> = () => {
   const [domain, setDomain] = useState<string>();
   const [data, setData] = useState<any>();
   const [dataSourceOne, setDataSourceOne] = useState<any[]>([
@@ -99,7 +99,6 @@ const SiteAudit: React.FC = (): ReactNode => {
     ]);
   }, [data]);
 
-
   const view_1 = [
     {
       title: "",
@@ -111,7 +110,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "totalIssues",
       key: "2",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`/site-audit/details/issues/1`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/1`}>
+          {text}
+        </Link>
       ),
     },
     {
@@ -119,7 +120,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "crawlability",
       key: "3",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`/site-audit/details/issues/2`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/2`}>
+          {text}
+        </Link>
       ),
     },
     {
@@ -127,7 +130,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "techIssues",
       key: "4",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`/site-audit/details/issues/3`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/3`}>
+          {text}
+        </Link>
       ),
     },
     {
@@ -135,7 +140,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "linkIssues",
       key: "5",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`/site-audit/details/issues/4`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/4`}>
+          {text}
+        </Link>
       ),
     },
 
@@ -144,7 +151,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "textIssues",
       key: "6",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`/site-audit/details/issues/5`}>{text}</Link>
+        <Link className="hyperLink" to={`/site-audit/details/issues/5`}>
+          {text}
+        </Link>
       ),
     },
   ];
@@ -168,7 +177,9 @@ const SiteAudit: React.FC = (): ReactNode => {
       dataIndex: "pagesWithIssues",
       key: "3",
       render: (text: string, record: any) => (
-        <Link className="hyperLink" to={`details/pages`}>{text}</Link>
+        <Link className="hyperLink" to={`details/pages`}>
+          {text}
+        </Link>
       ),
     },
     {
