@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { Col, Row } from "antd";
+import { Col, Row, Modal, Spin } from "antd";
 
 import { DashboardDataType } from "../../interfaces";
 import AuditedPages from "../AuditedPages";
@@ -53,6 +53,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
 
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
+   const [isModalOpen, setIsModalOpen] = useState(true);
   useEffect(() => {
     if (localStorage.getItem("projectId")) {
       axios
@@ -89,27 +90,37 @@ function Dashboard({ projectId }: DashboardProps) {
             if (response?.data?.status === "FINISHED") {
               // delete the interval
               clearInterval(interval);
+              setIsModalOpen(false);
             }
-            console.log(response ,'res of dasboard refetcg api');
+            console.log(response, "res of dasboard refetcg api");
           })
           .catch((error) => {
             console.error("Error fetching data:", error);
           });
       };
 
-      // Call the API immediately
       fetchData();
-      // Set up the interval to make the API call every 15 minutes
-      const interval = setInterval(fetchData, 15 * 60 * 1000); // 15 minutes in milliseconds
+      const interval = setInterval(fetchData, 15 * 60 * 1000);
     }
   }, []);
+
   return (
     <>
       <div
         style={{ backgroundColor: "white" }}
         id="dashboard-container-id"
-        className="dashboard-container"
+        className={`dashboard-container overlay-container`}
       >
+        <Modal
+          title="Please wait. Audit is running..."
+          open={isModalOpen}
+          footer={null}
+          closeIcon={null}
+          style={{ top: 0, left: 0 }}
+        >
+         <Spin />
+        </Modal>
+
         <Row>
           <Col span={15} style={{ border: "1px solid #D9D9D9" }}>
             <Card
