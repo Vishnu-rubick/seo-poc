@@ -71,20 +71,20 @@ function AuditedPages({ data }: AuditedPagesProps) {
     colorField: 'type',
     color: ['#84D149', '#FE6060', '#FD8E0C', '#FFB400', '#F5F5F5'],
     
-    label: {
-      position: 'top',
-      layout: [
-        {
-          type: 'interval-adjust-position',
-        }, 
-        {
-          type: 'interval-hide-overlap',
-        },
-        {
-          type: 'adjust-color',
-        },
-      ],
-    },
+    // label: {
+    //   position: 'top',
+    //   layout: [
+    //     {
+    //       type: 'interval-adjust-position',
+    //     }, 
+    //     {
+    //       type: 'interval-hide-overlap',
+    //     },
+    //     {
+    //       type: 'adjust-color',
+    //     },
+    //   ],
+    // },
   };
 
 
