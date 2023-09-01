@@ -52,7 +52,7 @@ function LandingPage({ projectId }: LandingPageProps) {
     {
       key: "Issues",
       label: `Issues`,
-      children: <IssuesDetails  />,
+      children: <IssuesDetails />,
     },
     {
       key: "audited-pages",
@@ -71,17 +71,20 @@ function LandingPage({ projectId }: LandingPageProps) {
   };
   const downloadOverviewSS = () => {
     const element = document.getElementById("dashboard-container-id"); // Replace with the actual ID of your <div>
-    domtoimage
-      .toPng(element)
-      .then((dataUrl: any) => {
-        const link = document.createElement("a");
-        link.href = dataUrl;
-        link.download = "overview.png";
-        link.click();
-      })
-      .catch((error: any) => {
-        console.error("Error capturing screenshot:", error);
-      });
+    if (element) {
+      domtoimage
+        .toPng(element)
+        .then((dataUrl: any) => {
+          const link = document.createElement("a");
+          link.href = dataUrl;
+          link.download = "overview.png";
+          link.click();
+        })
+        .catch((error: any) => {
+          <Alert message={`Error capturing screenshot:${error}`} type="error" />;
+          console.error("Error capturing screenshot:", error);
+        });
+    }
   };
   const handleExport = async () => {
     const projectId = localStorage.getItem("projectId");
