@@ -71,7 +71,7 @@ const columns: ColumnsType<DataType> = [
 function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
   const [tableColumns, setTableColumns] = useState<any[]>([]);
-
+  const [domainTitle, setDomainTitle] = useState<string | null>("");
   useEffect(() => {
     if(localStorage.getItem("projectId"))
     {
@@ -137,6 +137,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
          .catch((err) => {
            console.log(err);
          });
+    }
+    if(localStorage.getItem("domain")){
+      setDomainTitle(localStorage.getItem("domain"));
     }
      
   }, []);
@@ -216,7 +219,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           <div className="seo-overview-subheader">
             <span className="website-name">
               {/* <a href="https://www.textmercato.com/">www.textmercato.com</a> */}
-              {localStorage.getItem("domain")}
+              {domainTitle}
             </span>
             <div className="update-freq-container">
               <img className="history-logo" src={CalenderLogo} alt="" />
