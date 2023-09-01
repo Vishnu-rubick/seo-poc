@@ -54,7 +54,8 @@ function Card({ data, title, subTitle, child }: CardProps) {
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
    const [isModalOpen, setIsModalOpen] = useState(true);
-  useEffect(() => {
+
+  const fetchData= ()=>{
     if (localStorage.getItem("projectId")) {
       axios
         .get(
@@ -69,14 +70,15 @@ function Dashboard({ projectId }: DashboardProps) {
           console.error(error);
         });
     }
-  }, []);
+  }
 
   // API FOR FETCHING DASHBOARD DATA EVERY 15 MINS
 
   useEffect(() => {
+    fetchData();
     const projectId = localStorage.getItem("projectId");
     if (projectId) {
-      const fetchData = async () => {
+      const fetchCampignData = async () => {
         axios
           .get(
             `${
@@ -84,22 +86,18 @@ function Dashboard({ projectId }: DashboardProps) {
             }/site-audit/campaign/${projectId}`
           )
           .then((response) => {
-            if (response?.data) {
-              console.log(response?.data);
-            }
+            fetchData();
             if (response?.data?.status === "FINISHED") {
-              // delete the interval
               clearInterval(interval);
               setIsModalOpen(false);
             }
-            console.log(response, "res of dasboard refetcg api");
           })
           .catch((error) => {
             console.error("Error fetching data:", error);
           });
       };
 
-      fetchData();
+      fetchCampignData();
       const interval = setInterval(fetchData, 15 * 60 * 1000);
     }
   }, []);
