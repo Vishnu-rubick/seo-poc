@@ -30,7 +30,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
   ];
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
   const [expandedRowKeys, setExpandedRowKeys] = useState<number[]>([]);
-  const addDescription= (dataItem:any)=>{
+  const addDescription = (dataItem: any) => {
     return new Promise(function (res, rej) {
       axios
         .get(
@@ -48,8 +48,8 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
           rej();
         });
     });
-  }
-  
+  };
+
   useEffect(() => {
     const projectId = localStorage.getItem("projectId");
     if (projectId) {
@@ -84,13 +84,10 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
               const description = await addDescription(dataItem);
               console.log(description, "issue des");
 
-              const des = ["dd", "ddd"];
-
               return {
                 ...dataItem,
                 key: idx,
                 description: description, // Include the description from addDescription
-                someOtherData: des, // You can include other data as well
               };
             }
           );
