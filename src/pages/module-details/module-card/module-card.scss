@@ -26,5 +26,8 @@
   }
   .link{
     color: #00A6ED;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

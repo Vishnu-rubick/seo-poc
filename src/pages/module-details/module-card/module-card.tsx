@@ -6,7 +6,7 @@ function ModuleCard({ title, icon, para, onClick }:any) {
       <img src={icon} alt="" />
       <h4>{title}</h4>
       <p>{para}</p>
-      <Link className="link" onClick={onClick}>Learn more</Link>
+      <a className="link" onClick={onClick}>Learn more</a>
     </div>
   );
 }
