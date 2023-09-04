@@ -212,7 +212,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <Row className="seo-overview-header-row">
           <div className="seo-overview-header">
             <h1>SEO Overview</h1>
-            <p>Last Updated: {`${overviewData[0]?.lastUpdatedAt} || 01 Oct 2023`}</p>
+            <p>Last Updated: {`${overviewData[0]?.lastUpdatedAt || `01 Oct 2023`}`}</p>
           </div>
         </Row>
         <Row className="seo-overview-subheader-row">
