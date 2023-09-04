@@ -20,7 +20,7 @@ function Home() {
         console.log(res);
         if (res?.data?.projectId) {
           localStorage.setItem("projectId", res?.data?.projectId);
-          navigate("/seo-overview");
+         // navigate("/seo-overview");
         } else {
           axios
             .post(`${import.meta.env.VITE_API_BASE_URL}/project/setup`, {

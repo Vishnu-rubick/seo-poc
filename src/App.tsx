@@ -65,6 +65,9 @@ const siderStyle: React.CSSProperties = {
 function App() {
   const [currentMenu, setCurrentMenu] = useState("");
   const navigate = useNavigate();
+  if (window.location.pathname === "/") {
+    navigate("/configure", { replace: true });
+  }
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     setCurrentMenu(e.key);
     navigate(`/${e.key}`);
@@ -188,7 +191,7 @@ function App() {
       {/* <AppSider /> */}
       <div className="router-container">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/configure" element={<HomeModule />} />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
           <Route
             path="site-audit/details/pages"
@@ -216,7 +219,7 @@ function App() {
 
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
-          <Route path="/home" element={<HomeModule />} />
+          <Route path="/home" element={<SeoOverview />} />
           <Route path="/seo-overview" element={<SeoOverview />} />
 
           {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
