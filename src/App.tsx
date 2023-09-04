@@ -26,6 +26,7 @@ import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
 import TMLogo from "./assets/common/company-logo.svg";
+import RubickLogo from "./assets/common/rubick-logo.svg";
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";
@@ -95,7 +96,7 @@ function App() {
         mode="vertical"
       >
         <MenuItem disabled className="menu-item-header" key="">
-          <img height="20px" src={TMLogo} />
+          <img height="35px" src={RubickLogo} />
         </MenuItem>
         {/* <MenuItem className="menu-item-header" key="seo-overview">
           {currentMenu === "seo-overview" ? (
