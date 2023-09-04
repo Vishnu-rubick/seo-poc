@@ -109,7 +109,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       title: <span style={{ fontWeight: 400 }}>Issue</span>,
       dataIndex: "title",
       key: "1",
-      width: 150,
+      // width: 150,
       className: "typography issue-text",
       sorter: (a: DataSourceType, b: DataSourceType) =>
         a.title.localeCompare(b.title),
@@ -117,7 +117,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
     {
       title: <span style={{ fontWeight: 400 }}>Category</span>,
       dataIndex: "category",
-      width: 100,
+      // width: 100,
       key: "2",
       className: "typography",
       sorter: (a: DataSourceType, b: DataSourceType) =>
@@ -126,7 +126,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
     {
       title: <span style={{ fontWeight: 400 }}>Priority</span>,
       dataIndex: "priority",
-      width: 100,
+      // width: 100,
       key: "3",
       className: "typography",
       sorter: (a: DataSourceType, b: DataSourceType) =>
@@ -134,7 +134,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
     },
     {
       title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
-      width: 100,
+      // width: 100,
       dataIndex: "pagesAffected",
       key: "4",
       className: "typography",
@@ -189,7 +189,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         expandable={{
           expandedRowRender: (record, idx) => {
             return (
-              <ol key={idx} style={{ marginLeft: "9%" }}>
+              <ol key={idx} style={{ marginLeft: "22px" }}>
                 {record.description.map((desc, index) => (
                   <li style={{ marginTop: "5px" }} key={index}>
                     {desc}
