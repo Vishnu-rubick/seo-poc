@@ -25,6 +25,7 @@ import HonmeIcon from "./assets/common/HomeIcon.svg";
 import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
+import TMLogo from "./assets/common/company-logo.svg";
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";
@@ -94,7 +95,7 @@ function App() {
         mode="vertical"
       >
         <MenuItem disabled className="menu-item-header" key="">
-          <img height="20px" src="src/assets/common/company-logo.svg" />
+          <img height="20px" src={TMLogo} />
         </MenuItem>
         {/* <MenuItem className="menu-item-header" key="seo-overview">
           {currentMenu === "seo-overview" ? (
@@ -192,7 +193,10 @@ function App() {
       <div className="router-container">
         <Routes>
           <Route path="/configure" element={<HomeModule />} />
-          <Route path="/configure-domain" element={<HomeModule redirect={false} />} />
+          <Route
+            path="/configure-domain"
+            element={<HomeModule redirect={false} />}
+          />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
           <Route
             path="site-audit/details/pages"
