@@ -15,18 +15,24 @@ function WebsiteIq() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    auditForm.setFieldValue("domain", localStorage.getItem("domain"));
+    axios
+      .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
+      .then((configResponse) => {
+        let config = configResponse?.data;
+        auditForm.setFieldValue("domain", config.domain);
+      })
+      .catch((error) => {
+        console.error(error);
+        <Alert message="Somthing went wrong" type="error" />;
+      });
   }, []);
 
   const onChange = (checkedValues: CheckboxValueType[]) => {
-    console.log("checked = ", checkedValues);
     const searchString = "crawlSubdomains";
     if (checkedValues.includes(searchString)) {
       setCrawlSubdomains(true);
-     
-    }else{
-     setCrawlSubdomains(false);
-   
+    } else {
+      setCrawlSubdomains(false);
     }
   };
   const options = [
@@ -35,39 +41,40 @@ function WebsiteIq() {
   ];
   const onFinish = () => {
     console.log("Received values of form: ", auditForm.getFieldsValue());
-    if (localStorage.getItem("projectId") && localStorage.getItem("domain")){
-       axios
-         .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
-           projectId: localStorage.getItem("projectId"),
-           domain: auditForm.getFieldsValue().domain,
-           pageLimit: auditForm.getFieldsValue().pageLimit,
-           crawlFrequency: auditForm.getFieldsValue().crawlFrequency,
-           crawlSubdomains,
-         })
-         .then((response) => {
-           console.log(response);
-           axios
-             .get(
-               `${
-                 import.meta.env.VITE_API_BASE_URL
-               }/site-audit/campaign/${localStorage.getItem("projectId")}`
-             )
-             .then((response) => {
-               navigate("/seo-tools");
-             })
-             .catch((error) => {
-               <Alert message={error} type="error" />;
-             });
-         })
-         .catch((error) => {
-           console.error("Error:", error);
-           <Alert message={error} type="error" />;
-         });
+    if (localStorage.getItem("projectId") && localStorage.getItem("domain")) {
+      axios
+        .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
+          projectId: localStorage.getItem("projectId"),
+          domain: auditForm.getFieldsValue().domain,
+          pageLimit: auditForm.getFieldsValue().pageLimit,
+          crawlFrequency: auditForm.getFieldsValue().crawlFrequency,
+          crawlSubdomains,
+        })
+        .then((response) => {
+          console.log(response);
+          axios
+            .get(
+              `${
+                import.meta.env.VITE_API_BASE_URL
+              }/site-audit/campaign/${localStorage.getItem("projectId")}`
+            )
+            .then((response) => {
+              navigate("/seo-tools");
+            })
+            .catch((error) => {
+              <Alert message={error} type="error" />;
+            });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          <Alert message={error} type="error" />;
+        });
+    } else {
+      <Alert
+        type="error"
+        message="Somthing went wrong. Project id or domain not available."
+      />;
     }
-    else{
-      <Alert type="error" message="Somthing went wrong. Project id or domain not available."/>
-    }
-    
   };
 
   return (
@@ -99,10 +106,7 @@ function WebsiteIq() {
                 autoComplete="off"
                 validateTrigger="onChange"
               >
-                <Form.Item
-                  name="domain"
-                  className="url-form-item"
-                >
+                <Form.Item name="domain" className="url-form-item">
                   <Input
                     disabled
                     prefix={
