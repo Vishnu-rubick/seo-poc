@@ -91,7 +91,7 @@ const CustomTable = () => {
       expandable={{
         expandedRowRender: (record) => {
           return (
-            <ol style={{ marginLeft: "22px" }}>
+            <ol style={{ marginLeft: "25px" }}>
               {record.description.map((desc, index) => (
                 <li style={{ marginTop: "5px" }} key={index}>
                   {desc}
