@@ -69,7 +69,8 @@ const CustomTable = () => {
           }/site-audit/campaign/${projectId}/pages?page=0`
         )
         .then((response: any) => {
-          const transeformedData = response?.data?.map((item: any) => ({
+          const transeformedData = response?.data?.map((item: any, idx:any) => ({
+            key:idx,
             pageURL: item.pageUrl,
             totalIssues: item.noOfIssues,
             description: item.issues.map((issue: any) => issue.data.title),

@@ -40,7 +40,8 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         )
         .then((response: any) => {
           const transeformedData = response?.data?.map(
-            (item: any) => ({
+            (item: any, idx:any) => ({
+              key:idx,
               pageUrl: item.pageUrl,
               noOfIssues: item.noOfIssues,
               category: item.category[0],
