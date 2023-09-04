@@ -189,7 +189,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         expandable={{
           expandedRowRender: (record, idx) => {
             return (
-              <ol key={idx}>
+              <ol key={idx} style={{ marginLeft: "9%" }}>
                 {record.description.map((desc, index) => (
                   <li style={{ marginTop: "5px" }} key={index}>
                     {desc}
