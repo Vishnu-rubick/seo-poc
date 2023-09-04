@@ -6,6 +6,7 @@ import axios from "axios";
 
 function AffectedPages() {
   const [totalIssues, setTotalIssues] = useState();
+  const [totalHealthyPages, setTotalHealthyPages] = useState();
   useEffect(()=>{
       const fetchData = () => {
         if (localStorage.getItem("projectId")) {
@@ -17,6 +18,7 @@ function AffectedPages() {
             )
             .then((res) => {
                 setTotalIssues(res?.data?.totalIssues);
+                setTotalHealthyPages(res?.data?.healthyPages);
             })
             .catch((error) => {
               console.error(error);
@@ -37,7 +39,8 @@ function AffectedPages() {
                 Failed: <span style={{ color: "#FF595E" }}>{totalIssues}</span>
               </p>
               <p>
-                Successful: <span style={{ color: "#58AA19" }}>23,457</span>
+                Successful:{" "}
+                <span style={{ color: "#58AA19" }}>{totalHealthyPages}</span>
               </p>
             </div>
           </div>

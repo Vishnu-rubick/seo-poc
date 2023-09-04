@@ -19,22 +19,26 @@ function Home({
   const [competitors, setCompetitors] = useState<{}[]>([]);
   const navigate = useNavigate();
 
-
+ const getConfigAndRedirect= ()=>{
+   axios
+     .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
+     .then((configResponse) => {
+       let config = configResponse?.data;
+       let present = config.domain.length;
+       if (present) {
+         if (config?.projectId)
+           localStorage.setItem("projectId", config?.projectId);
+           localStorage.setItem("domain", config?.domain);
+         if (redirect) navigate("/module-details");
+       }
+     })
+     .catch((error) => {
+       console.error(error);
+       <Alert message="Somthing went wrong" type="error" />;
+     });
+ }
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
-      .then((configResponse) => {
-        let config = configResponse?.data;
-        let present = config.domain.length;
-        if (present) {
-          if(config?.projectId)  localStorage.setItem("projectId", config?.projectId);
-          if(redirect)  navigate("/module-details");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        <Alert message="Somthing went wrong" type="error" />;
-      });
+    getConfigAndRedirect();
   }, []);
 
   interface CompetitorsObject {
@@ -76,14 +80,7 @@ function Home({
         transformedObject
       )
       .then((response) => {
-        // if (response.status === 201) {
-          localStorage.setItem("domain", businessForm.getFieldsValue().domain);
-          localStorage.setItem("projectId", response?.data?.projectId);
-          <Alert message="Successfully created" type="success" />;
-          navigate("/module-details");
-        // } else {
-        //   <Alert message="Somthing went wrong." type="error" />;
-        // }
+          getConfigAndRedirect();
       })
       .catch((error) => {
         console.error("Error:", error);
