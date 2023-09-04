@@ -212,7 +212,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <Row className="seo-overview-header-row">
           <div className="seo-overview-header">
             <h1>SEO Overview</h1>
-            <p>Last Update: 02 Aug 2023</p>
+            <p>Last Updated: {`${overviewData[0]?.lastUpdatedAt} || 01 Oct 2023`}</p>
           </div>
         </Row>
         <Row className="seo-overview-subheader-row">
@@ -227,6 +227,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
               <Select
                 defaultValue="monthly"
                 style={{ width: 120 }}
+                disabled
                 //  onChange={handleChange}
                 className="custom-select"
                 options={[

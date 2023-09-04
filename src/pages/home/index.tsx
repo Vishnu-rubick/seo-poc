@@ -5,7 +5,14 @@ import { useNavigate } from "react-router-dom";
 import HomeFormImg from "../../assets/home-module/home-form-img.svg";
 import AppHeader from "../../components/app-header/app-header";
 import "./home.scss";
-function Home() {
+
+interface HomeProps {
+  redirect?: boolean
+}
+
+function Home({
+  redirect = true
+}: HomeProps) {
   const [businessForm] = Form.useForm();
   const formItemLayout = { labelCol: { span: 4 }, wrapperCol: { span: 15 } };
   const buttonItemLayout = { wrapperCol: { span: 14, offset: 4 } };
@@ -16,34 +23,17 @@ function Home() {
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
-      .then((res) => {
-        console.log(res);
-        if (res?.data?.projectId) {
-          localStorage.setItem("projectId", res?.data?.projectId);
-         // navigate("/seo-overview");
-        } else {
-          axios
-            .post(`${import.meta.env.VITE_API_BASE_URL}/project/setup`, {
-              pageLimit: 400,
-              domain: res?.data?.domain,
-            })
-            .then(() => {
-              axios
-                .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
-                .then((response) => {
-                  localStorage.setItem("projectId", response?.data?.projectId);
-                  navigate("/website-iq");
-                });
-            })
-            .catch((setUpError) => {
-              <Alert message={setUpError} type="error" />;
-            });
+      .then((configResponse) => {
+        let config = configResponse?.data;
+        let present = config.domain.length;
+        if (present) {
+          if(config?.projectId)  localStorage.setItem("projectId", config?.projectId);
+          if(redirect)  navigate("/module-details");
         }
       })
       .catch((error) => {
         console.error(error);
         <Alert message="Somthing went wrong" type="error" />;
-        navigate("/");
       });
   }, []);
 

@@ -13,9 +13,11 @@ function WebsiteIq() {
   const [auditForm] = Form.useForm();
   const [crawlSubdomains, setCrawlSubdomains] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     auditForm.setFieldValue("domain", localStorage.getItem("domain"));
   }, []);
+
   const onChange = (checkedValues: CheckboxValueType[]) => {
     console.log("checked = ", checkedValues);
     const searchString = "crawlSubdomains";
@@ -100,9 +102,6 @@ function WebsiteIq() {
                 <Form.Item
                   name="domain"
                   className="url-form-item"
-                  // rules={[
-                  //   { required: true, message: "Please input your URL!" },
-                  // ]}
                 >
                   <Input
                     disabled

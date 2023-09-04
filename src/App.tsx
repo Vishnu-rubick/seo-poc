@@ -129,7 +129,7 @@ function App() {
             </div>
           )}
         </MenuItem>
-        <MenuItem disabled key="key-metrics">
+        {/* <MenuItem disabled key="key-metrics">
           <img
             src={`src/assets/common/key-metrics${
               currentMenu == "key-metrics" ? "-selected" : ""
@@ -184,7 +184,7 @@ function App() {
             }.svg`}
             alt=""
           />
-        </MenuItem>
+        </MenuItem> */}
         {/* <MenuItem disabled key="keywords">Keywords</MenuItem>
         <MenuItem disabled key="competitorAnalysis">Competitor Analysis</MenuItem> */}
       </Menu>
@@ -192,6 +192,7 @@ function App() {
       <div className="router-container">
         <Routes>
           <Route path="/configure" element={<HomeModule />} />
+          <Route path="/configure-domain" element={<HomeModule redirect={false} />} />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
           <Route
             path="site-audit/details/pages"
