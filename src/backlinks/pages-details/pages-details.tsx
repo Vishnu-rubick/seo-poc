@@ -1,4 +1,4 @@
-import { Table } from "antd";
+import { Table, Alert } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ArrowDown from "../../assets/common/arrow-down.svg";
@@ -57,7 +57,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
   }, []);
  
   if(!localStorage.getItem("projectId")){
-    return <div>Project id not present</div>
+    return <Alert message="Project id not present." type="error" />
   }
   const rowHeight = 50;
   const columns = [
