@@ -70,4 +70,7 @@
       color: #00235b;
     }
   }
+  .ant-table .ant-table-title+.ant-table-container table>thead>tr:first-child td:first-child{
+     background: #eaf8fe !important;
+  }
 }
