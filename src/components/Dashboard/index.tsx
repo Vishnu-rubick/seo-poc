@@ -53,7 +53,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
 
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
-   const [isModalOpen, setIsModalOpen] = useState(true);
+  
 
   const fetchData= ()=>{
     if (localStorage.getItem("projectId")) {
@@ -89,7 +89,6 @@ function Dashboard({ projectId }: DashboardProps) {
             fetchData();
             if (response?.data?.status === "FINISHED") {
               clearInterval(interval);
-              setIsModalOpen(false);
             }
           })
           .catch((error) => {
@@ -109,16 +108,6 @@ function Dashboard({ projectId }: DashboardProps) {
         id="dashboard-container-id"
         className={`dashboard-container overlay-container`}
       >
-        <Modal
-          title="Please wait. Audit is running..."
-          open={isModalOpen}
-          footer={null}
-          closeIcon={null}
-          style={{ top: 0, left: 0 }}
-        >
-         <Spin />
-        </Modal>
-
         <Row>
           <Col span={15} style={{ border: "1px solid #D9D9D9" }}>
             <Card
