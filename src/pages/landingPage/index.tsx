@@ -1,5 +1,5 @@
 import { Checkbox, Tabs, TabsProps } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ExportLogo from "../../assets/home-module/export-logo.png";
 import IssuesDetails from "../../backlinks/issues-details/issues-details";
@@ -19,7 +19,7 @@ interface LandingPageProps {
 }
 
 function SubHeaderCard({
-  title = "Sample Text",
+  title = "",
   prefix = <></>,
   suffix = "",
   style = {},
@@ -41,7 +41,24 @@ function SubHeaderCard({
 
 function LandingPage({ projectId }: LandingPageProps) {
   const [currentTab, setCurrentTab] = useState<string>("overview");
+  const [campaignData, setCampaignData] = useState<any>({});
   const Navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${localStorage.getItem('projectId')}`
+        )
+        .then((response: any) => {
+          let campaignData = response?.data;
+          setCampaignData(campaignData);
+        })
+        .catch((err) => {
+          console.log(`Couldn't fetch Campaign Data...`, err);
+        });
+  }, [])
 
   const tabItems: TabsProps["items"] = [
     {
@@ -113,6 +130,11 @@ function LandingPage({ projectId }: LandingPageProps) {
     }
   };
 
+  const getDate = (val: string) => {
+    let date = new Date(val);
+    return date.toLocaleDateString();
+  }
+
   return (
     <>
       <div className="landing-container">
@@ -125,9 +147,9 @@ function LandingPage({ projectId }: LandingPageProps) {
           className="landing-container-content"
         >
           <div className="landing-container-sub-header">
-            <SubHeaderCard title="www.rubick.ai" suffix=" | " />
+            <SubHeaderCard title={campaignData?.url || ""} suffix=" | " />
             <SubHeaderCard
-              title="Last Updated: Fri, Aug 11, 2023"
+              title={`Last Updated: ${getDate(campaignData?.last_audit) || ""}`}
               suffix=" | "
             />
             <SubHeaderCard
@@ -142,10 +164,10 @@ function LandingPage({ projectId }: LandingPageProps) {
               suffix=" | "
               style={{ minWidth: "105px" }}
             />
-            <SubHeaderCard title="Crawl Limit: 1000" suffix=" | " />
+            <SubHeaderCard title={`Crawl Limit: ${campaignData?.pages_limit || 0}`} suffix=" | " />
             <SubHeaderCard title="Crawl Frequency: 15 days once" />
             <SubHeaderCard
-              prefix={<Checkbox disabled />}
+              prefix={<Checkbox disabled checked={campaignData?.crawlSubdomains || false} />}
               title="Exculde subdomains"
               style={{ marginLeft: "auto", minWidth: "180px" }}
             />

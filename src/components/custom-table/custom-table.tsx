@@ -27,7 +27,6 @@ const columns: ColumnsType<DataType> = [
   },
 ];
 const data: DataType[] = [
- 
   {
     key: 1,
     pageURL: "https://www.textmercato.com/homepage/",
