@@ -1,6 +1,8 @@
 import { Table } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ArrowDown from "../../assets/common/arrow-down.svg";
+import ArrowUp from "../../assets/common/arrow-up.svg";
 import "./pages-details.scss";
 
 interface PageDetailsProps {
@@ -12,16 +14,10 @@ type DataSourceType = {
   category: string;
   priority: string;
   noOfIssues: number;
+  description: string[];
 };
 
 function PagesDetails({ projectId }: PageDetailsProps) {
-  // const dataArray = Array.from({ length: 30 }, (_, index) => ({
-  //   key: index + 1,
-  //   pageUrl: `https://example${index + 1}.com`,
-  //   category: index % 2 === 0 ? "text and images" : "url/images",
-  //   priority: "--",
-  //   noOfIssues: Math.floor(Math.random() * 10) + 1,
-  // }));
   const dataArray = [
     {
       key: "Loading...",
@@ -32,7 +28,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
     },
   ];
   const [dataSource, setDataSource] = useState<any[]>(dataArray);
-
+  const [expandedRowKeys, setExpandedRowKeys] = useState<number[]>([]);
   useEffect(() => {
     const projectId = localStorage.getItem("projectId");
     if (projectId) {
@@ -44,11 +40,12 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         )
         .then((response: any) => {
           const transeformedData = response?.data?.map(
-            (item: DataSourceType) => ({
+            (item: any) => ({
               pageUrl: item.pageUrl,
               noOfIssues: item.noOfIssues,
               category: item.category[0],
               priority: item.priority[0],
+              description: item.issues.map((issue: any) => issue.data.title),
             })
           );
           setDataSource(transeformedData);
@@ -101,17 +98,58 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         a.noOfIssues - b.noOfIssues,
     },
   ];
+
+  const CustomExpandIcon = ({ expanded, onExpand, record }: any) => {
+    if (expanded) {
+      return (
+        <img
+          style={{ cursor: "pointer" }}
+          src={ArrowUp}
+          onClick={(e) => onExpand(record, e)}
+        />
+      );
+    } else {
+      return (
+        <img
+          style={{ cursor: "pointer" }}
+          src={ArrowDown}
+          onClick={(e) => onExpand(record, e)}
+        />
+      );
+    }
+  };
   return (
     <div className="issues-details-wrapper">
-      {/* <div className="issues-header">
-        <p className="issues-title">Audited Pages</p>
-      </div> */}
       <Table
         style={{ height: "85vh", overflow: "auto" }}
         className="issues-table"
         dataSource={dataSource}
         columns={columns}
         pagination={false}
+        expandable={{
+          expandedRowRender: (record) => {
+            return (
+              <ol>
+                {record.description.map((desc, index) => (
+                  <li style={{ marginTop: "5px" }} key={index}>
+                    {desc}
+                  </li>
+                ))}
+              </ol>
+            );
+          },
+          expandIcon: CustomExpandIcon,
+          expandedRowKeys: expandedRowKeys,
+          onExpand: (expanded, record) => {
+            if (expanded) {
+              setExpandedRowKeys([...expandedRowKeys, record.key]);
+            } else {
+              setExpandedRowKeys(
+                expandedRowKeys.filter((key) => key !== record.key)
+              );
+            }
+          },
+        }}
         //loading
         title={() => "Audited Analysis"}
         // showSorterTooltip={false}
