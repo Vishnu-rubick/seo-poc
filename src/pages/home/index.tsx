@@ -191,7 +191,7 @@ function Home({
                       message: "Please input your competitor 1!",
                     },
                     {
-                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,                     
                       message: "Invalid domain format",
                     },
                   ]}
@@ -260,7 +260,6 @@ function Home({
                         businessForm.submit();
                       }}
                       type="primary"
-                      htmlType="submit"
                     >
                       Submit
                     </Button>
