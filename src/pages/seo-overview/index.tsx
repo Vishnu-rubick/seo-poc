@@ -24,6 +24,7 @@ import UniqueVisitorsLogo from "../../assets/seo-overview/cards/unique-visitors.
 import VisitDurationArrow from "../../assets/seo-overview/cards/visit-duration-arrow.png";
 import VisitDurationLogo from "../../assets/seo-overview/cards/visit-duration.svg";
 import DomainSubheader from "../../components/domain-subheader/domain-subheader";
+import ModuleHeader from "../../components/module-header/module-header";
 
 interface SeoOverviewProps {
   projectId?: string;
@@ -138,7 +139,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           console.log(err);
         });
     } else {
-      navigate("/");
+      //navigate("/");
     }
     if (localStorage.getItem("domain")) {
       setDomainTitle(localStorage.getItem("domain"));
@@ -208,13 +209,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
       <AppHeader />
       <Col className="seo-overview-col" span={24}>
         <Row className="seo-overview-header-row">
-          <div className="seo-overview-header">
-            <h1>SEO Overview</h1>
-            <p>
-              Last Updated:{" "}
-              {`${overviewData[0]?.lastUpdatedAt || `01 Oct 2023`}`}
-            </p>
-          </div>
+          <ModuleHeader
+            lastUpdatedAt={`${overviewData[0]?.lastUpdatedAt || `01 Oct 2023`}`}
+          />
         </Row>
         <Row className="seo-overview-subheader-row">
           <DomainSubheader />

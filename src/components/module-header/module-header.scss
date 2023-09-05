@@ -1,0 +1,21 @@
+.seo-overview-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      // color: #00235b;
+      font-family: Inter;
+      background: linear-gradient(90.5deg, #00235b 17.92%, #00a6ed 97.07%);
+      -webkit-background-clip: text; /* For WebKit (Safari, Chrome) */
+      background-clip: text;
+      color: transparent;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }

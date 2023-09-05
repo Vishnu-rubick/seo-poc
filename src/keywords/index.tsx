@@ -14,6 +14,7 @@ import {
 import { Link } from "react-router-dom";
 import AppHeader from "../components/app-header/app-header";
 import DomainSubheader from "../components/domain-subheader/domain-subheader";
+import ModuleHeader from "../components/module-header/module-header";
 
 const Keywords: React.FC = () => {
   const keywordsData = KeywordsData as { [key: string]: MergedData };
@@ -88,6 +89,9 @@ const Keywords: React.FC = () => {
   return (
     <div className="keywords-dashboard">
       <AppHeader />
+      <Row>
+        <ModuleHeader lastUpdatedAt={"02 Aug 2023"} />
+      </Row>
       <Row className="domain-header-row">
         <DomainSubheader />
       </Row>
