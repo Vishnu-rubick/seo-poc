@@ -212,7 +212,10 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <Row className="seo-overview-header-row">
           <div className="seo-overview-header">
             <h1>SEO Overview</h1>
-            <p>Last Updated: {`${overviewData[0]?.lastUpdatedAt || `01 Oct 2023`}`}</p>
+            <p>
+              Last Updated:{" "}
+              {`${overviewData[0]?.lastUpdatedAt || `01 Oct 2023`}`}
+            </p>
           </div>
         </Row>
         <Row className="seo-overview-subheader-row">
@@ -244,8 +247,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewData?.map(
-              ({ metric: title, ["rubick.ai"]: val }: any, idx) => (
+
+            { domainTitle?.length && overviewData?.map(
+              ({ metric: title, [domainTitle]: val }: any, idx) => (
                 <Col span={6} key={idx}>
                   <OverviewCard
                     id={idx}

@@ -124,6 +124,14 @@ function LandingPage({ projectId }: LandingPageProps) {
         downloadFileFromURL(res?.data?.link, "pages-csv");
       } else if (currentTab === "overview") {
         downloadOverviewSS();
+      } else if (currentTab === "affected-pages") {
+           const res = await axios.get(
+             `${
+               import.meta.env.VITE_API_BASE_URL
+             }/site-audit/campaign/${projectId}/export/pages`
+           );
+
+           downloadFileFromURL(res?.data?.link, "pages-csv");
       }
     } else {
       <Alert message="Project id not present." type="error" />;

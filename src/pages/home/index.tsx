@@ -121,6 +121,10 @@ function Home({
                       required: true,
                       message: "Please input your domain!",
                     },
+                    {
+                      pattern: /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Invalid domain format",
+                    },
                   ]}
                 >
                   <Input
