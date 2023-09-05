@@ -25,32 +25,34 @@ function ModuleDetails() {
         axios
         .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
         .then((configResponse: any) => {
-          let config = configResponse?.data;
-          let domain = config.domain;
+          const config = configResponse?.data;
+          const domain = config.domain;
+          localStorage.setItem("projectId", config?.projectId);
+          localStorage.setItem("domain", domain);
+          navigate("/website-iq");
+          // if (config?.projectId) {
+          //   if(config?.projectId)  localStorage.setItem("projectId", config?.projectId);
+          //   navigate("/website-iq");
+          // }
+          // else {
+          //   axios
+          //     .post(`${import.meta.env.VITE_API_BASE_URL}/project/setup`, {
+          //       pageLimit: 400,
+          //       domain: domain,
+          //     })
+          //     .then(() => {
   
-          if (config?.projectId) {
-            if(config?.projectId)  localStorage.setItem("projectId", config?.projectId);
-            navigate("/website-iq");
-          }
-          else {
-            axios
-              .post(`${import.meta.env.VITE_API_BASE_URL}/project/setup`, {
-                pageLimit: 400,
-                domain: domain,
-              })
-              .then(() => {
-  
-                axios
-                  .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
-                  .then((response: any) => {
-                    localStorage.setItem("projectId", response?.data?.projectId);
-                    navigate("/website-iq");
-                  });
-              })
-              .catch((setUpError: any) => {
-                <Alert message={setUpError} type="error" />;
-              });
-          }
+          //       axios
+          //         .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
+          //         .then((response: any) => {
+          //           localStorage.setItem("projectId", response?.data?.projectId);
+          //           navigate("/website-iq");
+          //         });
+          //     })
+          //     .catch((setUpError: any) => {
+          //       <Alert message={setUpError} type="error" />;
+          //     });
+          // }
         })
         .catch((error) => {
           console.error(error);
