@@ -106,7 +106,6 @@ function KeywordsDetails() {
   ];
 
   const handleTabChange = (key: string) => {
-    console.log(key)
     setActiveTab(key);
     localStorage.setItem("keywordsTab", key)
     navigate(`/keywords/details/${key}`)

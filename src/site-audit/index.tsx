@@ -66,7 +66,6 @@ const SiteAudit: React.FC<SiteAuditProps> = () => {
   };
 
   useEffect(() => {
-    console.log("null us effect");
     setDomain("rubick.ai");
     localStorage.setItem("domain", "rubick.ai");
     setData(campaignDataRubick);
@@ -225,7 +224,6 @@ const SiteAudit: React.FC<SiteAuditProps> = () => {
     setDomain(e.value);
     setProjectId(e.key);
   };
-  console.log();
   return (
     <>
       <div className="home-container">
