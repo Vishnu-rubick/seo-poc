@@ -1,4 +1,4 @@
-import { Col, Row, Select, Table } from "antd";
+import { Alert, Col, Row, Select, Table } from "antd";
 import CalenderLogo from "../../assets/seo-overview/calender.svg";
 import AppHeader from "../../components/app-header/app-header";
 import OverviewCard from "./overview-card/overview-card";
@@ -23,7 +23,7 @@ import UniqueVisitorsArrow from "../../assets/seo-overview/cards/unique-visitors
 import UniqueVisitorsLogo from "../../assets/seo-overview/cards/unique-visitors.svg";
 import VisitDurationArrow from "../../assets/seo-overview/cards/visit-duration-arrow.png";
 import VisitDurationLogo from "../../assets/seo-overview/cards/visit-duration.svg";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 interface SeoOverviewProps {
   projectId?: string;
@@ -72,6 +72,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
   const [tableColumns, setTableColumns] = useState<any[]>([]);
   const [domainTitle, setDomainTitle] = useState<string | null>("");
+  const navigate= useNavigate();
   useEffect(() => {
     if(localStorage.getItem("projectId"))
     {
@@ -138,6 +139,9 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
            console.log(err);
          });
     }
+    else{
+      navigate("/")
+    }
     if(localStorage.getItem("domain")){
       setDomainTitle(localStorage.getItem("domain"));
     }
@@ -202,11 +206,10 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
     },
   ];
 
-  if (!localStorage.getItem("projectId")) {
-     return <div>Project id not present</div>
-  }
+  
   return (
     <div className="seo-overview-wrapper">
+     
       <AppHeader />
       <Col className="seo-overview-col" span={24}>
         <Row className="seo-overview-header-row">

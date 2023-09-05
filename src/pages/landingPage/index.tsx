@@ -45,6 +45,7 @@ function LandingPage({ projectId }: LandingPageProps) {
   const Navigate = useNavigate();
 
   useEffect(() => {
+    // const projectId= 
     axios
         .get(
           `${
