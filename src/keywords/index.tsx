@@ -1,7 +1,6 @@
-import { Table } from "antd";
+import { Table, Row } from "antd";
 import React, { useState } from "react";
-import "./style.css";
-
+import "./keywords.scss";
 import KeywordsData from "../../data/keywords/keyordsMerged.json";
 import {
   getAllKeywords,
@@ -13,6 +12,8 @@ import {
   getStrongKeywords
 } from "../apis/index";
 import { Link } from "react-router-dom";
+import AppHeader from "../components/app-header/app-header";
+import DomainSubheader from "../components/domain-subheader/domain-subheader";
 
 const Keywords: React.FC = () => {
   const keywordsData = KeywordsData as { [key: string]: MergedData };
@@ -86,11 +87,12 @@ const Keywords: React.FC = () => {
 
   return (
     <div className="keywords-dashboard">
-      <div className="keywords-dashboard-header">
-        <h4>KeyWords Analysis Report</h4>
-      </div>
-      <hr />
-      <Table dataSource={dataSource} columns={columns} pagination={false} />
+      <AppHeader />
+      <Row className="domain-header-row">
+        <DomainSubheader />
+      </Row>
+
+      {/* <Table dataSource={dataSource} columns={columns} pagination={false} /> */}
     </div>
   );
 };

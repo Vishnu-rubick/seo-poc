@@ -1,12 +1,12 @@
-import { Alert, Col, Row, Select, Table } from "antd";
-import CalenderLogo from "../../assets/seo-overview/calender.svg";
+import { Col, Row, Table } from "antd";
 import AppHeader from "../../components/app-header/app-header";
-import OverviewCard from "./overview-card/overview-card";
+import OverviewCard from "../../components/overview-card/overview-card";
 import "./seo-overview.scss";
 
 import type { ColumnsType } from "antd/es/table";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BounceRateArrow from "../../assets/seo-overview/cards/bounce-rate-arrow.png";
 import BounceRateLogo from "../../assets/seo-overview/cards/bounce-rate.svg";
 import DominAuthorityArrow from "../../assets/seo-overview/cards/domain-auth-arrow.png";
@@ -23,7 +23,7 @@ import UniqueVisitorsArrow from "../../assets/seo-overview/cards/unique-visitors
 import UniqueVisitorsLogo from "../../assets/seo-overview/cards/unique-visitors.svg";
 import VisitDurationArrow from "../../assets/seo-overview/cards/visit-duration-arrow.png";
 import VisitDurationLogo from "../../assets/seo-overview/cards/visit-duration.svg";
-import { Navigate, useNavigate } from "react-router-dom";
+import DomainSubheader from "../../components/domain-subheader/domain-subheader";
 
 interface SeoOverviewProps {
   projectId?: string;
@@ -49,7 +49,7 @@ const columns: ColumnsType<DataType> = [
     title: "Industry Benchmark",
     dataIndex: "industryBenchmark",
     width: 20,
-    render: (text: string) => <span style={{color:"#ADB0B8"}}>{text}</span>,
+    render: (text: string) => <span style={{ color: "#ADB0B8" }}>{text}</span>,
   },
   {
     title: "Rubick.ai",
@@ -72,80 +72,77 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
   const [tableColumns, setTableColumns] = useState<any[]>([]);
   const [domainTitle, setDomainTitle] = useState<string | null>("");
-  const navigate= useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
-    if(localStorage.getItem("projectId"))
-    {
-       axios
-         .get(
-           `${
-             import.meta.env.VITE_API_BASE_URL
-           }/site-audit/competitorAnalysis/${localStorage.getItem("projectId")}`
-         )
-         .then((response) => {
-           let data = response.data;
-           let res: any[] = [];
-           const columns = [
-             "Domain Authority",
-             "Organic Search Traffic",
-             "Paid Search Traffic",
-             "Visitors",
-             "Unique Visitors",
-             "Avg. Visit Duration",
-             "Bounce Rate",
-             "Traffic Share",
-           ];
-           columns.forEach((column, idx) => {
-             let obj = {
-               key: idx,
-               metric: column,
-               industryBenchmark: "Coming Soon",
-             } as any;
-             data.forEach((domainObj: any) => {
-               if (column == "Traffic Share")
-                 obj[domainObj.Domain] = domainObj[column].toPrecision(4);
-               else obj[domainObj.Domain] = parseInt(domainObj[column]);
-               if (isNaN(obj[domainObj.Domain])) {
-                 obj[domainObj.Domain] = "N/A";
-               }
-             });
-             res.push(obj);
-           });
-           setOverviewData(res);
-           const dynamicColumns = data.map((item:any) => ({
-             title: item.Domain,
-             dataIndex: item.Domain,
-             width: 20,
-           }));
-            const tablecols = [
-              {
-                title: "Metric",
-                dataIndex: "metric",
-                width: 30,
-              },
-              {
-                title: "Industry Benchmark",
-                dataIndex: "industryBenchmark",
-                width: 20,
-                render: (text: string) => (
-                  <span style={{ color: "#ADB0B8" }}>{text}</span>
-                ),
-              },
-              ...dynamicColumns, // Spread the dynamic columns here
-            ];
-           setTableColumns(tablecols);
-         })
-         .catch((err) => {
-           console.log(err);
-         });
+    if (localStorage.getItem("projectId")) {
+      axios
+        .get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/competitorAnalysis/${localStorage.getItem("projectId")}`
+        )
+        .then((response) => {
+          let data = response.data;
+          let res: any[] = [];
+          const columns = [
+            "Domain Authority",
+            "Organic Search Traffic",
+            "Paid Search Traffic",
+            "Visitors",
+            "Unique Visitors",
+            "Avg. Visit Duration",
+            "Bounce Rate",
+            "Traffic Share",
+          ];
+          columns.forEach((column, idx) => {
+            let obj = {
+              key: idx,
+              metric: column,
+              industryBenchmark: "Coming Soon",
+            } as any;
+            data.forEach((domainObj: any) => {
+              if (column == "Traffic Share")
+                obj[domainObj.Domain] = domainObj[column].toPrecision(4);
+              else obj[domainObj.Domain] = parseInt(domainObj[column]);
+              if (isNaN(obj[domainObj.Domain])) {
+                obj[domainObj.Domain] = "N/A";
+              }
+            });
+            res.push(obj);
+          });
+          setOverviewData(res);
+          const dynamicColumns = data.map((item: any) => ({
+            title: item.Domain,
+            dataIndex: item.Domain,
+            width: 20,
+          }));
+          const tablecols = [
+            {
+              title: "Metric",
+              dataIndex: "metric",
+              width: 30,
+            },
+            {
+              title: "Industry Benchmark",
+              dataIndex: "industryBenchmark",
+              width: 20,
+              render: (text: string) => (
+                <span style={{ color: "#ADB0B8" }}>{text}</span>
+              ),
+            },
+            ...dynamicColumns, // Spread the dynamic columns here
+          ];
+          setTableColumns(tablecols);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      navigate("/");
     }
-    else{
-      navigate("/")
-    }
-    if(localStorage.getItem("domain")){
+    if (localStorage.getItem("domain")) {
       setDomainTitle(localStorage.getItem("domain"));
     }
-     
   }, []);
   const overviewCards = [
     {
@@ -206,10 +203,8 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
     },
   ];
 
-  
   return (
     <div className="seo-overview-wrapper">
-     
       <AppHeader />
       <Col className="seo-overview-col" span={24}>
         <Row className="seo-overview-header-row">
@@ -222,48 +217,25 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
           </div>
         </Row>
         <Row className="seo-overview-subheader-row">
-          <div className="seo-overview-subheader">
-            <span className="website-name">
-              {/* <a href="https://www.textmercato.com/">www.textmercato.com</a> */}
-              {domainTitle}
-            </span>
-            <div className="update-freq-container">
-              <img className="history-logo" src={CalenderLogo} alt="" />
-              {/* <span>Update Frequency:</span> */}
-              <Select
-                defaultValue="monthly"
-                style={{ width: 120 }}
-                disabled
-                //  onChange={handleChange}
-                className="custom-select"
-                options={[
-                  { value: "fortnight", label: "Fortnight" },
-                  { value: "monthly", label: "Monthly" },
-                  { value: "quarterly", label: "Quarterly" },
-                  { value: "halfyearly", label: "Half Yearly" },
-                  { value: "yearly", label: "Yearly" },
-                ]}
-              />
-            </div>
-          </div>
+          <DomainSubheader />
         </Row>
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-
-            { domainTitle?.length && overviewData?.map(
-              ({ metric: title, [domainTitle]: val }: any, idx) => (
-                <Col span={6} key={idx}>
-                  <OverviewCard
-                    id={idx}
-                    img={overviewCards[idx]?.img}
-                    arrow={overviewCards[idx]?.arrow}
-                    title={title}
-                    val={Number.isNaN(val) ? "--" : val}
-                  />
-                </Col>
-              )
-            )}
+            {domainTitle?.length &&
+              overviewData?.map(
+                ({ metric: title, [domainTitle]: val }: any, idx) => (
+                  <Col span={6} key={idx}>
+                    <OverviewCard
+                      id={idx}
+                      img={overviewCards[idx]?.img}
+                      arrow={overviewCards[idx]?.arrow}
+                      title={title}
+                      val={Number.isNaN(val) ? "--" : val}
+                    />
+                  </Col>
+                )
+              )}
           </Row>
         </div>
 

@@ -1,25 +1,30 @@
-.keyword-container {
+.keywords-dashboard {
+  .keyword-container {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.table-container{
+  .table-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 5rem;
-}
+  }
 
-.keywords-dashboard{
+  .keywords-dashboard {
     width: 100%;
     margin-bottom: 5rem;
-}
+  }
 
-.keywords-dashboard-header {
+  .keywords-dashboard-header {
     display: flex;
     justify-content: center;
+  }
 }
-  
+
+.domain-header-row {
+    margin-top: 20px;
+}
