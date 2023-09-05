@@ -3,7 +3,7 @@ import "./App.scss";
 import { Menu, MenuProps } from "antd";
 
 import { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate, } from "react-router-dom";
 import Details from "./Details/Details";
 import Home from "./Home/home";
 //import PagesDetails from "./PagesDetails/pagesDetails";
@@ -67,9 +67,6 @@ const siderStyle: React.CSSProperties = {
 function App() {
   const [currentMenu, setCurrentMenu] = useState("");
   const navigate = useNavigate();
-  if (window.location.pathname === "/") {
-    navigate("/configure", { replace: true });
-  }
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     setCurrentMenu(e.key);
     navigate(`/${e.key}`);
@@ -193,8 +190,13 @@ function App() {
       {/* <AppSider /> */}
       <div className="router-container">
         <Routes>
+          <Route path="/" element={<Navigate to="/configure" />} />
+       
           <Route path="/configure" element={<HomeModule />} />
-          <Route path="/configure-domain" element={<HomeModule redirect={false} />} />
+          <Route
+            path="/configure-domain"
+            element={<HomeModule redirect={false} />}
+          />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
           <Route
             path="site-audit/details/pages"
@@ -217,17 +219,15 @@ function App() {
             element={<OutboundDomains />}
           />
 
-          {/* latest-components */}
+          {/* latest-components of home and website-Iq */}
           <Route path="/seo-tools" element={<LandingPage />} />
-
           <Route path="/website-iq" element={<WebsiteIq />} />
           <Route path="/module-details" element={<ModuleDetails />} />
           <Route path="/home" element={<SeoOverview />} />
           <Route path="/seo-overview" element={<SeoOverview />} />
 
-          {/* <Route path="/seo-tools/overview" element={<Dashboard projectId="12808182" />} />
-          <Route path="/seo-tools/issues" element={<IssuesDetails projectId="12808182" />} />
-          <Route path="/seo-tools/audited-pages" element={<PagesDetails projectId="12808182" />} /> */}
+          {/* keywords */}
+          <Route path="/keywords" element={<Keywords />} />
         </Routes>
       </div>
     </div>

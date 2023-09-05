@@ -123,7 +123,7 @@ function Home({
                       message: "Please input your domain!",
                     },
                     {
-                      pattern: /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                       message: "Invalid domain format",
                     },
                   ]}
@@ -190,6 +190,10 @@ function Home({
                       required: true,
                       message: "Please input your competitor 1!",
                     },
+                    {
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Invalid domain format",
+                    },
                   ]}
                 >
                   <Input
@@ -205,6 +209,10 @@ function Home({
                     {
                       required: true,
                       message: "Please input your Competitor 2!",
+                    },
+                    {
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Invalid domain format",
                     },
                   ]}
                 >
@@ -224,6 +232,10 @@ function Home({
                       {
                         required: true,
                         message: `Please input competitor ${index + 3}!`,
+                      },
+                      {
+                        pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: "Invalid domain format",
                       },
                     ]}
                   >
