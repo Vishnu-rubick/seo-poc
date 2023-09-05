@@ -28,10 +28,6 @@ totalIssues.forEach((issue: any) => {
   }
 })
 
-const onChange = (key: string) => {
-  console.log(key);
-};
-
 const getData = (type: string, data: any) => {
   if(!data || !(data.issueReports)) return [];
   
@@ -41,7 +37,6 @@ const getData = (type: string, data: any) => {
   for(const issueId in reports){
     for (const rep in reports[issueId].data){
       let obj = reports[issueId].data[rep] as any
-      console.log(issueCategoryMap[issueId].category, type, issueCategoryMap[issueId].category==type)
       if(type != "" && issueCategoryMap[issueId].category != type)  continue;
       if(!ans.hasOwnProperty(obj.source_url)) ans[obj.source_url] = []
       let issueReport = {
@@ -114,7 +109,6 @@ const PagesDetails: React.FC = () => {
         let res = [] as any[];
 
         const arrayOfObjects = Object.values(ans).map((obj) => obj);
-        console.log(ans)        
         return arrayOfObjects.map((row: any) => {
           return (
             <p>{row.data} occured {row.count} times</p>

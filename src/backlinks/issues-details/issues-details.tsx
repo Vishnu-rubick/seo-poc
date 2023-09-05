@@ -82,7 +82,6 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
           const transformedDataPromises = response.data.map(
             async (dataItem: any, idx: any) => {
               const description = await addDescription(dataItem);
-              console.log(description, "issue des");
 
               return {
                 ...dataItem,

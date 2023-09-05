@@ -40,7 +40,6 @@ function WebsiteIq() {
     { label: "Masked URLs", value: "Masked URLs" },
   ];
   const onFinish = () => {
-    console.log("Received values of form: ", auditForm.getFieldsValue());
     if (localStorage.getItem("projectId") && localStorage.getItem("domain")) {
       axios
         .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
@@ -51,7 +50,6 @@ function WebsiteIq() {
           crawlSubdomains,
         })
         .then((response) => {
-          console.log(response);
           axios
             .get(
               `${

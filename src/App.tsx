@@ -193,6 +193,7 @@ function App() {
       {/* <AppSider /> */}
       <div className="router-container">
         <Routes>
+          <Route path="/" element={<></>} />
           <Route path="/configure" element={<HomeModule />} />
           <Route path="/configure-domain" element={<HomeModule redirect={false} />} />
           <Route path="/site-audit" element={<SiteAudit />}></Route>
