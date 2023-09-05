@@ -80,6 +80,7 @@ function Home({
         transformedObject
       )
       .then((response) => {
+          redirect = true;
           getConfigAndRedirect();
       })
       .catch((error) => {
