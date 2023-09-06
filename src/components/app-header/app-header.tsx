@@ -20,14 +20,18 @@ const appHeaderStyle: React.CSSProperties = {
     justifyContent: 'space-between',
     alignItems: 'center',
 }
-
-const AppHeader = () => (
-    <>
-        <div className="app-header-container" style={appHeaderStyle}>
-            <Header style={headerStyle} >Hi Rubick</Header>
-            <img src="src/assets/common/default-user.svg" alt="" />
-        </div>
-    </>
+type headerProp={
+ title?: string;
+}
+const AppHeader = ({ title }: headerProp) => (
+  <>
+    <div className="app-header-container" style={appHeaderStyle}>
+      <Header style={headerStyle}>
+        {title  ? title : "Hi Rubick"}
+      </Header>
+      <img src="src/assets/common/default-user.svg" alt="" />
+    </div>
+  </>
 );
 
 export default AppHeader;
