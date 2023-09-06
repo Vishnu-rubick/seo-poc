@@ -122,6 +122,7 @@ const Keywords: React.FC = () => {
        arrow: DominAuthorityArrow,
        val: "26",
        title: "All Keywords",
+       linkTo: "/keywords/details/all",
      },
      {
        id: 3,
@@ -129,6 +130,7 @@ const Keywords: React.FC = () => {
        arrow: OrangicSearchTrafficArrow,
        val: "1.9k",
        title: "Shared Keywords",
+       linkTo: "/keywords/details/shared",
      },
      {
        id: 4,
@@ -136,6 +138,7 @@ const Keywords: React.FC = () => {
        arrow: PaidSearchTrafficArrow,
        val: "116",
        title: "Missing Keywords",
+       linkTo: "/keywords/details/missing",
      },
      {
        id: 5,
@@ -143,6 +146,7 @@ const Keywords: React.FC = () => {
        arrow: UniqueVisitorsArrow,
        val: "26",
        title: "Untapped Keywords",
+       linkTo: "/keywords/details/untapped",
      },
      {
        id: 6,
@@ -150,6 +154,7 @@ const Keywords: React.FC = () => {
        arrow: VisitDurationArrow,
        val: "0",
        title: "Strong Keywords",
+       linkTo: "/keywords/details/strong",
      },
      {
        id: 1,
@@ -157,6 +162,7 @@ const Keywords: React.FC = () => {
        arrow: PinkArrow,
        val: "26",
        title: "Weak Keywords",
+       linkTo: "/keywords/details/weak",
      },
    ];
 
@@ -173,9 +179,9 @@ const Keywords: React.FC = () => {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewCards?.map(({id, img, arrow, title, val}) => (
+            {overviewCards?.map(({id, img, arrow, title, val, linkTo}) => (
               <Col span={8} key={id}>
-                <OverviewCard id={id} img={img} arrow={arrow} title={title} val={val} />
+                <OverviewCard id={id} img={img} arrow={arrow} title={title} val={val} linkTo={linkTo} />
               </Col>
             ))}
           </Row>

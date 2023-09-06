@@ -1,8 +1,8 @@
 import { Table } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ArrowDown from "../../assets/common/arrow-down.svg";
-import ArrowUp from "../../assets/common/arrow-up.svg";
+import ArrowDown from "../../../assets/common/arrow-down.svg";
+import ArrowUp from "../../../assets/common/arrow-up.svg";
 import HeaderCard from "./header-card/header-card";
 import "./issues-details.scss";
 

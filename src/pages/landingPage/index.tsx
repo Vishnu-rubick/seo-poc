@@ -2,10 +2,10 @@ import { Checkbox, Tabs, TabsProps } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ExportLogo from "../../assets/home-module/export-logo.png";
-import IssuesDetails from "../../backlinks/issues-details/issues-details";
-import PagesDetails from "../../backlinks/pages-details/pages-details";
+import IssuesDetails from "./issues-details/issues-details";
 import Dashboard from "../../components/Dashboard";
 import { downloadFileFromURL } from "../../utility/fileDownload";
+import PagesDetails from "./pages-details/pages-details";
 
 import Alert from "antd/es/alert/Alert";
 import axios from "axios";
@@ -45,21 +45,21 @@ function LandingPage({ projectId }: LandingPageProps) {
   const Navigate = useNavigate();
 
   useEffect(() => {
-    // const projectId= 
+    // const projectId=
     axios
-        .get(
-          `${
-            import.meta.env.VITE_API_BASE_URL
-          }/site-audit/campaign/${localStorage.getItem('projectId')}`
-        )
-        .then((response: any) => {
-          let campaignData = response?.data;
-          setCampaignData(campaignData);
-        })
-        .catch((err) => {
-          console.log(`Couldn't fetch Campaign Data...`, err);
-        });
-  }, [])
+      .get(
+        `${
+          import.meta.env.VITE_API_BASE_URL
+        }/site-audit/campaign/${localStorage.getItem("projectId")}`
+      )
+      .then((response: any) => {
+        let campaignData = response?.data;
+        setCampaignData(campaignData);
+      })
+      .catch((err) => {
+        console.log(`Couldn't fetch Campaign Data...`, err);
+      });
+  }, []);
 
   const tabItems: TabsProps["items"] = [
     {
@@ -99,7 +99,10 @@ function LandingPage({ projectId }: LandingPageProps) {
           link.click();
         })
         .catch((error: any) => {
-          <Alert message={`Error capturing screenshot:${error}`} type="error" />;
+          <Alert
+            message={`Error capturing screenshot:${error}`}
+            type="error"
+          />;
           console.error("Error capturing screenshot:", error);
         });
     }
@@ -126,13 +129,13 @@ function LandingPage({ projectId }: LandingPageProps) {
       } else if (currentTab === "overview") {
         downloadOverviewSS();
       } else if (currentTab === "affected-pages") {
-           const res = await axios.get(
-             `${
-               import.meta.env.VITE_API_BASE_URL
-             }/site-audit/campaign/${projectId}/export/pages`
-           );
+        const res = await axios.get(
+          `${
+            import.meta.env.VITE_API_BASE_URL
+          }/site-audit/campaign/${projectId}/export/pages`
+        );
 
-           downloadFileFromURL(res?.data?.link, "pages-csv");
+        downloadFileFromURL(res?.data?.link, "pages-csv");
       }
     } else {
       <Alert message="Project id not present." type="error" />;
@@ -142,7 +145,7 @@ function LandingPage({ projectId }: LandingPageProps) {
   const getDate = (val: string) => {
     let date = new Date(val);
     return date.toLocaleDateString();
-  }
+  };
 
   return (
     <>
@@ -173,10 +176,18 @@ function LandingPage({ projectId }: LandingPageProps) {
               suffix=" | "
               style={{ minWidth: "105px" }}
             />
-            <SubHeaderCard title={`Crawl Limit: ${campaignData?.pages_limit || 0}`} suffix=" | " />
+            <SubHeaderCard
+              title={`Crawl Limit: ${campaignData?.pages_limit || 0}`}
+              suffix=" | "
+            />
             <SubHeaderCard title="Crawl Frequency: 15 days once" />
             <SubHeaderCard
-              prefix={<Checkbox disabled checked={campaignData?.crawlSubdomains || false} />}
+              prefix={
+                <Checkbox
+                  disabled
+                  checked={campaignData?.crawlSubdomains || false}
+                />
+              }
               title="Exculde subdomains"
               style={{ marginLeft: "auto", minWidth: "180px" }}
             />

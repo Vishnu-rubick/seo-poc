@@ -3,34 +3,32 @@ import "./App.scss";
 import { Menu, MenuProps } from "antd";
 
 import { useEffect, useState } from "react";
-import { Navigate, Route, Routes, useNavigate, } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import Details from "./Details/Details";
-import Home from "./Home/home";
 //import PagesDetails from "./PagesDetails/pagesDetails";
 import MenuItem from "antd/es/menu/MenuItem";
 import Backlinks from "./backlinks";
 import BacklinksDetails from "./backlinks/backlinks-details/backlinks-details";
-import ReferringDomains from "./backlinks/issues-details/issues-details";
+import ReferringDomains from "./pages/landingPage/issues-details/issues-details";
 import OutboundDomains from "./backlinks/outbound-domains/outbound-domains";
-import PagesDetails from "./backlinks/pages-details/pages-details";
 import CompetitorAnalysis from "./competitorAnalysis";
 import Keywords from "./keywords";
 import KeywordsDetails from "./keywords/keywords-details/keywords-details";
 import HomeModule from "./pages/home";
 import LandingPage from "./pages/landingPage";
+import PagesDetails from "./pages/landingPage/pages-details/pages-details";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
 
 //side-bar logos:
+import BacklinksIconSelected from "./assets/backlinks/backlinks-selected.svg";
 import HonmeIcon from "./assets/common/HomeIcon.svg";
 import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
+import RubickLogo from "./assets/common/rubick-logo.svg";
 import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
-import RubickLogo from "./assets/common/rubick-logo.svg";
-import KeywordsIcon from "./assets/keywords/keywords-logo.svg"
+import KeywordsIcon from "./assets/keywords/keywords-logo.svg";
 import KeywordsIconSelected from "./assets/keywords/keywords-selected.svg";
-import BacklinksIconSelected from "./assets/backlinks/backlinks-selected.svg";
-
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";

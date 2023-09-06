@@ -1,8 +1,8 @@
 import { Table, Alert } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ArrowDown from "../../assets/common/arrow-down.svg";
-import ArrowUp from "../../assets/common/arrow-up.svg";
+import ArrowDown from "../../../assets/common/arrow-down.svg";
+import ArrowUp from "../../../assets/common/arrow-up.svg";
 import "./pages-details.scss";
 
 interface PageDetailsProps {

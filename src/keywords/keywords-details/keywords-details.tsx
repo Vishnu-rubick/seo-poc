@@ -123,16 +123,16 @@ function KeywordsDetails() {
       label: `Missing Keywords`,
     },
     {
-      key: "weak",
-      label: `Weak keywords`,
-    },
-    {
       key: "untapped",
       label: `Untapped Keywords`,
     },
     {
       key: "strong",
       label: `Strong Keywords`,
+    },
+    {
+      key: "weak",
+      label: `Weak keywords`,
     },
   ];
 
