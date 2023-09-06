@@ -13,7 +13,8 @@ import {
   getStrongKeywords
 } from "../../apis";
 
-import "./style.css"
+import "./keywords-detials..scss"
+import TableComponent from "../../components/table-component/table-component";
 
 function KeywordsDetails() {
   const keywordsData = KeywordsData as { [key: string]: MergedData };
@@ -47,7 +48,7 @@ function KeywordsDetails() {
 
   const columns = [
     {
-      title: "keywords",
+      title: "Keywords",
       dataIndex: "keywords",
       key: "1",
     },
@@ -152,19 +153,8 @@ function KeywordsDetails() {
   }, [activeTab]);
 
   return (
-    <>
+    <div>
       <div className="keywords-tabs">
-        <Link
-          style={{
-            margin: "1rem",
-            marginLeft: "1.5rem",
-            color: "#1677ff",
-            textDecoration: "none",
-          }}
-          to="/keywords"
-        >
-          Go Back
-        </Link>
         <Tabs
           className="details-tab"
           activeKey={activeTab}
@@ -173,9 +163,9 @@ function KeywordsDetails() {
         />
       </div>
       <div className="keywords-details">
-        <Table dataSource={dataSource} columns={columns} />
+        <TableComponent dataSource={dataSource} columns={columns} expandable={false} />
       </div>
-    </>
+    </div>
   );
 }
 

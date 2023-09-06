@@ -2,7 +2,7 @@ import { Table } from "antd";
 import { useState } from "react";
 import ArrowDown from "../../assets/common/arrow-down.svg";
 import ArrowUp from "../../assets/common/arrow-up.svg";
-import "./custom-table.scss";
+import "./table-component.scss";
 
 const CustomExpandIcon = ({ expanded, onExpand, record }: any) => {
   if (expanded) {
