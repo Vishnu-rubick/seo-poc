@@ -3,6 +3,9 @@
   padding: 0;
   background-color: #F9FAFB;
   font-style: 'inter';
+  .ant-menu-item-selected{
+   background-color: #FFFFFF;
+  }
 }
 
 .ant-menu {

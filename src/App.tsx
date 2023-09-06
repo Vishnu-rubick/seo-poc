@@ -21,12 +21,16 @@ import LandingPage from "./pages/landingPage";
 import ModuleDetails from "./pages/module-details";
 import WebsiteIq from "./pages/website-Iq";
 
+//side-bar logos:
 import HonmeIcon from "./assets/common/HomeIcon.svg";
 import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import WebsiteIqIconSelected from "./assets/common/website-iq-selected.svg";
 import WebsiteIqIcon from "./assets/common/website-iq.svg";
-import TMLogo from "./assets/common/company-logo.svg";
 import RubickLogo from "./assets/common/rubick-logo.svg";
+import KeywordsIcon from "./assets/keywords/keywords-logo.svg"
+import KeywordsIconSelected from "./assets/keywords/keywords-selected.svg";
+import BacklinksIconSelected from "./assets/backlinks/backlinks-selected.svg";
+
 
 import SeoOverview from "./pages/seo-overview";
 import SiteAudit from "./site-audit";
@@ -95,17 +99,7 @@ function App() {
         <MenuItem disabled className="menu-item-header" key="">
           <img height="35px" src={RubickLogo} />
         </MenuItem>
-        {/* <MenuItem className="menu-item-header" key="seo-overview">
-          {currentMenu === "seo-overview" ? (
-            <div className="menu-icon">
-              <img src={DashboardIconSelected} alt="" />
-            </div>
-          ) : (
-            <div className="menu-icon">
-              <img src={DashboardIconSelected} alt="" />
-            </div>
-          )}
-        </MenuItem> */}
+
         <MenuItem className="menu-item-header" key="home">
           {currentMenu === "home" ? (
             <div className="menu-icon">
@@ -128,6 +122,31 @@ function App() {
             </div>
           )}
         </MenuItem>
+
+        <MenuItem className="menu-item-header" key="keywords">
+          {currentMenu === "keywords" ? (
+            <div className="menu-icon">
+              <img src={KeywordsIconSelected} alt="" />
+            </div>
+          ) : (
+            <div className="menu-icon">
+              <img src={KeywordsIcon} alt="" />
+            </div>
+          )}
+        </MenuItem>
+
+        <MenuItem className="menu-item-header" key="backlinks">
+          {currentMenu === "backlinks" ? (
+            <div className="menu-icon">
+              <img src={BacklinksIconSelected} alt="" />
+            </div>
+          ) : (
+            <div className="menu-icon">
+              <img src={""} alt="" />
+            </div>
+          )}
+        </MenuItem>
+
         {/* <MenuItem disabled key="key-metrics">
           <img
             src={`src/assets/common/key-metrics${
@@ -191,7 +210,7 @@ function App() {
       <div className="router-container">
         <Routes>
           <Route path="/" element={<Navigate to="/configure" />} />
-       
+
           <Route path="/configure" element={<HomeModule />} />
           <Route
             path="/configure-domain"
@@ -203,8 +222,6 @@ function App() {
             element={<PagesDetails projectId="12808182" />}
           />
           <Route path="/site-audit/details/issues/:id" element={<Details />} />
-          <Route path="/keywords" element={<Keywords />} />
-          <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
           <Route path="/competitorAnalysis" element={<CompetitorAnalysis />} />
 
           {/* backlinks-routes */}
@@ -228,6 +245,7 @@ function App() {
 
           {/* keywords */}
           <Route path="/keywords" element={<Keywords />} />
+          <Route path="/keywords/details/:type" element={<KeywordsDetails />} />
         </Routes>
       </div>
     </div>
