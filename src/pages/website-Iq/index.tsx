@@ -1,6 +1,6 @@
 import { Alert, Button, Checkbox, Form, Input, Select } from "antd";
 import type { CheckboxValueType } from "antd/es/checkbox/Group";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LimitPrefix from "../../assets/limit-input-prefix.png";
@@ -12,6 +12,8 @@ import "./websiteIq.scss";
 function WebsiteIq() {
   const [auditForm] = Form.useForm();
   const [crawlSubdomains, setCrawlSubdomains] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,6 +42,7 @@ function WebsiteIq() {
     { label: "Masked URLs", value: "Masked URLs" },
   ];
   const onFinish = () => {
+    setIsLoading(true);
     if (localStorage.getItem("projectId") && localStorage.getItem("domain")) {
       axios
         .post(`${import.meta.env.VITE_API_BASE_URL}/site-audit/run`, {
@@ -63,9 +66,17 @@ function WebsiteIq() {
               <Alert message={error} type="error" />;
             });
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.error("Error:", error);
-          <Alert message={error} type="error" />;
+          if(error?.response?.request.status === 409){
+            setError(error?.response?.data?.message);
+            const timer = setTimeout(() => {
+              navigate('/seo-tools');
+            }, 10000);
+          }
+          else{
+            <Alert message={error} type="error" />;
+          }
         });
     } else {
       <Alert
@@ -78,6 +89,7 @@ function WebsiteIq() {
   return (
     <div className="websiteIq-wrapper">
       <AppHeader />
+      {error && <Alert message={error} type="error" />}
       <div className="home-container">
         <div className="instructions-container">
           <div className="instructions-header">
@@ -175,6 +187,7 @@ function WebsiteIq() {
                     className="audit-btn"
                     type="primary"
                     onClick={() => auditForm.submit()}
+                    loading={isLoading}
                   >
                     Audit
                   </Button>
