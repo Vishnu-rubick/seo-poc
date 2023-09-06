@@ -149,7 +149,6 @@ const PagesDetails: React.FC = () => {
         className="details-tab"
         defaultActiveKey="1"
         items={items}
-        onChange={onChange}
       />
     </div>
   );
