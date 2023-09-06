@@ -1,4 +1,5 @@
 import { Layout } from "antd";
+import userLogo from "../../assets/common/default-user.svg";
 
 const { Header } = Layout;
 
@@ -29,7 +30,7 @@ const AppHeader = ({ title }: headerProp) => (
       <Header style={headerStyle}>
         {title  ? title : "Hi Rubick"}
       </Header>
-      <img src="src/assets/common/default-user.svg" alt="" />
+      <img src={userLogo} alt="" />
     </div>
   </>
 );

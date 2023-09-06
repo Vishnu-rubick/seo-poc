@@ -2,12 +2,13 @@ import "./module-header.scss"
 
 interface ModuleHeaderProps {
   lastUpdatedAt: String;
+  title?: String;
 }
 
-function ModuleHeader({ lastUpdatedAt }: ModuleHeaderProps) {
+function ModuleHeader({ lastUpdatedAt, title='SEO Overview' }: ModuleHeaderProps) {
   return (
     <div className="seo-overview-header">
-      <h1>SEO Overview</h1>
+      <h1>{title}</h1>
       <p>
         Last Updated:
         {lastUpdatedAt}

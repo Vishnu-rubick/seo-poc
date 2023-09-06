@@ -31,7 +31,16 @@
     letter-spacing: 0em;
     color: #00235b;
   }
-  .ant-table-thead >tr>td {
-      background: #eaf8fe;
+  .ant-table-thead > tr > td {
+    background: #eaf8fe;
+  }
+  .ant-table-column-title {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #00235B;
   }
 }

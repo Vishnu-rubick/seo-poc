@@ -1,30 +1,10 @@
 .keywords-dashboard {
-  .keyword-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ 
 
-  .table-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5rem;
-  }
-
-  .keywords-dashboard {
-    width: 100%;
-    margin-bottom: 5rem;
-  }
-
-  .keywords-dashboard-header {
-    display: flex;
-    justify-content: center;
-  }
-
-  // styles 
+  // styles
+  .dashboard-col{
+    padding-left: 2rem;
+  } 
    .overview-cards-container {
     margin-top: 1.4rem;
     background-color: #ffffff;

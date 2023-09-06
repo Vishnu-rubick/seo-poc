@@ -18,11 +18,18 @@ import OverviewCard from "../components/overview-card/overview-card";
 
 //assets
 import DominAuthorityArrow from "../assets/seo-overview/cards/domain-auth-arrow.png";
-import OrganicKeywordsArrow from "../assets/seo-overview/cards/organic-keywords-arrow.png";
 import PaidSearchTrafficArrow from "../assets/seo-overview/cards/paid-search-traffic-arrow.png";
-import OrangicSearchTrafficArrow from "../assets/seo-overview/cards/organic-search-traffic-arrow.png";
 import UniqueVisitorsArrow from "../assets/seo-overview/cards/unique-visitors-arrow.png";
 import VisitDurationArrow from "../assets/seo-overview/cards/visit-duration-arrow.png";
+import OrangicSearchTrafficArrow from "../assets/seo-overview/cards/organic-search-traffic-arrow.png";
+import PinkArrow from "../assets/seo-overview/cards/bounce-rate-arrow.png"
+
+import BlueIcon from "../assets/keywords/cards/blueIcon.svg"
+import OrangeIcon from "../assets/keywords/cards/orange.svg"
+import GreenIcon from "../assets/keywords/cards/green.svg"
+import LightgreenIcon from "../assets/keywords/cards/lightgreen.svg";
+import PurpleIcon from "../assets/keywords/cards/purple.svg"
+import PinkIcon from "../assets/keywords/cards/pink.svg"
 
 import "./keywords.scss";
 
@@ -111,43 +118,43 @@ const Keywords: React.FC = () => {
    const overviewCards = [
      {
        id: 2,
-       img: "",
-       arrow: OrangicSearchTrafficArrow,
+       img: BlueIcon,
+       arrow: DominAuthorityArrow,
        val: "26",
        title: "All Keywords",
      },
      {
        id: 3,
-       img: "",
-       arrow: PaidSearchTrafficArrow,
+       img: OrangeIcon,
+       arrow: OrangicSearchTrafficArrow,
        val: "1.9k",
        title: "Shared Keywords",
      },
      {
        id: 4,
-       img: "",
-       arrow: OrganicKeywordsArrow,
+       img: GreenIcon,
+       arrow: PaidSearchTrafficArrow,
        val: "116",
        title: "Missing Keywords",
      },
      {
        id: 5,
-       img: "",
+       img: LightgreenIcon,
        arrow: UniqueVisitorsArrow,
        val: "26",
        title: "Untapped Keywords",
      },
      {
        id: 6,
-       img: "",
+       img: PurpleIcon,
        arrow: VisitDurationArrow,
        val: "0",
        title: "Strong Keywords",
      },
      {
        id: 1,
-       img: "",
-       arrow: DominAuthorityArrow,
+       img: PinkIcon,
+       arrow: PinkArrow,
        val: "26",
        title: "Weak Keywords",
      },
@@ -156,9 +163,9 @@ const Keywords: React.FC = () => {
   return (
     <div className="keywords-dashboard">
       <AppHeader />
-      <Col className="seo-overview-col" span={24}>
+      <Col className="dashboard-col" span={24}>
         <Row>
-          <ModuleHeader lastUpdatedAt={"02 Aug 2023"} />
+          <ModuleHeader title="" lastUpdatedAt={"02 Aug 2023"} />
         </Row>
         <Row className="domain-header-row">
           <DomainSubheader />
@@ -174,8 +181,6 @@ const Keywords: React.FC = () => {
           </Row>
         </div>
       </Col>
-
-      {/* <Table dataSource={dataSource} columns={columns} pagination={false} /> */}
     </div>
   );
 };

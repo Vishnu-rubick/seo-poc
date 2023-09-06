@@ -48,7 +48,7 @@ const TableComponent = ({
               expandedRowRender: (record) => {
                 return (
                   <ol style={{ marginLeft: "25px" }}>
-                    {record.description.map((desc:string, index:number) => (
+                    {record.description.map((desc: string, index: number) => (
                       <li style={{ marginTop: "5px" }} key={index}>
                         {desc}
                       </li>
@@ -71,7 +71,9 @@ const TableComponent = ({
           : {}
       }
       dataSource={dataSource}
-      pagination={pagination ? {} : false}
+      pagination={
+        pagination ? { defaultPageSize: 10, showSizeChanger: false } : false
+      }
     />
   );
 };

@@ -17,6 +17,9 @@
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
+    p {
+      font-weight: 400;
+    }
   }
 
   .keywords-overview-title {
@@ -30,7 +33,7 @@
     letter-spacing: 0em;
     text-align: left;
     color: #4e668d;
-    .ant-tabs-tab-active .ant-tabs-tab-btn{
+    .ant-tabs-tab-active .ant-tabs-tab-btn {
       font-family: 500;
       color: #00235b !important;
     }
