@@ -53,6 +53,14 @@ function WebsiteIq() {
           crawlSubdomains,
         })
         .then((response) => {
+          console.log("res => ", response)
+          if(response?.status === 409){
+            setError(response?.data?.message);
+            const timer = setTimeout(() => {
+              navigate('/seo-tools');
+            }, 10000);
+            return;
+          }
           axios
             .get(
               `${
