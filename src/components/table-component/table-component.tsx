@@ -28,12 +28,14 @@ type TableComponentProps = {
   dataSource: any;
   pagination?: boolean;
   expandable: boolean;
+  scroll?: {};
 };
 const TableComponent = ({
   columns,
   dataSource,
   pagination,
   expandable,
+  scroll,
 }: TableComponentProps) => {
   const [expandedRowKeys, setExpandedRowKeys] = useState<number[]>([]);
 
@@ -42,6 +44,7 @@ const TableComponent = ({
       className="custom-Table"
       columns={columns}
       showSorterTooltip={true}
+      scroll={scroll ? scroll : {}}
       expandable={
         expandable
           ? {

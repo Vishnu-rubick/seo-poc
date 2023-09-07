@@ -219,7 +219,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {domainTitle?.length &&
+            {domainTitle?.length !==0 &&
               overviewData?.map(
                 ({ metric: title, [domainTitle]: val }: any, idx) => (
                   <Col span={6} key={idx}>
