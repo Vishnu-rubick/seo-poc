@@ -201,6 +201,7 @@ const Keywords: React.FC = () => {
               <h2>Keyword Overlap Map</h2>
               <Select
                 defaultValue="Organic Keywords"
+                className="custom-select"
                 options={[
                   { value: "organic-keywords", label: "Organic Keywords" },
                   // { value: "monthly", label: "Monthly" },

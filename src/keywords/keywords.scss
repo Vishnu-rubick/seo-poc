@@ -33,7 +33,26 @@
       background-color: #ffffff;
       //padding: 20px;
       .chart-header{
-        padding: 20px
+        padding: 20px;
+          .ant-select-selector {
+        border: none;
+        background: #f8f8f8;
+      }
+      .custom-select {
+        &:hover,
+        &:focus,
+        &:active,
+        &.ant-select-focused,
+        &.ant-select-focused:not(.ant-select-disabled):not(
+            .ant-select-customize-input
+          ) {
+          border: none;
+          color: initial;
+        }
+      }
+      .custom-select:focus {
+        border-color: none; /* Change the border color when the select is focused */
+      }
       }
       h2 {
         font-family: 'Inter';
