@@ -1,5 +1,6 @@
 import { Checkbox, Tabs, TabsProps } from "antd";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ExportLogo from "../../assets/home-module/export-logo.png";
 import IssuesDetails from "../../backlinks/issues-details/issues-details";
@@ -150,6 +151,7 @@ function LandingPage({ projectId }: LandingPageProps) {
         <AppHeader />
         <div className="landing-container-header">
           <h1>Here is your website analysis report!</h1>
+          <Link to="/website-iq">Run Audit</Link>
         </div>
         <div
           id="landing-container-content-id"
