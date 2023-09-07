@@ -1,6 +1,9 @@
 import React, { useState, useEffect} from 'react'
+import { Breadcrumb, TabsProps, Tabs } from 'antd';
 import BacklinksDetailsData from "../../../backlinks-data/backlinks-details.json"
 import TableComponent from '../../components/table-component/table-component';
+import AppHeader from '../../components/app-header/app-header';
+import BreadcrumbArrow from "../../assets/keywords/breadcrumb-arrow.svg";
 import './backlinks-details.scss'
 
 function BacklinksDetails() {
@@ -18,6 +21,7 @@ function BacklinksDetails() {
      },
    ]);
     
+   const [activeTab, setActiveTab] = useState("all");
    useEffect(()=>{
          const backlinksDetailsArr = BacklinksDetailsData.map((cur) => ({
            key: Date.now(),
@@ -33,8 +37,6 @@ function BacklinksDetails() {
 
          setDataSource(backlinksDetailsArr);
    },[])
- 
-
 
    const columns = [
      {
@@ -78,10 +80,58 @@ function BacklinksDetails() {
        key: "8",
      },
    ];
+
+    const tabItems: TabsProps["items"] = [
+      {
+        key: "all",
+        label: `All Backlinks`,
+      },
+      {
+        key: "referring",
+        label: `Referring Domains`,
+      },
+      {
+        key: "outbound",
+        label: `Outbound Domains`,
+      },
+    ];
+
+    const handleTabChange = (key: string) => {
+      setActiveTab(key);
+    };
   return (
     <div className="backlinks-details">
-    
-      <TableComponent dataSource={dataSource} columns={columns} expandable={false}/>
+      <AppHeader />
+      <div className="backlinks-details-contents">
+        <div className="breadcrumbs-wrapper">
+          <Breadcrumb
+            separator={<img src={BreadcrumbArrow} alt="" />}
+            items={[
+              {
+                title: "BACKLINKS OVERVIEW",
+                className: "breadcrumbs-title",
+                // href:""
+              },
+              {
+                title: `${activeTab}`.toUpperCase() + " DOMAINS",
+                // href: "",
+              },
+            ]}
+          />
+          <p>
+            <span style={{ color: "#818181" }}>Last Update:</span>02 Aug 2023
+          </p>
+        </div>
+        <div className="backlinks-tabs">
+          <Tabs
+            className=""
+            activeKey={activeTab}
+            items={tabItems}
+            onChange={handleTabChange}
+          />
+        </div>
+      </div>
+      {/* <TableComponent dataSource={dataSource} columns={columns} expandable={false}/> */}
     </div>
   );
 }

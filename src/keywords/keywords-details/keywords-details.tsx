@@ -187,7 +187,7 @@ function KeywordsDetails() {
             items={[
               {
                 title: "KEYWORD OVERVIEW",
-                className: "keywords-overview-title",
+                className: "breadcrumbs-title",
                 // href:""
               },
               {

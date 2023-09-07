@@ -94,41 +94,41 @@ const Backlinks: React.FC = () => {
         id: 2,
         img: BlueIcon,
         arrow: DominAuthorityArrow,
-        val: "26",
-        title: "All Keywords",
-        linkTo: "/keywords/details/all",
+        val: "1.4k",
+        title: "Backlinks",
+        linkTo: "/backlinks/details",
       },
       {
         id: 3,
         img: OrangeIcon,
         arrow: OrangicSearchTrafficArrow,
-        val: "1.9k",
-        title: "Shared Keywords",
-        linkTo: "/keywords/details/shared",
+        val: "263",
+        title: "Referring Domains",
+        linkTo: "/backlinks/details",
       },
       {
         id: 4,
         img: GreenIcon,
         arrow: PaidSearchTrafficArrow,
         val: "116",
-        title: "Missing Keywords",
-        linkTo: "/keywords/details/missing",
+        title: "Monthly Visits",
+        linkTo: "/backlinks/details",
       },
       {
         id: 6,
         img: PurpleIcon,
         arrow: VisitDurationArrow,
-        val: "0",
-        title: "Strong Keywords",
-        linkTo: "/keywords/details/strong",
+        val: "217",
+        title: "Organic Traffic",
+        linkTo: "/backlinks/details",
       },
       {
         id: 1,
         img: PinkIcon,
         arrow: PinkArrow,
         val: "26",
-        title: "Weak Keywords",
-        linkTo: "/keywords/details/weak",
+        title: "Outbound Domains",
+        linkTo: "/backlinks/details",
       },
     ];
   return (
@@ -145,7 +145,7 @@ const Backlinks: React.FC = () => {
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
             {overviewCards?.map(({ id, img, arrow, title, val, linkTo }) => (
-              <Col span={5} key={id}>
+              <Col span={8} key={id}>
                 <OverviewCard
                   id={id}
                   img={img}

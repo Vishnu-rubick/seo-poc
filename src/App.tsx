@@ -22,6 +22,7 @@ import WebsiteIq from "./pages/website-Iq";
 
 //side-bar logos:
 import BacklinksIconSelected from "./assets/backlinks/backlinks-selected.svg";
+import BacklinksIcon from "./assets/backlinks/backlinks-logo.svg";
 import HonmeIcon from "./assets/common/HomeIcon.svg";
 import HonmeIconSelected from "./assets/common/homeIcon-selected.svg";
 import RubickLogo from "./assets/common/rubick-logo.svg";
@@ -136,11 +137,11 @@ function App() {
         <MenuItem className="menu-item-header" key="backlinks">
           {currentMenu === "backlinks" ? (
             <div className="menu-icon">
-              <img src={BacklinksIconSelected} alt="" />
+              <img src={BacklinksIconSelected} alt="Backlinks" />
             </div>
           ) : (
             <div className="menu-icon">
-              <img src={""} alt="" />
+              <img src={BacklinksIcon} alt="Backlinks" />
             </div>
           )}
         </MenuItem>
