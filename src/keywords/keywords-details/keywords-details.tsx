@@ -214,6 +214,7 @@ function KeywordsDetails() {
             columns={columns}
             expandable={false}
             pagination={true}
+            scroll={{ y: 410 }}
           />
         </div>
       </div>

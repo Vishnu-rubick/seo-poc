@@ -91,7 +91,7 @@ function BacklinksDetails() {
           columns={columns}
           expandable={false}
           pagination={true}
-          scroll={{ y: 500 }}
+          scroll={{ y: 410 }}
         />
       ),
     },
@@ -104,7 +104,7 @@ function BacklinksDetails() {
           columns={columns}
           expandable={false}
           pagination={true}
-          scroll={{ y: 500 }}
+          scroll={{ y: 410 }}
         />
       ),
     },
@@ -117,7 +117,7 @@ function BacklinksDetails() {
           columns={columns}
           expandable={false}
           pagination={true}
-          scroll={{ y: 500 }}
+          scroll={{ y: 410 }}
         />
       ),
     },
@@ -149,7 +149,7 @@ function BacklinksDetails() {
             <span style={{ color: "#818181" }}>Last Update:</span>02 Aug 2023
           </p>
         </div>
-        <div className="backlinks-tabs">
+        <div className="custom-tabs">
           <Tabs
             className=""
             activeKey={activeTab}
