@@ -16,7 +16,8 @@ function Home({
   const [businessForm] = Form.useForm();
   const formItemLayout = { labelCol: { span: 4 }, wrapperCol: { span: 15 } };
   const buttonItemLayout = { wrapperCol: { span: 14, offset: 4 } };
-  const [competitors, setCompetitors] = useState<{}[]>([]);
+  const [competitors, setCompetitors] = useState<string[]>([]);
+  const [configData, setConfigData] = useState<any>(null);
   const navigate = useNavigate();
 
  const getConfigAndRedirect= ()=>{
@@ -24,6 +25,7 @@ function Home({
      .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
      .then((configResponse) => {
        let config = configResponse?.data;
+       setConfigData(config);
        let present = config.domain.length;
        if (present) {
          if (config?.projectId)
@@ -40,6 +42,18 @@ function Home({
   useEffect(() => {
     getConfigAndRedirect();
   }, []);
+
+  useEffect(() => {
+    businessForm.setFieldsValue({
+      domain: configData?.domain,
+      industry: configData?.industry,
+      geography: configData?.geography,
+      // ['competitor1']: configData?.competitors.length && configData?.competitors[0],
+      // ['competitor2']: configData?.competitors.length <= 2 && configData?.competitors[1]
+    });
+
+    setCompetitors(configData?.competitors)
+  }, [configData])
 
   interface CompetitorsObject {
     domain: string;
@@ -89,8 +103,15 @@ function Home({
       });
   };
 
+  const handleFormCancel = () => {
+    businessForm.resetFields();
+    setCompetitors([]);
+  }
+
+  console.log(configData)
+  
   const handleAddCompetitor = () => {
-    setCompetitors([...competitors, {}]);
+    setCompetitors([...competitors, ""]);
   };
   return (
     <div className="home-wrapper">
@@ -181,57 +202,63 @@ function Home({
                     ]}
                   />
                 </Form.Item>
-                <Form.Item
-                  label="Competitor 1"
-                  className="mandatory-field"
-                  name="competitor1"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your competitor 1!",
-                    },
-                    {
-                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,                     
-                      message: "Invalid domain format",
-                    },
-                  ]}
-                >
-                  <Input
-                    className="custom-input"
-                    placeholder="Enter competitor 1"
-                  />
-                </Form.Item>
-                <Form.Item
-                  label="Competitor 2"
-                  name="competitor2"
-                  className="mandatory-field"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your Competitor 2!",
-                    },
-                    {
-                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                      message: "Invalid domain format",
-                    },
-                  ]}
-                >
-                  <Input
-                    className="custom-input"
-                    placeholder="Enter competitor 2"
-                  />
-                </Form.Item>
-
-                {competitors.map((competitor, index) => (
+                {
+                  !configData &&
+                  (
+                    <>
+                    <Form.Item
+                      label="Competitor 1"
+                      className="mandatory-field"
+                      name="competitor1"
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your competitor 1!",
+                        },
+                        {
+                          pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,                     
+                          message: "Invalid domain format",
+                        },
+                      ]}
+                    >
+                      <Input
+                        className="custom-input"
+                        placeholder="Enter competitor 1"
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      label="Competitor 2"
+                      name="competitor2"
+                      className="mandatory-field"
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Competitor 2!",
+                        },
+                        {
+                          pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: "Invalid domain format",
+                        },
+                      ]}
+                    >
+                      <Input
+                        className="custom-input"
+                        placeholder="Enter competitor 2"
+                      />
+                    </Form.Item>
+                    </>
+                  )
+                }
+                {competitors?.map((competitor, index) => (
                   <Form.Item
                     key={index}
-                    label={`Competitor ${index + 3}`}
-                    name={`competitor${index + 3}`}
+                    label={`Competitor ${index + 1}`}
+                    name={`competitor${index + 1}`}
                     className="mandatory-field"
                     rules={[
                       {
                         required: true,
-                        message: `Please input competitor ${index + 3}!`,
+                        message: `Please input competitor ${index + 1}!`,
                       },
                       {
                         pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
@@ -241,7 +268,8 @@ function Home({
                   >
                     <Input
                       className="custom-input"
-                      placeholder={`Enter competitor ${index + 3}`}
+                      placeholder={`Enter competitor ${index + 1}`}
+                      defaultValue={competitor}
                     />
                   </Form.Item>
                 ))}
@@ -252,7 +280,7 @@ function Home({
 
                 <div className="btns-wrapper">
                   <Form.Item {...buttonItemLayout}>
-                    <Button type="primary">Cancel</Button>
+                    <Button onClick={handleFormCancel} type="primary">Cancel</Button>
                   </Form.Item>
                   <Form.Item {...buttonItemLayout}>
                     <Button
