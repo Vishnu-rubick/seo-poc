@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Row, Select } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import KeywordsData from "../../data/keywords/keyordsMerged.json";
@@ -17,20 +17,21 @@ import ModuleHeader from "../components/module-header/module-header";
 import OverviewCard from "../components/overview-card/overview-card";
 
 //assets
+import PinkArrow from "../assets/seo-overview/cards/bounce-rate-arrow.png";
 import DominAuthorityArrow from "../assets/seo-overview/cards/domain-auth-arrow.png";
+import OrangicSearchTrafficArrow from "../assets/seo-overview/cards/organic-search-traffic-arrow.png";
 import PaidSearchTrafficArrow from "../assets/seo-overview/cards/paid-search-traffic-arrow.png";
 import UniqueVisitorsArrow from "../assets/seo-overview/cards/unique-visitors-arrow.png";
 import VisitDurationArrow from "../assets/seo-overview/cards/visit-duration-arrow.png";
-import OrangicSearchTrafficArrow from "../assets/seo-overview/cards/organic-search-traffic-arrow.png";
-import PinkArrow from "../assets/seo-overview/cards/bounce-rate-arrow.png"
 
-import BlueIcon from "../assets/keywords/cards/blueIcon.svg"
-import OrangeIcon from "../assets/keywords/cards/orange.svg"
-import GreenIcon from "../assets/keywords/cards/green.svg"
+import BlueIcon from "../assets/keywords/cards/blueIcon.svg";
+import GreenIcon from "../assets/keywords/cards/green.svg";
 import LightgreenIcon from "../assets/keywords/cards/lightgreen.svg";
-import PurpleIcon from "../assets/keywords/cards/purple.svg"
-import PinkIcon from "../assets/keywords/cards/pink.svg"
+import OrangeIcon from "../assets/keywords/cards/orange.svg";
+import PinkIcon from "../assets/keywords/cards/pink.svg";
+import PurpleIcon from "../assets/keywords/cards/purple.svg";
 
+import VennChart from "../components/charts/veen-chart/venn-chart";
 import "./keywords.scss";
 
 const Keywords: React.FC = () => {
@@ -115,56 +116,56 @@ const Keywords: React.FC = () => {
     },
   ];
 
-   const overviewCards = [
-     {
-       id: 2,
-       img: BlueIcon,
-       arrow: DominAuthorityArrow,
-       val: "26",
-       title: "All Keywords",
-       linkTo: "/keywords/details/all",
-     },
-     {
-       id: 3,
-       img: OrangeIcon,
-       arrow: OrangicSearchTrafficArrow,
-       val: "1.9k",
-       title: "Shared Keywords",
-       linkTo: "/keywords/details/shared",
-     },
-     {
-       id: 4,
-       img: GreenIcon,
-       arrow: PaidSearchTrafficArrow,
-       val: "116",
-       title: "Missing Keywords",
-       linkTo: "/keywords/details/missing",
-     },
-     {
-       id: 5,
-       img: LightgreenIcon,
-       arrow: UniqueVisitorsArrow,
-       val: "26",
-       title: "Untapped Keywords",
-       linkTo: "/keywords/details/untapped",
-     },
-     {
-       id: 6,
-       img: PurpleIcon,
-       arrow: VisitDurationArrow,
-       val: "0",
-       title: "Strong Keywords",
-       linkTo: "/keywords/details/strong",
-     },
-     {
-       id: 1,
-       img: PinkIcon,
-       arrow: PinkArrow,
-       val: "26",
-       title: "Weak Keywords",
-       linkTo: "/keywords/details/weak",
-     },
-   ];
+  const overviewCards = [
+    {
+      id: 2,
+      img: BlueIcon,
+      arrow: DominAuthorityArrow,
+      val: "26",
+      title: "All Keywords",
+      linkTo: "/keywords/details/all",
+    },
+    {
+      id: 3,
+      img: OrangeIcon,
+      arrow: OrangicSearchTrafficArrow,
+      val: "1.9k",
+      title: "Shared Keywords",
+      linkTo: "/keywords/details/shared",
+    },
+    {
+      id: 4,
+      img: GreenIcon,
+      arrow: PaidSearchTrafficArrow,
+      val: "116",
+      title: "Missing Keywords",
+      linkTo: "/keywords/details/missing",
+    },
+    {
+      id: 5,
+      img: LightgreenIcon,
+      arrow: UniqueVisitorsArrow,
+      val: "26",
+      title: "Untapped Keywords",
+      linkTo: "/keywords/details/untapped",
+    },
+    {
+      id: 6,
+      img: PurpleIcon,
+      arrow: VisitDurationArrow,
+      val: "0",
+      title: "Strong Keywords",
+      linkTo: "/keywords/details/strong",
+    },
+    {
+      id: 1,
+      img: PinkIcon,
+      arrow: PinkArrow,
+      val: "26",
+      title: "Weak Keywords",
+      linkTo: "/keywords/details/weak",
+    },
+  ];
 
   return (
     <div className="keywords-dashboard">
@@ -179,13 +180,49 @@ const Keywords: React.FC = () => {
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
           <Row justify="start" className="overview-cards">
-            {overviewCards?.map(({id, img, arrow, title, val, linkTo}) => (
+            {overviewCards?.map(({ id, img, arrow, title, val, linkTo }) => (
               <Col span={8} key={id}>
-                <OverviewCard id={id} img={img} arrow={arrow} title={title} val={val} linkTo={linkTo} />
+                <OverviewCard
+                  id={id}
+                  img={img}
+                  arrow={arrow}
+                  title={title}
+                  val={val}
+                  linkTo={linkTo}
+                />
               </Col>
             ))}
           </Row>
         </div>
+
+        <Row className="chart-row">
+          <Col className="venn-col" span={12}>
+            <div className="chart-header">
+              <h2>Keyword Overlap Map</h2>
+              <Select
+                defaultValue="Organic Keywords"
+                options={[
+                  { value: "organic-keywords", label: "Organic Keywords" },
+                  // { value: "monthly", label: "Monthly" },
+                  // { value: "quarterly", label: "Quarterly" },
+                  // { value: "halfyearly", label: "Half Yearly" },
+                  // { value: "yearly", label: "Yearly" },
+                ]}
+              />
+            </div>
+            <div className="chart-container">
+              <VennChart />
+              {/* <div>
+                <li>
+                  <ul>ddmdm</ul>
+                  <ul>ddmdm</ul>
+                  <ul>ddmdm</ul>
+                </li>
+              </div> */}
+            </div>
+          </Col>
+          <Col span={12}>{/* bar-chart */}</Col>
+        </Row>
       </Col>
     </div>
   );

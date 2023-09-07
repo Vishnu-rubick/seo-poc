@@ -2,9 +2,9 @@ import { Checkbox, Tabs, TabsProps } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ExportLogo from "../../assets/home-module/export-logo.png";
-import IssuesDetails from "./issues-details/issues-details";
 import Dashboard from "../../components/Dashboard";
 import { downloadFileFromURL } from "../../utility/fileDownload";
+import IssuesDetails from "./issues-details/issues-details";
 import PagesDetails from "./pages-details/pages-details";
 
 import Alert from "antd/es/alert/Alert";
@@ -90,6 +90,7 @@ function LandingPage({ projectId }: LandingPageProps) {
   const downloadOverviewSS = () => {
     const element = document.getElementById("dashboard-container-id"); // Replace with the actual ID of your <div>
     if (element) {
+      debugger;
       domtoimage
         .toPng(element)
         .then((dataUrl: any) => {

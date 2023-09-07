@@ -1,11 +1,9 @@
 .keywords-dashboard {
- 
-
   // styles
-  .dashboard-col{
+  .dashboard-col {
     padding-left: 2rem;
-  } 
-   .overview-cards-container {
+  }
+  .overview-cards-container {
     margin-top: 1.4rem;
     background-color: #ffffff;
     padding: 10px;
@@ -22,11 +20,27 @@
       text-align: left;
     }
   }
-    .overview-cards {
+  .overview-cards {
     margin-top: 1rem;
     .ant-col {
       margin: 0;
     }
   }
+  .chart-row{
+    width: 100%;
+    .venn-col{
+      height: 200px;
+      background-color: #ffffff;
+      //padding: 20px;
+      .chart-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .chart-container{
+        display: flex;
+        padding-top: 2rem;
+      }
+    }
+  }
 }
-

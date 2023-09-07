@@ -42,6 +42,7 @@ const TableComponent = ({
   return (
     <Table
       className="custom-Table"
+    
       columns={columns}
       showSorterTooltip={true}
       scroll={scroll ? scroll : {}}
