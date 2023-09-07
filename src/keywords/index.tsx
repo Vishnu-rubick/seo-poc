@@ -213,12 +213,16 @@ const Keywords: React.FC = () => {
             </div>
             <div className="chart-container">
               <VennChart />
-              {/* <div>
-                <li>
-                  <ul>ddmdm</ul>
-                  <ul>ddmdm</ul>
-                  <ul>ddmdm</ul>
-                </li>
+              {/* <div className="competitors-list">
+                <p>
+                  <span></span>wittypen.com
+                </p>
+                <p>
+                  <span></span>peppercontent.io
+                </p>
+                <p>
+                  <span></span>textmercato.com
+                </p>
               </div> */}
             </div>
           </Col>
