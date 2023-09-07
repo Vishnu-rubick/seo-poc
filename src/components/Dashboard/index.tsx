@@ -53,6 +53,7 @@ function Card({ data, title, subTitle, child }: CardProps) {
 
 function Dashboard({ projectId }: DashboardProps) {
   const [data, setData] = useState<DashboardDataType | undefined>();
+  const [campaignData, setCampaignData] = useState<any>({});
   
 
   const fetchData= ()=>{
@@ -87,6 +88,7 @@ function Dashboard({ projectId }: DashboardProps) {
           )
           .then((response) => {
             fetchData();
+            setCampaignData(response?.data);
             if (response?.data?.status === "FINISHED") {
               clearInterval(interval);
             }
@@ -112,7 +114,7 @@ function Dashboard({ projectId }: DashboardProps) {
           <Col span={15} style={{ border: "1px solid #D9D9D9" }}>
             <Card
               data={data}
-              title="Audited Pages"
+              title={`Audited Pages ${data?.crawledPages}/${campaignData?.pages_limit}`}
               child={<AuditedPages data={data} />}
             />
           </Col>

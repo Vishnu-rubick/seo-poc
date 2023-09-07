@@ -10,7 +10,7 @@ type DataType = {
   key: number;
   description: string[];
   pageURL: string;
-  totalIssues: string;
+  totalIssues: number;
 };
 
 const columns: ColumnsType<DataType> = [
@@ -24,14 +24,14 @@ const columns: ColumnsType<DataType> = [
     title: "Total Issues",
     dataIndex: "totalIssues",
     key: "totalIssues",
-    sorter: (a, b) => a.totalIssues.localeCompare(b.totalIssues),
+    sorter: (a, b) => a.totalIssues - b.totalIssues,
   },
 ];
 const data: DataType[] = [
   {
     key: 1,
     pageURL: "",
-    totalIssues: "",
+    totalIssues: 0,
     description: [""],
   },
 ];
@@ -91,13 +91,15 @@ const CustomTable = () => {
       expandable={{
         expandedRowRender: (record) => {
           return (
-            <ol style={{ marginLeft: "25px" }}>
-              {record.description.map((desc, index) => (
-                <li style={{ marginTop: "5px" }} key={index}>
-                  {desc}
-                </li>
-              ))}
-            </ol>
+            <div style={{maxHeight: '350px', overflowY: 'auto'}}>
+              <ol style={{ marginLeft: "25px" }}>
+                {record.description.map((desc, index) => (
+                  <li style={{ marginTop: "5px" }} key={index}>
+                    {desc}
+                  </li>
+                ))}
+              </ol>
+            </div>
           );
         },
         expandIcon: CustomExpandIcon,
