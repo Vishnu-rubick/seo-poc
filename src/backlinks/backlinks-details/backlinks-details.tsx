@@ -1,8 +1,7 @@
-import { Table } from 'antd';
 import React, { useState, useEffect} from 'react'
 import BacklinksDetailsData from "../../../backlinks-data/backlinks-details.json"
-import { Link } from 'react-router-dom';
-import './backlinks-details.css'
+import TableComponent from '../../components/table-component/table-component';
+import './backlinks-details.scss'
 
 function BacklinksDetails() {
    const [dataSource, setDataSource] = useState<any[]>([
@@ -81,24 +80,8 @@ function BacklinksDetails() {
    ];
   return (
     <div className="backlinks-details">
-      <div className='header'>
-        <Link
-          style={{
-            margin: "1rem",
-            marginLeft: "1.5rem",
-            color: "#1677ff",
-            textDecoration: "none",
-          }}
-          to="/backlinks"
-        >
-          Go Back
-        </Link>
-        <p>Backlinks Deatails</p>
-      </div>
-      <Table
-        dataSource={dataSource}
-        columns={columns}
-      />
+    
+      <TableComponent dataSource={dataSource} columns={columns} expandable={false}/>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.backlinks-dashboard {
+  .dashboard-col {
+    padding-left: 2rem;
+  }
+  .overview-cards-container {
+    margin-top: 1.4rem;
+    background-color: #ffffff;
+    padding: 10px;
+    .subheading {
+      margin-left: 15px;
+    }
+    h2 {
+      color: #00235b;
+      font-family: Inter;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+  .overview-cards {
+    margin-top: 1rem;
+    .ant-col {
+      margin: 0;
+    }
+  }
+}
