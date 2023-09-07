@@ -26,18 +26,29 @@
       margin: 0;
     }
   }
-  .chart-row{
+  .chart-row {
     width: 100%;
-    .venn-col{
+    .venn-col {
       height: 200px;
       background-color: #ffffff;
       //padding: 20px;
       .chart-header{
+        padding: 20px
+      }
+      h2 {
+        font-family: 'Inter';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .chart-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
-      .chart-container{
+      .chart-container {
         display: flex;
         padding-top: 2rem;
       }
