@@ -178,7 +178,7 @@ function LandingPage({ projectId }: LandingPageProps) {
             <SubHeaderCard title={`Crawl Limit: ${campaignData?.pages_limit || 0}`} suffix=" | " />
             <SubHeaderCard title="Crawl Frequency: 15 days once" />
             <SubHeaderCard
-              prefix={<Checkbox disabled checked={campaignData?.crawlSubdomains || false} />}
+              prefix={<Checkbox disabled checked={!campaignData?.crawlSubdomains || false} />}
               title="Exculde subdomains"
               style={{ marginLeft: "auto", minWidth: "180px" }}
             />
