@@ -1,4 +1,4 @@
-import { VennDiagramChart, extractSets } from "chartjs-chart-venn";
+import { VennDiagramChart } from "chartjs-chart-venn";
 import { useEffect, useRef } from "react";
 import "./venn-chart.scss";
 
@@ -93,9 +93,11 @@ const ChartVenn = () => {
     },
   };
 
-  useEffect(() => {
-    new VennDiagramChart(canvasRef.current, config);
-  });
+   useEffect(() => {
+     if (canvasRef.current) {
+       new VennDiagramChart(canvasRef.current, config);
+     }
+   }, []);
 
   return (
     <div className="venn-chart-wrapper">

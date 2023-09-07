@@ -1,34 +1,32 @@
-import { Table, Row, Col } from "antd";
+import { Col, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import AppHeader from "../components/app-header/app-header";
-import ModuleHeader from "../components/module-header/module-header";
 import DomainSubheader from "../components/domain-subheader/domain-subheader";
+import ModuleHeader from "../components/module-header/module-header";
 import OverviewCard from "../components/overview-card/overview-card";
 
 // import backlinksOverview from "../../backlinks-data/backlinks-overview.json";
-import referringDomainsData from "../../backlinks-data/referring-domains.json";
 import backlinksList from "../../backlinks-data/backlinks-details.json";
 import outboundDomainsData from "../../backlinks-data/outbound-domains.json";
-
+import referringDomainsData from "../../backlinks-data/referring-domains.json";
 
 //assets
+import PinkArrow from "../assets/seo-overview/cards/bounce-rate-arrow.png";
 import DominAuthorityArrow from "../assets/seo-overview/cards/domain-auth-arrow.png";
-import PaidSearchTrafficArrow from "../assets/seo-overview/cards/paid-search-traffic-arrow.png";
-import UniqueVisitorsArrow from "../assets/seo-overview/cards/unique-visitors-arrow.png";
-import VisitDurationArrow from "../assets/seo-overview/cards/visit-duration-arrow.png";
 import OrangicSearchTrafficArrow from "../assets/seo-overview/cards/organic-search-traffic-arrow.png";
-import PinkArrow from "../assets/seo-overview/cards/bounce-rate-arrow.png"
+import PaidSearchTrafficArrow from "../assets/seo-overview/cards/paid-search-traffic-arrow.png";
+import VisitDurationArrow from "../assets/seo-overview/cards/visit-duration-arrow.png";
 
-import BlueIcon from "../assets/keywords/cards/blueIcon.svg"
-import OrangeIcon from "../assets/keywords/cards/orange.svg"
-import GreenIcon from "../assets/keywords/cards/green.svg"
-import LightgreenIcon from "../assets/keywords/cards/lightgreen.svg";
-import PurpleIcon from "../assets/keywords/cards/purple.svg"
-import PinkIcon from "../assets/keywords/cards/pink.svg"
+import BlueIcon from "../assets/keywords/cards/blueIcon.svg";
+import GreenIcon from "../assets/keywords/cards/green.svg";
+import OrangeIcon from "../assets/keywords/cards/orange.svg";
+import PinkIcon from "../assets/keywords/cards/pink.svg";
+import PurpleIcon from "../assets/keywords/cards/purple.svg";
 
 import "./backlinks.scss";
+import ReportCard from "./report-card/report-card";
 
 const Backlinks: React.FC = () => {
   const [dataSource, setDataSource] = useState<any[]>([
@@ -37,8 +35,8 @@ const Backlinks: React.FC = () => {
       rowHeader: "Total",
       backlinks: backlinksList.length,
       referringDomains: referringDomainsData.length,
-      monthlyVisits: '?',
-      organicTraffic: '?',
+      monthlyVisits: "?",
+      organicTraffic: "?",
       outboundDomains: outboundDomainsData.length,
     },
   ]);
@@ -89,48 +87,74 @@ const Backlinks: React.FC = () => {
       ),
     },
   ];
-    const overviewCards = [
-      {
-        id: 2,
-        img: BlueIcon,
-        arrow: DominAuthorityArrow,
-        val: "1.4k",
-        title: "Backlinks",
-        linkTo: "/backlinks/details",
-      },
-      {
-        id: 3,
-        img: OrangeIcon,
-        arrow: OrangicSearchTrafficArrow,
-        val: "263",
-        title: "Referring Domains",
-        linkTo: "/backlinks/details",
-      },
-      {
-        id: 4,
-        img: GreenIcon,
-        arrow: PaidSearchTrafficArrow,
-        val: "116",
-        title: "Monthly Visits",
-        linkTo: "/backlinks/details",
-      },
-      {
-        id: 6,
-        img: PurpleIcon,
-        arrow: VisitDurationArrow,
-        val: "217",
-        title: "Organic Traffic",
-        linkTo: "/backlinks/details",
-      },
-      {
-        id: 1,
-        img: PinkIcon,
-        arrow: PinkArrow,
-        val: "26",
-        title: "Outbound Domains",
-        linkTo: "/backlinks/details",
-      },
-    ];
+  const overviewCards = [
+    {
+      id: 2,
+      img: BlueIcon,
+      arrow: DominAuthorityArrow,
+      val: "1.4k",
+      title: "Backlinks",
+      linkTo: "/backlinks/details",
+    },
+    {
+      id: 3,
+      img: OrangeIcon,
+      arrow: OrangicSearchTrafficArrow,
+      val: "263",
+      title: "Referring Domains",
+      linkTo: "/backlinks/details",
+    },
+    {
+      id: 4,
+      img: GreenIcon,
+      arrow: PaidSearchTrafficArrow,
+      val: "116",
+      title: "Monthly Visits",
+      linkTo: "/backlinks/details",
+    },
+    {
+      id: 6,
+      img: PurpleIcon,
+      arrow: VisitDurationArrow,
+      val: "217",
+      title: "Organic Traffic",
+      linkTo: "/backlinks/details",
+    },
+    {
+      id: 1,
+      img: PinkIcon,
+      arrow: PinkArrow,
+      val: "26",
+      title: "Outbound Domains",
+      linkTo: "/backlinks/details",
+    },
+  ];
+  const reportCards = [
+    {
+      key: 1,
+      value: 245,
+      title: "Referring Domains",
+      color: "#00A6ED",
+    },
+    {
+      key: 2,
+      value: 45,
+      title: "Toxic Links",
+      color: "#FFB400",
+    },
+    {
+      key: 3,
+      value: 24,
+      title: "Potentially Toxic",
+      color: "#FF595E",
+    },
+    {
+      key: 4,
+      value: 245,
+      title: "Healthy",
+      color: "#7FB800",
+    },
+  ];
   return (
     <div className="backlinks-dashboard">
       <AppHeader />
@@ -158,6 +182,18 @@ const Backlinks: React.FC = () => {
             ))}
           </Row>
         </div>
+        <Row className="bottom-row">
+          <Col span={12}>
+            <h2>Backlink Audit Report</h2>
+            <Row>
+              {reportCards.map(({key, value, title, color}) => (
+                <Col className="card-col" span={12} key={key}>
+                  <ReportCard  color={color} value={value} title={title}/>
+                </Col>
+              ))}
+            </Row>
+          </Col>
+        </Row>
       </Col>
       {/* <div>
         <p>Backlink Analysis Report</p>
