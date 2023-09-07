@@ -48,11 +48,14 @@ function Home({
       domain: configData?.domain,
       industry: configData?.industry,
       geography: configData?.geography,
-      // ['competitor1']: configData?.competitors.length && configData?.competitors[0],
-      // ['competitor2']: configData?.competitors.length <= 2 && configData?.competitors[1]
+      competitor1: configData?.competitors.length ? configData.competitors[0] : "",
+      competitor2: configData?.competitors.length <= 2 ? configData.competitors[1] : ""
     });
-
+     
     setCompetitors(configData?.competitors)
+
+    console.log(configData)
+    console.log('f', businessForm.getFieldsValue())
   }, [configData])
 
   interface CompetitorsObject {
@@ -108,8 +111,6 @@ function Home({
     setCompetitors([]);
   }
 
-  console.log(configData)
-  
   const handleAddCompetitor = () => {
     setCompetitors([...competitors, ""]);
   };
@@ -130,7 +131,7 @@ function Home({
                 layout="horizontal"
                 form={businessForm}
                 // initialValues={{ layout: formLayout }}
-                style={{ maxWidth: 600, textAlign: "left" }}
+                style={{ maxWidth: 800, width: 'auto', textAlign: "left" }}
                 autoComplete="off"
                 validateTrigger="onChange"
                 onFinish={handleOnFinish}
@@ -202,63 +203,62 @@ function Home({
                     ]}
                   />
                 </Form.Item>
-                {
-                  !configData &&
-                  (
-                    <>
-                    <Form.Item
-                      label="Competitor 1"
-                      className="mandatory-field"
-                      name="competitor1"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please input your competitor 1!",
-                        },
-                        {
-                          pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,                     
-                          message: "Invalid domain format",
-                        },
-                      ]}
-                    >
-                      <Input
-                        className="custom-input"
-                        placeholder="Enter competitor 1"
-                      />
-                    </Form.Item>
-                    <Form.Item
-                      label="Competitor 2"
-                      name="competitor2"
-                      className="mandatory-field"
-                      rules={[
-                        {
-                          required: true,
-                          message: "Please input your Competitor 2!",
-                        },
-                        {
-                          pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                          message: "Invalid domain format",
-                        },
-                      ]}
-                    >
-                      <Input
-                        className="custom-input"
-                        placeholder="Enter competitor 2"
-                      />
-                    </Form.Item>
-                    </>
-                  )
-                }
-                {competitors?.map((competitor, index) => (
+                <Form.Item
+                  label="Competitor 1"
+                  style={{
+                    width: 'auto'
+                  }}
+                  className="mandatory-field"
+                  name="competitor1"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your competitor 1!",
+                    },
+                    {
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,                     
+                      message: "Invalid domain format",
+                    },
+                  ]}
+                >
+                  <Input
+                    className="custom-input"
+                    placeholder="Enter competitor 1"
+                  />
+                </Form.Item>
+                <Form.Item
+                  label="Competitor 2"
+                  name="competitor2"
+                  className="mandatory-field"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Competitor 2!",
+                    },
+                    {
+                      pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: "Invalid domain format",
+                    },
+                  ]}
+                >
+                  <Input
+                    className="custom-input"
+                    placeholder="Enter competitor 2"
+                  />
+                </Form.Item>
+                {competitors?.slice(2).map((competitor, index) => (
                   <Form.Item
                     key={index}
-                    label={`Competitor ${index + 1}`}
-                    name={`competitor${index + 1}`}
+                    label={`Competitor ${index + 3}`}
+                    name={`competitor${index + 3}`}
+                    style={{
+                      width: 'max-content'
+                    }}
                     className="mandatory-field"
                     rules={[
                       {
                         required: true,
-                        message: `Please input competitor ${index + 1}!`,
+                        message: `Please input competitor ${index + 3}!`,
                       },
                       {
                         pattern: /^(?!www\.)[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
@@ -268,7 +268,7 @@ function Home({
                   >
                     <Input
                       className="custom-input"
-                      placeholder={`Enter competitor ${index + 1}`}
+                      placeholder={`Enter competitor ${index + 3}`}
                       defaultValue={competitor}
                     />
                   </Form.Item>
