@@ -33,8 +33,10 @@
       margin: 0;
     }
     .venn-col {
+      width: 49%;
       background-color: #ffffff;
       //padding: 20px;
+      margin-right: 1%;
       .chart-header {
         padding: 20px;
         .ant-select-selector {
@@ -99,7 +101,10 @@
     }
     .progress-col {
       background-color: #ffffff;
-      padding-top: 20px;
+      padding: 20px;
+      width: 49%;
+      padding-left: 20px !important;
+      margin-left: 1%;
     }
     h2 {
       font-family: "Inter";
@@ -111,6 +116,7 @@
     }
     .competitors-progress-list {
       width: 100%;
+     
       // overflow-y: auto;
       // height: 50vh;
     }

@@ -208,7 +208,7 @@ const Keywords: React.FC = () => {
         </div>
 
         <Row className="chart-row" gutter={16}>
-          <Col className="venn-col" span={12}>
+          <Col className="venn-col">
             <div className="chart-header">
               <h2>Keyword Overlap Map</h2>
               <Select
@@ -250,7 +250,7 @@ const Keywords: React.FC = () => {
               </div>
             </div>
           </Col>
-          <Col className="progress-col" span={12}>
+          <Col className="progress-col" >
             <h2>Top 10 keywords</h2>
             <div className="competitors-progress-list">
               {competitorsList.map(({ title, value, percent }) => (
