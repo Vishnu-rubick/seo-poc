@@ -122,7 +122,7 @@ function App() {
           )}
         </MenuItem>
 
-        <MenuItem className="menu-item-header" key="keywords">
+        <MenuItem className="menu-item-header" key="keywords" >
           {currentMenu === "keywords" ? (
             <div className="menu-icon">
               <img src={KeywordsIconSelected} alt="" />

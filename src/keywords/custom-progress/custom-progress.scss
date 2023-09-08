@@ -1,0 +1,27 @@
+.custom-progress-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #696e7d;
+    margin: 0;
+  }
+  .title {
+    font-size: 14px;
+    line-height: 17px;
+    width:100px;
+  }
+  .custom-progress {
+    width: 70%;
+  }
+  .ant-progress-bg {
+    height: 10px !important;
+    background-color: #00a6ed;
+  }
+}

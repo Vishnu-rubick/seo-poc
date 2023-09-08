@@ -21,7 +21,7 @@ import AppHeader from "../../components/app-header/app-header";
 import "./keywords-detials..scss";
 
 type DataType = {
-  key: string;
+  key: number;
   keywords: string;
   "Text Mercato": number;
   "Witty Pen": number;
@@ -32,7 +32,7 @@ type DataType = {
 
 const data: DataType[] = [
   {
-    key: "1",
+    key: 0,
     keywords: "",
     "Text Mercato": 0,
     "Witty Pen": 0,

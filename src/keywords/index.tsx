@@ -32,6 +32,7 @@ import PinkIcon from "../assets/keywords/cards/pink.svg";
 import PurpleIcon from "../assets/keywords/cards/purple.svg";
 
 import VennChart from "../components/charts/veen-chart/venn-chart";
+import CustomProgress from "./custom-progress/custom-progress";
 import "./keywords.scss";
 
 const Keywords: React.FC = () => {
@@ -166,7 +167,18 @@ const Keywords: React.FC = () => {
       linkTo: "/keywords/details/weak",
     },
   ];
-
+  const competitorsList = [
+    { title: "Information literacy", percent: 40, value: "24,333" },
+    { title: "Digit", percent: 60, value: "24,333" },
+    { title: "Media", percent: 70, value: "24,333" },
+    { title: "Information literacy", percent: 80, value: "24,333" },
+    { title: "Digit", percent: 40, value: "24,333" },
+    { title: "Media", percent: 30, value: "24,333" },
+    { title: "Information literacy", percent: 20, value: "24,333" },
+    { title: "Digit", percent: 30, value: "24,333" },
+    { title: "Media", percent: 40, value: "24,333" },
+    { title: "Information literacy", percent: 70, value: "24,333" },
+  ];
   return (
     <div className="keywords-dashboard">
       <AppHeader />
@@ -195,7 +207,7 @@ const Keywords: React.FC = () => {
           </Row>
         </div>
 
-        <Row className="chart-row">
+        <Row className="chart-row" gutter={16}>
           <Col className="venn-col" span={12}>
             <div className="chart-header">
               <h2>Keyword Overlap Map</h2>
@@ -215,21 +227,37 @@ const Keywords: React.FC = () => {
               <VennChart />
               <div className="competitors-list">
                 <p>
-                  <span className="circle" style={{ background: "#7FB800" }}></span>{" "}
+                  <span
+                    className="circle"
+                    style={{ background: "#7FB800" }}
+                  ></span>{" "}
                   <p>wittypen.com</p>
                 </p>
                 <p>
-                  <span className="circle" style={{ background: "#FFB400" }}></span>{" "}
+                  <span
+                    className="circle"
+                    style={{ background: "#FFB400" }}
+                  ></span>{" "}
                   <p>peppercontent.io</p>
                 </p>
                 <p>
-                  <span className="circle" style={{ background: "#00A6ED" }}></span>{" "}
+                  <span
+                    className="circle"
+                    style={{ background: "#00A6ED" }}
+                  ></span>{" "}
                   <p>textmercato.com</p>
                 </p>
               </div>
             </div>
           </Col>
-          <Col span={12}>{/* bar-chart */}</Col>
+          <Col className="progress-col" span={12}>
+            <h2>Top 10 keywords</h2>
+            <div className="competitors-progress-list">
+              {competitorsList.map(({ title, value, percent }) => (
+                <CustomProgress title={title} value={value} percent={percent} />
+              ))}
+            </div>
+          </Col>
         </Row>
       </Col>
     </div>

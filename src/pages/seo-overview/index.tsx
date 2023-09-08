@@ -72,7 +72,7 @@ const columns: ColumnsType<DataType> = [
 function SeoOverview({ projectId }: SeoOverviewProps) {
   const [overviewData, setOverviewData] = useState<any[]>([]);
   const [tableColumns, setTableColumns] = useState<any[]>([]);
-  const [domainTitle, setDomainTitle] = useState<string | null>("");
+  const [domainTitle, setDomainTitle] = useState<string>("");
   const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("projectId")) {
@@ -142,7 +142,7 @@ function SeoOverview({ projectId }: SeoOverviewProps) {
       //navigate("/");
     }
     if (localStorage.getItem("domain")) {
-      setDomainTitle(localStorage.getItem("domain"));
+      setDomainTitle(localStorage.getItem("domain")||"");
     }
   }, []);
   const overviewCards = [
