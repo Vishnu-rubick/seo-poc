@@ -213,17 +213,20 @@ const Keywords: React.FC = () => {
             </div>
             <div className="chart-container">
               <VennChart />
-              {/* <div className="competitors-list">
+              <div className="competitors-list">
                 <p>
-                  <span></span>wittypen.com
+                  <span className="circle" style={{ background: "#7FB800" }}></span>{" "}
+                  <p>wittypen.com</p>
                 </p>
                 <p>
-                  <span></span>peppercontent.io
+                  <span className="circle" style={{ background: "#FFB400" }}></span>{" "}
+                  <p>peppercontent.io</p>
                 </p>
                 <p>
-                  <span></span>textmercato.com
+                  <span className="circle" style={{ background: "#00A6ED" }}></span>{" "}
+                  <p>textmercato.com</p>
                 </p>
-              </div> */}
+              </div>
             </div>
           </Col>
           <Col span={12}>{/* bar-chart */}</Col>

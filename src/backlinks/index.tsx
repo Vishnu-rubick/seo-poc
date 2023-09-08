@@ -167,9 +167,9 @@ const Backlinks: React.FC = () => {
         </Row>
         <div className="overview-cards-container">
           <h2 className="subheading">Your key SEO Metrics</h2>
-          <Row justify="start" className="overview-cards">
+          <Row justify="start" className="overview-cards-custom">
             {overviewCards?.map(({ id, img, arrow, title, val, linkTo }) => (
-              <Col span={8} key={id}>
+              // <Col span={8} key={id}>
                 <OverviewCard
                   id={id}
                   img={img}
@@ -178,14 +178,14 @@ const Backlinks: React.FC = () => {
                   val={val}
                   linkTo={linkTo}
                 />
-              </Col>
+              // </Col>
             ))}
           </Row>
         </div>
         <Row className="bottom-row">
           <Col span={12}>
             <h2>Backlink Audit Report</h2>
-            <Row>
+            <Row className="cards-row">
               {reportCards.map(({key, value, title, color}) => (
                 <Col className="card-col" span={12} key={key}>
                   <ReportCard  color={color} value={value} title={title}/>

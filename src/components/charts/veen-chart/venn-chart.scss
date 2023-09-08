@@ -4,6 +4,15 @@
   width: 100%;
   #canvas {
     height: 251px !important;
-    width: 602px !important;
+    width: 512px !important;
+  }
+  @media (max-width: 1499px) {
+    /* Your CSS rules for screens less than 1500 pixels wide go here */
+    .venn-chart-wrapper {
+      #canvas {
+        height: 251px !important;
+        width: 502px !important;
+      }
+    }
   }
 }

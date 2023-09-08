@@ -19,7 +19,12 @@
       text-align: left;
     }
   }
-  .overview-cards {
+  .overview-cards-custom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Three columns per row */
+    gap: 2rem;
+    text-align: left;
     margin-top: 1rem;
     .ant-col {
       margin: 0;
@@ -29,7 +34,7 @@
     background-color: #ffffff;
     margin-top: 2rem;
     h2 {
-      font-family: 'Inter';
+      font-family: "Inter";
       font-size: 21px;
       font-weight: 500;
       line-height: 26px;
@@ -38,6 +43,10 @@
     }
     .card-col {
       margin: 0;
+    }
+    .cards-row {
+      box-shadow: 0px 3px 8px -1px #3232470d;
+      box-shadow: 0px 0px 1px 0px #0c1a4b3d;
     }
   }
 }

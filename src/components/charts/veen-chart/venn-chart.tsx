@@ -44,15 +44,7 @@ const ChartVenn = () => {
   const config = {
     type: "venn",
     data: {
-      labels: [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-      ],
+      labels: ["", "", "", "", "", "", ""],
       datasets: [
         {
           // label: "Sports",
@@ -75,7 +67,7 @@ const ChartVenn = () => {
       },
       borderWidth: 1,
       backgroundColor: [
-        "rgba(255, 26, 104, 0.2)",
+        "rgba(161, 197, 93, 0.8)",
         "rgba(54, 162, 235, 0.2)",
         "rgba(255, 206, 86, 0.2)",
         "rgba(75, 192, 192, 0.2)",
@@ -83,7 +75,7 @@ const ChartVenn = () => {
         "rgba(255, 159, 64, 0.2)",
       ],
       borderColor: [
-        "rgba(255, 26, 104, 1)",
+        "#7FB800",
         "rgba(54, 162, 235, 1)",
         "rgba(255, 206, 86, 1)",
         "rgba(75, 192, 192, 1)",
