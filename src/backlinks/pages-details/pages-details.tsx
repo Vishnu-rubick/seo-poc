@@ -130,13 +130,15 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         expandable={{
           expandedRowRender: (record) => {
             return (
-              <ol style={{marginLeft:"25px"}}>
-                {record.description.map((desc, index) => (
-                  <li style={{ marginTop: "5px" }} key={index}>
-                    {desc}
-                  </li>
-                ))}
-              </ol>
+              <div style={{maxHeight: '350px', overflowY: 'auto'}}>
+                <ol style={{marginLeft:"25px"}}>
+                  {record.description.map((desc, index) => (
+                    <li style={{ marginTop: "5px" }} key={index}>
+                      {desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             );
           },
           expandIcon: CustomExpandIcon,

@@ -188,13 +188,15 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         expandable={{
           expandedRowRender: (record, idx) => {
             return (
-              <ol key={idx} style={{ marginLeft: "25px" }}>
-                {record.description.map((desc, index) => (
-                  <li style={{ marginTop: "5px" }} key={index}>
-                    {desc}
-                  </li>
-                ))}
-              </ol>
+              <div style={{maxHeight: '350px', overflowY: 'auto'}}>
+                <ol key={idx} style={{ marginLeft: "25px" }}>
+                  {record.description.map((desc, index) => (
+                    <li style={{ marginTop: "5px" }} key={index}>
+                      {desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
             );
           },
           expandIcon: CustomExpandIcon,

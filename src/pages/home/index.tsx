@@ -16,7 +16,8 @@ function Home({
   const [businessForm] = Form.useForm();
   const formItemLayout = { labelCol: { span: 4 }, wrapperCol: { span: 15 } };
   const buttonItemLayout = { wrapperCol: { span: 14, offset: 4 } };
-  const [competitors, setCompetitors] = useState<{}[]>([]);
+  const [competitors, setCompetitors] = useState<string[]>([]);
+  const [configData, setConfigData] = useState<any>(null);
   const navigate = useNavigate();
 
  const getConfigAndRedirect= ()=>{
@@ -24,6 +25,7 @@ function Home({
      .get(`${import.meta.env.VITE_API_BASE_URL}/project/config`)
      .then((configResponse) => {
        let config = configResponse?.data;
+       setConfigData(config);
        let present = config.domain.length;
        if (present) {
          if (config?.projectId)
@@ -40,6 +42,21 @@ function Home({
   useEffect(() => {
     getConfigAndRedirect();
   }, []);
+
+  useEffect(() => {
+    businessForm.setFieldsValue({
+      domain: configData?.domain,
+      industry: configData?.industry,
+      geography: configData?.geography,
+      competitor1: configData?.competitors.length ? configData.competitors[0] : "",
+      competitor2: configData?.competitors.length <= 2 ? configData.competitors[1] : ""
+    });
+     
+    setCompetitors(configData?.competitors)
+
+    console.log(configData)
+    console.log('f', businessForm.getFieldsValue())
+  }, [configData])
 
   interface CompetitorsObject {
     domain: string;
@@ -89,8 +106,13 @@ function Home({
       });
   };
 
+  const handleFormCancel = () => {
+    businessForm.resetFields();
+    setCompetitors([]);
+  }
+
   const handleAddCompetitor = () => {
-    setCompetitors([...competitors, {}]);
+    setCompetitors([...competitors, ""]);
   };
   return (
     <div className="home-wrapper">
@@ -109,7 +131,7 @@ function Home({
                 layout="horizontal"
                 form={businessForm}
                 // initialValues={{ layout: formLayout }}
-                style={{ maxWidth: 600, textAlign: "left" }}
+                style={{ maxWidth: 800, width: 'auto', textAlign: "left" }}
                 autoComplete="off"
                 validateTrigger="onChange"
                 onFinish={handleOnFinish}
@@ -183,6 +205,9 @@ function Home({
                 </Form.Item>
                 <Form.Item
                   label="Competitor 1"
+                  style={{
+                    width: 'auto'
+                  }}
                   className="mandatory-field"
                   name="competitor1"
                   rules={[
@@ -221,12 +246,14 @@ function Home({
                     placeholder="Enter competitor 2"
                   />
                 </Form.Item>
-
-                {competitors.map((competitor, index) => (
+                {competitors?.slice(2).map((competitor, index) => (
                   <Form.Item
                     key={index}
                     label={`Competitor ${index + 3}`}
                     name={`competitor${index + 3}`}
+                    style={{
+                      width: 'max-content'
+                    }}
                     className="mandatory-field"
                     rules={[
                       {
@@ -242,6 +269,7 @@ function Home({
                     <Input
                       className="custom-input"
                       placeholder={`Enter competitor ${index + 3}`}
+                      defaultValue={competitor}
                     />
                   </Form.Item>
                 ))}
@@ -252,7 +280,7 @@ function Home({
 
                 <div className="btns-wrapper">
                   <Form.Item {...buttonItemLayout}>
-                    <Button type="primary">Cancel</Button>
+                    <Button onClick={handleFormCancel} type="primary">Cancel</Button>
                   </Form.Item>
                   <Form.Item {...buttonItemLayout}>
                     <Button
