@@ -29,16 +29,16 @@
   letter-spacing: 0px;
   text-align: left;
 }
-.p0 {
+.P0 {
   border: 2px solid rgba(255, 37, 3, 1);
   background:#FFF7F6
 
 }
-.p1 {
+.P1 {
   border: 2px solid rgba(255, 132, 0, 1);
   background: #FEF6F2
 }
-.p2 {
+.P2 {
   background: #FFF8F2;
   border: 2px solid rgba(255, 191, 0, 1);
 }
@@ -46,7 +46,6 @@
 .circle{
   width: 10px;
   height: 10px;
-  background-color: #3498db; 
   border-radius: 50%; 
   margin-right: 6px;
 }

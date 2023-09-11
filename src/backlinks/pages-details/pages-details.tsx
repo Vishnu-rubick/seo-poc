@@ -63,7 +63,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
   const rowHeight = 50;
   const columns = [
     {
-      title: <span style={{ fontWeight: 400 }}>Issue</span>,
+      title: <span style={{ fontWeight: 400 }}>Page Url</span>,
       dataIndex: "pageUrl",
       key: "1",
       // width: 150,
