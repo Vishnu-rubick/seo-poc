@@ -190,7 +190,7 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
             return (
               <div style={{maxHeight: '350px', overflowY: 'auto'}}>
                 <ol key={idx} style={{ marginLeft: "25px" }}>
-                  {record.description.map((desc, index) => (
+                  {record?.description?.map((desc, index) => (
                     <li style={{ marginTop: "5px" }} key={index}>
                       {desc}
                     </li>
