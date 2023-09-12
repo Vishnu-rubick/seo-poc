@@ -63,11 +63,15 @@ function PagesDetails({ projectId }: PageDetailsProps) {
   const rowHeight = 50;
   const columns = [
     {
-      title: <span style={{ fontWeight: 400 }}>Page Url</span>,
+      title: <span style={{ fontWeight: 400 }}>Page URL</span>,
       dataIndex: "pageUrl",
       key: "1",
       // width: 150,
+      render: (text: string) => (
+        <span style={{ color: "rgba(4, 79, 200, 1)" }}>{text}</span>
+      ),
       className: "typography",
+
       sorter: (a: DataSourceType, b: DataSourceType) =>
         a.pageUrl.localeCompare(b.pageUrl),
     },
@@ -131,7 +135,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
           expandedRowRender: (record) => {
             return (
               <div style={{maxHeight: '350px', overflowY: 'auto'}}>
-                <ol style={{marginLeft:"25px"}}>
+                <ol style={{marginLeft:"25px", textDecoration:"underline"}}>
                   {record?.description?.map((desc, index) => (
                     <li style={{ marginTop: "5px" }} key={index}>
                       {desc}

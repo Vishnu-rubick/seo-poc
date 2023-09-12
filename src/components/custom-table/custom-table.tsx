@@ -18,6 +18,9 @@ const columns: ColumnsType<DataType> = [
     title: "Page URL",
     dataIndex: "pageURL",
     key: "pageUrl",
+    render: (text: string) => (
+      <span style={{ color: "rgba(4, 79, 200, 1)" }}>{text}</span>
+    ),
     sorter: (a, b) => a.pageURL.localeCompare(b.pageURL),
   },
   {
@@ -94,7 +97,7 @@ const CustomTable = () => {
         expandedRowRender: (record) => {
           return (
             <div style={{maxHeight: '350px', overflowY: 'auto', textDecoration:"underline"}}>
-              <ol style={{ marginLeft: "25px" }}>
+              <ol style={{ marginLeft: "25px", textDecoration:"underline" }}>
                 {record?.description?.map((desc, index) => (
                   <li style={{ marginTop: "5px" }} key={index}>
                     {desc}

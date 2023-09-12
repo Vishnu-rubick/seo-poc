@@ -110,6 +110,9 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       key: "1",
       // width: 150,
       className: "typography issue-text",
+      render: (text: string) => (
+        <span style={{ fontWeight: "500" }}>{text}</span>
+      ),
       sorter: (a: DataSourceType, b: DataSourceType) =>
         a.title.localeCompare(b.title),
     },
@@ -128,6 +131,9 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
       // width: 100,
       key: "3",
       className: "typography",
+      render: (text: string) => (
+        <span style={{ fontWeight: "500" }}>{text}</span>
+      ),
       sorter: (a: DataSourceType, b: DataSourceType) =>
         a.priority.localeCompare(b.priority),
     },
