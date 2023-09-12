@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
   p {
     font-family: "Inter";
     font-size: 12px;
@@ -11,6 +12,7 @@
     text-align: left;
     color: #696e7d;
     margin: 0;
+    
   }
   .title {
     font-size: 14px;
@@ -22,6 +24,6 @@
   }
   .ant-progress-bg {
     height: 10px !important;
-    background-color: #00a6ed;
+    background-color: #00a6ed !important;
   }
 }

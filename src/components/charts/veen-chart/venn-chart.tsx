@@ -34,9 +34,9 @@ const ChartVenn: React.FC = () => {
         "rgba(255, 180, 0, 0.3)",
         "rgba(127, 184, 0, 0.2)",
         "rgba(0, 166, 237, 0.2)",
+        "rgba(255, 159, 64, 0.2)",
         "#CDDBBF",
         "#B7E3D3",
-        "rgba(255, 159, 64, 0.2)",
       ],
 
       borderColor: [
