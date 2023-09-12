@@ -14,6 +14,7 @@ import domtoimage from "dom-to-image";
 import AppHeader from "../../components/app-header/app-header";
 import AffectedPages from "../website-Iq/report/affected-pages";
 import "./style.scss";
+import DesktopIcon from "../../assets/common/desktop.svg";
 
 interface LandingPageProps {
   projectId?: string;
@@ -164,22 +165,24 @@ function LandingPage({ projectId }: LandingPageProps) {
               suffix=" | "
             />
             <SubHeaderCard
-              prefix={
-                <img
-                  width="15px"
-                  height="15px"
-                  src="src/assets/common/desktop.svg"
-                />
-              }
+              prefix={<img width="15px" height="15px" src={DesktopIcon} />}
               title="Desktop"
               suffix=" | "
               style={{ minWidth: "105px" }}
             />
-            <SubHeaderCard title={`Crawl Limit: ${campaignData?.pages_limit || 0}`} suffix=" | " />
+            <SubHeaderCard
+              title={`Crawl Limit: ${campaignData?.pages_limit || 0}`}
+              suffix=" | "
+            />
             <SubHeaderCard title="Crawl Frequency: Monthly" suffix=" | " />
             <SubHeaderCard title={`Status: ${campaignData?.status}`} />
             <SubHeaderCard
-              prefix={<Checkbox disabled checked={!campaignData?.crawlSubdomains || false} />}
+              prefix={
+                <Checkbox
+                  disabled
+                  checked={!campaignData?.crawlSubdomains || false}
+                />
+              }
               title="Exculde subdomains"
               style={{ marginLeft: "auto", minWidth: "180px" }}
             />

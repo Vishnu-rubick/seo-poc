@@ -188,7 +188,15 @@ function IssuesDetails({ projectId }: IssuesDetailsProps) {
         expandable={{
           expandedRowRender: (record, idx) => {
             return (
-              <div style={{maxHeight: '350px', overflowY: 'auto'}}>
+              <div
+                style={{
+                  maxHeight: "350px",
+                  overflowY: "auto",
+                  fontWeight: "400",
+                  fontFamily: "Roboto",
+                  color: "rgba(4, 79, 200, 1)",
+                }}
+              >
                 <ol key={idx} style={{ marginLeft: "25px" }}>
                   {record?.description?.map((desc, index) => (
                     <li style={{ marginTop: "5px" }} key={index}>

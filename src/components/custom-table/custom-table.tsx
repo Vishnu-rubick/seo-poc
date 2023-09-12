@@ -93,7 +93,7 @@ const CustomTable = () => {
       expandable={{
         expandedRowRender: (record) => {
           return (
-            <div style={{maxHeight: '350px', overflowY: 'auto'}}>
+            <div style={{maxHeight: '350px', overflowY: 'auto', textDecoration:"underline"}}>
               <ol style={{ marginLeft: "25px" }}>
                 {record?.description?.map((desc, index) => (
                   <li style={{ marginTop: "5px" }} key={index}>

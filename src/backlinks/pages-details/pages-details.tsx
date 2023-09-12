@@ -90,7 +90,7 @@ function PagesDetails({ projectId }: PageDetailsProps) {
         a.priority.localeCompare(b.priority),
     },
     {
-      title: <span style={{ fontWeight: 400 }}>Pages Affected</span>,
+      title: <span style={{ fontWeight: 400 }}>Total Issues</span>,
       // width: 100,
       dataIndex: "noOfIssues",
       key: "4",

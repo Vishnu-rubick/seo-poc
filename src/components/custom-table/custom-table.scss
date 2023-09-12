@@ -5,13 +5,14 @@
     color: #00235b;
     font-family: Inter;
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 500 !important;
     line-height: 26px;
     letter-spacing: 0em;
     // text-align: center;
   }
   .ant-table-cell {
     background: #ffffff;
+    color: rgba(4, 79, 200, 1);
   }
   .ant-table-thead > tr > th {
     background: #eaf8fe;
@@ -31,7 +32,7 @@
     letter-spacing: 0em;
     color: #00235b;
   }
-  .ant-table-thead >tr>td {
-      background: #eaf8fe;
+  .ant-table-thead > tr > td {
+    background: #eaf8fe;
   }
 }
